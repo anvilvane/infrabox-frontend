@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
-import { Container, Section, Tag } from "@/components/ui";
 import {
   ArrowLink,
   Band,
   CtaBand,
   InlineLink,
   PageHero,
+  Steps,
   Strip,
 } from "@/app/_marketing/page-parts";
 import { SITE_VERIFICATION_RETRY } from "@/app/_marketing/facts";
@@ -23,6 +23,7 @@ const TOTAL_MINUTES = PIPELINE.reduce((n, s) => n + s.typicalMinutes, 0);
 const LONGEST = PIPELINE.reduce((a, b) =>
   b.typicalMinutes > a.typicalMinutes ? b : a,
 );
+const LONGEST_SHARE = Math.round((LONGEST.typicalMinutes / TOTAL_MINUTES) * 100);
 
 function humanDuration(minutes: number) {
   if (minutes < 60) return `~${minutes} min`;
@@ -60,6 +61,32 @@ const jsonLd = [
   },
 ];
 
+/**
+ * The duration bar. Proportional to the longest step, not to the total, so the
+ * seven short steps stay visible instead of collapsing to nothing — and the one
+ * step that dominates the run is legible at a glance rather than buried in a
+ * column of numbers. It is `aria-hidden`; the duration beside it is the text.
+ */
+function Duration({ minutes }: { minutes: number }) {
+  const share = (minutes / LONGEST.typicalMinutes) * 100;
+  return (
+    <div className="flex items-center gap-3 lg:flex-col lg:items-end lg:gap-2">
+      <span
+        aria-hidden
+        className="block h-1.5 w-24 shrink-0 rounded-sm bg-muted ring-1 ring-inset ring-border lg:w-full"
+      >
+        <span
+          className="block h-full rounded-sm bg-brand"
+          style={{ width: `${Math.max(share, 4)}%` }}
+        />
+      </span>
+      <span className="tabular font-mono text-xs text-muted-foreground">
+        {humanDuration(minutes)}
+      </span>
+    </div>
+  );
+}
+
 export default function HowItWorksPage() {
   return (
     <>
@@ -71,6 +98,14 @@ export default function HowItWorksPage() {
       <PageHero
         eyebrow="How it works"
         title="From a domain you just bought to a mailbox that sends."
+        meta={[
+          { label: "steps", value: PIPELINE.length },
+          { label: "run", value: "Unattended, in order" },
+          { label: "typical total", value: `~${Math.round(TOTAL_MINUTES / 60)} hours` },
+          { label: "longest step", value: LONGEST.label },
+          { label: "google logins", value: "None" },
+        ]}
+        metaCaption="Durations are the dashboard's own per-step estimates, not a service level."
       >
         <p>
           Infrabox runs the same eight steps for every Google Workspace mailbox
@@ -86,63 +121,56 @@ export default function HowItWorksPage() {
       </PageHero>
 
       {/* ------------------------------------------------------- the 8 steps */}
-      <Section divided aria-labelledby="steps-heading">
-        <Container className="py-16 lg:py-24">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <h2 id="steps-heading" className="text-3xl font-semibold sm:text-4xl">
-              The eight steps.
-            </h2>
-            <Tag>{PIPELINE.length} steps · unattended</Tag>
-          </div>
-
-          <ol className="mt-12 border-t border-border">
-            {PIPELINE.map((step, i) => (
-              <li
-                key={step.key}
-                className="grid gap-x-10 gap-y-3 border-b border-border py-8 lg:grid-cols-[4rem_minmax(0,1fr)_7rem] lg:py-10"
-              >
-                <span className="font-mono text-[0.6875rem] uppercase tracking-[0.18em] text-brand">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-
-                <div>
-                  <h3 className="text-lg font-semibold leading-snug">
-                    {step.label}
-                  </h3>
-                  <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                    {step.long}
-                  </p>
-                </div>
-
-                <div className="lg:text-right">
-                  <span className="tabular font-mono text-xs text-muted-foreground">
-                    {humanDuration(step.typicalMinutes)}
-                  </span>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </Container>
-      </Section>
-
-      <Strip id="hiw-next" heading="What this gets you">
-        <p>
-          <InlineLink href="/deliverability">
-            Authentication and deliverability
-          </InlineLink>{" "}
-          covers what the records published in steps four to six actually do,
-          and where we stop making claims.{" "}
-          <InlineLink href="/pricing">Pricing</InlineLink> is two line items,
-          and the{" "}
-          <InlineLink href="/pricing/calculator">calculator</InlineLink> will
-          total up your setup.
-        </p>
-        <div className="mt-4">
-          <ArrowLink href="/compare/doing-it-by-hand">
-            Or compare this against doing it by hand
-          </ArrowLink>
+      <Band
+        id="steps"
+        index="01"
+        label="the pipeline"
+        eyebrow="The pipeline"
+        title="The eight steps."
+        lede={
+          <>
+            Each bar is drawn against the longest step, so the shape of the run
+            is visible rather than buried in a column of numbers. One step is
+            roughly {LONGEST_SHARE}% of the typical total.
+          </>
+        }
+      >
+        <div className="mt-10 border-t border-border pt-9">
+          <Steps
+            items={PIPELINE.map((step) => ({
+              title: step.label,
+              body: step.long,
+              meta: <Duration minutes={step.typicalMinutes} />,
+            }))}
+          />
         </div>
-      </Strip>
+
+        <dl className="mt-10 grid gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-3">
+          {[
+            {
+              term: LONGEST.label,
+              detail: `${LONGEST.typicalMinutes} min · ${LONGEST_SHARE}%`,
+            },
+            {
+              term: `The other ${PIPELINE.length - 1} steps`,
+              detail: `${TOTAL_MINUTES - LONGEST.typicalMinutes} min · ${100 - LONGEST_SHARE}%`,
+            },
+            {
+              term: "Typical total",
+              detail: `${TOTAL_MINUTES.toLocaleString("en-US")} min`,
+            },
+          ].map((item) => (
+            <div key={item.term} className="bg-background px-5 py-4">
+              <dt className="font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-muted-foreground">
+                {item.term}
+              </dt>
+              <dd className="tabular mt-1.5 text-[0.9375rem] font-semibold text-foreground">
+                {item.detail}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </Band>
 
       {/* ----------------------------------------------------- the long pole */}
       <Band
@@ -179,8 +207,57 @@ export default function HowItWorksPage() {
             instead of mysterious.
           </p>
         </div>
+
+        <dl className="mt-10 grid gap-px overflow-hidden rounded-md border border-ink-border bg-ink-border sm:grid-cols-3">
+          {[
+            {
+              term: "Retry attempts",
+              detail: String(SITE_VERIFICATION_RETRY.maxAttempts),
+            },
+            {
+              term: "First backoff",
+              detail: `${SITE_VERIFICATION_RETRY.initialDelaySeconds} sec`,
+            },
+            {
+              term: "Backoff ceiling",
+              detail: `${SITE_VERIFICATION_RETRY.maxDelayMinutes} min`,
+            },
+          ].map((item) => (
+            <div key={item.term} className="bg-ink px-5 py-4">
+              <dt className="font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-ink-muted">
+                {item.term}
+              </dt>
+              <dd className="tabular mt-1.5 text-[0.9375rem] font-semibold text-ink-foreground">
+                {item.detail}
+              </dd>
+            </div>
+          ))}
+        </dl>
+        <p className="mt-4 text-xs leading-relaxed text-ink-muted">
+          Read out of the <code className="font-mono">site_verification</code>{" "}
+          step&rsquo;s own retry policy. Every other step uses the shared
+          default instead.
+        </p>
       </Band>
 
+      <Strip id="hiw-next" heading="What this gets you">
+        <p>
+          <InlineLink href="/deliverability">
+            Authentication and deliverability
+          </InlineLink>{" "}
+          covers what the records published in steps four to six actually do,
+          and where we stop making claims.{" "}
+          <InlineLink href="/pricing">Pricing</InlineLink> is two line items,
+          and the{" "}
+          <InlineLink href="/pricing/calculator">calculator</InlineLink> will
+          total up your setup.
+        </p>
+        <div className="mt-4">
+          <ArrowLink href="/compare/doing-it-by-hand">
+            Or compare this against doing it by hand
+          </ArrowLink>
+        </div>
+      </Strip>
 
       <CtaBand
         title="Ready to stand up sending infrastructure?"

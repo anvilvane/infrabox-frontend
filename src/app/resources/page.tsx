@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 
-import { Rails, Section, SectionHeading } from "@/components/ui";
+import { Section, SectionHeading, SectionShell } from "@/components/ui";
 import {
   ArticleHeader,
+  CardGrid,
+  ContentCta,
   LinkCard,
   LinkRow,
   Pill,
   Prose,
 } from "@/components/content";
+import { PIPELINE } from "@/lib/product";
 import { GUIDES } from "@/content/guides";
 import { LEGAL_DOCS, LEGAL_STATUS_LABEL } from "../legal/legal-chrome";
 
@@ -22,25 +25,26 @@ export default function ResourcesPage() {
     <>
       <ArticleHeader
         eyebrow="Resources"
-        title="Resources"
+        title="Guides, answers and documents"
         lede="Everything on this site that is not a product page: the technical guides, the questions people ask before buying, and the legal documents with an honest label on each."
         pills={
           <>
-            <Pill>{GUIDES.length} guides</Pill>
+            <Pill className="tabular">{GUIDES.length} guides</Pill>
             <Pill>FAQ</Pill>
-            <Pill>{LEGAL_DOCS.length} legal documents</Pill>
+            <Pill className="tabular">
+              {LEGAL_DOCS.length} legal documents
+            </Pill>
           </>
         }
       />
 
-      <Section aria-labelledby="start-heading">
-        <Rails className="border-t border-dashed border-border py-12 lg:py-16">
+      <Section divided aria-labelledby="start-heading">
+        <SectionShell index="01" label="start here">
           <SectionHeading
             id="start-heading"
-            eyebrow="Start here"
             title="The two pages most people want first"
           />
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          <CardGrid columns={2} className="mt-10">
             <LinkCard
               href="/resources/faq"
               kicker="FAQ"
@@ -50,66 +54,70 @@ export default function ResourcesPage() {
               what you can take with you if you leave, and how to connect a
               sending tool.
             </LinkCard>
-            <LinkCard href="/how-it-works" kicker="Product" title="How it works">
+            <LinkCard
+              href="/how-it-works"
+              kicker={`Product · ${PIPELINE.length} steps`}
+              title="How it works"
+            >
               The eight provisioning steps in the order they run, with the typical
               time each takes and the one that dominates the total.
             </LinkCard>
-          </div>
-        </Rails>
+          </CardGrid>
+        </SectionShell>
       </Section>
 
-      <Section aria-labelledby="guides-heading">
-        <Rails className="border-t border-dashed border-border py-12 lg:py-16">
+      <Section tone="muted" divided aria-labelledby="guides-heading">
+        <SectionShell index="02" label="guides">
           <SectionHeading
             id="guides-heading"
-            eyebrow="Guides"
             title="Four pieces of real technical writing"
             lede="Each came out of a problem that had to be solved to make provisioning work unattended."
           />
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+          <CardGrid columns={2} className="mt-10">
             {GUIDES.map((g) => (
-              <li key={g.slug} className="flex">
-                <LinkCard
-                  href={`/guides/${g.slug}`}
-                  kicker={`${g.topic} · ${g.minutes} min`}
-                  title={g.shortTitle}
-                >
-                  {g.description}
-                </LinkCard>
-              </li>
+              <LinkCard
+                key={g.slug}
+                href={`/guides/${g.slug}`}
+                kicker={`${g.topic} · ${g.minutes} min`}
+                title={g.shortTitle}
+              >
+                {g.description}
+              </LinkCard>
+            ))}
+          </CardGrid>
+        </SectionShell>
+      </Section>
+
+      <Section divided aria-labelledby="legal-heading">
+        <SectionShell index="03" label="legal">
+          <SectionHeading
+            id="legal-heading"
+            title="Labelled, not padded"
+            lede="Two drafts pending review, three not written. Each page says which it is."
+          />
+          <ul className="mt-10 border-t border-border">
+            {LEGAL_DOCS.map((doc) => (
+              <LinkRow
+                key={doc.href}
+                href={doc.href}
+                title={doc.title}
+                badge={LEGAL_STATUS_LABEL[doc.status]}
+              >
+                {doc.summary}
+              </LinkRow>
             ))}
           </ul>
-        </Rails>
+        </SectionShell>
       </Section>
 
-      <Section aria-labelledby="legal-heading">
-        <Rails className="border-t border-dashed border-border py-12 lg:py-16">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:gap-16">
+      <Section tone="muted" divided aria-labelledby="not-here-heading">
+        <SectionShell index="04" label="what is missing">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] lg:gap-14">
             <SectionHeading
-              id="legal-heading"
-              eyebrow="Legal"
-              title="Labelled, not padded"
-              lede="Two drafts pending review, three not written. Each page says which it is."
+              id="not-here-heading"
+              title="What is not here"
             />
-            <ul className="border-t border-dashed border-border">
-              {LEGAL_DOCS.map((doc) => (
-                <LinkRow
-                  key={doc.href}
-                  href={doc.href}
-                  title={doc.title}
-                  badge={LEGAL_STATUS_LABEL[doc.status]}
-                />
-              ))}
-            </ul>
-          </div>
-        </Rails>
-      </Section>
-
-      <Section tone="muted" aria-labelledby="not-here-heading">
-        <Rails className="border-t border-dashed border-border py-12 lg:py-16">
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:gap-16">
-            <SectionHeading id="not-here-heading" title="What is not here" />
-            <Prose>
+            <Prose className="text-base">
               <p>
                 There are no case studies, customer stories or testimonials on
                 this site. Not as a design decision — there is simply nothing to
@@ -124,8 +132,10 @@ export default function ResourcesPage() {
               </p>
             </Prose>
           </div>
-        </Rails>
+        </SectionShell>
       </Section>
+
+      <ContentCta id="resources-cta" />
     </>
   );
 }

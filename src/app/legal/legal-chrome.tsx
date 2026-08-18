@@ -1,7 +1,7 @@
 import Link from "next/link";
 import * as React from "react";
 
-import { Callout, Pending } from "@/components/content";
+import { Callout, Pending, RailLabel } from "@/components/content";
 
 /**
  * Shared furniture for the legal documents.
@@ -72,7 +72,7 @@ export function DraftBanner({ children }: { children?: React.ReactNode }) {
 
 export function PendingLegend() {
   return (
-    <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
+    <p className="text-[0.9375rem] leading-relaxed text-muted-foreground">
       Values shown as <Pending /> are genuine gaps. The source draft left each
       one as an open decision, and we would rather show the gap than print a
       number nobody has agreed to.
@@ -94,7 +94,7 @@ export function NotDrafted({
           text that looks authoritative and binds nobody, this page states the
           gap and lists what the finished document has to cover.
         </p>
-        <p className="mt-3">
+        <p>
           If you need this settled before you can buy, say so on the{" "}
           <Link
             href="/get-started"
@@ -117,28 +117,57 @@ export function NotDrafted({
   );
 }
 
-export function LegalFootLinks({ current }: { current: string }) {
-  const others = LEGAL_DOCS.filter((d) => d.href !== current);
+/**
+ * The set of documents, in the rail beside a legal page, with the one you are
+ * reading marked. Every legal page carries it: the honest thing about this set
+ * is that it is incomplete, and the fastest way to see that is to see all five
+ * at once from inside any one of them.
+ */
+export function LegalDocRail({ current }: { current: string }) {
   return (
-    <nav
-      aria-label="Other legal documents"
-      className="mt-14 border-t border-dashed border-border pt-8"
-    >
-      <h2 className="font-display text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
-        Other documents
-      </h2>
-      <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-        {others.map((d) => (
-          <li key={d.href}>
-            <Link
-              href={d.href}
-              className="font-medium text-brand underline decoration-brand/30 underline-offset-[3px] hover:decoration-brand"
-            >
-              {d.title}
-            </Link>
-          </li>
-        ))}
+    <nav aria-label="Legal documents">
+      <RailLabel>The set</RailLabel>
+      <ul className="mt-4 border-t border-border">
+        {LEGAL_DOCS.map((doc) => {
+          const isCurrent = doc.href === current;
+          return (
+            <li key={doc.href}>
+              {isCurrent ? (
+                <span
+                  aria-current="page"
+                  className="flex gap-3 border-b border-border py-2.5 text-[0.8125rem] leading-snug font-medium text-foreground"
+                >
+                  <span
+                    aria-hidden
+                    className="mt-[0.6em] h-px w-3 shrink-0 bg-brand"
+                  />
+                  <span className="min-w-0">{doc.title}</span>
+                </span>
+              ) : (
+                <Link
+                  href={doc.href}
+                  className="group flex gap-3 border-b border-border py-2.5 text-[0.8125rem] leading-snug text-muted-foreground transition-colors hover:text-brand"
+                >
+                  <span
+                    aria-hidden
+                    className="mt-[0.6em] h-px w-3 shrink-0 bg-border transition-colors group-hover:bg-brand"
+                  />
+                  <span className="min-w-0">{doc.title}</span>
+                </Link>
+              )}
+            </li>
+          );
+        })}
       </ul>
+      <p className="mt-4 text-[0.75rem] leading-relaxed text-muted-foreground">
+        None of these is in force.{" "}
+        <Link
+          href="/legal"
+          className="font-medium text-brand underline decoration-brand/30 underline-offset-[3px] hover:decoration-brand"
+        >
+          Where this stands
+        </Link>
+      </p>
     </nav>
   );
 }

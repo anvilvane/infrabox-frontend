@@ -87,6 +87,7 @@ function Choice<T extends string>({
   );
 }
 
+/** One row of the itemised ledger inside the ink result panel. */
 function Line({
   label,
   detail,
@@ -102,31 +103,40 @@ function Line({
     <div
       className={cn(
         "flex items-baseline justify-between gap-6 py-3.5",
-        strong ? "border-t border-border" : "border-t border-border/60",
+        strong ? "border-t border-ink-border" : "border-t border-ink-border/60",
       )}
     >
       <div>
         <p
           className={cn(
-            "text-sm text-foreground",
+            "text-sm text-ink-foreground",
             strong ? "font-semibold" : "font-medium",
           )}
         >
           {label}
         </p>
-        <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">
+        <p className="mt-0.5 text-xs leading-relaxed text-ink-muted">
           {detail}
         </p>
       </div>
       <p
         className={cn(
-          "tabular shrink-0 font-display font-semibold text-foreground",
+          "tabular shrink-0 font-display font-semibold text-ink-foreground",
           strong ? "text-xl" : "text-base",
         )}
       >
         {amount}
       </p>
     </div>
+  );
+}
+
+/** A qualifier under the headline number: which assumptions produced it. */
+function Chip({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center rounded-sm border border-ink-border px-2.5 py-1 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-ink-muted">
+      {children}
+    </span>
   );
 }
 
@@ -170,7 +180,9 @@ export function Estimate() {
         className="grid gap-6 self-start rounded-lg border border-border bg-card p-6"
         onSubmit={(e) => e.preventDefault()}
       >
-        <h3 className="text-sm font-semibold text-foreground">Your setup</h3>
+        <h3 className="border-b border-border pb-4 font-mono text-[0.6875rem] uppercase tracking-[0.18em] text-brand">
+          Your setup
+        </h3>
 
         <div className="grid gap-1.5">
           <label
@@ -284,24 +296,54 @@ export function Estimate() {
       {/* --------------------------------------------------------- result */}
       <div>
         <div
-          className="rounded-lg border border-border bg-brand-tint p-6 sm:p-8"
+          className="on-ink ink-gradient relative isolate overflow-hidden rounded-lg border border-ink-border p-6 sm:p-8"
           aria-live="polite"
         >
+          <div
+            aria-hidden
+            className="dot-field pointer-events-none absolute inset-0 -z-10"
+          />
           <div className="flex flex-wrap items-baseline justify-between gap-3">
-            <h3 className="text-sm font-semibold text-foreground">Estimate</h3>
-            <p className="text-xs text-muted-foreground">
-              <span className="tabular font-medium text-foreground">
+            <h3 className="font-mono text-[0.6875rem] uppercase tracking-[0.18em] text-ink-accent">
+              Estimate
+            </h3>
+            <p className="text-xs text-ink-muted">
+              <span className="tabular font-medium text-ink-foreground">
                 {mailboxCount}
               </span>{" "}
               {mailboxCount === 1 ? "mailbox" : "mailboxes"} across{" "}
-              <span className="tabular font-medium text-foreground">
+              <span className="tabular font-medium text-ink-foreground">
                 {domainCount}
               </span>{" "}
               {domainCount === 1 ? "domain" : "domains"}
             </p>
           </div>
 
-          <div className="mt-5">
+          {/* The answer, at the size the answer deserves. */}
+          <p className="mt-5 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+            <span className="tabular font-display text-[clamp(2.75rem,6vw,3.75rem)] font-semibold leading-none tracking-[-0.04em] text-ink-foreground">
+              {usd(firstMonth)}
+            </span>
+            <span className="font-mono text-xs uppercase tracking-[0.14em] text-ink-muted">
+              first month
+            </span>
+          </p>
+          <p className="mt-3 text-sm text-ink-foreground/75">
+            Then{" "}
+            <span className="tabular font-medium text-ink-foreground">
+              {usd(mailboxesMonthly)}
+            </span>{" "}
+            every month, with the domains due again next year.
+          </p>
+
+          <div className="mt-5 flex flex-wrap gap-2">
+            <Chip>{usd(MAILBOX_PRICE_USD)} / mailbox</Chip>
+            <Chip>{row.tld}</Chip>
+            <Chip>{usingPrewarm ? "Pre-warmed" : "Newly registered"}</Chip>
+            <Chip>+${markup} markup</Chip>
+          </div>
+
+          <div className="mt-7">
             <Line
               label="Mailboxes"
               detail={`${mailboxCount} × ${usd(MAILBOX_PRICE_USD)} per mailbox per month`}
@@ -326,7 +368,12 @@ export function Estimate() {
             />
           </div>
 
-          <ButtonLink href="/get-started" size="lg" className="mt-7 w-full">
+          <ButtonLink
+            href="/get-started"
+            variant="inverse"
+            size="lg"
+            className="mt-7 w-full"
+          >
             Get a real total
             <ArrowRight aria-hidden />
           </ButtonLink>

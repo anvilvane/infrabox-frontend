@@ -12,7 +12,7 @@ import {
   Td,
   Th,
 } from "@/components/content";
-import { DraftBanner, LegalFootLinks, PendingLegend } from "../legal-chrome";
+import { DraftBanner, LegalDocRail, PendingLegend } from "../legal-chrome";
 
 export const metadata: Metadata = {
   title: "Deliverability SLA",
@@ -46,7 +46,7 @@ export default function ServiceLevelAgreementPage() {
         }
       />
 
-      <Article toc={TOC}>
+      <Article toc={TOC} aside={<LegalDocRail current="/legal/service-level-agreement" />}>
         <Prose>
           <DraftBanner>
             <p>
@@ -294,8 +294,6 @@ export default function ServiceLevelAgreementPage() {
             terminate the affected subscription without penalty within the notice
             period.
           </p>
-
-          <LegalFootLinks current="/legal/service-level-agreement" />
         </Prose>
       </Article>
     </>

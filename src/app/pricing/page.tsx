@@ -214,29 +214,70 @@ const jsonLd = [
   },
 ];
 
+/**
+ * The one price on the site, given the dark ground so it carries the hero
+ * rather than sitting in it as another pale box. Every figure resolves through
+ * `@/lib/product`; there is no numeric literal in here.
+ */
 function PriceCard() {
   return (
-    <div className="rounded-lg border border-border bg-brand-tint p-7">
-      <Pill>Google Workspace mailbox</Pill>
-      <p className="mt-5 flex items-baseline gap-2">
-        <span className="tabular font-display text-5xl font-semibold tracking-[-0.04em] text-foreground">
-          {usd(MAILBOX_PRICE_USD)}
-        </span>
-        <span className="text-sm text-muted-foreground">
-          / mailbox / month
-        </span>
-      </p>
-      <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-        The same price at every quantity. Renewal is scheduled as the last
-        provisioning step, so a mailbox does not quietly lapse mid-campaign.
-      </p>
-      <ButtonLink href="/get-started" size="lg" className="mt-6 w-full">
-        Get started
-        <ArrowRight aria-hidden />
-      </ButtonLink>
-      <p className="mt-4 text-center text-xs text-muted-foreground">
-        Plus the domain, priced per TLD below.
-      </p>
+    <div className="on-ink ink-gradient relative isolate overflow-hidden rounded-lg border border-ink-border">
+      <div
+        aria-hidden
+        className="dot-field pointer-events-none absolute inset-0 -z-10"
+      />
+      <div className="p-7">
+        <Pill tone="ink">Google Workspace mailbox</Pill>
+        <p className="mt-6 flex items-baseline gap-2">
+          <span className="tabular font-display text-[3.25rem] font-semibold leading-none tracking-[-0.04em] text-ink-foreground">
+            {usd(MAILBOX_PRICE_USD)}
+          </span>
+          <span className="font-mono text-xs uppercase tracking-[0.14em] text-ink-muted">
+            / mbx / mo
+          </span>
+        </p>
+        <p className="mt-5 text-sm leading-relaxed text-ink-foreground/75">
+          The same price at every quantity. Renewal is scheduled as the last
+          provisioning step, so a mailbox does not quietly lapse mid-campaign.
+        </p>
+
+        <dl className="mt-6 border-t border-ink-border pt-4 text-sm">
+          {[
+            { term: "Minimum order", detail: "1 mailbox" },
+            { term: "Contract", detail: "None" },
+            { term: "Setup fee", detail: "None" },
+            {
+              term: "Domain markup",
+              detail: `$${DOMAIN_MARKUP.standard} or $${DOMAIN_MARKUP.aged}`,
+            },
+          ].map((item) => (
+            <div
+              key={item.term}
+              className="flex items-baseline justify-between gap-4 border-b border-ink-border/60 py-2.5 last:border-b-0"
+            >
+              <dt className="font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-ink-muted">
+                {item.term}
+              </dt>
+              <dd className="tabular text-sm font-medium text-ink-foreground">
+                {item.detail}
+              </dd>
+            </div>
+          ))}
+        </dl>
+
+        <ButtonLink
+          href="/get-started"
+          variant="inverse"
+          size="lg"
+          className="mt-7 w-full"
+        >
+          Get started
+          <ArrowRight aria-hidden />
+        </ButtonLink>
+        <p className="mt-4 text-center text-xs text-ink-muted">
+          Plus the domain, priced per TLD below.
+        </p>
+      </div>
     </div>
   );
 }
@@ -309,48 +350,67 @@ export default function PricingPage() {
           </>
         }
       >
-        <div className="mt-10 max-w-3xl overflow-hidden rounded-md border border-border">
+        <div className="mt-10 max-w-4xl overflow-hidden rounded-md border border-border">
           <div className="-mx-px overflow-x-auto">
-            <table className="w-full min-w-[32rem] border-collapse text-left text-sm">
+            <table className="w-full min-w-[38rem] border-collapse text-left text-sm">
               <caption className="sr-only">
-                Domain registration prices per TLD, before the platform markup
+                Domain registration prices per TLD, before and after the flat
+                platform markup on a newly registered domain
               </caption>
+              <colgroup>
+                <col className="w-[8rem]" />
+                <col />
+                <col />
+                <col />
+              </colgroup>
               <thead>
                 <tr className="bg-muted">
                   <th
                     scope="col"
-                    className="px-5 py-3 font-display text-xs font-semibold uppercase tracking-[0.1em] text-muted-foreground"
+                    className="px-5 py-3.5 font-mono text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-muted-foreground"
                   >
                     TLD
                   </th>
                   <th
                     scope="col"
-                    className="px-5 py-3 font-display text-xs font-semibold uppercase tracking-[0.1em] text-muted-foreground"
+                    className="px-5 py-3.5 text-right font-mono text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-muted-foreground"
                   >
-                    Registration / year
+                    Registration / yr
                   </th>
                   <th
                     scope="col"
-                    className="px-5 py-3 font-display text-xs font-semibold uppercase tracking-[0.1em] text-muted-foreground"
+                    className="px-5 py-3.5 text-right font-mono text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-muted-foreground"
                   >
-                    Pre-warmed
+                    Pre-warmed / yr
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-5 py-3.5 text-right font-mono text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-foreground"
+                  >
+                    New domain, yr 1
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {TLD_PRICES.map((row) => (
-                  <tr key={row.tld} className="border-t border-border">
+                  <tr
+                    key={row.tld}
+                    className="border-t border-border transition-colors hover:bg-muted/60"
+                  >
                     <th
                       scope="row"
                       className="px-5 py-3.5 text-left font-mono text-sm font-medium text-foreground"
                     >
                       {row.tld}
                     </th>
-                    <td className="tabular px-5 py-3.5 text-muted-foreground">
+                    <td className="tabular px-5 py-3.5 text-right font-mono text-[0.8125rem] text-muted-foreground">
                       {usd(row.base)}
                     </td>
-                    <td className="tabular px-5 py-3.5 text-muted-foreground">
+                    <td className="tabular px-5 py-3.5 text-right font-mono text-[0.8125rem] text-muted-foreground">
                       {row.prewarmed === null ? "—" : usd(row.prewarmed)}
+                    </td>
+                    <td className="tabular px-5 py-3.5 text-right font-mono text-[0.8125rem] font-medium text-foreground">
+                      {usd(row.base + DOMAIN_MARKUP.standard)}
                     </td>
                   </tr>
                 ))}
@@ -359,12 +419,15 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          These are registration prices before markup. Registrar prices move,
-          and availability and recorded age vary per name, so the exact total
-          for a specific domain is quoted at checkout before you commit to it.
-          Pre-warmed domains carry their own registration figure rather than a
-          surcharge on the standard one.
+        <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+          The last column is the first two added together — registration plus
+          the ${DOMAIN_MARKUP.standard} markup on a newly registered name — and
+          nothing else. Registrar prices move, and availability and recorded age
+          vary per name, so the exact total for a specific domain is quoted at
+          checkout before you commit to it. Pre-warmed domains carry their own
+          registration figure rather than a surcharge on the standard one, and
+          the {DOMAIN_MARKUP.agedThresholdYears * 12}-month markup is $
+          {DOMAIN_MARKUP.aged} rather than ${DOMAIN_MARKUP.standard}.
         </p>
         <div className="mt-6">
           <ArrowLink href="/pricing/calculator">
@@ -396,8 +459,9 @@ export default function PricingPage() {
         eyebrow="Scope"
         title="What Infrabox sells today."
         lede="The pricing above is the whole price list, and this is the whole product it prices."
+        tone="ink"
       >
-        <div className="mt-8 max-w-2xl space-y-4 leading-relaxed text-muted-foreground">
+        <div className="mt-8 max-w-2xl space-y-4 leading-relaxed text-ink-foreground/75">
           <p>
             Google Workspace mailboxes, on domains registered and connected
             through Infrabox, delivered to your sending tool over SMTP. That is
@@ -409,6 +473,24 @@ export default function PricingPage() {
             not a footnote implying they already exist.
           </p>
         </div>
+
+        <dl className="mt-10 grid max-w-3xl gap-px overflow-hidden rounded-md border border-ink-border bg-ink-border sm:grid-cols-2">
+          {[
+            { term: "On sale", detail: "Google Workspace mailboxes" },
+            { term: "Billed", detail: "Per mailbox, per month" },
+            { term: "Delivered over", detail: "SMTP, to your own tool" },
+            { term: "Not on sale yet", detail: "Every other mailbox platform" },
+          ].map((item) => (
+            <div key={item.term} className="bg-ink px-5 py-4">
+              <dt className="font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-ink-muted">
+                {item.term}
+              </dt>
+              <dd className="mt-1.5 text-[0.9375rem] font-medium text-ink-foreground">
+                {item.detail}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </Band>
 
       {/* ------------------------------------------------------------- faq */}

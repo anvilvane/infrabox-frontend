@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { Pill, Rails, Section } from "@/components/ui";
+import { Cell, CellGrid } from "@/components/ui";
 import {
   ArrowLink,
   Band,
@@ -10,8 +10,6 @@ import {
   FaqList,
   InlineLink,
   PageHero,
-  Tile,
-  TileGrid,
   type FaqItem,
 } from "@/app/_marketing/page-parts";
 import {
@@ -40,30 +38,27 @@ const DNS_STEP = stepFor("workspace_dns");
 const VERIFY_STEP = stepFor("site_verification");
 const DKIM_STEP = stepFor("dkim");
 
+/** The four DNS records, each one a record type — hence the mono names. */
 const RECORDS = [
   {
     title: "MX",
+    answers: "Where does mail go?",
     body: "Says where mail for the domain should be delivered. Without it the domain cannot receive — and a sending domain that cannot take a reply is not a sending domain, it is a leak.",
   },
   {
     title: "SPF",
+    answers: "Who may send as you?",
     body: "Lists which servers may send as the domain. One stray include, one lookup too many, and receivers stop treating the domain as authorised. The easiest record to get subtly wrong.",
   },
   {
     title: "DKIM",
+    answers: "Was it altered?",
     body: "The signature proving a message was not altered in transit. Google exposes the key only through the Admin Console, which is why it is the record most setups quietly skip.",
   },
   {
     title: "DMARC",
+    answers: "What if they disagree?",
     body: "Tells receivers what to do when SPF and DKIM disagree with the visible From address. Publishing a policy is the difference between having an opinion about your domain and having none.",
-  },
-  {
-    title: "Domain verification",
-    body: "Not a deliverability record — a gate. Google will not let a domain send at all until it has confirmed you own it, and Google decides when it is satisfied.",
-  },
-  {
-    title: "And what none of them decide",
-    body: "Whether the recipient wanted the message. All five answer identity, not welcome — which is why getting every one of them right is necessary and still not sufficient.",
   },
 ];
 
@@ -237,6 +232,17 @@ export default function DeliverabilityPage() {
       <PageHero
         eyebrow="Authentication & deliverability"
         title="The records that decide whether your domain is believed."
+        meta={[
+          { label: "records", value: "MX · SPF · DKIM · DMARC" },
+          { label: "verified by", value: "Google" },
+          { label: "connection", value: `SMTP · port ${RELAY_PORT}` },
+          {
+            label: "daily cap",
+            value: `${RELAY_DAILY_LIMIT.toLocaleString("en-US")} / mailbox`,
+          },
+          { label: "placement rate", value: "Not claimed" },
+        ]}
+        metaCaption="The last row is not an omission. It is the point of the section headed “where the line is”."
       >
         <p>
           Before a receiving server decides where your message goes, it asks a
@@ -257,15 +263,56 @@ export default function DeliverabilityPage() {
         id="records" index="01" label="the records"
         eyebrow="What gets checked"
         title="Five things a receiver looks at."
-        lede="Four are DNS records. The fifth is a gate Google puts in front of the domain before it will carry any mail at all."
+        lede="Four are DNS records, and each one answers exactly one question. The fifth is not a record at all — it is a gate Google puts in front of the domain before it will carry any mail."
       >
-        <TileGrid columns={3} className="mt-10">
+        <CellGrid columns={4} className="mt-10">
           {RECORDS.map((record) => (
-            <Tile key={record.title} title={record.title}>
-              {record.body}
-            </Tile>
+            <Cell key={record.title} className="flex flex-col">
+              <h3 className="font-mono text-sm font-semibold uppercase tracking-[0.14em] text-brand">
+                {record.title}
+              </h3>
+              <p className="mt-2 text-[0.9375rem] font-semibold leading-snug text-foreground">
+                {record.answers}
+              </p>
+              <p className="mt-2.5 text-[0.8125rem] leading-relaxed text-muted-foreground">
+                {record.body}
+              </p>
+            </Cell>
           ))}
-        </TileGrid>
+        </CellGrid>
+
+        {/* The two things that are not records, kept out of the record grid. */}
+        <div className="mt-8 grid gap-5 lg:grid-cols-2">
+          <div className="rounded-md border border-border bg-muted p-5">
+            <p className="font-mono text-[0.6875rem] uppercase tracking-[0.18em] text-muted-foreground">
+              Not a record — a gate
+            </p>
+            <h3 className="mt-2.5 text-[0.9375rem] font-semibold text-foreground">
+              Google&rsquo;s domain verification
+            </h3>
+            <p className="mt-2 text-[0.8125rem] leading-relaxed text-muted-foreground">
+              Google will not let a domain send at all until it has confirmed
+              you own it, and Google decides when it is satisfied. It is step{" "}
+              {PIPELINE.findIndex((s) => s.key === "site_verification") + 1} of{" "}
+              {PIPELINE.length}, and it is the one that takes the longest.
+            </p>
+          </div>
+          <div className="rounded-md border border-border bg-background p-5">
+            <p className="font-mono text-[0.6875rem] uppercase tracking-[0.18em] text-muted-foreground">
+              And what none of them decide
+            </p>
+            <h3 className="mt-2.5 text-[0.9375rem] font-semibold text-foreground">
+              Whether the recipient wanted it
+            </h3>
+            <p className="mt-2 text-[0.8125rem] leading-relaxed text-muted-foreground">
+              All five answer identity, not welcome — which is why getting every
+              one of them right is necessary and still not sufficient. That
+              distinction is the whole reason this page has a section headed
+              &ldquo;where the line is&rdquo;.
+            </p>
+          </div>
+        </div>
+
         <div className="mt-8">
           <ArrowLink href="/guides/spf-dkim-dmarc">
             How each record works, in detail
@@ -447,47 +494,59 @@ export default function DeliverabilityPage() {
       </Band>
 
       {/* ----------------------------------------------------- the honest bit */}
-      <Section tone="ink" divided aria-labelledby="limits-heading">
-        <Rails className="py-14 lg:py-20">
-          <div className="max-w-3xl">
-            <Pill tone="ink">Where the line is</Pill>
-            <h2
-              id="limits-heading"
-              className="mt-5 text-3xl font-semibold leading-[1.1] text-ink-foreground sm:text-4xl"
-            >
-              What this page deliberately does not claim.
-            </h2>
-            <div className="mt-6 space-y-4 leading-relaxed text-ink-foreground/75">
-              <p>
-                No inbox-placement rate. No &ldquo;95% of your mail lands&rdquo;.
-                No deliverability guarantee and no money back if a campaign
-                underperforms. None of those numbers exist in our systems, so
-                printing one here would mean making it up.
-              </p>
-              <p>
-                No claim that correct authentication makes a campaign work.
-                Authentication is necessary and it is not sufficient. If the
-                list is bad, the copy is generic or the volume is reckless,
-                perfectly signed mail goes to spam — correctly.
-              </p>
-              <p>
-                And no reliability figure attached to the DKIM step in
-                particular. It is implemented, it runs as step six of eight, and
-                it is the one step permitted to fail without blocking the
-                mailbox. When it does fail, you are told.
-              </p>
-              <p className="text-ink-foreground/95">
-                What is left after all that is a real and useful thing: the
-                boring, error-prone, entirely mechanical work of standing a
-                domain up correctly, done the same way every time.
-              </p>
+      <Band
+        id="limits" index="04" label="where the line is"
+        eyebrow="Where the line is"
+        title="What this page deliberately does not claim."
+        tone="ink"
+      >
+        <div className="mt-8 max-w-2xl space-y-4 leading-relaxed text-ink-foreground/75">
+          <p>
+            No inbox-placement rate. No &ldquo;95% of your mail lands&rdquo;. No
+            deliverability guarantee and no money back if a campaign
+            underperforms. None of those numbers exist in our systems, so
+            printing one here would mean making it up.
+          </p>
+          <p>
+            No claim that correct authentication makes a campaign work.
+            Authentication is necessary and it is not sufficient. If the list is
+            bad, the copy is generic or the volume is reckless, perfectly signed
+            mail goes to spam — correctly.
+          </p>
+          <p>
+            And no reliability figure attached to the DKIM step in particular.
+            It is implemented, it runs as step{" "}
+            {PIPELINE.findIndex((s) => s.key === "dkim") + 1} of{" "}
+            {PIPELINE.length}, and it is the one step permitted to fail without
+            blocking the mailbox. When it does fail, you are told.
+          </p>
+          <p className="text-ink-foreground/95">
+            What is left after all that is a real and useful thing: the boring,
+            error-prone, entirely mechanical work of standing a domain up
+            correctly, done the same way every time.
+          </p>
+        </div>
+
+        <dl className="mt-10 grid max-w-3xl gap-px overflow-hidden rounded-md border border-ink-border bg-ink-border sm:grid-cols-3">
+          {[
+            { term: "Placement rate published", detail: "None" },
+            { term: "Deliverability guarantee", detail: "None" },
+            { term: "DKIM reliability figure", detail: "None" },
+          ].map((item) => (
+            <div key={item.term} className="bg-ink px-5 py-4">
+              <dt className="font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-ink-muted">
+                {item.term}
+              </dt>
+              <dd className="mt-1.5 text-[0.9375rem] font-semibold text-ink-foreground">
+                {item.detail}
+              </dd>
             </div>
-          </div>
-        </Rails>
-      </Section>
+          ))}
+        </dl>
+      </Band>
 
       <Band
-        id="deliverability-faq" index="04" label="questions"
+        id="deliverability-faq" index="05" label="questions"
         eyebrow="Questions"
         title="The ones worth asking."
       >

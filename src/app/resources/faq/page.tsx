@@ -2,8 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import type * as React from "react";
 
-import { Disclosure, Rails, Section, SectionHeading } from "@/components/ui";
-import { ArticleHeader, Callout, Pill, Prose } from "@/components/content";
+import {
+  Disclosure,
+  Section,
+  SectionHeading,
+  SectionShell,
+} from "@/components/ui";
+import {
+  ArticleHeader,
+  ContentCta,
+  Pill,
+  Prose,
+} from "@/components/content";
 import {
   MAILBOX_PRICE_USD,
   PIPELINE,
@@ -426,23 +436,29 @@ export default function FaqPage() {
         }
       />
 
-      {SECTIONS.map((section, i) => (
-        <Section
-          key={section.heading}
-          tone={i % 2 === 1 ? "muted" : "default"}
-          aria-labelledby={`${section.slug}-heading`}
-        >
-          <Rails className="border-t border-dashed border-border py-12 lg:py-16">
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] lg:gap-16">
-              <div>
-                <div className="lg:sticky lg:top-24">
-                  <SectionHeading
-                    id={`${section.slug}-heading`}
-                    eyebrow={`0${i + 1}`}
-                    title={section.heading}
-                  />
-                </div>
-              </div>
+      {SECTIONS.map((section, i) => {
+        // A running number across the whole page, so a question keeps the same
+        // index whichever section it sits in.
+        const offset = SECTIONS.slice(0, i).reduce(
+          (n, s) => n + s.items.length,
+          0,
+        );
+
+        return (
+          <Section
+            key={section.heading}
+            tone={i % 2 === 1 ? "muted" : "default"}
+            divided
+            aria-labelledby={`${section.slug}-heading`}
+          >
+            <SectionShell
+              index={String(i + 1).padStart(2, "0")}
+              label={section.heading.toLowerCase()}
+            >
+              <SectionHeading
+                id={`${section.slug}-heading`}
+                title={section.heading}
+              />
 
               {/*
                 Disclosure draws its own `border-b` and clears it on the last
@@ -451,49 +467,44 @@ export default function FaqPage() {
                 is also where the anchor id has to live for a deep link to land
                 on the whole row rather than inside it.
               */}
-              <ul className="border-t border-border">
-                {section.items.map((item) => (
+              <ul className="mt-10 border-t border-border">
+                {section.items.map((item, j) => (
                   <li
                     key={item.id}
                     id={item.id}
                     className="scroll-mt-24 border-b border-border last:border-b-0"
                   >
-                    <Disclosure question={item.question}>
-                      <Prose className="text-sm leading-relaxed">
+                    <Disclosure
+                      question={
+                        <>
+                          <span
+                            aria-hidden
+                            className="tabular mr-4 font-mono text-[0.6875rem] font-normal text-muted-foreground"
+                          >
+                            {String(offset + j + 1).padStart(2, "0")}
+                          </span>
+                          {item.question}
+                        </>
+                      }
+                    >
+                      <Prose className="max-w-3xl text-[0.9375rem] leading-relaxed">
                         {item.answer}
                       </Prose>
                     </Disclosure>
                   </li>
                 ))}
               </ul>
-            </div>
-          </Rails>
-        </Section>
-      ))}
+            </SectionShell>
+          </Section>
+        );
+      })}
 
-      <Section aria-labelledby="more-heading">
-        <Rails className="border-t border-dashed border-border py-12 lg:py-16">
-          <h2 id="more-heading" className="sr-only">
-            Anything else
-          </h2>
-          <div className="max-w-2xl">
-            <Callout title="Something not answered here?">
-              <p>
-                Ask it on the{" "}
-                <Link
-                  href="/get-started"
-                  className="font-medium text-brand underline decoration-brand/30 underline-offset-[3px] hover:decoration-brand"
-                >
-                  get started
-                </Link>{" "}
-                form. Questions that come up more than once end up on this page,
-                phrased the way they were asked rather than the way we would
-                prefer them.
-              </p>
-            </Callout>
-          </div>
-        </Rails>
-      </Section>
+      <ContentCta id="faq-cta" title="Ask the one that is not here.">
+        Questions that come up more than once end up on this page, phrased the
+        way they were asked rather than the way we would prefer them. Ask yours
+        on the get-started form along with what you need to send.
+      </ContentCta>
+
     </>
   );
 }

@@ -222,6 +222,17 @@ export default function CalculatorPage() {
       <PageHero
         eyebrow="Pricing calculator"
         title="Put your numbers into the price list."
+        meta={[
+          { label: "mailbox", value: `${usd(MAILBOX_PRICE_USD)} / mo` },
+          { label: "domain", value: "Per TLD, per year" },
+          {
+            label: "markup",
+            value: `$${DOMAIN_MARKUP.standard} or $${DOMAIN_MARKUP.aged}`,
+          },
+          { label: "volume tiers", value: "None" },
+          { label: "sign-up needed", value: "None" },
+        ]}
+        metaCaption="Arithmetic on the published price list. The binding total is quoted at checkout."
       >
         <p>
           Two inputs decide almost everything: how many domains, and how many

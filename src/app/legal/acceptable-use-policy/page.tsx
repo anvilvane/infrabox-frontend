@@ -11,7 +11,7 @@ import {
   Td,
   Th,
 } from "@/components/content";
-import { DraftBanner, LegalFootLinks, PendingLegend } from "../legal-chrome";
+import { DraftBanner, LegalDocRail, PendingLegend } from "../legal-chrome";
 
 export const metadata: Metadata = {
   title: "Acceptable Use Policy",
@@ -45,7 +45,7 @@ export default function AcceptableUsePolicyPage() {
         }
       />
 
-      <Article toc={TOC}>
+      <Article toc={TOC} aside={<LegalDocRail current="/legal/acceptable-use-policy" />}>
         <Prose>
           <DraftBanner />
           <PendingLegend />
@@ -249,8 +249,6 @@ export default function AcceptableUsePolicyPage() {
             <Link href="/legal/privacy-policy">privacy policy</Link> page for what
             is and is not settled.
           </p>
-
-          <LegalFootLinks current="/legal/acceptable-use-policy" />
         </Prose>
       </Article>
     </>

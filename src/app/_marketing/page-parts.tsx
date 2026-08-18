@@ -33,27 +33,88 @@ import { cn } from "@/lib/utils";
 
 /* ------------------------------------------------------------------- hero */
 
+export type HeroMetaItem = {
+  /** Monospace key, e.g. "mailbox price". */
+  label: string;
+  /** The value. Numbers get `tabular` for free. */
+  value: React.ReactNode;
+};
+
+/**
+ * The hero's right-hand rail when a page has no bespoke aside: a spec sheet of
+ * key/value rows. It is the same shape as the SMTP panel on /deliverability, so
+ * a reader learns the pattern once — mono label on the left, fact on the right.
+ */
+export function HeroMeta({
+  items,
+  caption,
+}: {
+  items: HeroMetaItem[];
+  /** Optional line under the sheet, for a caveat the facts need. */
+  caption?: React.ReactNode;
+}) {
+  return (
+    <div>
+      <dl className="overflow-hidden rounded-md border border-border bg-card">
+        {items.map((item) => (
+          <div
+            key={item.label}
+            className="flex items-baseline justify-between gap-5 border-b border-border px-5 py-3.5 last:border-b-0"
+          >
+            <dt className="font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-muted-foreground">
+              {item.label}
+            </dt>
+            <dd className="tabular text-right text-sm font-medium leading-snug text-foreground">
+              {item.value}
+            </dd>
+          </div>
+        ))}
+      </dl>
+      {caption ? (
+        <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+          {caption}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 export function PageHero({
   eyebrow,
   title,
   children,
   aside,
+  meta,
+  metaCaption,
 }: {
   eyebrow: string;
   title: React.ReactNode;
   children?: React.ReactNode;
   /** Optional right-hand column — a price card, a stat panel, a diagram. */
   aside?: React.ReactNode;
+  /** Shorthand for the standard spec-sheet rail. Ignored when `aside` is set. */
+  meta?: HeroMetaItem[];
+  metaCaption?: React.ReactNode;
 }) {
+  const rail =
+    aside ??
+    (meta && meta.length ? <HeroMeta items={meta} caption={metaCaption} /> : null);
+
   return (
-    <Section>
+    <Section className="relative isolate overflow-hidden">
+      {/* Faint brand texture so the first screen is a surface, not a blank page. */}
+      <div
+        aria-hidden
+        className="dot-field-light pointer-events-none absolute inset-0 -z-10"
+      />
       <Container
         className={cn(
           "py-16 lg:py-24",
-          aside && "grid gap-10 lg:grid-cols-[minmax(0,1fr)_21rem] lg:gap-16",
+          rail &&
+            "grid gap-10 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start lg:gap-16",
         )}
       >
-        <div className={cn(!aside && "max-w-3xl")}>
+        <div className={cn(!rail && "max-w-3xl")}>
           <Eyebrow>{eyebrow}</Eyebrow>
           <h1 className="mt-5 text-[clamp(2.25rem,5vw,3.5rem)] font-semibold leading-[1.04]">
             {title}
@@ -64,7 +125,7 @@ export function PageHero({
             </div>
           ) : null}
         </div>
-        {aside ? <div className="lg:pt-3">{aside}</div> : null}
+        {rail ? <div className="lg:pt-3">{rail}</div> : null}
       </Container>
     </Section>
   );
@@ -98,19 +159,27 @@ export function Band({
   children?: React.ReactNode;
 }) {
   const headingId = `${id}-heading`;
+  const isInk = tone === "ink";
   return (
-    <Section tone={tone} divided aria-labelledby={headingId}>
-      <SectionShell
-        index={index}
-        label={label}
-        tone={tone === "ink" ? "ink" : "default"}
-      >
+    <Section
+      tone={tone}
+      divided
+      aria-labelledby={headingId}
+      className={cn(isInk && "ink-gradient relative isolate overflow-hidden")}
+    >
+      {isInk ? (
+        <div
+          aria-hidden
+          className="dot-field pointer-events-none absolute inset-0 -z-10"
+        />
+      ) : null}
+      <SectionShell index={index} label={label} tone={isInk ? "ink" : "default"}>
         <SectionHeading
           id={headingId}
           eyebrow={eyebrow}
           title={title}
           lede={lede}
-          tone={tone === "ink" ? "ink" : "default"}
+          tone={isInk ? "ink" : "default"}
         />
         {children}
       </SectionShell>
@@ -171,6 +240,103 @@ export function Tile({
         {children}
       </div>
     </Cell>
+  );
+}
+
+/* ------------------------------------------------------------------ steps */
+
+export type StepItem = {
+  /** Optional bold line. Omit for a sequence of plain clauses. */
+  title?: React.ReactNode;
+  body: React.ReactNode;
+  /** Right-hand slot — a duration, a status, a measurement. */
+  meta?: React.ReactNode;
+};
+
+/**
+ * A numbered sequence with a drawn 1px connector running between the indices.
+ * Three routes were each rendering their own flat list of numbered rows; this
+ * is the one shape they share, so a step list looks the same everywhere on the
+ * site and actually reads as a sequence rather than as a stack.
+ */
+export function Steps({
+  items,
+  tone = "default",
+  className,
+}: {
+  items: StepItem[];
+  /** `ink` recolours the rule and indices for a dark band. */
+  tone?: "default" | "ink";
+  className?: string;
+}) {
+  const isInk = tone === "ink";
+  return (
+    <ol className={cn("relative", className)}>
+      {items.map((step, i) => {
+        const last = i === items.length - 1;
+        return (
+          <li
+            key={i}
+            className={cn(
+              "relative grid gap-x-6 gap-y-2 sm:grid-cols-[2.5rem_minmax(0,1fr)]",
+              !last && "pb-9",
+            )}
+          >
+            {/* The connector: from just under this index to the next one. */}
+            {!last ? (
+              <span
+                aria-hidden
+                className={cn(
+                  "absolute left-[0.4375rem] top-6 hidden h-[calc(100%-1.25rem)] w-px sm:block",
+                  isInk ? "bg-ink-border" : "bg-border",
+                )}
+              />
+            ) : null}
+
+            <span
+              className={cn(
+                "tabular relative z-10 font-mono text-[0.6875rem] uppercase tracking-[0.18em]",
+                isInk ? "text-ink-accent" : "text-brand",
+              )}
+            >
+              {String(i + 1).padStart(2, "0")}
+            </span>
+
+            <div
+              className={cn(
+                "grid gap-x-8 gap-y-2",
+                step.meta && "lg:grid-cols-[minmax(0,1fr)_8rem]",
+              )}
+            >
+              <div className="min-w-0">
+                {step.title ? (
+                  <h3
+                    className={cn(
+                      "text-[1.0625rem] font-semibold leading-snug",
+                      isInk ? "text-ink-foreground" : "text-foreground",
+                    )}
+                  >
+                    {step.title}
+                  </h3>
+                ) : null}
+                <div
+                  className={cn(
+                    "max-w-2xl text-sm leading-relaxed",
+                    step.title && "mt-2",
+                    isInk ? "text-ink-foreground/75" : "text-muted-foreground",
+                  )}
+                >
+                  {step.body}
+                </div>
+              </div>
+              {step.meta ? (
+                <div className="lg:pt-0.5 lg:text-right">{step.meta}</div>
+              ) : null}
+            </div>
+          </li>
+        );
+      })}
+    </ol>
   );
 }
 
@@ -264,89 +430,108 @@ export type CompareRow = {
 };
 
 /**
- * Our column is tinted with `brand-tint`, per DESIGN.md. Every marker is
- * paired with an `sr-only` word, so the table reads correctly unseen.
+ * Our column is the **full dark ground**, per DESIGN.md §0 — a tinted highlight
+ * column is explicitly the thing we do not do. Every marker is paired with an
+ * `sr-only` word, so the table reads correctly unseen, and the column carries
+ * `on-ink` so a keyboard ring inside it stays visible.
  */
 export function ComparisonTable({
   rows,
   theirsLabel,
   caption,
+  footnote,
 }: {
   rows: CompareRow[];
   theirsLabel: string;
   caption: string;
+  /** The table's tail — a provenance line, so the figure has an edge and a foot. */
+  footnote?: React.ReactNode;
 }) {
   return (
-    <div className="-mx-5 mt-10 overflow-x-auto px-5 sm:-mx-7 sm:px-7 lg:mx-0 lg:px-0">
-      <table className="w-full min-w-[46rem] border-collapse text-left text-sm">
-        <caption className="sr-only">{caption}</caption>
-        <colgroup>
-          <col className="w-[15rem]" />
-          <col />
-          <col />
-        </colgroup>
-        <thead>
-          <tr>
-            <th scope="col" className="pb-3 pr-6">
-              <span className="sr-only">Criterion</span>
-            </th>
-            <th
-              scope="col"
-              className="rounded-t-md bg-brand-tint px-5 pb-3 pt-4 text-sm font-semibold text-foreground"
-            >
-              Infrabox
-            </th>
-            <th
-              scope="col"
-              className="px-5 pb-3 pt-4 text-sm font-semibold text-muted-foreground"
-            >
-              {theirsLabel}
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row, i) => (
-            <tr key={row.criterion} className="align-top">
-              <th
-                scope="row"
-                className="border-t border-border py-4 pr-6 text-left text-sm font-medium text-foreground"
-              >
-                {row.criterion}
+    <div className="mt-10">
+      <div className="-mx-5 overflow-x-auto px-5 sm:-mx-7 sm:px-7 lg:mx-0 lg:px-0">
+        <table className="w-full min-w-[46rem] border-collapse text-left text-sm">
+          <caption className="sr-only">{caption}</caption>
+          <colgroup>
+            <col className="w-[14rem]" />
+            <col className="w-[36%]" />
+            <col />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col" className="pb-0 pr-6">
+                <span className="sr-only">Criterion</span>
               </th>
-              <td
-                className={cn(
-                  "border-t border-border/50 bg-brand-tint px-5 py-4 leading-relaxed text-foreground",
-                  i === rows.length - 1 && "rounded-b-md",
-                )}
+              <th
+                scope="col"
+                className="on-ink rounded-t-md bg-ink px-5 pb-4 pt-5 align-bottom"
               >
-                <span className="flex items-start gap-2.5">
-                  {row.verdict === "tradeoff" ? (
-                    <>
-                      <span
-                        aria-hidden
-                        className="mt-2 h-px w-3.5 shrink-0 bg-muted-foreground"
-                      />
-                      <span className="sr-only">Trade-off:</span>
-                    </>
-                  ) : (
-                    <>
-                      <Check
-                        aria-hidden
-                        className="mt-0.5 size-4 shrink-0 text-brand"
-                      />
-                      <span className="sr-only">Yes:</span>
-                    </>
-                  )}
-                  <span>{row.ours}</span>
+                <span className="block font-mono text-[0.6875rem] uppercase tracking-[0.18em] text-ink-accent">
+                  ours
                 </span>
-              </td>
-              <td className="border-t border-border px-5 py-4 leading-relaxed text-muted-foreground">
-                {row.theirs}
-              </td>
+                <span className="mt-1.5 block text-[0.9375rem] font-semibold text-ink-foreground">
+                  Infrabox
+                </span>
+              </th>
+              <th scope="col" className="px-5 pb-4 pt-5 align-bottom">
+                <span className="block font-mono text-[0.6875rem] uppercase tracking-[0.18em] text-muted-foreground">
+                  the alternative
+                </span>
+                <span className="mt-1.5 block text-[0.9375rem] font-semibold text-foreground">
+                  {theirsLabel}
+                </span>
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {rows.map((row, i) => (
+              <tr key={row.criterion} className="group align-top">
+                <th
+                  scope="row"
+                  className="border-t border-border py-5 pr-6 text-left text-sm font-medium leading-snug text-foreground"
+                >
+                  {row.criterion}
+                </th>
+                <td
+                  className={cn(
+                    "on-ink border-t border-ink-border bg-ink px-5 py-5 leading-relaxed text-ink-foreground",
+                    i === rows.length - 1 && "rounded-b-md",
+                  )}
+                >
+                  <span className="flex items-start gap-2.5">
+                    {row.verdict === "tradeoff" ? (
+                      <>
+                        <span
+                          aria-hidden
+                          className="mt-[0.6875rem] h-px w-3.5 shrink-0 bg-ink-muted"
+                        />
+                        <span className="sr-only">Trade-off:</span>
+                      </>
+                    ) : (
+                      <>
+                        <Check
+                          aria-hidden
+                          className="mt-0.5 size-4 shrink-0 text-ink-accent"
+                        />
+                        <span className="sr-only">Yes:</span>
+                      </>
+                    )}
+                    <span>{row.ours}</span>
+                  </span>
+                </td>
+                <td className="border-t border-border px-5 py-5 leading-relaxed text-muted-foreground transition-colors group-hover:bg-muted">
+                  {row.theirs}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {footnote ? (
+        <p className="mt-4 max-w-2xl text-xs leading-relaxed text-muted-foreground">
+          {footnote}
+        </p>
+      ) : null}
     </div>
   );
 }
@@ -382,8 +567,29 @@ export function CtaBand({
   label?: string;
   secondary?: { href: string; label: string };
 }) {
+  /*
+   * Deliberately *not* `ink-gradient`: the site footer directly below this band
+   * is flat ink, and a gradient that lightens toward its own bottom edge shows
+   * a visible seam against it. The dot texture and the specular top rule carry
+   * the band instead. Mid-page ink bands (`Band tone="ink"`) do get the
+   * gradient, because white sits on both sides of them.
+   */
   return (
-    <Section tone="ink" divided aria-labelledby="cta-band-heading">
+    <Section
+      tone="ink"
+      divided
+      aria-labelledby="cta-band-heading"
+      className="relative isolate overflow-hidden"
+    >
+      <div
+        aria-hidden
+        className="dot-field pointer-events-none absolute inset-0 -z-10"
+      />
+      {/* The specular rule off the top face of the mark, closing the band. */}
+      <div
+        aria-hidden
+        className="accent-edge pointer-events-none absolute inset-x-0 top-0 h-px"
+      />
       <Container className="py-16 lg:py-24">
         <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-xl">

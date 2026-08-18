@@ -1,10 +1,11 @@
-import Link from "next/link";
 import * as React from "react";
 
-import { Rails, Section, SectionHeading } from "@/components/ui";
+import { ArrowLink, Container, Section, SectionHeading } from "@/components/ui";
 import {
   Article,
   ArticleHeader,
+  CardGrid,
+  ContentCta,
   LinkCard,
   Pill,
   Prose,
@@ -16,6 +17,9 @@ import { GUIDES, getGuide } from "@/content/guides";
  * The frame every guide sits in. Each guide supplies its slug, its contents
  * list and its body; the title, description, topic and reading time come from
  * the registry, so a guide's heading and its sitemap entry cannot drift apart.
+ *
+ * A guide ends somewhere rather than trailing into the footer: the rest of the
+ * set on a flush sheet, then the closing band.
  */
 export function GuideShell({
   slug,
@@ -38,13 +42,10 @@ export function GuideShell({
         pills={
           <>
             <Pill>{guide.topic}</Pill>
-            <Pill>{guide.minutes} min read</Pill>
-            <Link
-              href="/guides"
-              className="text-xs font-medium text-brand underline decoration-brand/30 underline-offset-[3px] hover:decoration-brand"
-            >
+            <Pill className="tabular">{guide.minutes} min read</Pill>
+            <ArrowLink href="/guides" className="ml-auto">
               All guides
-            </Link>
+            </ArrowLink>
           </>
         }
       />
@@ -53,28 +54,29 @@ export function GuideShell({
         <Prose>{children}</Prose>
       </Article>
 
-      <Section tone="muted">
-        <Rails className="border-t border-dashed border-border py-12 lg:py-16">
+      <Section tone="muted" divided aria-labelledby="keep-reading">
+        <Container className="py-14 lg:py-16">
           <SectionHeading
             id="keep-reading"
             eyebrow="Keep reading"
             title="The rest of the set"
           />
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <CardGrid columns={3} className="mt-8">
             {others.map((g) => (
-              <li key={g.slug} className="flex">
-                <LinkCard
-                  href={`/guides/${g.slug}`}
-                  kicker={`${g.topic} · ${g.minutes} min`}
-                  title={g.shortTitle}
-                >
-                  {g.description}
-                </LinkCard>
-              </li>
+              <LinkCard
+                key={g.slug}
+                href={`/guides/${g.slug}`}
+                kicker={`${g.topic} · ${g.minutes} min`}
+                title={g.shortTitle}
+              >
+                {g.description}
+              </LinkCard>
             ))}
-          </ul>
-        </Rails>
+          </CardGrid>
+        </Container>
       </Section>
+
+      <ContentCta id="guide-cta" />
     </>
   );
 }

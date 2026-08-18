@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Article, ArticleHeader, Pill, Prose } from "@/components/content";
-import { LegalFootLinks, NotDrafted } from "../legal-chrome";
+import { LegalDocRail, NotDrafted } from "../legal-chrome";
 
 export const metadata: Metadata = {
   title: "Refund Policy",
@@ -20,7 +20,7 @@ export default function RefundPolicyPage() {
         pills={<Pill>Not written yet</Pill>}
       />
 
-      <Article>
+      <Article aside={<LegalDocRail current="/legal/refund-policy" />}>
         <Prose>
           <NotDrafted
             covers={[
@@ -56,8 +56,6 @@ export default function RefundPolicyPage() {
             it is a reasonable thing to raise on the{" "}
             <Link href="/get-started">get started</Link> form before you do.
           </p>
-
-          <LegalFootLinks current="/legal/refund-policy" />
         </Prose>
       </Article>
     </>

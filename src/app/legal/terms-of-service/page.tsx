@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { Article, ArticleHeader, Pill, Prose } from "@/components/content";
-import { LegalFootLinks, NotDrafted } from "../legal-chrome";
+import { LegalDocRail, NotDrafted } from "../legal-chrome";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -19,7 +19,7 @@ export default function TermsOfServicePage() {
         pills={<Pill>Not written yet</Pill>}
       />
 
-      <Article>
+      <Article aside={<LegalDocRail current="/legal/terms-of-service" />}>
         <Prose>
           <NotDrafted
             covers={[
@@ -45,8 +45,6 @@ export default function TermsOfServicePage() {
             to be in writing before you buy, ask for it in writing. That is a
             better answer than a page of boilerplate.
           </p>
-
-          <LegalFootLinks current="/legal/terms-of-service" />
         </Prose>
       </Article>
     </>

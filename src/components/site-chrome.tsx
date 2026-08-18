@@ -240,7 +240,7 @@ const FOOTER_COLUMNS: { heading: string; links: { href: string; label: string }[
 export function SiteFooter() {
   return (
     <footer className="on-ink bg-ink text-ink-foreground">
-      <Container className="grid gap-12 py-16 md:grid-cols-[minmax(0,1.5fr)_repeat(2,minmax(0,1fr))] md:gap-14">
+      <Container className="grid gap-12 py-16 md:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))] md:gap-10 lg:gap-14">
         <div className="max-w-sm">
           <Wordmark tone="dark" />
           <p className="mt-5 text-sm leading-relaxed text-ink-muted">
@@ -274,9 +274,7 @@ export function SiteFooter() {
       <div className="border-t border-ink-border">
         <Container className="flex flex-col gap-2 py-6 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-ink-muted sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {new Date().getFullYear()} Infrabox</p>
-          <p>
-            Google Workspace mailboxes ·{" "}
-          </p>
+          <p>Google Workspace mailboxes</p>
         </Container>
       </div>
     </footer>

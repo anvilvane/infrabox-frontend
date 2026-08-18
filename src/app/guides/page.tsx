@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { Rails, Section, SectionHeading } from "@/components/ui";
-import { ArticleHeader, LinkCard, Pill, Prose } from "@/components/content";
+import { Section, SectionHeading, SectionShell } from "@/components/ui";
+import {
+  ArticleHeader,
+  CardGrid,
+  ContentCta,
+  LinkCard,
+  Pill,
+  Prose,
+} from "@/components/content";
 import { GUIDES } from "@/content/guides";
 
 export const metadata: Metadata = {
@@ -12,41 +19,50 @@ export const metadata: Metadata = {
 };
 
 export default function GuidesIndexPage() {
+  const minutes = GUIDES.reduce((sum, g) => sum + g.minutes, 0);
+
   return (
     <>
       <ArticleHeader
-        eyebrow="Guides"
+        eyebrow="Resources"
         title="Guides"
         lede="Four pieces, each about something we had to solve to build this. They are longer than a blog post and shorter than documentation, and none of them exist to rank for a keyword."
-        pills={<Pill>{GUIDES.length} guides</Pill>}
+        pills={
+          <>
+            <Pill className="tabular">{GUIDES.length} guides</Pill>
+            <Pill className="tabular">{minutes} min in total</Pill>
+          </>
+        }
       />
 
-      <Section>
-        <Rails className="border-t border-dashed border-border py-12 lg:py-16">
+      <Section divided aria-labelledby="all-guides">
+        <SectionShell index="01" label="the set">
           <h2 id="all-guides" className="sr-only">
             All guides
           </h2>
-          <ul className="grid gap-4 sm:grid-cols-2">
+          <CardGrid columns={2}>
             {GUIDES.map((g) => (
-              <li key={g.slug} className="flex">
-                <LinkCard
-                  href={`/guides/${g.slug}`}
-                  kicker={`${g.topic} · ${g.minutes} min`}
-                  title={g.shortTitle}
-                >
-                  {g.description}
-                </LinkCard>
-              </li>
+              <LinkCard
+                key={g.slug}
+                href={`/guides/${g.slug}`}
+                kicker={`${g.topic} · ${g.minutes} min`}
+                title={g.shortTitle}
+              >
+                {g.description}
+              </LinkCard>
             ))}
-          </ul>
-        </Rails>
+          </CardGrid>
+        </SectionShell>
       </Section>
 
-      <Section tone="muted">
-        <Rails className="border-t border-dashed border-border py-12 lg:py-16">
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:gap-16">
-            <SectionHeading id="why-four" title="Why there are only four" />
-            <Prose>
+      <Section tone="muted" divided aria-labelledby="why-four">
+        <SectionShell index="02" label="why only four">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] lg:gap-14">
+            <SectionHeading
+              id="why-four"
+              title="Why there are only four"
+            />
+            <Prose className="text-base">
               <p>
                 Because these are the four things we actually know something
                 about that is not already written down better elsewhere. Each one
@@ -63,8 +79,10 @@ export default function GuidesIndexPage() {
               </p>
             </Prose>
           </div>
-        </Rails>
+        </SectionShell>
       </Section>
+
+      <ContentCta id="guides-cta" />
     </>
   );
 }

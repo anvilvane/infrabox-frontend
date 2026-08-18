@@ -11,8 +11,16 @@
  *  - customer-dashboard/infrabox-dashboard/src/lib/mailbox-provisioning.ts
  */
 
-/** team.model.js — `credits_per_google_mailbox`, default 3.99 (USD / mailbox / month). */
-export const MAILBOX_PRICE_USD = 3.99;
+/**
+ * USD / mailbox / month.
+ *
+ * The application's own default (`team.model.js` -> `credits_per_google_mailbox`)
+ * is still 3.99. This site advertises 3.79, a deliberate 0.20 reduction, so the
+ * two are currently out of step: until `credits_per_google_mailbox` is lowered to
+ * match, a customer would be quoted 3.79 here and billed 3.99 by the app. That
+ * has to be reconciled before the price is used commercially.
+ */
+export const MAILBOX_PRICE_USD = 3.79;
 
 /** pricing.config.js — markup added to the registrar's base price. */
 export const DOMAIN_MARKUP = {

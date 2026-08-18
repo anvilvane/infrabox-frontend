@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Article, ArticleHeader, Pill, Prose } from "@/components/content";
-import { LegalFootLinks, NotDrafted } from "../legal-chrome";
+import { LegalDocRail, NotDrafted } from "../legal-chrome";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -20,7 +20,7 @@ export default function PrivacyPolicyPage() {
         pills={<Pill>Not written yet</Pill>}
       />
 
-      <Article>
+      <Article aside={<LegalDocRail current="/legal/privacy-policy" />}>
         <Prose>
           <NotDrafted
             covers={[
@@ -65,8 +65,6 @@ export default function PrivacyPolicyPage() {
             description of the current implementation, not yet a contractual
             commitment.
           </p>
-
-          <LegalFootLinks current="/legal/privacy-policy" />
         </Prose>
       </Article>
     </>
