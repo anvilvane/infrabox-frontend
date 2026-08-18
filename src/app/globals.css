@@ -1,0 +1,351 @@
+@import "tailwindcss";
+
+/*
+ * ============================================================================
+ * Infrabox marketing site — design tokens
+ * ============================================================================
+ *
+ * This file is the single source of truth for colour, type, radius and the
+ * handful of hand-written utilities the site leans on. Other routes are built
+ * against these tokens and against `src/components/ui.tsx`; see DESIGN.md.
+ *
+ * The visual language is deliberately *engineered* rather than *soft*: square
+ * corners, hairline grids of flush cells instead of floating rounded cards, a
+ * monospace index running down the left gutter, and one dark spruce band that
+ * bookends the page. See DESIGN.md §0 for what that is and is not.
+ *
+ * Brand: sampled from public/logo.png itself — the mark is a cyan/teal cube,
+ * so the palette is a deep teal ramp (--brand-950 … --brand-200) plus the
+ * bright wordmark cyans (--accent-400 … --accent-100). There is no green in
+ * the logo and there is none in this file.
+ *
+ *   #026c8a  primary action on light  (5.98:1 on white — AA body)
+ *   #012c3c  the dark ground          (14.7:1 against white text)
+ *   #4ae3f4  accent, on dark only     (9.5:1 on the dark ground)
+ *
+ * The accent cyans are never used as text on white — they fail contrast.
+ * See DESIGN.md §1.
+ *
+ * Type: headings in Geist Sans, body copy in Figtree, labels and numerals in
+ * the system mono stack. All self-hosted by next/font (see layout.tsx).
+ * ============================================================================
+ */
+
+@theme inline {
+  /* --- surfaces & text ---------------------------------------------------- */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  /* --- brand -------------------------------------------------------------- */
+  /* Semantic aliases first — reach for these, not the numbered ramp. */
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-foreground: var(--brand-foreground);
+  /* A very pale teal, mixed from the brand itself. Tints a cell or a callout
+     without going dark. */
+  --color-brand-tint: var(--brand-tint);
+  --color-primary: var(--brand);
+  --color-primary-foreground: var(--brand-foreground);
+
+  /* The measured ramp, straight off the logo file. Use when you need a
+     specific step (a gradient stop, a chart series); prefer the aliases. */
+  --color-brand-950: var(--brand-950);
+  --color-brand-900: var(--brand-900);
+  --color-brand-800: var(--brand-800);
+  --color-brand-700: var(--brand-700);
+  --color-brand-600: var(--brand-600);
+  --color-brand-500: var(--brand-500);
+  --color-brand-400: var(--brand-400);
+  --color-brand-300: var(--brand-300);
+  --color-brand-200: var(--brand-200);
+
+  /* The wordmark cyans. On the dark ground only — see DESIGN.md §1. */
+  --color-accent-400: var(--accent-400);
+  --color-accent-300: var(--accent-300);
+  --color-accent-200: var(--accent-200);
+  --color-accent-100: var(--accent-100);
+
+  /* --- the dark ground ---------------------------------------------------- */
+  /* `ink` is the brand at full strength, used as a section background (the
+     hero band, the closing CTA, the footer, one table column). Its companions
+     are the only colours allowed on top of it. */
+  --color-ink: var(--ink);
+  --color-ink-raised: var(--ink-raised);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-border: var(--ink-border);
+  --color-ink-accent: var(--ink-accent);
+
+  /* --- lines & controls --------------------------------------------------- */
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* --- status (used sparingly; never as decoration) ----------------------- */
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-destructive: var(--destructive);
+
+  /* --- type --------------------------------------------------------------- */
+  /* `font-sans` is the body face so unstyled prose picks up Figtree.
+     `font-display` is Geist Sans and is applied to h1..h6 automatically.
+     `font-mono` carries every label, index number, price and duration. */
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --font-display: var(--font-geist-sans), var(--font-figtree), ui-sans-serif,
+    system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+
+  /* --- radius ------------------------------------------------------------- */
+  /* Small on purpose. Nothing on this site is a pill or a bubble. */
+  --radius-sm: 2px;
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 6px);
+}
+
+:root {
+  --radius: 4px;
+
+  /* --- the ramp, measured off public/logo.png --------------------------- */
+  --brand-950: #01202c; /* deepest cube faces */
+  --brand-900: #012c3c; /* dark sections, footer */
+  --brand-800: #013a4d;
+  --brand-700: #014b63; /* most common single colour in the mark */
+  --brand-600: #01536c;
+  --brand-500: #026c8a; /* primary action on white */
+  --brand-400: #017493;
+  --brand-300: #0283a3;
+  --brand-200: #0293b4;
+
+  --accent-400: #3ce2f4; /* wordmark cyan */
+  --accent-300: #4ae3f4;
+  --accent-200: #6cf4fb; /* brightest wordmark cyan */
+  --accent-100: #b3fdfe; /* specular highlight on the mark */
+
+  /* --- semantic ---------------------------------------------------------- */
+  --background: #ffffff;
+  --foreground: #0b1a20;
+  --card: #ffffff;
+  --card-foreground: #0b1a20;
+
+  --brand: var(--brand-500);
+  --brand-hover: var(--brand-600);
+  --brand-foreground: #ffffff;
+  /* --brand-500 at ~6% over white. */
+  --brand-tint: #eef7fa;
+
+  --muted: #f2f7f9;
+  --muted-foreground: #4f6570; /* 6.1:1 on white */
+  --secondary: #f2f7f9;
+  --secondary-foreground: #0f2731;
+  --accent: #f2f7f9;
+  --accent-foreground: #0f2731;
+
+  --border: #dfe8ec;
+  --input: #c6d5dc;
+  --ring: var(--brand-500);
+
+  --success: #ecf7f2;
+  --success-foreground: #12603f;
+  --warning: #fdf6e9;
+  --warning-foreground: #8a5a12;
+  --info: #eef4f9;
+  --info-foreground: #14506e;
+  --destructive: #c0362c;
+
+  /* The dark ground is --brand-900, the same teal the logo's darkest faces
+     are, so a dark band and a brand button are one hue at two strengths. */
+  --ink: var(--brand-900);
+  --ink-raised: var(--brand-800);
+  --ink-foreground: #eaf7fa; /* 14.4:1 on --ink */
+  --ink-muted: #8fb6c4; /* 6.8:1 on --ink */
+  --ink-border: #0a4257;
+  /* The one place the wordmark cyan is allowed to carry meaning: links,
+     emphasis and rules sitting on the dark ground. 9.5:1 on --ink. */
+  --ink-accent: var(--accent-300);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  /* Belt and braces against a stray wide child causing a body scrollbar. */
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings take the display face and the tight tracking site-wide, so a page
+   author never has to remember to add `font-display tracking-tight`. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+/* Visible, consistent keyboard focus everywhere. */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* On the dark ground the brand ring would disappear — flip it. */
+.on-ink :focus-visible,
+.on-ink:focus-visible {
+  outline-color: var(--ink-foreground);
+}
+
+/* Skip link: off-screen until focused. */
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -4rem;
+  z-index: 100;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+/*
+ * A field of 1px dots, not a ruled grid. Used behind the ink hero at very low
+ * contrast; it reads as texture rather than graph paper.
+ */
+.dot-field {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    var(--ink-foreground) 1px,
+    transparent 0
+  );
+  background-size: 22px 22px;
+  opacity: 0.07;
+  mask-image: radial-gradient(ellipse at 50% 40%, #000 0%, transparent 78%);
+  -webkit-mask-image: radial-gradient(
+    ellipse at 50% 40%,
+    #000 0%,
+    transparent 78%
+  );
+}
+
+/* The same texture in brand ink, for the rare light surface that needs it. */
+.dot-field-light {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    var(--brand) 1px,
+    transparent 0
+  );
+  background-size: 22px 22px;
+  opacity: 0.06;
+  mask-image: radial-gradient(ellipse at 50% 40%, #000 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(
+    ellipse at 50% 40%,
+    #000 0%,
+    transparent 75%
+  );
+}
+
+/*
+ * The dark ground with the logo's own lighting: --brand-900 falling away to
+ * --brand-700 at the lower right, which is how the cube itself is lit. Put it
+ * on the section, then layer `.dot-field` over it.
+ */
+.ink-gradient {
+  background-image: radial-gradient(
+    120% 110% at 78% 100%,
+    var(--brand-700) 0%,
+    var(--brand-800) 38%,
+    var(--brand-900) 72%
+  );
+}
+
+/*
+ * A 1px cyan edge, the same specular line that runs along the top face of the
+ * mark. Use it to close a dark band, never as a border on white.
+ */
+.accent-edge {
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--accent-300) 22%,
+    var(--accent-100) 50%,
+    var(--accent-300) 78%,
+    transparent 100%
+  );
+  opacity: 0.55;
+}
+
+/*
+ * Flush cell grid. Children sit on a 1px sheet of --border with no radius and
+ * no shadow, so a group of features reads as one machined panel instead of
+ * eight floating cards. Pair with `bg-background` on each child.
+ */
+.cell-grid {
+  display: grid;
+  gap: 1px;
+  background-color: var(--border);
+  border: 1px solid var(--border);
+}
+
+/* Numeric tables, prices and durations should not wobble between values. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/*
+ * A details/summary disclosure with the marker removed, so the FAQ needs no
+ * JavaScript and still opens, closes and announces correctly. The caret is a
+ * plain rotation — no icon swap, no bubble around it.
+ */
+.disclosure > summary {
+  list-style: none;
+  cursor: pointer;
+}
+.disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+.disclosure[open] .disclosure-caret {
+  transform: rotate(90deg);
+}
