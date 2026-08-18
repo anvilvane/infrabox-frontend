@@ -12,7 +12,7 @@ import {
   Td,
   Th,
 } from "@/components/content";
-import { DraftBanner, LegalDocRail, PendingLegend } from "../legal-chrome";
+import { LegalDocRail, LegalNotice, PendingLegend } from "../legal-chrome";
 
 export const metadata: Metadata = {
   title: "Deliverability SLA",
@@ -41,26 +41,21 @@ export default function ServiceLevelAgreementPage() {
           <>
             <Pill>Draft</Pill>
             <Pill>Tier not currently sold</Pill>
-            <Pill>Not in force</Pill>
+            <Pill>For a tier not currently sold</Pill>
           </>
         }
       />
 
       <Article toc={TOC} aside={<LegalDocRail current="/legal/service-level-agreement" />}>
         <Prose>
-          <DraftBanner>
-            <p>
-              This document has not been reviewed by counsel and is not in force.
-              It is published so it can be read and argued with before it becomes
-              binding.
-            </p>
-            <p className="mt-3">
-              It is also written for a <strong>Guaranteed Placement</strong>{" "}
-              subscription tier that Infrabox does not currently sell. What is on{" "}
-              <Link href="/pricing">the pricing page</Link> today is the mailbox
-              and the domain, with no placement guarantee attached to either.
-            </p>
-          </DraftBanner>
+          <LegalNotice>
+            It is written for a <strong>Guaranteed Placement</strong>{" "}
+            subscription tier that Infrabox does not currently sell. What is on{" "}
+            <Link href="/pricing">the pricing page</Link> today is the mailbox
+            and the domain, with no placement guarantee attached to either — so
+            read this as the shape of that tier, not as a commitment that
+            applies to a mailbox you buy now.
+          </LegalNotice>
 
           <Callout tone="warn" title="Why no percentages appear below">
             <p>

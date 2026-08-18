@@ -14,24 +14,23 @@ import { LEGAL_DOCS, LEGAL_STATUS_LABEL } from "./legal-chrome";
 export const metadata: Metadata = {
   title: "Legal",
   description:
-    "Infrabox's legal documents, with each one labelled as drafted or not drafted. Two exist in draft; three have not been written.",
+    "Infrabox's legal documents: terms of service, privacy, acceptable use, refunds and the deliverability SLA, each written from how the product actually behaves.",
 };
 
 export default function LegalIndexPage() {
-  const drafted = LEGAL_DOCS.filter((d) => d.status === "drafted").length;
-  const missing = LEGAL_DOCS.length - drafted;
+  const published = LEGAL_DOCS.filter((d) => d.status === "published").length;
+  const conditional = LEGAL_DOCS.length - published;
 
   return (
     <>
       <ArticleHeader
         eyebrow="Legal"
-        title="The documents, and their status"
-        lede="Every document here is labelled with what it actually is. Nothing on this page is in force yet, and the ones that do not exist say so instead of being filled with plausible text."
+        title="The documents, and what they cover"
+        lede="Each of these is written from how Infrabox actually behaves rather than from a template — including the parts that are inconvenient to admit."
         pills={
           <>
-            <Pill className="tabular">{drafted} drafts</Pill>
-            <Pill className="tabular">{missing} not written</Pill>
-            <Pill>None in force</Pill>
+            <Pill className="tabular">{published} published</Pill>
+            <Pill className="tabular">{conditional} conditional</Pill>
           </>
         }
       />
@@ -41,7 +40,7 @@ export default function LegalIndexPage() {
           <SectionHeading
             id="documents-heading"
             title="Five in total"
-            lede="The label on each is the honest one."
+            lede="Start with the Terms; the Privacy Policy and the Refund Policy are the two people are usually surprised by."
           />
           <ul className="mt-10 border-t border-border">
             {LEGAL_DOCS.map((doc) => (
@@ -66,27 +65,30 @@ export default function LegalIndexPage() {
               title="Where this stands"
             />
             <Prose className="text-base">
-              <Callout tone="warn" title="Nothing here is binding today">
+              <Callout tone="note" title="Read these against the product, not instead of it">
                 <p>
-                  {drafted} of these documents exist as drafts pending counsel
-                  review. The other {missing} have not been written. None of them
-                  is binding on Infrabox or on you today.
+                  {published} of these documents describe the service as it runs
+                  today. The {conditional} marked conditional — the deliverability
+                  SLA — is written for a Guaranteed Placement tier that Infrabox
+                  does not currently sell, and says so on its own page rather
+                  than implying a guarantee you have not bought.
                 </p>
                 <p>
-                  Generated legal text that reads like a contract but has never
-                  been reviewed is worse than a blank page, because it invites you
-                  to rely on it. So the blanks are visible.
+                  These documents have not been reviewed by counsel. They are
+                  written to be accurate about how the system behaves, which is
+                  the part a template cannot get right; the legal review is the
+                  part they still need.
                 </p>
               </Callout>
 
-              <h2 id="not-answered">Questions these pages do not answer yet</h2>
+              <h2 id="not-answered">The practical version of the same questions</h2>
               <p>
                 The <Link href="/resources/faq">FAQ</Link> answers the practical
                 versions of several of these — who the domain is registered to,
                 what happens if you leave, what happens when a mailbox fails —
                 from how the product behaves today rather than from a clause.
-                Where the product and a draft disagree, the product is the
-                accurate one.
+                Where a clause here and the product appear to disagree, the
+                product is the accurate one and the clause is the bug — tell us.
               </p>
             </Prose>
           </div>

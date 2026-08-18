@@ -92,8 +92,8 @@ export default function ResourcesPage() {
         <SectionShell index="03" label="legal">
           <SectionHeading
             id="legal-heading"
-            title="Labelled, not padded"
-            lede="Two drafts pending review, three not written. Each page says which it is."
+            title="Written from the product"
+            lede="Four published policies plus an SLA for a tier not yet sold. Each says what it actually covers."
           />
           <ul className="mt-10 border-t border-border">
             {LEGAL_DOCS.map((doc) => (

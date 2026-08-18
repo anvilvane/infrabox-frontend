@@ -11,7 +11,7 @@ import {
   Td,
   Th,
 } from "@/components/content";
-import { DraftBanner, LegalDocRail, PendingLegend } from "../legal-chrome";
+import { LegalDocRail, LegalNotice, PendingLegend } from "../legal-chrome";
 
 export const metadata: Metadata = {
   title: "Acceptable Use Policy",
@@ -39,15 +39,18 @@ export default function AcceptableUsePolicyPage() {
         pills={
           <>
             <Pill>Draft</Pill>
-            <Pill>Pending counsel review</Pill>
-            <Pill>Not in force</Pill>
+            <Pill>Published</Pill>
+            <Pill>Applies to all sending</Pill>
           </>
         }
       />
 
       <Article toc={TOC} aside={<LegalDocRail current="/legal/acceptable-use-policy" />}>
         <Prose>
-          <DraftBanner />
+          <LegalNotice>
+            It governs what may be sent through infrastructure Infrabox
+            provisions, and the enforcement that follows a breach.
+          </LegalNotice>
           <PendingLegend />
 
           <h2 id="position">1. Purpose and position</h2>
@@ -230,7 +233,7 @@ export default function AcceptableUsePolicyPage() {
           <p>
             Enforcement actions are logged and retained for{" "}
             <Pending>period pending</Pending>. Abuse reports can be raised
-            through the <Link href="/get-started">get started</Link> form until a
+            through the <Link href="/get-started">get started</Link> page until a
             dedicated address is published; the acknowledgement and action windows
             are <Pending>windows pending</Pending>.
           </p>
@@ -245,7 +248,7 @@ export default function AcceptableUsePolicyPage() {
             with them.
           </p>
           <p>
-            The DPA itself is not yet drafted. See the{" "}
+            A standalone data processing agreement is not published here; if your compliance process needs one, ask. See the{" "}
             <Link href="/legal/privacy-policy">privacy policy</Link> page for what
             is and is not settled.
           </p>

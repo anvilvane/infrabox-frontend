@@ -246,7 +246,7 @@ const SECTIONS: { slug: string; heading: string; items: Item[] }[] = [
               <Link href="/legal/service-level-agreement">
                 deliverability SLA
               </Link>
-              , and that document is not in force.
+              , which is written for a tier Infrabox does not currently sell.
             </p>
           </>
         ),
@@ -379,21 +379,22 @@ const SECTIONS: { slug: string; heading: string; items: Item[] }[] = [
         id: "contracts",
         question: "Is there a contract, an SLA, or a privacy policy?",
         plain:
-          "Partly. The Acceptable Use Policy and a deliverability SLA exist as drafts pending counsel review and are not in force. The Terms of Service, Privacy Policy and Refund Policy have not been written. Every legal page states which it is.",
+          "Yes. Terms of Service, a Privacy Policy, a Refund Policy and an Acceptable Use Policy are all published, written from how the product actually behaves. A deliverability SLA also exists, but for a Guaranteed Placement tier Infrabox does not currently sell.",
         answer: (
           <>
             <p>
-              Partly, and every page says which. The Acceptable Use Policy and a
-              deliverability SLA exist as drafts pending review — they are
-              published so they can be read and argued with, not because they bind
-              anyone. The Terms of Service, Privacy Policy and Refund Policy have
-              not been written, and those pages say so rather than being filled
-              with plausible text.
+              Yes. The Terms of Service, Privacy Policy, Refund Policy and
+              Acceptable Use Policy are published, and each is written from how
+              the system actually behaves rather than from a template — including
+              the parts that are awkward to admit, like administrative access to
+              mailboxes and the fact that transfer-out is not built. A
+              deliverability SLA also exists, but it describes a Guaranteed
+              Placement tier that is not currently sold, and says so.
             </p>
             <p>
               The <Link href="/legal">legal index</Link> lists all five with their
               status. If something in there needs settling before you can buy, say
-              so on the <Link href="/get-started">get started</Link> form.
+              so on the <Link href="/get-started">get started</Link> page.
             </p>
           </>
         ),
@@ -502,7 +503,7 @@ export default function FaqPage() {
       <ContentCta id="faq-cta" title="Ask the one that is not here.">
         Questions that come up more than once end up on this page, phrased the
         way they were asked rather than the way we would prefer them. Ask yours
-        on the get-started form along with what you need to send.
+        on the get started page along with what you need to send.
       </ContentCta>
 
     </>
