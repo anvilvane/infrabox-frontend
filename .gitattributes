@@ -1,0 +1,4 @@
+# Normalise line endings so the repo does not churn between Windows and
+# the Linux build container.
+* text=auto eol=lf
+*.png binary
