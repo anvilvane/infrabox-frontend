@@ -1,0 +1,142 @@
+{
+  "id": "programmatic-vertical-infra",
+  "name": "Cold email infrastructure by vertical",
+  "pageType": "learn",
+  "generator": "programmatic",
+  "priority": 2,
+  "status": "done",
+  "assignedAgent": "claude-opus-4-6",
+  "owner": "seo-generate all (2026-04-11)",
+  "description": "Vertical-specific guides that map Infrabox infrastructure to how a specific industry actually runs cold email. Each variant must have industry-specific volume, regulatory notes, typical deal size, and a real-world sending pattern.",
+  "searchIntent": "informational-commercial",
+  "headKeywords": [
+    "cold email infrastructure for <vertical>",
+    "<vertical> cold email setup",
+    "best cold email tools for <vertical>"
+  ],
+  "semanticKeywords": [
+    "deliverability",
+    "sender reputation",
+    "sending volume",
+    "workspace accounts",
+    "warmup",
+    "compliance",
+    "<vertical> outreach"
+  ],
+  "competitors": [
+    "mailforge",
+    "primeforge",
+    "instantly",
+    "smartlead"
+  ],
+  "intentHints": [],
+  "template": {
+    "slugPattern": "cold-email-infrastructure-<vertical>",
+    "titlePattern": "Cold Email Infrastructure for <Vertical> (2026)",
+    "category": "Guides",
+    "type": "guide",
+    "minWords": 1800
+  },
+  "variables": [
+    {
+      "vertical": "agencies",
+      "Vertical": "Agencies",
+      "audience": "lead-gen agencies running multi-client outbound",
+      "skip": "covered-by best-email-infrastructure-agencies and agency-workflows-guide — check before generating",
+      "status": "skipped",
+      "skippedAt": "2026-04-11",
+      "skipReason": "duplicate-with-existing-pages"
+    },
+    {
+      "vertical": "b2b-saas",
+      "Vertical": "B2B SaaS",
+      "audience": "B2B SaaS growth teams",
+      "status": "skipped",
+      "skippedAt": "2026-04-11",
+      "skipReason": "duplicate-with-cold-email-infrastructure-saas"
+    },
+    {
+      "vertical": "startups",
+      "Vertical": "Startups",
+      "audience": "early-stage founders running outbound themselves",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "slug": "cold-email-infrastructure-startups",
+      "runDir": "seo-generate:2026-04-11"
+    },
+    {
+      "vertical": "ecommerce",
+      "Vertical": "E-commerce",
+      "audience": "DTC brands doing B2B wholesale outreach",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "slug": "cold-email-infrastructure-ecommerce",
+      "runDir": "seo-generate:2026-04-11"
+    },
+    {
+      "vertical": "staffing",
+      "Vertical": "Staffing",
+      "audience": "staffing firms sourcing candidates via email",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "slug": "cold-email-infrastructure-staffing",
+      "runDir": "seo-generate:2026-04-11"
+    },
+    {
+      "vertical": "legal",
+      "Vertical": "Legal",
+      "audience": "law firms running business development outbound",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "slug": "cold-email-infrastructure-legal",
+      "runDir": "seo-generate:2026-04-11"
+    },
+    {
+      "vertical": "financial-services",
+      "Vertical": "Financial Services",
+      "audience": "RIAs and financial advisors doing compliant outreach",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "slug": "cold-email-infrastructure-financial-services",
+      "runDir": "seo-generate:2026-04-11"
+    },
+    {
+      "vertical": "consulting",
+      "Vertical": "Consulting",
+      "audience": "consultancies running partner or client outbound",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "slug": "cold-email-infrastructure-consulting",
+      "runDir": "seo-generate:2026-04-11"
+    },
+    {
+      "vertical": "manufacturing",
+      "Vertical": "Manufacturing",
+      "audience": "industrial / manufacturing sales teams",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "slug": "cold-email-infrastructure-manufacturing",
+      "runDir": "seo-generate:2026-04-11"
+    },
+    {
+      "vertical": "healthcare",
+      "Vertical": "Healthcare",
+      "audience": "healthtech B2B sales with HIPAA considerations",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "slug": "cold-email-infrastructure-healthcare",
+      "runDir": "seo-generate:2026-04-11"
+    }
+  ],
+  "excludeSlugs": [
+    "cold-email-infrastructure-saas",
+    "cold-email-infrastructure-real-estate",
+    "cold-email-infrastructure-recruitment"
+  ],
+  "cmuxPanelCount": 3,
+  "notes": "The 3 excluded slugs are already live and should be read by each agent before writing a new variant so the voice matches and there is no duplicate content.",
+  "mcp": {
+    "keywordsSyncedAt": "2026-04-11T14:35:00.000Z",
+    "keywordsSyncedBy": "backfill-from-push-history"
+  }
+}

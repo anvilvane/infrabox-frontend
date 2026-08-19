@@ -1,0 +1,2205 @@
+{
+  "_meta": {
+    "description": "Content gaps detected during generation: queries with unclear intent, competitors with missing data, programmatic variants that couldn't produce unique content, Reddit threads that surfaced needs not yet covered. Agents append here whenever they hit a wall.",
+    "schemaVersion": 1,
+    "updatedAt": "2026-04-12T08:25:00Z",
+    "lastUpdatedAt": "2026-04-11T19:30:00.000Z",
+    "lastSerpMonitorRun": "2026-04-11T18:30:00.000Z",
+    "lastCannibalizationCheck": "2026-04-11T19:06:52.018Z",
+    "lastContentPolishRun": "2026-04-11T19:30:00.000Z"
+  },
+  "gaps": [
+    {
+      "id": "programmatic-vertical-infra.agencies",
+      "cluster": "programmatic-vertical-infra",
+      "variant": "agencies",
+      "reason": "skip-duplicate",
+      "detail": "Cluster variable 'agencies' is already covered by /learn/best-email-infrastructure-agencies and /learn/agency-workflows-guide. Generating a third page would overlap >70% and cannibalize the existing two. Skipped per cluster note.",
+      "detectedAt": "2026-04-11T00:00:00.000Z",
+      "status": "intentional-skip"
+    },
+    {
+      "id": "programmatic-vertical-infra.b2b-saas",
+      "cluster": "programmatic-vertical-infra",
+      "variant": "b2b-saas",
+      "reason": "skip-duplicate",
+      "detail": "Slug 'cold-email-infrastructure-b2b-saas' would overlap >70% with the live /learn/cold-email-infrastructure-saas page, which already targets B2B SaaS growth teams as its primary audience. The target keyword splits hair-thin ('saas' vs 'b2b saas'). Skipped to preserve single canonical page and avoid internal keyword cannibalization.",
+      "detectedAt": "2026-04-11T00:00:00.000Z",
+      "status": "intentional-skip"
+    },
+    {
+      "id": "best-of-use-case-listicles.intent-signals-missing",
+      "cluster": "best-of-use-case-listicles",
+      "reason": "missing-intent-data",
+      "detail": "intent-signals.json has no Reddit/forum data for any of the 6 head keywords (startups, cheapest, under-50, Microsoft 365, high-volume, solo founders). Proceeding with generation using known cold-email pain points surfaced in existing articles (best-cold-email-infrastructure-2026, shared-vs-private-email-infrastructure) and competitor positioning. Future seo-reddit-intent run on r/coldemail and r/sales should inform a revision pass.",
+      "affectedSlugs": [
+        "best-cold-email-infrastructure-startups-2026",
+        "cheapest-cold-email-infrastructure-2026",
+        "best-cold-email-infrastructure-under-50-mailboxes",
+        "best-cold-email-infrastructure-microsoft-365",
+        "best-cold-email-infrastructure-high-volume",
+        "cold-email-infrastructure-solo-founders"
+      ],
+      "detectedAt": "2026-04-11T00:00:00.000Z",
+      "status": "logged-proceeding"
+    },
+    {
+      "id": "sequencer-integration-guides.infrabox-apollo-integration-orphan",
+      "cluster": "sequencer-integration-guides",
+      "reason": "stale-generated-entry",
+      "detail": "generated.json contains a learn entry for 'infrabox-apollo-integration' (cluster: sequencer-integration-guides, generatedAt 2026-04-11T14:04:20Z) but no article file exists at app/learn/[slug]/articles/infrabox-apollo-integration.js. Appears to be an aborted or partial prior generation. Encountered during best-of-use-case-listicles validation but NOT touched because it belongs to a different cluster — owner of sequencer-integration-guides should either finish the article or remove the stale entry via validate-memory.mjs --sync.",
+      "affectedSlugs": [
+        "infrabox-apollo-integration"
+      ],
+      "detectedAt": "2026-04-11T00:00:00.000Z",
+      "status": "pre-existing-not-owned"
+    },
+    {
+      "id": "troubleshoot-deliverability.intent-signal-augmentation",
+      "cluster": "troubleshoot-deliverability",
+      "reason": "missing-intent-data",
+      "detail": "Cluster has intentHints flagging Reddit presence. All 8 articles were drafted from domain knowledge of common diagnostic patterns without running seo-reddit-intent for each slug. A follow-up pass with seo-reddit-intent on r/coldemail, r/Emailmarketing, and r/sysadmin for each target query could layer in literal user phrasing into the diagnostic sections. Non-blocking — articles meet minimum quality bar (2200-2800 words each, 8-10 sections, 5 external authoritative sources, 5 relatedSlugs plus in-content internal links, 5 FAQs). Script register-article.mjs regex was also patched during this run to handle the non-exported articles-map pattern in learn-data.js.",
+      "affectedSlugs": [
+        "cold-emails-going-to-spam-gmail-fix",
+        "emails-landing-in-promotions-tab",
+        "dmarc-failed-gmail-fix",
+        "domain-blacklisted-diagnosis-guide",
+        "soft-bounce-cold-email-fix",
+        "google-postmaster-bad-reputation",
+        "microsoft-365-cold-email-spam-fix",
+        "spf-softfail-fix"
+      ],
+      "detectedAt": "2026-04-11T00:00:00.000Z",
+      "status": "logged-proceeding"
+    },
+    {
+      "id": "sequencer-integration-guides.leadspicker-metadata-only",
+      "cluster": "sequencer-integration-guides",
+      "variant": "leadspicker",
+      "reason": "metadata-only-no-form-config",
+      "detail": "LeadsPicker exists in ../src/lib/sequencer-metadata.ts as an outreach platform entry, but there is no matching form config in ../src/lib/sequencers.ts and no leadspicker-sequencer.json in the parent config bundle (unlike reachinbox-sequencer.json and masterinbox-sequencer.json which ARE present). That means the /sequencers/connect UI cannot render a connection form for LeadsPicker — the platform is metadata-only, not a live integration. Per cluster zero-hallucination policy, skipping the infrabox-leadspicker-integration slug until the form config ships. Verified on 2026-04-11.",
+      "affectedSlugs": [
+        "infrabox-leadspicker-integration"
+      ],
+      "detectedAt": "2026-04-11T15:35:00Z",
+      "status": "intentional-skip"
+    },
+    {
+      "id": "sequencer-integration-guides.apollo-excluded-by-policy",
+      "cluster": "sequencer-integration-guides",
+      "variant": "apollo",
+      "reason": "excluded-by-cluster-policy",
+      "detail": "Apollo has a platform key in ../src/lib/sequencer-metadata.ts and a form config in ../src/lib/sequencers.ts, so technically it is a live integration. However the cluster notes explicitly prohibit drafting an Apollo integration article: Apollo is hidden from the public /sequencers/connect UI (not in the 24-item catalog) and a prior Apollo article was hallucinated and rolled back. Skipping per the cluster's zero-hallucination rule. Apollo remains valid for /alternatives/apollo and third-party comparisons, but NOT for infrabox-apollo-integration.",
+      "affectedSlugs": [
+        "infrabox-apollo-integration"
+      ],
+      "detectedAt": "2026-04-11T15:35:00Z",
+      "status": "intentional-skip"
+    },
+    {
+      "id": "infrabox-prewarm-angle.intent-signals-missing",
+      "cluster": "infrabox-prewarm-angle",
+      "reason": "missing-intent-data",
+      "detail": "intent-signals.json has no Reddit/forum data for any of the 8 prewarm head keywords. Proceeded with generation using known r/coldemail themes surfaced in existing articles (pre-warmed-mailboxes-worth-it, zapmail-pricing) and zapmail.ai homepage testimonials that quoted agency founder feedback. Future seo-reddit-intent run on r/coldemail for 'pre-warmed mailboxes' and 'skip email warmup' would enrich the honest-objection framing in infrabox-prewarmed-mailboxes, skip-email-warmup-safely, and buy-pre-warmed-email-accounts-guide.",
+      "affectedSlugs": [
+        "infrabox-prewarmed-mailboxes",
+        "pre-warmed-mailboxes-vs-self-warmup",
+        "pre-warmed-google-workspace-accounts",
+        "pre-warmed-microsoft-365-mailboxes",
+        "buy-pre-warmed-email-accounts-guide",
+        "skip-email-warmup-safely",
+        "launch-cold-email-campaign-same-day",
+        "zapmail-prewarm-vs-infrabox-prewarm"
+      ],
+      "detectedAt": "2026-04-11T14:30:00Z",
+      "status": "logged-proceeding"
+    },
+    {
+      "id": "refresh-alternatives-fresh-wave.mcp-unavailable",
+      "cluster": "alternatives-fresh-wave",
+      "reason": "mcp-unreachable",
+      "detail": "/seo-refresh alternatives-fresh-wave ran in degraded mode: sendkit-seo MCP tools not surfaced in deferred tool pool despite server showing Connected in `claude mcp list`. Skipped: get_playbook, get_content_pieces, get_competitors, serp_analysis, save_content. All 4 target slugs (apollo, salesforge, lemlist, gmass) audited locally via seo-geo rubric only.",
+      "affectedSlugs": [
+        "apollo",
+        "salesforge",
+        "lemlist",
+        "gmass"
+      ],
+      "action": "Re-run `/seo-refresh alternatives-fresh-wave --push-only` (MCP backfill) and then a full refresh (SERP + save_content) after sendkit-seo MCP is reconnected.",
+      "detectedAt": "2026-04-11T14:37:00Z",
+      "status": "blocked-on-mcp"
+    },
+    {
+      "id": "refresh-alternatives-fresh-wave.apollo.meta-description-short",
+      "cluster": "alternatives-fresh-wave",
+      "slug": "apollo",
+      "reason": "minor-touchup",
+      "detail": "Apollo page metaDescription is 139 chars; playbook target 150-160. Content is otherwise strong (2,595 words, full schema, fresh). Suggested fix: append a ~50-char CTA mentioning Infrabox's $2.99/mailbox starting price to raise CTR and hit the target band.",
+      "affectedSlugs": [
+        "apollo"
+      ],
+      "action": "In-place edit of entry.metaDescription in app/alternatives/[slug]/alternatives-data.js at line 30. Do NOT regenerate.",
+      "detectedAt": "2026-04-11T14:37:00Z",
+      "status": "logged-for-operator"
+    },
+    {
+      "id": "zapmail-crawl.what-is-infrabox",
+      "slug": "what-is-infrabox",
+      "pageType": "learn",
+      "cluster": null,
+      "reason": "factual-drift-vs-zapmail",
+      "severity": "high",
+      "detail": "Feature comparison table line 49: claims Zapmail has 5 integrations (actual: 50+), no monitoring (actual: ZapShield), shared pool warmup (actual: pre-warmed with 12 weeks of warmup). Needs correction per .seo/runs/2026-04-11-zapmail-crawl/summary.json",
+      "evidenceSource": ".seo/runs/2026-04-11-zapmail-crawl/summary.json",
+      "detectedAt": "2026-04-11T15:23:00Z",
+      "status": "refresh-suggests-upgrade"
+    },
+    {
+      "id": "zapmail-crawl.infrabox-pricing",
+      "slug": "infrabox-pricing",
+      "pageType": "learn",
+      "cluster": null,
+      "reason": "factual-drift-vs-zapmail-and-primeforge",
+      "severity": "high",
+      "detail": "Feature comparison table line 41: (a) claims Zapmail has 5 integrations (actual: 50+), no monitoring (actual: ZapShield), no inbox testing (actual: 3/10/30 credits/month); (b) claims Primeforge has NO Microsoft 365 (actual: Primeforge DOES support M365). UPDATE 2026-04-11T16:47Z: Primeforge Microsoft 365 cell fixed (No → Yes) via yolo audit primeforge-crawl-yolo.microsoft-365-only-claims. Zapmail drift still pending.",
+      "evidenceSource": ".seo/runs/2026-04-11-zapmail-crawl/summary.json",
+      "detectedAt": "2026-04-11T15:23:00Z",
+      "status": "refresh-suggests-upgrade",
+      "partialFixes": [
+        "app/learn/[slug]/articles/infrabox-pricing.js:41 Primeforge Microsoft 365 cell No → Yes (2026-04-11T16:47Z, primeforge yolo audit)"
+      ]
+    },
+    {
+      "id": "zapmail-crawl.cold-email-infrastructure-comparison-2026",
+      "slug": "cold-email-infrastructure-comparison-2026",
+      "pageType": "learn",
+      "cluster": null,
+      "reason": "factual-drift-vs-zapmail",
+      "severity": "high",
+      "detail": "Line 32 table says Zapmail has 5 integrations (actual: 50+). Detailed breakdown text says Zapmail has warmup add-on (shared pool), no monitoring, no testing — all wrong per zapmail crawl. Zapmail has pre-warmed mailboxes, ZapShield monitoring, and placement testing.",
+      "evidenceSource": ".seo/runs/2026-04-11-zapmail-crawl/summary.json",
+      "detectedAt": "2026-04-11T15:23:00Z",
+      "status": "refresh-suggests-upgrade"
+    },
+    {
+      "id": "zapmail-crawl.email-infrastructure-cost-analysis-2026",
+      "slug": "email-infrastructure-cost-analysis-2026",
+      "pageType": "learn",
+      "cluster": null,
+      "reason": "factual-drift-vs-zapmail-and-primeforge",
+      "severity": "high",
+      "detail": "Per-mailbox table line 32 shows ZapMail = $3.00 (actual: $2.50 floor per their hero). Tables elsewhere claim Zapmail has no testing, basic monitoring — contradicts ZapShield and placement test feature. Also Primeforge/Maildoso/Inframail cells show N/A for Microsoft 365 which is wrong for Primeforge and Maildoso.",
+      "evidenceSource": ".seo/runs/2026-04-11-zapmail-crawl/summary.json",
+      "detectedAt": "2026-04-11T15:23:00Z",
+      "status": "refresh-suggests-upgrade"
+    },
+    {
+      "id": "zapmail-crawl.compare-zapmail",
+      "slug": "zapmail",
+      "pageType": "compare",
+      "cluster": null,
+      "reason": "factual-drift-vs-zapmail",
+      "severity": "high",
+      "detail": "The /compare/zapmail entry in compare-data.js needs a full audit. Line 697 says Zapmail doesnt offer monitoring (wrong — ZapShield). Line 799 framing on placement testing uses limited-credit framing but surrounding text may need updates. Also check integration count, pre-warmed wording, US vs US/EU framing.",
+      "evidenceSource": ".seo/runs/2026-04-11-zapmail-crawl/summary.json",
+      "detectedAt": "2026-04-11T15:23:00Z",
+      "status": "refresh-suggests-upgrade"
+    },
+    {
+      "id": "zapmail-crawl.alternatives-zapmail",
+      "slug": "zapmail",
+      "pageType": "alternatives",
+      "cluster": null,
+      "reason": "factual-drift-vs-zapmail",
+      "severity": "medium",
+      "detail": "The /alternatives/zapmail intro and whyLook claims Zapmail has smaller integration ecosystem (wrong — 50+ integrations) and that domain monitoring/health-check features are less developed (wrong — ZapShield). whyLook bullets need rewriting to honest differentiators.",
+      "evidenceSource": ".seo/runs/2026-04-11-zapmail-crawl/summary.json",
+      "detectedAt": "2026-04-11T15:23:00Z",
+      "status": "refresh-suggests-upgrade"
+    },
+    {
+      "id": "zapmail-crawl.learn-infrabox-vs-zapmail",
+      "slug": "infrabox-vs-zapmail",
+      "pageType": "learn",
+      "cluster": null,
+      "reason": "factual-drift-vs-zapmail",
+      "severity": "high",
+      "detail": "Infrabox-vs-Zapmail article needs full audit. Core positioning of Infrabox vs Zapmail depends on accurate Zapmail facts. Verify every Zapmail claim against the crawl summary.",
+      "evidenceSource": ".seo/runs/2026-04-11-zapmail-crawl/summary.json",
+      "detectedAt": "2026-04-11T15:23:00Z",
+      "status": "refresh-suggests-upgrade"
+    },
+    {
+      "id": "zapmail-crawl.learn-zapmail-review",
+      "slug": "zapmail-review",
+      "pageType": "learn",
+      "cluster": null,
+      "reason": "factual-drift-vs-zapmail",
+      "severity": "high",
+      "detail": "Full review article needs re-auditing against crawled facts. Check integration count, monitoring, placement testing, pre-warm warmup depth (12 weeks not 2-3), $2.50 floor pricing, US/EU IP.",
+      "evidenceSource": ".seo/runs/2026-04-11-zapmail-crawl/summary.json",
+      "detectedAt": "2026-04-11T15:23:00Z",
+      "status": "refresh-suggests-upgrade"
+    },
+    {
+      "id": "zapmail-crawl.learn-zapmail-pricing",
+      "slug": "zapmail-pricing",
+      "pageType": "learn",
+      "cluster": null,
+      "reason": "factual-drift-vs-zapmail",
+      "severity": "high",
+      "detail": "Zapmail pricing teardown article. Verify pricing tiers ($39/99/299), extra rates ($3.50/3.25/3.00), placement credit allocations (3/10/30/month), billing options (Monthly/Quarterly/Yearly with 2 months free), $2.50 floor claim, and M365 toggle availability.",
+      "evidenceSource": ".seo/runs/2026-04-11-zapmail-crawl/summary.json",
+      "detectedAt": "2026-04-11T15:23:00Z",
+      "status": "refresh-suggests-upgrade"
+    },
+    {
+      "id": "zapmail-crawl.learn-zapmail-vs-mailforge",
+      "slug": "zapmail-vs-mailforge",
+      "pageType": "learn",
+      "cluster": null,
+      "reason": "factual-drift-vs-zapmail",
+      "severity": "medium",
+      "detail": "Third-party comparison. Zapmail side of the comparison needs fact-check against the crawl. Verify integration count, monitoring claims, placement testing claims.",
+      "evidenceSource": ".seo/runs/2026-04-11-zapmail-crawl/summary.json",
+      "detectedAt": "2026-04-11T15:23:00Z",
+      "status": "refresh-suggests-upgrade"
+    },
+    {
+      "id": "zapmail-crawl.learn-zapmail-vs-primeforge",
+      "slug": "zapmail-vs-primeforge",
+      "pageType": "learn",
+      "cluster": null,
+      "reason": "factual-drift-vs-zapmail",
+      "severity": "medium",
+      "detail": "Third-party comparison. Zapmail side needs fact-check against crawl. Verify integration count, monitoring, placement testing.",
+      "evidenceSource": ".seo/runs/2026-04-11-zapmail-crawl/summary.json",
+      "detectedAt": "2026-04-11T15:23:00Z",
+      "status": "refresh-suggests-upgrade"
+    },
+    {
+      "id": "zapmail-crawl.learn-infrabox-vs-zapmail-vs-primeforge",
+      "slug": "infrabox-vs-zapmail-vs-primeforge",
+      "pageType": "learn",
+      "cluster": null,
+      "reason": "factual-drift-vs-zapmail",
+      "severity": "high",
+      "detail": "Three-way comparison. All three competitors need fact-checking. Specifically: Zapmail integration count (50+ not 5), Zapmail monitoring (ZapShield exists), Zapmail placement testing (exists with credits), Primeforge Microsoft 365 support (exists).",
+      "evidenceSource": ".seo/runs/2026-04-11-zapmail-crawl/summary.json",
+      "detectedAt": "2026-04-11T15:23:00Z",
+      "status": "refresh-suggests-upgrade"
+    },
+    {
+      "id": "zapmail-crawl.competitors-json-sync-done",
+      "slug": null,
+      "pageType": "memory",
+      "cluster": null,
+      "reason": "memory-already-corrected",
+      "severity": "info",
+      "detail": "competitors.json and MCP competitor 69ca1a532844d421333a9dc8 both updated with corrected Zapmail data on 2026-04-11. No further memory edits needed unless Zapmail pricing changes.",
+      "evidenceSource": ".seo/runs/2026-04-11-zapmail-crawl/summary.json",
+      "detectedAt": "2026-04-11T15:23:00Z",
+      "status": "resolved"
+    },
+    {
+      "id": "maildoso-crawl.microsoft365-false-claim",
+      "slug": null,
+      "pageType": "content-drift",
+      "cluster": null,
+      "competitor": "maildoso",
+      "reason": "false-feature-claim",
+      "severity": "high",
+      "detail": "Multiple articles claim Maildoso provisions real Microsoft 365 or Google Workspace + Microsoft 365 mailboxes. Crawl of maildoso.com confirms: SMTP mailboxes + Google Workspace only, NO Microsoft 365 tier anywhere on site.",
+      "evidence": "Homepage: 'choose between reliable SMTP inboxes or official Google Workspace accounts with a business license'. Pricing page has no Microsoft 365 tier.",
+      "evidenceSource": ".seo/runs/2026-04-11-maildoso-crawl/summary.json",
+      "affectedFiles": [
+        "app/learn/[slug]/articles/maildoso-review.js",
+        "app/learn/[slug]/articles/maildoso-alternatives.js",
+        "app/learn/[slug]/articles/cold-email-infrastructure-comparison-2026.js"
+      ],
+      "detectedAt": "2026-04-11T20:55:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T16:58:04Z",
+      "editEvidence": "app/learn/[slug]/articles/maildoso-review.js (full rewrite), app/learn/[slug]/articles/maildoso-alternatives.js:14-15, app/alternatives/[slug]/alternatives-data.js:1386,1878 — all residual M365 claims removed"
+    },
+    {
+      "id": "maildoso-crawl.google-workspace-4-30-inflated",
+      "slug": null,
+      "pageType": "content-drift",
+      "cluster": null,
+      "competitor": "maildoso",
+      "reason": "inflated-price-claim",
+      "severity": "high",
+      "detail": "Articles quote Maildoso Google Workspace at ~$4.30/mailbox/mo. Actual pricing from maildoso.com/pricing: Combo tiers only, $3/mb (15+15), $2.50/mb (35+35), $2.50/mb GW (150+150). No $4.30 tier exists anywhere.",
+      "evidence": "Pricing page Combo: '15 mailboxes: $3 per SMTP and GW', '35 mailboxes: $2.5 per SMTP and GW', '150 mailboxes: $2 per SMTP/$2.5 per GW'",
+      "evidenceSource": ".seo/runs/2026-04-11-maildoso-crawl/summary.json",
+      "affectedFiles": [
+        "app/learn/[slug]/articles/maildoso-review.js",
+        "app/learn/[slug]/articles/cold-email-infrastructure-comparison-2026.js",
+        "app/alternatives/[slug]/alternatives-data.js"
+      ],
+      "detectedAt": "2026-04-11T20:55:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T16:58:04Z",
+      "editEvidence": "app/learn/[slug]/articles/maildoso-review.js (full rewrite), app/alternatives/[slug]/alternatives-data.js:2316 (Primeforge card Combo 35+35 $2.99→$2.50), app/compare/[slug]/compare-data.js:930 (GW Combo price row corrected to $2.50–$3/mb)"
+    },
+    {
+      "id": "maildoso-crawl.inbox-testing-false-claim",
+      "slug": null,
+      "pageType": "content-drift",
+      "cluster": null,
+      "competitor": "maildoso",
+      "reason": "false-missing-feature-claim",
+      "severity": "high",
+      "detail": "Articles claim 'No inbox placement testing' for Maildoso. Pricing page SMTP feature explicitly states: 'We run inbox placement tests every 3 days and display up-to-date health scores for each mailbox.'",
+      "evidenceSource": ".seo/runs/2026-04-11-maildoso-crawl/summary.json",
+      "affectedFiles": [
+        "app/learn/[slug]/articles/maildoso-review.js",
+        "app/learn/[slug]/articles/maildoso-alternatives.js",
+        "app/learn/[slug]/articles/cold-email-infrastructure-comparison-2026.js",
+        "app/alternatives/[slug]/alternatives-data.js"
+      ],
+      "detectedAt": "2026-04-11T20:55:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T16:58:04Z",
+      "editEvidence": "app/learn/[slug]/articles/maildoso-review.js:67 (FAQ), app/learn/[slug]/articles/maildoso-alternatives.js:14 (excerpt), app/alternatives/[slug]/alternatives-data.js:1800 (CheapInboxes FAQ), app/compare/[slug]/compare-data.js:953-955 (feature row 3-day schedule)"
+    },
+    {
+      "id": "maildoso-crawl.monitoring-false-claim",
+      "slug": null,
+      "pageType": "content-drift",
+      "cluster": null,
+      "competitor": "maildoso",
+      "reason": "false-missing-feature-claim",
+      "severity": "medium",
+      "detail": "Articles describe Maildoso monitoring as 'Limited', 'None', or 'No automated monitoring'. Crawl confirms domain health monitoring, inbox reputation monitoring, per-mailbox health scores every 3 days, and self-healing 14-day pause-and-rotate on burned mailboxes.",
+      "evidenceSource": ".seo/runs/2026-04-11-maildoso-crawl/summary.json",
+      "affectedFiles": [
+        "app/learn/[slug]/articles/maildoso-review.js",
+        "app/learn/[slug]/articles/maildoso-alternatives.js",
+        "app/learn/[slug]/articles/cold-email-infrastructure-comparison-2026.js",
+        "app/alternatives/[slug]/alternatives-data.js"
+      ],
+      "detectedAt": "2026-04-11T20:55:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T16:58:04Z",
+      "editEvidence": "app/learn/[slug]/articles/maildoso-review.js:67, app/learn/[slug]/articles/cold-email-infrastructure-comparison-2026.js:37 (warmup language), app/compare/[slug]/compare-data.js:948-950 (Domain Monitoring row with self-healing)"
+    },
+    {
+      "id": "maildoso-crawl.automated-recovery-false-claim",
+      "slug": null,
+      "pageType": "content-drift",
+      "cluster": null,
+      "competitor": "maildoso",
+      "reason": "false-missing-feature-claim",
+      "severity": "medium",
+      "detail": "maildoso-review.js claims 'No automated recovery. Troubleshooting is entirely manual.' Crawl confirms self-healing mailboxes: 'Burned mailboxes? Not a problem! Our system pauses them for 14 days — just enough time to recover — and then brings them back into rotation.'",
+      "evidenceSource": ".seo/runs/2026-04-11-maildoso-crawl/summary.json",
+      "affectedFiles": [
+        "app/learn/[slug]/articles/maildoso-review.js"
+      ],
+      "detectedAt": "2026-04-11T20:55:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T16:58:04Z",
+      "editEvidence": "app/learn/[slug]/articles/maildoso-review.js (full rewrite — self-healing mailboxes explicitly described in What Works + What is Missing sections)"
+    },
+    {
+      "id": "maildoso-crawl.competitors-json-sync-done",
+      "slug": null,
+      "pageType": "memory",
+      "cluster": null,
+      "competitor": "maildoso",
+      "reason": "memory-already-corrected",
+      "severity": "info",
+      "detail": "competitors.json maildoso entry updated with verified pricing, features, providers, and trust signals on 2026-04-11 from fresh maildoso.com crawl. MCP sync pending (SendKit SEO MCP not available in this session).",
+      "evidenceSource": ".seo/runs/2026-04-11-maildoso-crawl/summary.json",
+      "detectedAt": "2026-04-11T20:55:00Z",
+      "status": "resolved"
+    },
+    {
+      "id": "mailforge-crawl.alternatives-data-150-floor",
+      "slug": "multiple-alternative-slugs",
+      "pageType": "alternatives",
+      "cluster": null,
+      "reason": "factual-drift-vs-mailforge",
+      "severity": "high",
+      "detail": "alternatives-data.js cites '$1.50/mailbox/month' as Mailforge's floor — unsupported by crawl. Mailforge public headline is '$3 to $2 per mailbox per month'. Effective floor at 200-mailbox volume is $2.42. Minimum-tier effective rate is ~$6. Affects lines 1506, 2091, 2242.",
+      "evidenceSource": ".seo/runs/2026-04-11-mailforge-crawl/summary.json",
+      "detectedAt": "2026-04-11T15:42:46Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T15:45:23Z",
+      "editEvidence": [
+        "app/alternatives/[slug]/alternatives-data.js:1506",
+        "app/alternatives/[slug]/alternatives-data.js:2091",
+        "app/alternatives/[slug]/alternatives-data.js:2242"
+      ]
+    },
+    {
+      "id": "mailforge-crawl.compare-no-monitoring-claim",
+      "slug": "mailforge",
+      "pageType": "compare",
+      "cluster": null,
+      "reason": "factual-drift-vs-mailforge",
+      "severity": "high",
+      "detail": "compare-data.js mailforge entry originally said 'none include domain monitoring'. Prior Jina-based crawl mistakenly instructed a fix that ADDED 'Mailforge includes basic domain reputation monitoring via its Mailbox Heat Score metric' — which is WRONG. A 2026-04-11T16:55 cmux-browser re-crawl verified that the 'Mailbox Heat Score' and 'Monitor domain reputation' strings on the Mailforge home page live inside a .tabel_row2 element labeled 'Without the Forge' (a pain-point list) with rect width=0 height=0, not in any Mailforge feature section. Heat Score is a Warmforge trademark (confirmed on warmforge.ai). Line 166 ('none of them match InfraGuard depth') is defensible. Line 222 FAQ answer has been rewritten to 'No — Mailforge itself does not include domain monitoring' with correct Warmforge standalone pricing ($10/slot/mo).",
+      "evidenceSource": ".seo/runs/2026-04-11-mailforge-crawl/summary-rerender.json",
+      "detectedAt": "2026-04-11T15:42:46Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T16:56:00Z",
+      "fixHistory": [
+        {
+          "at": "2026-04-11T15:45:23Z",
+          "action": "softened 'none include monitoring' -> 'none match InfraGuard depth' (line 166) + added Heat Score attribution (line 222)",
+          "outcome": "partial-regression: line 222 Heat Score attribution introduced new drift"
+        },
+        {
+          "at": "2026-04-11T16:56:00Z",
+          "action": "cmux-browser rerender revealed Heat Score is a Warmforge trademark. Rewrote line 222 FAQ to accurate 'Mailforge itself does not include domain monitoring' framing with verified Warmforge standalone pricing.",
+          "outcome": "resolved"
+        }
+      ],
+      "editEvidence": [
+        "app/compare/[slug]/compare-data.js:166",
+        "app/compare/[slug]/compare-data.js:222"
+      ]
+    },
+    {
+      "id": "mailforge-crawl-rerender.heat-score-mis-attribution",
+      "slug": "multiple",
+      "pageType": "compare+learn",
+      "cluster": null,
+      "reason": "factual-drift-vs-mailforge",
+      "severity": "high",
+      "detail": "Re-crawl via cmux-browser on 2026-04-11T16:55 revealed that the prior Jina-based crawl hallucinated Mailforge feature attributions for 'Mailbox Heat Score', 'Monitor domain reputation', and 'Verify emails'. These strings ARE in the mailforge.ai HTML but live inside a .tabel_row2 element labeled 'Without the Forge' — a pain-point list showing what you'd have to do manually without the Forge stack — with computed bounding rect {w:0,h:0}. They are NOT Mailforge features. Heat Score is a Warmforge trademark (verified on warmforge.ai home H3 'Monitoring & Health Checks' and /pricing page 'Health Checks: Check the DNS & MX records + blacklist status'). Surgical rollback applied to 3 content locations that had adopted the false attribution.",
+      "evidenceSource": ".seo/runs/2026-04-11-mailforge-crawl/summary-rerender.json",
+      "detectedAt": "2026-04-11T16:55:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T16:58:00Z",
+      "editEvidence": [
+        "app/compare/[slug]/compare-data.js:222 (FAQ answer rewritten)",
+        "app/learn/[slug]/articles/mailforge-pricing.js:67 (Mailbox Heat Score monitoring claim removed)",
+        "app/learn/[slug]/articles/mailforge-pricing.js:57 (Warmforge not-sold-standalone claim corrected)"
+      ]
+    },
+    {
+      "id": "mailforge-crawl-rerender.tco-warmforge-underestimate",
+      "slug": "multiple",
+      "pageType": "learn",
+      "cluster": null,
+      "competitor": "mailforge",
+      "reason": "numeric-drift-tco-calculation",
+      "severity": "medium",
+      "detail": "Multiple Mailforge TCO calculations quote Warmforge at '$2/mailbox/mo'. Actual standalone Warmforge pricing verified 2026-04-11T16:55 via cmux-browser on warmforge.ai/pricing: '$10 Per month, billed quarterly' with 1 free slot included. If every mailbox is continuously warming, cost is $10/mailbox not $2. Affected TCO ranges ($6-8.50/mailbox in mailforge-pricing.js:14 meta description, $5.50-6.50/mailbox in infrabox-vs-mailforge.js:64) rely on the low number. Changing one input breaks the calculated range — requires manual recalculation, not surgical cell replacement. May be defensible as blended-average if only a subset of mailboxes are warmed at any time, but articles don't currently make that blending explicit.",
+      "evidence": "warmforge.ai/pricing: 'Email Warm Up $10 Per month, billed quarterly', 'Using Salesforge? Warmforge Is Included!' (bundled only with Salesforge sequencer)",
+      "evidenceSource": ".seo/runs/2026-04-11-mailforge-crawl/summary-rerender.json",
+      "affectedFiles": [
+        "app/learn/[slug]/articles/mailforge-pricing.js:14 (meta description)",
+        "app/learn/[slug]/articles/infrabox-vs-mailforge.js:64 (FAQ)",
+        "app/learn/[slug]/articles/mailforge-pricing.js (TCO sections)"
+      ],
+      "detectedAt": "2026-04-11T16:55:00Z",
+      "status": "needs-manual-review",
+      "reviewReason": "Compound arithmetic — cell-level Warmforge price fix breaks the stated $6-8.50/mailbox TCO range. Operator should re-derive ranges explicitly or add a blending footnote."
+    },
+    {
+      "id": "mailforge-crawl.pricing-article-infraforge-mislabeled",
+      "slug": "mailforge-pricing",
+      "pageType": "learn",
+      "cluster": null,
+      "reason": "factual-drift-vs-mailforge",
+      "severity": "medium",
+      "detail": "mailforge-pricing.js line 67 labels Infraforge as 'separate monitoring subscription'. Infraforge is Salesforge's dedicated-IP product, not a monitoring product. Should be 'Infraforge (separate dedicated-IP subscription)'.",
+      "evidenceSource": ".seo/runs/2026-04-11-mailforge-crawl/summary.json",
+      "detectedAt": "2026-04-11T15:42:46Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T15:45:23Z",
+      "editEvidence": [
+        "app/learn/[slug]/articles/mailforge-pricing.js:67"
+      ]
+    },
+    {
+      "id": "salesforge-crawl.warmforge-now-bundled",
+      "slug": "salesforge",
+      "pageType": "alternatives",
+      "cluster": "alternatives-fresh-wave",
+      "reason": "factual-drift-vs-salesforge",
+      "severity": "high",
+      "detail": "Salesforge bundles Warmforge Premium free with every plan (warm-up + placement testing + inbox health monitoring). Multiple claims in app/alternatives/[slug]/alternatives-data.js Salesforge slug stated that warm-up required a separate Warmforge subscription and that the Forge stack required 4 separate subscriptions. Corrected to reflect bundled Warmforge Premium.",
+      "evidenceSource": ".seo/runs/2026-04-11-salesforge-crawl/summary.json",
+      "detectedAt": "2026-04-11T16:30:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T16:30:00Z",
+      "editEvidence": [
+        "app/alternatives/[slug]/alternatives-data.js:551 (subheadline)",
+        "app/alternatives/[slug]/alternatives-data.js:552 (intro)",
+        "app/alternatives/[slug]/alternatives-data.js:554 (whyLook bullet)",
+        "app/alternatives/[slug]/alternatives-data.js:557 (whyLook bullet)",
+        "app/alternatives/[slug]/alternatives-data.js:584 (SmartLead description, 2 phrases)",
+        "app/alternatives/[slug]/alternatives-data.js:665 (FAQ answer)",
+        "app/alternatives/[slug]/alternatives-data.js:687 (FAQ duplicate)",
+        "app/alternatives/[slug]/alternatives-data.js:740 (Monitoring table row)",
+        "app/alternatives/[slug]/alternatives-data.js:749 (Warmup table row)",
+        "app/alternatives/[slug]/alternatives-data.js:759 (buyer guide)"
+      ]
+    },
+    {
+      "id": "salesforge-crawl.positioning-shift-multi-channel",
+      "slug": "salesforge",
+      "pageType": "memory",
+      "cluster": null,
+      "reason": "positioning-drift-vs-salesforge",
+      "severity": "medium",
+      "detail": "Salesforge has repositioned from \"AI-native cold outreach platform\" to \"multi-channel (Email + LinkedIn) outreach platform with unlimited mailboxes and LinkedIn senders, unified Primebox inbox, and optional Agent Frank AI SDR.\" Memory competitors.json salesforge entry updated accordingly.",
+      "evidenceSource": ".seo/runs/2026-04-11-salesforge-crawl/summary.json",
+      "detectedAt": "2026-04-11T16:30:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T16:30:00Z",
+      "editEvidence": [
+        ".seo/memory/competitors.json:450 (salesforge entry — corePositioning, knownStrengths, knownWeaknesses, knownUrls, lastScrapedAt)"
+      ]
+    },
+    {
+      "id": "salesforge-crawl.placement-and-monitoring-via-warmforge",
+      "slug": "salesforge",
+      "pageType": "alternatives",
+      "cluster": "alternatives-fresh-wave",
+      "reason": "factual-drift-vs-salesforge",
+      "severity": "high",
+      "detail": "Warmforge Premium (bundled with Salesforge) includes inbox placement testing and inbox health monitoring. Prior alternatives page claimed Salesforge had no monitoring (\"No — via Infraforge\"), which was wrong on two counts: Infraforge is a dedicated-IP product, not monitoring; and Warmforge Premium provides the actual monitoring. Fixed the comparison table row to reflect bundled monitoring.",
+      "evidenceSource": ".seo/runs/2026-04-11-salesforge-crawl/summary.json",
+      "detectedAt": "2026-04-11T16:30:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T16:30:00Z",
+      "editEvidence": [
+        "app/alternatives/[slug]/alternatives-data.js:740 (Monitoring row)"
+      ]
+    },
+    {
+      "id": "salesforge-crawl.infraforge-is-dedicated-ip",
+      "slug": "salesforge",
+      "pageType": "compare+learn",
+      "cluster": null,
+      "reason": "factual-drift-vs-salesforge",
+      "severity": "high",
+      "detail": "Multiple comparison and learn articles mislabeled Infraforge as 'monitoring' (Infraforge is actually dedicated IP infrastructure per the Salesforge stack page). The confusion also produced absolute claims like 'none of the Forge products offer monitoring' which are wrong — Warmforge Premium (bundled free with a Salesforge subscription) provides basic inbox health monitoring. Corrected the Infraforge labels and reframed the absolute monitoring claims to preserve the defensible 'InfraGuard depth advantage' framing without falsely denying Warmforge's bundled capabilities.",
+      "evidenceSource": ".seo/runs/2026-04-11-salesforge-crawl/summary.json",
+      "detectedAt": "2026-04-11T22:15:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T22:16:00Z",
+      "editEvidence": [
+        "app/compare/[slug]/compare-data.js:222 (Mailforge FAQ monitoring)",
+        "app/compare/[slug]/compare-data.js:374 (Primeforge advantage monitoring)",
+        "app/compare/[slug]/compare-data.js:418 (Primeforge FAQ monitoring)",
+        "app/learn/[slug]/articles/primeforge-review.js:28 (ecosystem intro)",
+        "app/learn/[slug]/articles/primeforge-review.js:33 (pricing table Infraforge row)",
+        "app/learn/[slug]/articles/primeforge-pricing.js:25 (Forge ecosystem table Infraforge row)",
+        "app/learn/[slug]/articles/primeforge-pricing.js:40 (feature table Monitoring row)",
+        "app/learn/[slug]/articles/primeforge-pricing.js:62 (FAQ answer on Infraforge)",
+        "app/learn/[slug]/articles/mailforge-pricing.js:45 (feature table Monitoring row)",
+        "app/learn/[slug]/articles/mailforge-pricing.js:57 (FAQ on costs, Infraforge labeled as dedicated IPs)",
+        "app/learn/[slug]/articles/infrabox-vs-primeforge.js:69 (pricing FAQ Warmforge+Infraforge framing)"
+      ]
+    },
+    {
+      "id": "salesforge-crawl.has-placement-testing-across-learn",
+      "slug": "salesforge",
+      "pageType": "compare+learn",
+      "cluster": null,
+      "reason": "factual-drift-vs-salesforge",
+      "severity": "high",
+      "detail": "Compare + learn articles made absolute claims like 'None of the Forge products offer inbox placement testing' or 'Primeforge does not offer inbox placement testing in any of the Salesforge products'. Per the 2026-04-11 Salesforge crawl, Warmforge Premium (bundled free with a Salesforge subscription) does include inbox placement testing. Fixed by reframing to 'Primeforge/Mailforge itself does not include placement testing; it is available via Warmforge Premium bundled with a Salesforge subscription'. Preserved the defensible point that a standalone Primeforge/Mailforge purchase does not include placement testing.",
+      "evidenceSource": ".seo/runs/2026-04-11-salesforge-crawl/summary.json",
+      "detectedAt": "2026-04-11T22:15:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T22:16:00Z",
+      "editEvidence": [
+        "app/compare/[slug]/compare-data.js:379 (Primeforge advantage placement testing)",
+        "app/compare/[slug]/compare-data.js:428 (Primeforge FAQ placement testing)",
+        "app/learn/[slug]/articles/primeforge-review.js:48 (honest gaps bullet)",
+        "app/learn/[slug]/articles/primeforge-pricing.js:35 (Hidden Costs bullet)",
+        "app/learn/[slug]/articles/primeforge-pricing.js:40 (feature table Inbox Placement Testing row)"
+      ]
+    },
+    {
+      "id": "salesforge-crawl.warmforge-not-standalone",
+      "slug": "salesforge",
+      "pageType": "compare+learn",
+      "cluster": null,
+      "reason": "factual-drift-vs-salesforge",
+      "severity": "medium",
+      "detail": "Multiple articles treated Warmforge as a standalone subscription (e.g. 'Primeforge requires Warmforge ($2/mailbox) and Infraforge ($1.50/mailbox) separately', 'warmup (Warmforge), and monitoring (Infraforge) are separate costs'). Per the 2026-04-11 crawl, Warmforge is NOT sold standalone — it is bundled free as Warmforge Premium with every Salesforge subscription. Corrected to reflect that Warmforge is only available via a Salesforge subscription, not as a separate purchase.",
+      "evidenceSource": ".seo/runs/2026-04-11-salesforge-crawl/summary.json",
+      "detectedAt": "2026-04-11T22:15:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T22:16:00Z",
+      "editEvidence": [
+        "app/learn/[slug]/articles/mailforge-pricing.js:57 (FAQ on costs)",
+        "app/learn/[slug]/articles/infrabox-vs-primeforge.js:69 (pricing FAQ)",
+        "app/learn/[slug]/articles/primeforge-pricing.js:62 (FAQ on Forge product bundling)"
+      ]
+    },
+    {
+      "id": "instantly-crawl.lead-database-size-160M-stale",
+      "slug": "multiple-alternative-and-compare-slugs",
+      "pageType": "alternatives+compare",
+      "cluster": null,
+      "competitor": "instantly",
+      "reason": "factual-drift-vs-instantly",
+      "severity": "medium",
+      "detail": "alternatives-data.js and compare-data.js cited Instantly's B2B lead database as '160M+' across 28 locations (24 + 3 + 1 bare '160M'). Playwright-verified crawl of instantly.ai/pricing Instantly Credits Growth tier: 'Database of 450M+ B2B Leads'. Fixed via replace_all '160M+' → '450M+' (24 hits in alternatives-data) + individual Edits for bare '160M (separate add-on)', '160M (separate $47/mo)', '(with 160M lead database)' (3 sites) + individual Edits on compare-data.js ('Lead database with 160M+ contacts', '160M+ contacts').",
+      "evidenceSource": ".seo/runs/2026-04-11-instantly-crawl/summary.json",
+      "affectedFiles": [
+        "app/alternatives/[slug]/alternatives-data.js",
+        "app/compare/[slug]/compare-data.js"
+      ],
+      "detectedAt": "2026-04-11T22:20:00+05:30",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T22:20:33+05:30",
+      "editEvidence": [
+        "app/alternatives/[slug]/alternatives-data.js (24 x 160M+ + 3 bare-160M sites)",
+        "app/compare/[slug]/compare-data.js:2664 ('Lead database with 160M+ contacts' → '450M+ contacts')",
+        "app/compare/[slug]/compare-data.js:2692 ('160M+ contacts' → '450M+ contacts')"
+      ]
+    },
+    {
+      "id": "instantly-crawl.lead-database-price-47-99-stale",
+      "slug": "multiple-alternative-and-compare-slugs",
+      "pageType": "alternatives+compare",
+      "cluster": null,
+      "competitor": "instantly",
+      "reason": "factual-drift-vs-instantly",
+      "severity": "low",
+      "detail": "alternatives-data.js and compare-data.js cited Instantly's separate Lead Database subscription as '$47.99/mo' across 18 locations. Playwright-verified crawl of instantly.ai/pricing Instantly Credits tab: 'Growth$47/monthlyGet Started1500-2000 Instantly Credits MonthlyDatabase of 450M+ B2B Leads'. The lead database is bundled with the Instantly Credits Growth tier at $47/mo, not '$47.99'. Fixed via replace_all '$47.99' → '$47' (17 hits in alternatives-data + 1 in compare-data).",
+      "evidenceSource": ".seo/runs/2026-04-11-instantly-crawl/summary.json",
+      "affectedFiles": [
+        "app/alternatives/[slug]/alternatives-data.js",
+        "app/compare/[slug]/compare-data.js"
+      ],
+      "detectedAt": "2026-04-11T22:20:00+05:30",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T22:20:33+05:30",
+      "editEvidence": [
+        "app/alternatives/[slug]/alternatives-data.js (17 x $47.99 → $47)",
+        "app/compare/[slug]/compare-data.js:2674 ('From $47.99/mo (Growth Leads)' → 'From $47/mo (Credits Growth)')"
+      ]
+    },
+    {
+      "id": "instantly-crawl.outreach-growth-30-stale",
+      "slug": "instantly",
+      "pageType": "compare",
+      "cluster": null,
+      "competitor": "instantly",
+      "reason": "factual-drift-vs-instantly",
+      "severity": "low",
+      "detail": "compare-data.js instantly entry categorizedFeatures Pricing row cited 'From $30/mo (Growth)' for Instantly's Outreach Plan. Playwright-verified: Growth tier is $47/monthly (or $37.60/mo annual) — never $30. Fixed to '$47/mo (Growth)'.",
+      "evidenceSource": ".seo/runs/2026-04-11-instantly-crawl/summary.json",
+      "affectedFiles": [
+        "app/compare/[slug]/compare-data.js"
+      ],
+      "detectedAt": "2026-04-11T22:20:00+05:30",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T22:20:40+05:30",
+      "editEvidence": [
+        "app/compare/[slug]/compare-data.js:2673 ('From $30/mo (Growth)' → 'From $47/mo (Growth)')"
+      ]
+    },
+    {
+      "id": "instantly-crawl.apollo-comparison-clause-stale",
+      "slug": "infrabox-vs-apollo-alternative-entry",
+      "pageType": "alternatives",
+      "cluster": null,
+      "competitor": "instantly",
+      "reason": "semantic-drift-requires-rewrite",
+      "severity": "medium",
+      "detail": "alternatives-data.js lines 45 and 56 contain comparison clauses stating Apollo's 275M database is 'broader than' Instantly's 160M and calling Instantly's database 'thinner for some segments'. With the verified 450M+ size for Instantly, this is now a direction-flipped comparison (450M+ > 275M), not just a number swap. Left untouched by the yolo agent per guardrail 'never rewrite paragraphs'. Needs a human rewrite to reflect that Instantly is now the larger database while preserving Apollo's defensible differentiators (technographic enrichment, international depth).",
+      "evidenceSource": ".seo/runs/2026-04-11-instantly-crawl/summary.json",
+      "affectedFiles": [
+        "app/alternatives/[slug]/alternatives-data.js"
+      ],
+      "detectedAt": "2026-04-11T22:20:00+05:30",
+      "status": "needs-manual-review",
+      "reviewReason": "Comparison direction flips after surgical fix — requires paragraph-level rewrite that is out of scope for surgical edits."
+    },
+    {
+      "id": "instantly-crawl.memory-synced",
+      "slug": null,
+      "pageType": "memory",
+      "cluster": null,
+      "competitor": "instantly",
+      "reason": "memory-already-corrected",
+      "severity": "info",
+      "detail": "competitors.json instantly entry updated with verified outreach pricing (Growth $47 / Hypergrowth $97 / Light Speed $358), Instantly Credits tiers with 450M+ Lead Database, 1M+ deliverability pool, 400+ blacklists monitoring, 50,000+ sales teams trust signal, Google-only email accounts (no M365), DNS automation, and lastScrapedAt/scrapeArtifactDir/crawlEngine fields. MCP sync pending.",
+      "evidenceSource": ".seo/runs/2026-04-11-instantly-crawl/summary.json",
+      "detectedAt": "2026-04-11T22:20:00+05:30",
+      "status": "resolved"
+    },
+    {
+      "id": "primeforge-crawl-yolo.microsoft-365-only-claims",
+      "slug": "multiple-learn-articles",
+      "pageType": "learn",
+      "cluster": null,
+      "competitor": "primeforge",
+      "reason": "factual-drift-vs-primeforge",
+      "severity": "high",
+      "detail": "Multiple articles claimed Primeforge is Microsoft 365 only / Primeforge focuses exclusively on Microsoft 365 / Primeforge has No Google Workspace. Crawl verified (cmux browser Tier 2 engine, surface:46) that primeforge.ai hero explicitly advertises 'Get real Google Workspace & Microsoft 365 mailboxes engineered for cold outreach' and the pricing calculator includes Microsoft 365 at the same per-slot rate. Surgical fixes applied to 7 files across 11 edit locations.",
+      "evidenceSource": ".seo/runs/2026-04-11-primeforge-crawl/summary.json",
+      "engine": "cmux-browser",
+      "engineNote": "Playwright MCP unavailable in session; Tier 2 cmux browser WKWebView used for verification. Screenshots: primeforge-home-cmux.png, primeforge-pricing-cmux.png.",
+      "detectedAt": "2026-04-11T15:36:38Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T16:52:00Z",
+      "editEvidence": [
+        "app/learn/[slug]/articles/infrabox-vs-primeforge.js:64 (FAQ answer: No → Yes with verbatim primeforge.ai hero quote)",
+        "app/learn/[slug]/articles/primeforge-review.js:22 (excerpt: focuses-on-M365 → offers-both-at-$3.50-$4.50)",
+        "app/learn/[slug]/articles/primeforge-review.js:28 (section opener: focused-on-M365 → offering-GWS-and-M365)",
+        "app/learn/[slug]/articles/primeforge-review.js:65 (FAQ answer: No → Yes)",
+        "app/learn/[slug]/articles/infrabox-review.js:80 (FAQ: Primeforge-focuses-Microsoft → Both-offer-GWS-and-M365)",
+        "app/learn/[slug]/articles/infrabox-pricing.js:41 (feature table Microsoft 365 cell for Primeforge: No → Yes)",
+        "app/learn/[slug]/articles/best-cold-email-infrastructure-2026.js:50 (heading: Microsoft-Focused → GWS-and-M365-in-Salesforge-ecosystem)",
+        "app/learn/[slug]/articles/best-cold-email-infrastructure-2026.js:52 (section body: 3 drift phrases replaced in one surgical edit — focuses-on-M365, No-GWS-support, exclusively-use-M365)",
+        "app/learn/[slug]/articles/best-cold-email-infrastructure-2026.js:82 (skip directive: exclusively-M365 → commit-to-full-Forge-stack)",
+        "app/learn/[slug]/articles/premium-inboxes-alternatives.js:45 (M365-focus → Real-GWS-and-M365)",
+        "app/learn/[slug]/articles/best-cold-email-infrastructure-microsoft-365.js:44 (primarily-focuses-on-M365 → offers-M365-at-same-rate-as-GWS)"
+      ]
+    },
+    {
+      "id": "primeforge-crawl-yolo.pricing-file-needs-regen",
+      "slug": "primeforge-pricing",
+      "pageType": "learn",
+      "cluster": null,
+      "competitor": "primeforge",
+      "reason": "factual-drift-vs-primeforge",
+      "severity": "medium",
+      "detail": "app/learn/[slug]/articles/primeforge-pricing.js has 6 distinct drift claims — (1) 'no published volume discounts' body line 20, (2) table row 'Annual | Pricing varies | Contact Primeforge for annual rates' line 20, (3) 'Pricing varies by mailbox type' Monthly row label line 20, (4) FAQ 'How much does Primeforge cost' answer says 'Contact Primeforge for current annual rates. No published volume discounts' line 57, (5) FAQ 'Does Primeforge offer volume discounts?' answered 'No. Flat pricing regardless of volume' line 72, (6) FAQ 'What is the minimum commitment' answered 'Contact Primeforge for current minimum commitments' line 77. Crawl-verified facts: $4.50→$3.50 volume tier exists (primeforge.ai hero: '$4.5 to $3.5 per mailbox per month'), annual billing = 2 months free (FAQ), minimum purchase = 10 mailbox slots (calculator + FAQ). 6 drift claims exceeds the >5-claim surgical threshold; flagged for full regeneration by operator.",
+      "evidenceSource": ".seo/runs/2026-04-11-primeforge-crawl/summary.json",
+      "engine": "cmux-browser",
+      "detectedAt": "2026-04-11T16:53:00Z",
+      "status": "needs-regeneration"
+    },
+    {
+      "id": "primeforge-crawl-yolo.google-warmup-time-na",
+      "slug": "infrabox-vs-zapmail-vs-primeforge",
+      "pageType": "learn",
+      "cluster": null,
+      "competitor": "primeforge",
+      "reason": "factual-drift-vs-primeforge",
+      "severity": "low",
+      "detail": "Warmup comparison table line 42 shows 'Primeforge Google Warmup Time = N/A', which is logically wrong — Primeforge supports Google Workspace so the paired Warmforge warmup must have a day count. Not surgically fixable without inventing a specific day count.",
+      "evidenceSource": ".seo/runs/2026-04-11-primeforge-crawl/summary.json",
+      "engine": "cmux-browser",
+      "detectedAt": "2026-04-11T16:54:00Z",
+      "status": "needs-manual-review",
+      "reviewReason": "requires-actual-warmforge-google-warmup-day-count"
+    },
+    {
+      "id": "smartlead-crawl-yolo.pro-90k-not-150k",
+      "slug": null,
+      "pageType": "content-drift",
+      "cluster": null,
+      "competitor": "smartlead",
+      "reason": "factual-drift-vs-smartlead",
+      "severity": "high",
+      "detail": "Multiple cross-reference descriptions across apollo/lemlist/salesforge/gmass/infraforge/inframail/hypertide/infrabox alternatives entries claimed Smartlead Pro plan includes 150,000 emails/month. Rendered pricing page (cmux-browser, monthly toggle) shows Pro at $94/month with 30,000 contacts, 90,000 Email sends, 30,000 Verified Emails.",
+      "evidenceSource": ".seo/runs/2026-04-11-smartlead-crawl/summary.json",
+      "engine": "cmux-browser",
+      "evidenceQuote": "Pricing page rendered text: 'Pro $94 /month ... 30,000 contacts 90,000 Email sends 30,000 Verified Emails'",
+      "affectedFiles": [
+        "app/alternatives/[slug]/alternatives-data.js"
+      ],
+      "detectedAt": "2026-04-11T16:55:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T16:58:00Z",
+      "editEvidence": [
+        "app/alternatives/[slug]/alternatives-data.js:65 (apollo/SmartLead description)",
+        "app/alternatives/[slug]/alternatives-data.js:67 (apollo/SmartLead pricing row — replace_all caught 3 identical rows)",
+        "app/alternatives/[slug]/alternatives-data.js:70 (apollo pros bullet '150K → 90K')",
+        "app/alternatives/[slug]/alternatives-data.js:305 (lemlist/SmartLead description)",
+        "app/alternatives/[slug]/alternatives-data.js:311 (lemlist pros bullet '150K → 90K')",
+        "app/alternatives/[slug]/alternatives-data.js:584 (salesforge/SmartLead description)",
+        "app/alternatives/[slug]/alternatives-data.js:589 (salesforge pros bullet '150K → 90K, 3× → nearly 2×')",
+        "app/alternatives/[slug]/alternatives-data.js:842 (gmass/SmartLead description)",
+        "app/alternatives/[slug]/alternatives-data.js:1311 (infraforge/SmartLead cross-ref description)",
+        "app/alternatives/[slug]/alternatives-data.js:1626 (inframail-1/SmartLead cross-ref description)",
+        "app/alternatives/[slug]/alternatives-data.js:1918 (inframail-2/SmartLead cross-ref description)",
+        "app/alternatives/[slug]/alternatives-data.js:2210 (hypertide/SmartLead cross-ref description)",
+        "app/alternatives/[slug]/alternatives-data.js:2660 (smartlead slug Hypertide alt: 'SmartLead Pro's 150,000 → 90,000 email capacity')",
+        "app/alternatives/[slug]/alternatives-data.js:2785 (infraboxEntry/SmartLead alt description)"
+      ]
+    },
+    {
+      "id": "smartlead-crawl-yolo.ceiling-379-not-174",
+      "slug": null,
+      "pageType": "content-drift",
+      "cluster": null,
+      "competitor": "smartlead",
+      "reason": "factual-drift-vs-smartlead",
+      "severity": "high",
+      "detail": "Multiple cross-reference descriptions claimed Smartlead ceiling is $174/month (Custom tier). Rendered pricing page shows 4 tiers: Base $39, Pro $94, Unlimited Smart $174, Unlimited Prime $379. The $174 tier is called 'Unlimited Smart' (not 'Custom'), and the true ceiling is $379/month Unlimited Prime. Platform fee range updated from $39-$174/mo to $39-$379/mo everywhere.",
+      "evidenceSource": ".seo/runs/2026-04-11-smartlead-crawl/summary.json",
+      "engine": "cmux-browser",
+      "evidenceQuote": "Pricing page rendered text: 'Base $39 /month ... Pro $94 /month ... Unlimited Smart $174 /month ... Unlimited Prime $379 /month ... 3 SmartServers + OAuth 3+ included'",
+      "affectedFiles": [
+        "app/alternatives/[slug]/alternatives-data.js"
+      ],
+      "detectedAt": "2026-04-11T16:55:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T16:58:00Z",
+      "editEvidence": [
+        "app/alternatives/[slug]/alternatives-data.js:190 (Apollo comparison table — replace_all caught 2 identical SmartLead pricing rows at lines 190/449)",
+        "app/alternatives/[slug]/alternatives-data.js:1323 (infraforge cons: '$39-$174/mo → $39-$379/mo')",
+        "app/alternatives/[slug]/alternatives-data.js:1638/1929/2221 (inframail/hypertide cons: platform fee range, replace_all caught 3)",
+        "app/alternatives/[slug]/alternatives-data.js:2785 (infrabox-alternatives description: '$39-$174/month → $39-$379/month')",
+        "app/alternatives/[slug]/alternatives-data.js:2787 (infrabox-alternatives pricing row)"
+      ]
+    },
+    {
+      "id": "smartlead-crawl-yolo.smartsenders-publicly-listed",
+      "slug": null,
+      "pageType": "content-drift",
+      "cluster": null,
+      "competitor": "smartlead",
+      "reason": "factual-drift-vs-smartlead",
+      "severity": "high",
+      "detail": "Multiple claims that 'SmartSenders pricing is not publicly listed' or 'SmartSenders DFY pricing not transparent, may exceed Infrabox cost'. Rendered helpcenter article 266 (cmux-browser) publishes all 5 SmartSenders partner rates: Pager.ai $13/yr + $4.50/mo, Infrabox $13/yr + $4.50/mo, Zapmail Standard $13/yr + $4.5/mo, Mailreef SMTP $19/yr + $3.99/mo (75-mailbox min), Zapmail Pre-Warmed $18/yr + $9/mo. Crucially, Infrabox is itself one of the five named SmartSenders partners — this is a partnership, not a pure competition.",
+      "evidenceSource": ".seo/runs/2026-04-11-smartlead-crawl/summary.json",
+      "engine": "cmux-browser",
+      "evidenceQuote": "helpcenter.smartlead.ai/en/articles/266 rendered article: '1. Pager.ai ... Domain Pricing: $13 per year / Mailbox Pricing: $4.50 per month / 2. Infrabox ... Domain Pricing: $13 per year / Mailbox Pricing: $4.50 per month / 3. Zapmail Standard (with Admin Access) ... Domain Pricing: $13 per year / Mailbox Pricing: $4.5 per month / 4. SMTP (Mailreef) ... total minimum of 75 mailboxes ... Domain Pricing: $19 per year / Mailbox Pricing: $3.99 per month / 5. Zapmail Pre-Warmed Mailboxes ... Domain Pricing: $18 per year / Mailbox Pricing: $9 per month'",
+      "affectedFiles": [
+        "app/alternatives/[slug]/alternatives-data.js"
+      ],
+      "detectedAt": "2026-04-11T16:55:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T16:58:00Z",
+      "editEvidence": [
+        "app/alternatives/[slug]/alternatives-data.js:2569 (smartlead slug whyLook[0])",
+        "app/alternatives/[slug]/alternatives-data.js:2686 (smartlead slug FAQ answer on pricing comparison)",
+        "app/alternatives/[slug]/alternatives-data.js:1311/1626 (infraforge/inframail cross-ref 'though pricing is not publicly transparent' — replace_all caught both)",
+        "app/alternatives/[slug]/alternatives-data.js:2785 (infrabox-alt description 'at undisclosed pricing')",
+        "app/alternatives/[slug]/alternatives-data.js:2222 (hypertide cons 'SmartSenders DFY pricing not transparent')",
+        "app/alternatives/[slug]/alternatives-data.js:2797 (infrabox-alt cons 'SmartSenders DFY pricing not transparent, may exceed Infrabox cost')"
+      ]
+    },
+    {
+      "id": "smartlead-crawl-yolo.compare-needs-regeneration",
+      "slug": "smartlead",
+      "pageType": "compare",
+      "cluster": null,
+      "competitor": "smartlead",
+      "reason": "factual-drift-vs-smartlead",
+      "severity": "high",
+      "detail": "app/compare/[slug]/compare-data.js smartlead entry (lines 2083-2293) contains 15+ drift locations tied to four root errors: (1) pricing ceiling stated as $174 instead of $379; (2) Pro plan listed as 150K emails instead of 90K; (3) SmartSenders pricing stated as 'not publicly listed'; (4) FABRICATED 12M active leads / 60M emails figures attributed to the 'Custom' tier (no such numbers exist on Smartlead's pricing page). Drift is too structural for surgical edits — the competitorStrengths[3] 'Enterprise-Scale Capacity' bullet and FAQ 'Is SmartLead's Custom plan worth $174/month?' are built on fabricated numbers that cannot be swap-replaced without rewriting the paragraphs. Per playbook (more than 5 drift claims → needs-regeneration). File left untouched.",
+      "evidenceSource": ".seo/runs/2026-04-11-smartlead-crawl/summary.json",
+      "engine": "cmux-browser",
+      "affectedFiles": [
+        "app/compare/[slug]/compare-data.js"
+      ],
+      "affectedLines": [
+        2096,
+        2098,
+        2118,
+        2132,
+        2135,
+        2139,
+        2142,
+        2149,
+        2164,
+        2169,
+        2236,
+        2251,
+        2265,
+        2278,
+        2280
+      ],
+      "detectedAt": "2026-04-11T16:55:00Z",
+      "status": "needs-regeneration",
+      "regenerationGuidance": "Rewrite the smartlead slug in compare-data.js using the verified facts in .seo/runs/2026-04-11-smartlead-crawl/summary.json: 4 tiers (Base $39, Pro $94 / 90K emails, Unlimited Smart $174 / 150K emails, Unlimited Prime $379 / 500K emails), SmartSenders is a partner-reseller tier (Infrabox is itself a named SmartSenders partner at $13/yr + $4.50/mo via helpcenter article 266), and drop the fabricated 12M/60M 'Enterprise-Scale Capacity' strength bullet."
+    },
+    {
+      "id": "smartlead-crawl-yolo.integrations-16-not-24",
+      "slug": null,
+      "pageType": "memory",
+      "cluster": null,
+      "competitor": "smartlead",
+      "reason": "integration-count-overstated",
+      "severity": "low",
+      "detail": "Previous WebFetch-based summary stated Smartlead has ~23-24 named native integrations. Rendered /integrations page (cmux-browser) shows exactly 16 native platforms (Clay, HubSpot, Listkit, Sendspark, LeadMagic, Slack, Gmail, Outlook, Zapmail, Hyperinboxes, Mailreef, Inbox Automate, InfraInbox, Expandi, OutboundSync, Smartreach) plus a Zapier bridge to 1,000+ apps. No content files cite the 23-24 number (only competitors.json did), so no surgical fixes needed — just memory update.",
+      "evidenceSource": ".seo/runs/2026-04-11-smartlead-crawl/summary.json",
+      "engine": "cmux-browser",
+      "detectedAt": "2026-04-11T16:55:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-11T17:00:00Z",
+      "editEvidence": [
+        ".seo/memory/competitors.json smartlead.knownStrengths updated with '16 native + Zapier bridge'"
+      ]
+    },
+    {
+      "id": "smartlead-crawl-yolo.competitors-json-sync-done",
+      "slug": null,
+      "pageType": "memory",
+      "cluster": null,
+      "competitor": "smartlead",
+      "reason": "memory-refreshed",
+      "severity": "info",
+      "detail": "competitors.json smartlead entry upgraded from stub ('corePositioning: Sequencer with multi-inbox management', 2 knownStrengths) to a verified record covering 4-tier pricing, SmartSenders partner network, 16 native integrations, 100K+ trust signal, and providerSupport breakdown. MCP push skipped: mcp__sendkit-seo__save_competitor_data tools surfaced but later disconnected mid-run, and per playbook Tier 2 runs don't require MCP push. Operator should re-run `/seo-sync smartlead` after MCP is reconnected.",
+      "evidenceSource": ".seo/runs/2026-04-11-smartlead-crawl/summary.json",
+      "engine": "cmux-browser",
+      "detectedAt": "2026-04-11T17:00:00Z",
+      "status": "resolved"
+    },
+    {
+      "id": "competitor-change.mailreef.attack-pages",
+      "cluster": "competitor-watch",
+      "reason": "competitor-change-detected",
+      "severity": "high",
+      "competitor": "mailreef",
+      "field": "feature",
+      "oldValue": "(no prior snapshot — tier-3 competitor, never crawled until 2026-04-11)",
+      "newValue": "Mailreef ships direct /compare attack pages against Mailforge, InfraForge, Maildoso, Inframail, Mailscale, Superwave, Mission Inbox — 7 major providers including 2 we also target",
+      "evidenceSource": ".seo/runs/2026-04-11-competitor-watch/snapshots/mailreef.json",
+      "detectedAt": "2026-04-12T00:00:30Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T10:30:00Z",
+      "editEvidence": "Mailreef fully crawled 2026-04-12 via cmux-browser. competitors.json updated with all 11 comparison pages. Attack page intelligence incorporated into competitor record.",
+      "impact": "Mailreef is actively SEO-weaponizing the same alternatives-page space we are building. We should consider adding Mailreef to our tracked competitor comparison set and potentially write /compare/mailreef-vs-* pages for Mailforge and Infraforge to defend the intersection.",
+      "detail": "[competitor-watch 2026-04-11] mailreef feature: Mailreef ships direct /compare attack pages against Mailforge, InfraForge, Maildoso, Inframail, Mailscale, Superwave, Mission Inbox — 7 major providers including 2 we also target"
+    },
+    {
+      "id": "competitor-change.hypertide.entra-support",
+      "cluster": "competitor-watch",
+      "reason": "competitor-change-detected",
+      "severity": "high",
+      "competitor": "hypertide",
+      "field": "feature",
+      "oldValue": "(no prior snapshot)",
+      "newValue": "Hypertide advertises Google + Microsoft + Entra (Azure AD) triple-provider support directly in H1. Entra is unique — no other tracked competitor mentions Entra/Azure AD explicitly.",
+      "evidenceSource": ".seo/runs/2026-04-11-competitor-watch/snapshots/hypertide.json",
+      "detectedAt": "2026-04-12T00:00:30Z",
+      "status": "refresh-suggests-upgrade",
+      "impact": "Our alternatives/learn pages currently frame M365 support as Google-vs-Microsoft binary. Hypertide has introduced an 'Entra/Azure AD' category. We should audit whether Infrabox supports Entra provisioning and, if yes, add it to positioning; if no, at least acknowledge the category in /learn/cold-email-infrastructure-microsoft-365.",
+      "detail": "[competitor-watch 2026-04-11] hypertide feature: Hypertide advertises Google + Microsoft + Entra (Azure AD) triple-provider support directly in H1. Entra is unique — no other tracked competitor mentions Entra/Azure AD explicitly."
+    },
+    {
+      "id": "competitor-change.cheapinboxes.floor-price",
+      "cluster": "competitor-watch",
+      "reason": "competitor-change-detected",
+      "severity": "high",
+      "competitor": "cheapinboxes",
+      "field": "pricing",
+      "oldValue": "(no prior snapshot — category = budget-mailbox-provider, no price tracked)",
+      "newValue": "Cheapinboxes floor is $2.80/mailbox/month at 1000+ mailboxes (published on home via calculator). Ceiling $3.50 at 1-99 tier.",
+      "evidenceSource": ".seo/runs/2026-04-11-competitor-watch/snapshots/cheapinboxes.json",
+      "detectedAt": "2026-04-12T00:00:30Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T10:20:00Z",
+      "editEvidence": "app/compare/[slug]/compare-data.js:1099 app/alternatives/[slug]/alternatives-data.js:2871 app/learn/[slug]/articles/cheapinboxes-alternatives.js:26",
+      "impact": "Our 'cheapest cold email infrastructure 2026' article and any price-comparison tables must include Cheapinboxes at $2.80 floor — it is cheaper than Mailforge's quoted floor, which changes the 'cheapest' ranking.",
+      "detail": "[competitor-watch 2026-04-11] cheapinboxes pricing: Cheapinboxes floor is $2.80/mailbox/month at 1000+ mailboxes (published on home via calculator). Ceiling $3.50 at 1-99 tier."
+    },
+    {
+      "id": "competitor-change.inframail.pricing-model",
+      "cluster": "competitor-watch",
+      "reason": "competitor-change-detected",
+      "severity": "medium",
+      "competitor": "inframail",
+      "field": "pricing",
+      "oldValue": "(no prior snapshot)",
+      "newValue": "Inframail uses FLAT-rate pricing ($129 / $327 / $499 per month) instead of per-mailbox — genuinely unusual vs all other tracked competitors.",
+      "evidenceSource": ".seo/runs/2026-04-12-inframail-crawl/summary.json",
+      "detectedAt": "2026-04-12T00:00:30Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T12:17:00Z",
+      "editEvidence": [
+        "app/learn/[slug]/articles/inframail-review.js:32 (pricing table: ~$3/mailbox → $129/$327/$499 flat-rate tiers)",
+        "app/learn/[slug]/articles/inframail-review.js:52 (verdict table: ~$3/mailbox flat → $129/mo flat unlimited)",
+        "app/learn/[slug]/articles/inframail-alternatives.js:19 (excerpt: $5-10/mailbox → $129/month flat)",
+        "app/learn/[slug]/articles/inframail-alternatives.js:25 (comparison table: ~$5-10/mo → $129/mo flat unlimited)",
+        "app/learn/[slug]/articles/best-cold-email-infrastructure-microsoft-365.js:34 (table: Not publicly disclosed → $129/mo flat)",
+        "app/learn/[slug]/articles/best-cold-email-infrastructure-microsoft-365.js:59 (section rewrite: added actual pricing data)"
+      ],
+      "impact": "Any 'Inframail pricing' or alternatives article that describes them with a per-mailbox price is wrong. Need to flag /learn/*inframail* and any alternatives tables for factcheck. Flat-rate is a meaningful structural difference worth a dedicated callout.",
+      "detail": "[competitor-watch 2026-04-11] inframail pricing: Inframail uses FLAT-rate pricing ($129 / $327 / $499 per month) instead of per-mailbox — genuinely unusual vs all other tracked competitors."
+    },
+    {
+      "id": "competitor-change.infraforge.positioning",
+      "cluster": "competitor-watch",
+      "reason": "competitor-change-detected",
+      "severity": "medium",
+      "competitor": "infraforge",
+      "field": "hero",
+      "oldValue": "(no prior snapshot — only category=dedicated-ip-infrastructure tracked)",
+      "newValue": "H1: 'Advanced Private Email Infrastructure That Makes Scaling Easy'. Slots-based billing (pay for slots not active mailboxes). $99/IP dedicated-IP add-on. 20% revshare whitelabel program. Part of Forge Stack with full cross-linking to Salesforge/Primeforge/Mailforge/Warmforge/Leadsforge.",
+      "evidenceSource": ".seo/runs/2026-04-11-competitor-watch/snapshots/infraforge.json",
+      "detectedAt": "2026-04-12T00:00:30Z",
+      "status": "refresh-suggests-upgrade",
+      "impact": "Infraforge is the dedicated-IP tier of the Forge ecosystem. Our Forge-comparison articles (/learn/infrabox-vs-primeforge, /compare/*forge*) should explicitly position Infraforge against Primeforge (dedicated IP vs Google/MS365) to avoid confusing readers who think Forge is one product.",
+      "detail": "[competitor-watch 2026-04-11] infraforge hero: H1: 'Advanced Private Email Infrastructure That Makes Scaling Easy'. Slots-based billing (pay for slots not active mailboxes). $99/IP dedicated-IP add-on. 20% revshare whitelabel program. Part of Forg"
+    },
+    {
+      "id": "competitor-change.hypertide.pricing-model",
+      "cluster": "competitor-watch",
+      "reason": "competitor-change-detected",
+      "severity": "low",
+      "competitor": "hypertide",
+      "field": "pricing",
+      "oldValue": "(no prior snapshot)",
+      "newValue": "Hypertide flat $50/month per order — neither per-mailbox nor per-seat, per 'order' (likely per-campaign or per-project).",
+      "evidenceSource": ".seo/runs/2026-04-11-competitor-watch/snapshots/hypertide.json",
+      "detectedAt": "2026-04-12T00:00:30Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T12:00:00Z",
+      "editEvidence": "All articles already correctly use per-order pricing. Verified in 2026-04-12 audit.",
+      "impact": "If we ever add Hypertide to comparison tables, the pricing unit must be clarified as 'per order' not 'per mailbox'.",
+      "detail": "[competitor-watch 2026-04-11] hypertide pricing: Hypertide flat $50/month per order — neither per-mailbox nor per-seat, per 'order' (likely per-campaign or per-project)."
+    },
+    {
+      "id": "audit.hypertide.done-for-you-mischaracterization",
+      "cluster": "hypertide-audit-2026-04-12",
+      "reason": "factual-drift-corrected",
+      "severity": "high",
+      "competitor": "hypertide",
+      "field": "positioning",
+      "oldValue": "Articles described Hypertide as 'done-for-you email infrastructure service, managing mailbox provisioning and setup on behalf of cold email teams' with whyLook bullets claiming manual setup, limited transparency, and higher costs.",
+      "newValue": "Hypertide is an automated platform (H1: 'Automated Cold Email Infrastructure'). FAQ explicitly says 'fully automated, unlike competitors that rely on virtual assistants'. Setup is automated in 4-6 hours. Pricing is clearly published ($50/mo).",
+      "evidenceSource": ".seo/runs/2026-04-12-hypertide-crawl/summary.json",
+      "detectedAt": "2026-04-12T12:00:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T12:00:06Z",
+      "editEvidence": "app/alternatives/[slug]/alternatives-data.js:2165-2170 (intro + 4 whyLook bullets replaced)",
+      "impact": "Fixed mischaracterization of Hypertide as manual/done-for-you service. Updated intro and all 4 whyLook bullets with factual criticism backed by crawl evidence.",
+      "detail": "[audit 2026-04-12] 5 edits in alternatives-data.js: intro changed from 'done-for-you' to 'automated', whyLook bullets replaced with factual limitations (inbox cap, integration limit, no monitoring, setup time)."
+    },
+    {
+      "id": "audit.hypertide.source-url-and-table",
+      "cluster": "hypertide-audit-2026-04-12",
+      "reason": "factual-drift-corrected",
+      "severity": "medium",
+      "competitor": "hypertide",
+      "field": "learn-article",
+      "oldValue": "Source URL was hypertide.co (wrong domain). Comparison table claimed ~$3-5/mo pricing (wrong) and 20 min setup (wrong).",
+      "newValue": "Correct domain is hypertide.io. Pricing is $1/inbox ($50/order). Setup is 4-6 hours. Warmup is included (not just 'Basic').",
+      "evidenceSource": ".seo/runs/2026-04-12-hypertide-crawl/summary.json",
+      "detectedAt": "2026-04-12T12:00:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T12:00:01Z",
+      "editEvidence": "app/learn/[slug]/articles/hypertide-alternatives.js:25,81",
+      "impact": "Fixed wrong domain URL and incorrect pricing/setup claims in learn article comparison table.",
+      "detail": "[audit 2026-04-12] 2 edits in hypertide-alternatives.js: source URL hypertide.co -> hypertide.io, table row pricing/setup/warmup corrected."
+    },
+    {
+      "id": "audit.hypertide.inbox-count-discrepancy",
+      "cluster": "hypertide-audit-2026-04-12",
+      "reason": "site-self-contradiction",
+      "severity": "low",
+      "competitor": "hypertide",
+      "field": "pricing",
+      "oldValue": "Our articles say 50 inboxes per order ($1/inbox effective)",
+      "newValue": "Hypertide pricing section says 50 inboxes but FAQ says 100 Azure inboxes (50 per domain). Site contradicts itself.",
+      "evidenceSource": ".seo/runs/2026-04-12-hypertide-crawl/summary.json",
+      "detectedAt": "2026-04-12T12:00:00Z",
+      "status": "needs-manual-review",
+      "reviewReason": "Hypertide's own site contradicts itself (pricing section: 50 inboxes, FAQ: 100 Azure inboxes). Our articles use 50 which matches the pricing section. Recommend verifying by signing up or contacting Hypertide directly.",
+      "impact": "If actual count is 100 inboxes, effective rate is $0.50/inbox (not $1/inbox) and per-inbox email volume is 50/month (not 100/month). Multiple compare/alternatives entries would need updating.",
+      "detail": "[audit 2026-04-12] Pricing section: '50 inboxes auto-linked to SmartLead, Instantly, or Bison'. FAQ: 'Each Hypertide order comes with 100 Azure inboxes (50 per domain)'. Keeping 50 in our articles as it matches the official pricing section."
+    },
+    {
+      "id": "competitor-change.mailreef.outlook-only",
+      "cluster": "competitor-watch",
+      "reason": "competitor-change-detected",
+      "severity": "low",
+      "competitor": "mailreef",
+      "field": "feature",
+      "oldValue": "(no prior snapshot)",
+      "newValue": "Mailreef is Microsoft-Outlook-first on homepage — no Google Workspace mention. Supports Mailgun/Sendgrid relays. Segments into 'For Teams of 1' vs 'For Agencies'.",
+      "evidenceSource": ".seo/runs/2026-04-11-competitor-watch/snapshots/mailreef.json",
+      "detectedAt": "2026-04-12T00:00:30Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T10:30:00Z",
+      "editEvidence": "competitors.json updated with Outlook-only provider support. compare-data.js and alternatives-data.js updated to reflect dedicated SMTP server model, not Google/Microsoft accounts.",
+      "impact": "For M365-focused articles, Mailreef is a natural comparison. For Google Workspace articles, Mailreef should be excluded or marked N/A.",
+      "detail": "[competitor-watch 2026-04-11] mailreef feature: Mailreef is Microsoft-Outlook-first on homepage — no Google Workspace mention. Supports Mailgun/Sendgrid relays. Segments into 'For Teams of 1' vs 'For Agencies'."
+    },
+    {
+      "id": "serp-baseline.infrabox-vs-zapmail",
+      "cluster": null,
+      "reason": "serp-url-mismatch",
+      "severity": "medium",
+      "keyword": "infrabox vs zapmail",
+      "ourPositionNew": 5,
+      "ourUrlDetected": "https://www.infrabox.io/",
+      "ourUrlExpected": "https://www.infrabox.io/learn/infrabox-vs-zapmail",
+      "detail": "Google ranks infrabox.io homepage at position 5 for the brand-vs keyword, while the dedicated /learn/infrabox-vs-zapmail page is absent from the top 10. Possible indexation lag or internal-link signal weakness on the dedicated page.",
+      "detectedAt": "2026-04-11T18:30:00.000Z",
+      "status": "needs-investigation",
+      "source": "seo-serp-monitor baseline run #1"
+    },
+    {
+      "id": "serp-baseline.infrabox-vs-instantly",
+      "cluster": null,
+      "reason": "serp-url-mismatch",
+      "severity": "medium",
+      "keyword": "infrabox vs instantly",
+      "ourPositionNew": 7,
+      "ourUrlDetected": "https://www.infrabox.io/",
+      "ourUrlExpected": "https://www.infrabox.io/learn/infrabox-vs-instantly",
+      "detail": "Homepage ranks #7 for infrabox vs instantly. Dedicated /learn/infrabox-vs-instantly page missing from top 10 and also missing from local generated.json — likely not yet built.",
+      "detectedAt": "2026-04-11T18:30:00.000Z",
+      "status": "needs-investigation",
+      "source": "seo-serp-monitor baseline run #1"
+    },
+    {
+      "id": "serp-baseline.infrabox-vs-smartlead",
+      "cluster": null,
+      "reason": "serp-url-mismatch",
+      "severity": "medium",
+      "keyword": "infrabox vs smartlead",
+      "ourPositionNew": 10,
+      "ourUrlDetected": "https://www.infrabox.io/cold-email-warmup",
+      "ourUrlExpected": "https://www.infrabox.io/learn/infrabox-vs-smartlead",
+      "detail": "Cold-email-warmup marketing page ranks #10. Dedicated /learn/infrabox-vs-smartlead page needed or existing one not indexed.",
+      "detectedAt": "2026-04-11T18:30:00.000Z",
+      "status": "needs-investigation",
+      "source": "seo-serp-monitor baseline run #1"
+    },
+    {
+      "id": "serp-baseline.what-is-infrabox",
+      "cluster": null,
+      "reason": "serp-url-mismatch",
+      "severity": "low",
+      "keyword": "what is infrabox",
+      "ourPositionNew": 1,
+      "ourUrlDetected": "https://www.infrabox.io/",
+      "ourUrlExpected": "https://www.infrabox.io/learn/what-is-infrabox",
+      "detail": "Homepage owns #1 for what is infrabox, which is fine for informational navigation but the /learn/what-is-infrabox page is absent from top 10 — evaluate whether to consolidate or internal-link more aggressively.",
+      "detectedAt": "2026-04-11T18:30:00.000Z",
+      "status": "needs-investigation",
+      "source": "seo-serp-monitor baseline run #1"
+    },
+    {
+      "id": "serp-baseline.infrabox-pricing-breakdown",
+      "cluster": null,
+      "reason": "serp-url-mismatch",
+      "severity": "low",
+      "keyword": "infrabox pricing breakdown",
+      "ourPositionNew": 1,
+      "ourUrlDetected": "https://www.infrabox.io/",
+      "ourUrlExpected": "https://www.infrabox.io/learn/infrabox-pricing",
+      "detail": "Homepage owns #1. /learn/infrabox-pricing missing from top 10 despite being a published article.",
+      "detectedAt": "2026-04-11T18:30:00.000Z",
+      "status": "needs-investigation",
+      "source": "seo-serp-monitor baseline run #1"
+    },
+    {
+      "id": "serp-baseline.alternatives-pages-missing",
+      "cluster": "competitor-vs-competitor",
+      "reason": "serp-not-ranking",
+      "severity": "high",
+      "keyword": "zapmail alternatives + primeforge alternatives + mailforge alternatives + maildoso alternatives + infraforge alternatives + instantly alternatives for infrastructure + smartlead alternatives for infrastructure",
+      "ourPositionNew": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/alternatives/<tool>",
+      "detail": "7 /alternatives/<tool> pages (zapmail, primeforge, mailforge, maildoso, infraforge, instantly, smartlead) exist on disk but none rank in top 10 for their head keyword. Top results are dominated by competitor owned-media (zapmail.ai, primeforge.ai, mailforge.ai, salesforge.ai). Likely a backlink / topical-authority gap, not a content gap.",
+      "detectedAt": "2026-04-11T18:30:00.000Z",
+      "status": "needs-investigation",
+      "source": "seo-serp-monitor baseline run #1"
+    },
+    {
+      "id": "serp-baseline.review-pages-missing",
+      "cluster": null,
+      "reason": "serp-not-ranking",
+      "severity": "high",
+      "keyword": "zapmail review + primeforge review + mailforge review",
+      "ourPositionNew": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/<tool>-review",
+      "detail": "3 /learn/<tool>-review pages exist on disk but are absent from top 10. Top 10 is filled with G2, Trustpilot, Reddit, and direct-competitor owned-media. Signals that these reviews need E-E-A-T boost (real testing screenshots, author bio, updated dates) and external trust signals.",
+      "detectedAt": "2026-04-11T18:30:00.000Z",
+      "status": "needs-investigation",
+      "source": "seo-serp-monitor baseline run #1"
+    },
+    {
+      "id": "serp-baseline.prewarmed-cluster-missing",
+      "cluster": "infrabox-prewarm-angle",
+      "reason": "serp-not-ranking",
+      "severity": "medium",
+      "keyword": "pre-warmed mailboxes + pre-warmed google workspace + pre-warmed microsoft 365",
+      "ourPositionNew": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/infrabox-prewarmed-mailboxes + /pre-warmed-google-workspace-accounts + /pre-warmed-microsoft-365-mailboxes",
+      "detail": "8 prewarm-angle articles are live but none rank in top 10 for the head keywords. Matches the phase-1 finding that this cluster lacks FAQs. Combined FAQ repair + E-E-A-T polish needed.",
+      "detectedAt": "2026-04-11T18:30:00.000Z",
+      "status": "needs-investigation",
+      "source": "seo-serp-monitor baseline run #1"
+    },
+    {
+      "id": "serp-baseline.best-of-listicles-missing",
+      "cluster": "best-of-use-case-listicles",
+      "reason": "serp-not-ranking",
+      "severity": "medium",
+      "keyword": "best cold email infrastructure for startups + cheapest cold email infrastructure + under 50 mailboxes + high volume",
+      "ourPositionNew": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/best-cold-email-infrastructure-*",
+      "detail": "Best-of listicles are fresh (written 2026-04-11) and not yet indexed / ranked. Expected baseline; recheck on run #3.",
+      "detectedAt": "2026-04-11T18:30:00.000Z",
+      "status": "monitoring",
+      "source": "seo-serp-monitor baseline run #1"
+    },
+    {
+      "id": "serp-baseline.troubleshoot-not-ranking",
+      "cluster": "troubleshoot-deliverability",
+      "reason": "serp-not-ranking",
+      "severity": "low",
+      "keyword": "cold emails going to spam gmail + dmarc failed gmail + why is my domain blacklisted",
+      "ourPositionNew": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/<troubleshooting-slug>",
+      "detail": "Troubleshoot cluster content competes with Google Workspace help docs, MxToolbox, DNS Checker, PowerDMARC — very high-authority incumbents. Low priority; expect slower climb.",
+      "detectedAt": "2026-04-11T18:30:00.000Z",
+      "status": "monitoring",
+      "source": "seo-serp-monitor baseline run #1"
+    },
+    {
+      "id": "cannibalization.9d04eafc15",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "high",
+      "kind": "alt+learn-alternatives",
+      "normalizedQuery": "inframail alternatives",
+      "slugs": [
+        {
+          "slug": "inframail-alternatives",
+          "pageType": "learn",
+          "title": "7 Best Inframail Alternatives (2026)"
+        },
+        {
+          "slug": "inframail",
+          "pageType": "alternatives",
+          "title": "7 Best Inframail Alternatives in 2026"
+        }
+      ],
+      "overlapScore": 0.2,
+      "bodyShingleJaccard": 0,
+      "serpQuery": "inframail alternatives",
+      "serpWinner": "none",
+      "serpNote": "Neither /alternatives/inframail nor /learn/inframail-alternatives rank.",
+      "recommendation": "canonicalize-to-/alternatives/inframail (/alternatives hub is richer; redirect /learn/inframail-alternatives OR narrow learn article to a specific sub-angle and add rel=canonical to alternatives)",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.da191f575c",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "high",
+      "kind": "alt+learn-alternatives",
+      "normalizedQuery": "hypertide alternatives",
+      "slugs": [
+        {
+          "slug": "hypertide-alternatives",
+          "pageType": "learn",
+          "title": "7 Best Hypertide Alternatives (2026)"
+        },
+        {
+          "slug": "hypertide",
+          "pageType": "alternatives",
+          "title": "7 Best Hypertide Alternatives in 2026"
+        }
+      ],
+      "overlapScore": 0.167,
+      "bodyShingleJaccard": 0,
+      "serpQuery": null,
+      "serpWinner": "none",
+      "serpNote": "not probed",
+      "recommendation": "canonicalize-to-/alternatives/hypertide (/alternatives hub is richer; redirect /learn/hypertide-alternatives OR narrow learn article to a specific sub-angle and add rel=canonical to alternatives)",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.829caa2e5b",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "high",
+      "kind": "alt+learn-alternatives",
+      "normalizedQuery": "maildoso alternatives",
+      "slugs": [
+        {
+          "slug": "maildoso-alternatives",
+          "pageType": "learn",
+          "title": "7 Best Maildoso Alternatives (2026): Cheaper, Better Deliverability"
+        },
+        {
+          "slug": "maildoso",
+          "pageType": "alternatives",
+          "title": "7 Best Maildoso Alternatives in 2026"
+        }
+      ],
+      "overlapScore": 0.158,
+      "bodyShingleJaccard": 0,
+      "serpQuery": "maildoso alternatives",
+      "serpWinner": "none",
+      "serpNote": "Neither /alternatives/maildoso nor /learn/maildoso-alternatives rank.",
+      "recommendation": "canonicalize-to-/alternatives/maildoso (/alternatives hub is richer; redirect /learn/maildoso-alternatives OR narrow learn article to a specific sub-angle and add rel=canonical to alternatives)",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.017d8a7478",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "high",
+      "kind": "alt+learn-alternatives",
+      "normalizedQuery": "cheapinboxes alternatives",
+      "slugs": [
+        {
+          "slug": "cheapinboxes-alternatives",
+          "pageType": "learn",
+          "title": "7 Best CheapInboxes Alternatives (2026)"
+        },
+        {
+          "slug": "cheapinboxes",
+          "pageType": "alternatives",
+          "title": "7 Best CheapInboxes Alternatives in 2026"
+        }
+      ],
+      "overlapScore": 0.146,
+      "bodyShingleJaccard": 0,
+      "serpQuery": "cheapinboxes alternatives",
+      "serpWinner": "none",
+      "serpNote": "Neither /alternatives/cheapinboxes nor /learn/cheapinboxes-alternatives rank.",
+      "recommendation": "canonicalize-to-/alternatives/cheapinboxes (/alternatives hub is richer; redirect /learn/cheapinboxes-alternatives OR narrow learn article to a specific sub-angle and add rel=canonical to alternatives)",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.8d6a28a93d",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "high",
+      "kind": "alt+learn-alternatives",
+      "normalizedQuery": "mailreef alternatives",
+      "slugs": [
+        {
+          "slug": "mailreef-alternatives",
+          "pageType": "learn",
+          "title": "7 Best Mailreef Alternatives (2026)"
+        },
+        {
+          "slug": "mailreef",
+          "pageType": "alternatives",
+          "title": "7 Best Mailreef Alternatives in 2026"
+        }
+      ],
+      "overlapScore": 0.139,
+      "bodyShingleJaccard": 0,
+      "serpQuery": null,
+      "serpWinner": "none",
+      "serpNote": "not probed",
+      "recommendation": "canonicalize-to-/alternatives/mailreef (/alternatives hub is richer; redirect /learn/mailreef-alternatives OR narrow learn article to a specific sub-angle and add rel=canonical to alternatives)",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.d0f4e38cd0",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "high",
+      "kind": "explicit-startups-duplicate",
+      "normalizedQuery": "cold email infrastructure startups",
+      "slugs": [
+        {
+          "slug": "best-cold-email-infrastructure-startups-2026",
+          "pageType": "learn",
+          "title": "Best Cold Email Infrastructure for Startups (2026): The $500/Month Stack"
+        },
+        {
+          "slug": "cold-email-infrastructure-startups",
+          "pageType": "learn",
+          "title": "Cold Email Infrastructure for Startups: The Founder-Run Playbook for 2026"
+        }
+      ],
+      "overlapScore": 0.11,
+      "bodyShingleJaccard": 0.001,
+      "serpQuery": "cold email infrastructure for startups",
+      "serpWinner": "none",
+      "serpNote": "Neither startups page in top 10; amyntas.in/sprintzeal/scaledmail win.",
+      "recommendation": "merge: pick best-cold-email-infrastructure-startups-2026 (more recent + intent-matched), 301 cold-email-infrastructure-startups to it, or differentiate cold-email-infrastructure-startups as a setup tutorial vs the best-of roundup",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.a9ffb3be61",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "high",
+      "kind": "compare+learn-vs",
+      "normalizedQuery": "infrabox vs zapmail",
+      "slugs": [
+        {
+          "slug": "infrabox-vs-zapmail",
+          "pageType": "learn",
+          "title": "Infrabox vs Zapmail: Which Cold Email Infrastructure Wins in 2026?"
+        },
+        {
+          "slug": "zapmail",
+          "pageType": "compare",
+          "title": "Infrabox vs Zapmail (2026) - Compare Cold Email Infrastructure"
+        }
+      ],
+      "overlapScore": 0.054,
+      "bodyShingleJaccard": 0,
+      "serpQuery": "infrabox vs zapmail",
+      "serpWinner": "homepage",
+      "serpNote": "HOMEPAGE ranks at #6; neither compare/zapmail nor learn/infrabox-vs-zapmail rank — split authority.",
+      "recommendation": "canonicalize-to-/compare/zapmail (keep compare as canonical vs page; redirect or differentiate learn/infrabox-vs-zapmail to a review-style angle, add rel=canonical)",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.315509ff27",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "high",
+      "kind": "compare+learn-vs",
+      "normalizedQuery": "infrabox vs zapmail",
+      "slugs": [
+        {
+          "slug": "infrabox-vs-zapmail-vs-primeforge",
+          "pageType": "learn",
+          "title": "Infrabox vs Zapmail vs Primeforge: Three-Way Comparison (2026)"
+        },
+        {
+          "slug": "zapmail",
+          "pageType": "compare",
+          "title": "Infrabox vs Zapmail (2026) - Compare Cold Email Infrastructure"
+        }
+      ],
+      "overlapScore": 0.037,
+      "bodyShingleJaccard": 0,
+      "serpQuery": "infrabox vs zapmail",
+      "serpWinner": "homepage",
+      "serpNote": "HOMEPAGE ranks at #6; neither compare/zapmail nor learn/infrabox-vs-zapmail rank — split authority.",
+      "recommendation": "canonicalize-to-/compare/zapmail (keep compare as canonical vs page; redirect or differentiate learn/infrabox-vs-zapmail-vs-primeforge to a review-style angle, add rel=canonical)",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.613cc77e03",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "high",
+      "kind": "compare+learn-vs",
+      "normalizedQuery": "infrabox vs primeforge",
+      "slugs": [
+        {
+          "slug": "infrabox-vs-primeforge",
+          "pageType": "learn",
+          "title": "Infrabox vs Primeforge: Cold Email Infrastructure Compared for 2026"
+        },
+        {
+          "slug": "primeforge",
+          "pageType": "compare",
+          "title": "Infrabox vs Primeforge (2026) - Compare Cold Email Infrastructure"
+        }
+      ],
+      "overlapScore": 0.032,
+      "bodyShingleJaccard": 0.003,
+      "serpQuery": "infrabox vs primeforge",
+      "serpWinner": "none",
+      "serpNote": "SourceForge/Primeforge blog dominate; neither compare/primeforge nor learn/infrabox-vs-primeforge rank.",
+      "recommendation": "canonicalize-to-/compare/primeforge (keep compare as canonical vs page; redirect or differentiate learn/infrabox-vs-primeforge to a review-style angle, add rel=canonical)",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.c4dc1d2921",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "high",
+      "kind": "compare+learn-vs",
+      "normalizedQuery": "infrabox vs mailforge",
+      "slugs": [
+        {
+          "slug": "infrabox-vs-mailforge",
+          "pageType": "learn",
+          "title": "Infrabox vs Mailforge: Official Google/Microsoft vs Shared IP Mailboxes"
+        },
+        {
+          "slug": "mailforge",
+          "pageType": "compare",
+          "title": "Infrabox vs Mailforge (2026) - Compare Cold Email Infrastructure"
+        }
+      ],
+      "overlapScore": 0.03,
+      "bodyShingleJaccard": 0.005,
+      "serpQuery": "infrabox vs mailforge",
+      "serpWinner": "none",
+      "serpNote": "SourceForge/Mailforge blog/Slashdot dominate; neither compare/mailforge nor learn/infrabox-vs-mailforge rank.",
+      "recommendation": "canonicalize-to-/compare/mailforge (keep compare as canonical vs page; redirect or differentiate learn/infrabox-vs-mailforge to a review-style angle, add rel=canonical)",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.a6c1be9c29",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "high",
+      "kind": "compare+learn-vs",
+      "normalizedQuery": "infrabox vs primeforge",
+      "slugs": [
+        {
+          "slug": "infrabox-vs-zapmail-vs-primeforge",
+          "pageType": "learn",
+          "title": "Infrabox vs Zapmail vs Primeforge: Three-Way Comparison (2026)"
+        },
+        {
+          "slug": "primeforge",
+          "pageType": "compare",
+          "title": "Infrabox vs Primeforge (2026) - Compare Cold Email Infrastructure"
+        }
+      ],
+      "overlapScore": 0.016,
+      "bodyShingleJaccard": 0.001,
+      "serpQuery": "infrabox vs primeforge",
+      "serpWinner": "none",
+      "serpNote": "SourceForge/Primeforge blog dominate; neither compare/primeforge nor learn/infrabox-vs-primeforge rank.",
+      "recommendation": "canonicalize-to-/compare/primeforge (keep compare as canonical vs page; redirect or differentiate learn/infrabox-vs-zapmail-vs-primeforge to a review-style angle, add rel=canonical)",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.c4fb4b4829",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "medium",
+      "kind": "best-infra-family",
+      "normalizedQuery": "best cold email infrastructure",
+      "slugs": [
+        {
+          "slug": "best-cold-email-infrastructure-high-volume",
+          "pageType": "learn",
+          "title": "Best Cold Email Infrastructure for High Volume (500+ Mailboxes, 2026)"
+        },
+        {
+          "slug": "best-cold-email-infrastructure-startups-2026",
+          "pageType": "learn",
+          "title": "Best Cold Email Infrastructure for Startups (2026): The $500/Month Stack"
+        }
+      ],
+      "overlapScore": 0.207,
+      "bodyShingleJaccard": 0.003,
+      "serpQuery": "best cold email infrastructure 2026",
+      "serpWinner": "none",
+      "serpNote": "Neither /learn/best-cold-email-infrastructure-2026 nor variants in top 10; Reddit/unifygtm/hypergen/mailpool rank.",
+      "recommendation": "differentiate: tighten titles + H1 to make audience split explicit (e.g. 2026 = default hub; startups-2026 = <20 mailbox teams; high-volume = 100+ mailboxes; microsoft-365 = MS-only; under-50 = SMB; cheapest = budget; comparison = buyer intent table). Hub-and-spoke with internal links + rel=canonical to 2026 hub.",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.ea2839b478",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "medium",
+      "kind": "best-infra-family",
+      "normalizedQuery": "best cold email infrastructure",
+      "slugs": [
+        {
+          "slug": "best-cold-email-infrastructure-microsoft-365",
+          "pageType": "learn",
+          "title": "Best Cold Email Infrastructure for Microsoft 365 (2026)"
+        },
+        {
+          "slug": "cheapest-cold-email-infrastructure-2026",
+          "pageType": "learn",
+          "title": "Cheapest Cold Email Infrastructure in 2026 (Honest Ranking)"
+        }
+      ],
+      "overlapScore": 0.195,
+      "bodyShingleJaccard": 0.012,
+      "serpQuery": "best cold email infrastructure 2026",
+      "serpWinner": "none",
+      "serpNote": "Neither /learn/best-cold-email-infrastructure-2026 nor variants in top 10; Reddit/unifygtm/hypergen/mailpool rank.",
+      "recommendation": "differentiate: tighten titles + H1 to make audience split explicit (e.g. 2026 = default hub; startups-2026 = <20 mailbox teams; high-volume = 100+ mailboxes; microsoft-365 = MS-only; under-50 = SMB; cheapest = budget; comparison = buyer intent table). Hub-and-spoke with internal links + rel=canonical to 2026 hub.",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.4171ee1ddc",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "medium",
+      "kind": "best-infra-family",
+      "normalizedQuery": "best cold email infrastructure",
+      "slugs": [
+        {
+          "slug": "best-cold-email-infrastructure-2026",
+          "pageType": "learn",
+          "title": "7 Best Cold Email Infrastructure Tools (2026): Tested and Compared"
+        },
+        {
+          "slug": "cold-email-infrastructure-comparison-2026",
+          "pageType": "learn",
+          "title": "Cold Email Infrastructure Comparison: Complete Guide (2026)"
+        }
+      ],
+      "overlapScore": 0.182,
+      "bodyShingleJaccard": 0.001,
+      "serpQuery": "best cold email infrastructure 2026",
+      "serpWinner": "none",
+      "serpNote": "Neither /learn/best-cold-email-infrastructure-2026 nor variants in top 10; Reddit/unifygtm/hypergen/mailpool rank.",
+      "recommendation": "differentiate: tighten titles + H1 to make audience split explicit (e.g. 2026 = default hub; startups-2026 = <20 mailbox teams; high-volume = 100+ mailboxes; microsoft-365 = MS-only; under-50 = SMB; cheapest = budget; comparison = buyer intent table). Hub-and-spoke with internal links + rel=canonical to 2026 hub.",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.d5205eaa6a",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "medium",
+      "kind": "compare+non-infrabox-vs",
+      "normalizedQuery": "smartlead vs instantly",
+      "slugs": [
+        {
+          "slug": "smartlead-vs-instantly",
+          "pageType": "learn",
+          "title": "Smartlead vs Instantly (2026): Verified Pricing & Feature Comparison"
+        },
+        {
+          "slug": "instantly",
+          "pageType": "compare",
+          "title": "Infrabox vs Instantly (2026) - Compare Cold Email Infrastructure"
+        }
+      ],
+      "overlapScore": 0.133,
+      "bodyShingleJaccard": 0.003,
+      "serpQuery": null,
+      "serpWinner": "none",
+      "serpNote": "not probed",
+      "recommendation": "differentiate: learn/X-vs-Y should be third-party benchmark angle; compare/X is Infrabox-centric. Add clear audience framing + cross-link.",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.f9283ca963",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "medium",
+      "kind": "compare+non-infrabox-vs",
+      "normalizedQuery": "zapmail vs maildoso",
+      "slugs": [
+        {
+          "slug": "zapmail-vs-maildoso",
+          "pageType": "learn",
+          "title": "Zapmail vs Maildoso (2026): Pre-Warmed Google vs SMTP Combo"
+        },
+        {
+          "slug": "zapmail",
+          "pageType": "compare",
+          "title": "Infrabox vs Zapmail (2026) - Compare Cold Email Infrastructure"
+        }
+      ],
+      "overlapScore": 0.129,
+      "bodyShingleJaccard": 0.002,
+      "serpQuery": null,
+      "serpWinner": "none",
+      "serpNote": "not probed",
+      "recommendation": "differentiate: learn/X-vs-Y should be third-party benchmark angle; compare/X is Infrabox-centric. Add clear audience framing + cross-link.",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.40c08d620c",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "medium",
+      "kind": "compare+non-infrabox-vs",
+      "normalizedQuery": "zapmail vs maildoso",
+      "slugs": [
+        {
+          "slug": "zapmail-vs-maildoso",
+          "pageType": "learn",
+          "title": "Zapmail vs Maildoso (2026): Pre-Warmed Google vs SMTP Combo"
+        },
+        {
+          "slug": "maildoso",
+          "pageType": "compare",
+          "title": "Infrabox vs Maildoso (2026) - Compare Cold Email Infrastructure | Infrabox"
+        }
+      ],
+      "overlapScore": 0.125,
+      "bodyShingleJaccard": 0.002,
+      "serpQuery": null,
+      "serpWinner": "none",
+      "serpNote": "not probed",
+      "recommendation": "differentiate: learn/X-vs-Y should be third-party benchmark angle; compare/X is Infrabox-centric. Add clear audience framing + cross-link.",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "cannibalization.d95c15109b",
+      "pageType": "meta",
+      "reason": "cannibalization-risk",
+      "severity": "medium",
+      "kind": "alt+learn-alternatives",
+      "normalizedQuery": "infraforge alternatives",
+      "slugs": [
+        {
+          "slug": "infraforge-alternatives",
+          "pageType": "learn",
+          "title": "6 Best Infraforge Alternatives (2026): Better Deliverability, Real Mailboxes"
+        },
+        {
+          "slug": "infraforge",
+          "pageType": "alternatives",
+          "title": "7 Best Infraforge Alternatives in 2026"
+        }
+      ],
+      "overlapScore": 0.094,
+      "bodyShingleJaccard": 0,
+      "serpQuery": null,
+      "serpWinner": "none",
+      "serpNote": "not probed",
+      "recommendation": "canonicalize-to-/alternatives/infraforge (/alternatives hub is richer; redirect /learn/infraforge-alternatives OR narrow learn article to a specific sub-angle and add rel=canonical to alternatives)",
+      "detectedAt": "2026-04-11T19:06:52.018Z",
+      "status": "needs-manual-review",
+      "detectedBy": "seo-cannibalization-check",
+      "run": "2026-04-11-pipeline"
+    },
+    {
+      "id": "content-polish.instantly-alt.seamlessly-1",
+      "slug": "instantly",
+      "reason": "content-polish-applied",
+      "severity": "low",
+      "detail": "metaDescription: removed \"seamlessly\" from integration claim",
+      "detectedAt": "2026-04-11T19:30:00.000Z",
+      "status": "fixed"
+    },
+    {
+      "id": "content-polish.instantly-alt.seamlessly-2",
+      "slug": "instantly",
+      "reason": "content-polish-applied",
+      "severity": "low",
+      "detail": "intro: replaced \"integrate seamlessly\" with \"integrate directly\"",
+      "detectedAt": "2026-04-11T19:30:00.000Z",
+      "status": "fixed"
+    },
+    {
+      "id": "content-polish.smartlead-alt.seamlessly-1",
+      "slug": "smartlead",
+      "reason": "content-polish-applied",
+      "severity": "low",
+      "detail": "metaDescription: removed \"seamlessly\" from integration claim",
+      "detectedAt": "2026-04-11T19:30:00.000Z",
+      "status": "fixed"
+    },
+    {
+      "id": "content-polish.smartlead-alt.seamlessly-2",
+      "slug": "smartlead",
+      "reason": "content-polish-applied",
+      "severity": "low",
+      "detail": "intro: replaced \"integrate seamlessly\" with \"integrate directly\"",
+      "detectedAt": "2026-04-11T19:30:00.000Z",
+      "status": "fixed"
+    },
+    {
+      "id": "content-polish.cold-email-infra-comparison-2026.seamlessly",
+      "slug": "cold-email-infrastructure-comparison-2026",
+      "reason": "content-polish-applied",
+      "severity": "low",
+      "detail": "section: replaced \"handles all five seamlessly\" with \"handles all five without manual glue\"",
+      "detectedAt": "2026-04-11T19:30:00.000Z",
+      "status": "fixed"
+    },
+    {
+      "id": "content-polish.email-infra-cost-2026.leverage",
+      "slug": "email-infrastructure-cost-analysis-2026",
+      "reason": "content-polish-applied",
+      "severity": "low",
+      "detail": "hidden-costs table: replaced verb \"leverage\" with \"use\"",
+      "detectedAt": "2026-04-11T19:30:00.000Z",
+      "status": "fixed"
+    },
+    {
+      "id": "content-polish.agency-workflows-guide.leverage",
+      "slug": "agency-workflows-guide",
+      "reason": "content-polish-applied",
+      "severity": "low",
+      "detail": "scaling section: replaced verb \"leverage\" with \"use\"",
+      "detectedAt": "2026-04-11T19:30:00.000Z",
+      "status": "fixed"
+    },
+    {
+      "id": "content-polish.mailforge-vs-maildoso.game-changer-quote",
+      "slug": "mailforge-vs-maildoso",
+      "reason": "content-polish-skipped",
+      "severity": "low",
+      "detail": "\"game-changer\" appears inside a verbatim Saleshandy co-founder testimonial quote — left as-is per guardrail (never edit quoted strings)",
+      "detectedAt": "2026-04-11T19:30:00.000Z",
+      "status": "intentional-skip"
+    },
+    {
+      "id": "gmass-crawl-yolo.coldsmtp-omission-faq1",
+      "slug": "gmass",
+      "pageType": "content-drift",
+      "cluster": null,
+      "competitor": "gmass",
+      "reason": "factual-drift-vs-gmass",
+      "severity": "medium",
+      "detail": "FAQ answer about GMass infrastructure omitted ColdSMTP ($99/month dedicated cold email server for unlimited cold emails). Only described usage-based SMTP ($5 per 10K). Updated to mention both SMTP tiers.",
+      "evidenceSource": ".seo/runs/2026-04-12-gmass-crawl/summary.json",
+      "engine": "cmux-browser",
+      "evidenceQuote": "ColdSMTP blog: ColdSMTP is $99/month in addition to your GMass plan. That price includes unlimited cold emails.",
+      "affectedFiles": [
+        "app/alternatives/[slug]/alternatives-data.js:952"
+      ],
+      "detectedAt": "2026-04-12T08:20:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T08:24:00Z",
+      "editEvidence": [
+        "app/alternatives/[slug]/alternatives-data.js:952 (faqs array GMass infrastructure FAQ)"
+      ]
+    },
+    {
+      "id": "gmass-crawl-yolo.coldsmtp-omission-faq2",
+      "slug": "gmass",
+      "pageType": "content-drift",
+      "cluster": null,
+      "competitor": "gmass",
+      "reason": "factual-drift-vs-gmass",
+      "severity": "medium",
+      "detail": "Compact FAQ answer about GMass infrastructure omitted ColdSMTP. Only described generic SMTP add-on. Updated to mention ColdSMTP ($99/month) alongside usage-based SMTP.",
+      "evidenceSource": ".seo/runs/2026-04-12-gmass-crawl/summary.json",
+      "engine": "cmux-browser",
+      "evidenceQuote": "ColdSMTP blog: ColdSMTP is $99/month in addition to your GMass plan. That price includes unlimited cold emails.",
+      "affectedFiles": [
+        "app/alternatives/[slug]/alternatives-data.js:974"
+      ],
+      "detectedAt": "2026-04-12T08:20:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T08:24:30Z",
+      "editEvidence": [
+        "app/alternatives/[slug]/alternatives-data.js:974 (faq array GMass infrastructure FAQ)"
+      ]
+    },
+    {
+      "id": "lemlist-pricing-39",
+      "competitor": "lemlist",
+      "type": "factual-drift",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T08:28:39.707735Z",
+      "editEvidence": "app/learn/[slug]/articles/cold-email-infrastructure-comparison-2026.js:32",
+      "detail": "Comparison table listed Lemlist platform fee as \"From $39/mo\" and integrations as \"Lemlist only\". Corrected to \"From $63/user/mo\" (Email Pro annual) and \"57+ (CRMs, Zapier, Make, etc.)\".",
+      "foundIn": [
+        "app/learn/[slug]/articles/cold-email-infrastructure-comparison-2026.js"
+      ],
+      "source": "seo-audit-competitor lemlist 2026-04-12"
+    },
+    {
+      "id": "lemlist-lemchain-heading",
+      "competitor": "lemlist",
+      "type": "factual-drift",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T08:28:39.707735Z",
+      "editEvidence": "app/learn/[slug]/articles/infrabox-lemlist-integration.js:40",
+      "detail": "Heading referenced \"Lemchain\" — no evidence this name exists. Corrected to \"Lemwarm\".",
+      "foundIn": [
+        "app/learn/[slug]/articles/infrabox-lemlist-integration.js"
+      ],
+      "source": "seo-audit-competitor lemlist 2026-04-12"
+    },
+    {
+      "id": "lemlist-formerly-lemchain",
+      "competitor": "lemlist",
+      "type": "factual-drift",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T08:28:39.707735Z",
+      "editEvidence": "app/learn/[slug]/articles/infrabox-lemlist-integration.js:41",
+      "detail": "Claimed Lemwarm was \"formerly Lemchain\". No evidence of Lemchain branding. Removed.",
+      "foundIn": [
+        "app/learn/[slug]/articles/infrabox-lemlist-integration.js"
+      ],
+      "source": "seo-audit-competitor lemlist 2026-04-12"
+    },
+    {
+      "id": "lemlist-lemwarm-costs-extra",
+      "competitor": "lemlist",
+      "type": "factual-drift",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T08:28:39.707735Z",
+      "editEvidence": "app/learn/[slug]/articles/infrabox-lemlist-integration.js:41",
+      "detail": "Claimed \"Lemwarm costs extra: it is a separate add-on to your Lemlist seat.\" Lemwarm is included with all paid plans (Email Pro+). Corrected.",
+      "foundIn": [
+        "app/learn/[slug]/articles/infrabox-lemlist-integration.js"
+      ],
+      "source": "seo-audit-competitor lemlist 2026-04-12"
+    },
+    {
+      "id": "lemlist-error-table-warmup-addon",
+      "competitor": "lemlist",
+      "type": "factual-drift",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T08:28:39.707735Z",
+      "editEvidence": "app/learn/[slug]/articles/infrabox-lemlist-integration.js:45",
+      "detail": "Error table row claimed \"Lemwarm requires paid add-on\" with cause \"Free plan does not include warmup\". No free plan exists (14-day trial). Lemwarm included in paid plans. Replaced with \"Lemwarm not sending\" / \"warmup paused\" error.",
+      "foundIn": [
+        "app/learn/[slug]/articles/infrabox-lemlist-integration.js"
+      ],
+      "source": "seo-audit-competitor lemlist 2026-04-12"
+    },
+    {
+      "id": "lemlist-seat-per-mailbox",
+      "competitor": "lemlist",
+      "type": "factual-drift",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T08:28:39.707735Z",
+      "editEvidence": "app/learn/[slug]/articles/infrabox-lemlist-integration.js:55",
+      "detail": "FAQ claimed \"Each Infrabox mailbox you connect uses one seat.\" Lemlist seats include 3-5 senders. Each mailbox uses one sender slot, not a full seat. Corrected.",
+      "foundIn": [
+        "app/learn/[slug]/articles/infrabox-lemlist-integration.js"
+      ],
+      "source": "seo-audit-competitor lemlist 2026-04-12"
+    },
+    {
+      "id": "apollo-crawl.free-credits-fix",
+      "slug": "apollo",
+      "pageType": "alternatives",
+      "cluster": "alternatives-fresh-wave",
+      "competitor": "apollo",
+      "reason": "factual-drift-vs-apollo",
+      "severity": "high",
+      "detail": "Apollo Free tier credits were stated as '50 credits' but pricing page shows 900 credits/user/year (75/month). Also 'Gmail connection only' corrected to 'Gmail & Microsoft'.",
+      "evidenceSource": ".seo/runs/2026-04-12-apollo-crawl/summary.json",
+      "engine": "cmux-browser",
+      "affectedFiles": ["app/alternatives/[slug]/alternatives-data.js"],
+      "detectedAt": "2026-04-12T00:00:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T00:00:00Z",
+      "editEvidence": ["app/alternatives/[slug]/alternatives-data.js:37 (intro free credits and connection)"],
+      "source": "seo-audit-competitor apollo 2026-04-12"
+    },
+    {
+      "id": "apollo-crawl.infrastructure-provision-fix",
+      "slug": "apollo",
+      "pageType": "alternatives",
+      "cluster": "alternatives-fresh-wave",
+      "competitor": "apollo",
+      "reason": "factual-drift-vs-apollo",
+      "severity": "critical",
+      "detail": "Multiple claims stated Apollo 'does not provision dedicated domains or mailboxes' and 'does not offer warmup'. Apollo pricing page now lists 'Domain & Mailbox Purchasing' and 'Deliverability Suite & Email Warmup' on Basic+ plans. Fixed in intro, whyLook[3], both FAQ arrays, comparison table, and buyer guide.",
+      "evidenceSource": ".seo/runs/2026-04-12-apollo-crawl/summary.json",
+      "engine": "cmux-browser",
+      "evidenceQuote": "Pricing cards for Basic/Professional/Organization list 'Domain & Mailbox Purchasing' and 'Deliverability Suite & Email Warmup'",
+      "affectedFiles": ["app/alternatives/[slug]/alternatives-data.js"],
+      "detectedAt": "2026-04-12T00:00:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T00:00:00Z",
+      "editEvidence": [
+        "app/alternatives/[slug]/alternatives-data.js:37 (intro infrastructure claim)",
+        "app/alternatives/[slug]/alternatives-data.js:42 (whyLook[3])",
+        "app/alternatives/[slug]/alternatives-data.js:167 (FAQ 'does not provision')",
+        "app/alternatives/[slug]/alternatives-data.js:185 (short FAQ)",
+        "app/alternatives/[slug]/alternatives-data.js:219 (comparison table 'No, BYO Google/Microsoft')"
+      ],
+      "source": "seo-audit-competitor apollo 2026-04-12"
+    },
+    {
+      "id": "apollo-crawl.sending-caps-fix",
+      "slug": "apollo",
+      "pageType": "alternatives",
+      "cluster": "alternatives-fresh-wave",
+      "competitor": "apollo",
+      "reason": "factual-drift-vs-apollo",
+      "severity": "high",
+      "detail": "Claims stated Apollo inherits '2,000/day on Workspace, 500/day on gmail.com' from connected mailbox. Actual Apollo caps: Free/Basic 250 emails/day (Apollo's own limit), Professional/Organization Unlimited. Professional+ gets unlimited mailboxes.",
+      "evidenceSource": ".seo/runs/2026-04-12-apollo-crawl/summary.json",
+      "engine": "cmux-browser",
+      "evidenceQuote": "Comparison table: Daily Email Sends — Free/Basic: '250 emails', Professional/Organization: 'Unlimited'. Mailboxes per User — Professional: 'Unlimited Google and Microsoft mailboxes + 5 SMTP mailboxes per user'",
+      "affectedFiles": ["app/alternatives/[slug]/alternatives-data.js"],
+      "detectedAt": "2026-04-12T00:00:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T00:00:00Z",
+      "editEvidence": [
+        "app/alternatives/[slug]/alternatives-data.js:39 (whyLook[0] sending cap)",
+        "app/alternatives/[slug]/alternatives-data.js:151 (FAQ sending cap)",
+        "app/alternatives/[slug]/alternatives-data.js:173 (short FAQ sending cap)",
+        "app/alternatives/[slug]/alternatives-data.js:237 (comparison table sending cap)",
+        "app/alternatives/[slug]/alternatives-data.js:254 (buyer guide sending cap)",
+        "app/alternatives/[slug]/alternatives-data.js:210 (comparison table rotation 'Limited' → tier-specific)"
+      ],
+      "source": "seo-audit-competitor apollo 2026-04-12"
+    },
+    {
+      "id": "apollo-crawl.credit-allocations-fix",
+      "slug": "apollo",
+      "pageType": "alternatives",
+      "cluster": "alternatives-fresh-wave",
+      "competitor": "apollo",
+      "reason": "factual-drift-vs-apollo",
+      "severity": "high",
+      "detail": "Claims referenced 'Fair Use Policy' and '10,000-credit/month soft cap'. Apollo pricing page shows explicit credit allocations: 900/yr Free, 30,000/yr Basic, 48,000/yr Professional, 72,000/yr Organization. No mention of Fair Use Policy.",
+      "evidenceSource": ".seo/runs/2026-04-12-apollo-crawl/summary.json",
+      "engine": "cmux-browser",
+      "affectedFiles": ["app/alternatives/[slug]/alternatives-data.js"],
+      "detectedAt": "2026-04-12T00:00:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T00:00:00Z",
+      "editEvidence": [
+        "app/alternatives/[slug]/alternatives-data.js:37 (intro Fair Use)",
+        "app/alternatives/[slug]/alternatives-data.js:41 (whyLook[2])",
+        "app/alternatives/[slug]/alternatives-data.js:74 (SmartLead pros 'Fair Use caps' → 'credit allocations')"
+      ],
+      "source": "seo-audit-competitor apollo 2026-04-12"
+    },
+    {
+      "id": "apollo-crawl.dialer-all-paid-fix",
+      "slug": "apollo",
+      "pageType": "alternatives",
+      "cluster": "alternatives-fresh-wave",
+      "competitor": "apollo",
+      "reason": "factual-drift-vs-apollo",
+      "severity": "medium",
+      "detail": "Multiple claims stated dialer was 'Professional+' only. Apollo pricing shows US Dialer on all paid plans (credits apply). Advanced Dialer (International, Parallel, Power, Local Presence) is $119/team/mo add-on.",
+      "evidenceSource": ".seo/runs/2026-04-12-apollo-crawl/summary.json",
+      "engine": "cmux-browser",
+      "affectedFiles": ["app/alternatives/[slug]/alternatives-data.js"],
+      "detectedAt": "2026-04-12T00:00:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T00:00:00Z",
+      "editEvidence": [
+        "app/alternatives/[slug]/alternatives-data.js:228 (comparison table 'Professional+' → 'all paid plans')",
+        "app/alternatives/[slug]/alternatives-data.js:258 (buyer guide 'Professional's' → 'all paid plans')",
+        "app/alternatives/[slug]/alternatives-data.js:63 (Instantly cons 'Professional offers' → 'offers')",
+        "app/alternatives/[slug]/alternatives-data.js:81 (SmartLead cons 'Professional has one' → 'all paid plans')"
+      ],
+      "source": "seo-audit-competitor apollo 2026-04-12"
+    },
+    {
+      "id": "apollo-crawl.slug-regeneration-candidate",
+      "slug": "apollo",
+      "pageType": "alternatives",
+      "cluster": "alternatives-fresh-wave",
+      "competitor": "apollo",
+      "reason": "refresh-suggests-upgrade",
+      "severity": "low",
+      "detail": "Apollo alternatives entry had 10 drift claims (>5 threshold). All were surgically fixed. However, the article's framing around 'Apollo doesn't provide infrastructure' was a central thesis. While each claim was individually corrected, a full regeneration could produce a more coherent narrative acknowledging Apollo's new infrastructure capabilities while still positioning Infrabox's advantages.",
+      "evidenceSource": ".seo/runs/2026-04-12-apollo-crawl/summary.json",
+      "affectedFiles": ["app/alternatives/[slug]/alternatives-data.js"],
+      "detectedAt": "2026-04-12T00:00:00Z",
+      "status": "needs-manual-review",
+      "reviewReason": "10 drift claims surgically fixed, but article thesis was built around Apollo lacking infrastructure. Operator should decide if full regeneration is warranted.",
+      "source": "seo-audit-competitor apollo 2026-04-12"
+    },
+    {
+      "id": "audit.mailreef.pricing-public",
+      "cluster": "mailreef-audit-2026-04-12",
+      "reason": "factual-drift-corrected",
+      "severity": "high",
+      "competitor": "mailreef",
+      "field": "pricing",
+      "oldValue": "Multiple pages claimed 'Contact for pricing', 'hidden pricing', 'contact-sales model', 'no public pricing'. One article claimed '~$3-4/mo per mailbox' and 'Real Google/MS' account type.",
+      "newValue": "Pricing is publicly listed: Agency $240/mo (12-month) + $0.001/send, Agency Flex $249/mo (month-to-month) + $0.001/send. 150+ mailboxes/server. Dedicated SMTP server, NOT Google/Microsoft accounts.",
+      "evidenceSource": ".seo/runs/2026-04-12-mailreef-crawl/summary.json",
+      "engine": "cmux-browser",
+      "affectedFiles": [
+        "app/compare/[slug]/compare-data.js",
+        "app/alternatives/[slug]/alternatives-data.js",
+        "app/learn/[slug]/articles/mailreef-alternatives.js"
+      ],
+      "detectedAt": "2026-04-12T10:30:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T10:30:00Z",
+      "editEvidence": "compare-data.js: subheadline, summary, competitorOverview, competitorPricing, pricingVerdict, features table, infraboxAdvantages, FAQs, atAGlance, categorizedFeatures all updated. alternatives-data.js: mailforge-alternatives entry, mailreef-alternatives page (intro, whyLook, 5 competitor descriptions, verdict, FAQs), smartlead-alternatives entry all updated.",
+      "source": "seo-audit-competitor mailreef 2026-04-12"
+    },
+    {
+      "id": "audit.mailreef.monitoring-exists",
+      "cluster": "mailreef-audit-2026-04-12",
+      "reason": "factual-drift-corrected",
+      "severity": "medium",
+      "competitor": "mailreef",
+      "field": "feature",
+      "oldValue": "Pages claimed monitoring 'Not documented', 'No known monitoring', 'no blacklist monitoring suite'",
+      "newValue": "'Server & Mailbox Monitoring' is explicitly listed in 'All Plans Include' on /pricing page",
+      "evidenceSource": ".seo/runs/2026-04-12-mailreef-crawl/summary.json",
+      "engine": "cmux-browser",
+      "affectedFiles": [
+        "app/compare/[slug]/compare-data.js",
+        "app/alternatives/[slug]/alternatives-data.js"
+      ],
+      "detectedAt": "2026-04-12T10:30:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T10:30:00Z",
+      "editEvidence": "compare-data.js categorizedFeatures Domain Monitoring updated. atAGlance Monitoring updated. Alternatives cons updated to 'No inbox placement testing or built-in warmup' (monitoring claim removed).",
+      "source": "seo-audit-competitor mailreef 2026-04-12"
+    },
+    {
+      "id": "audit.mailreef.api-documented",
+      "cluster": "mailreef-audit-2026-04-12",
+      "reason": "factual-drift-corrected",
+      "severity": "medium",
+      "competitor": "mailreef",
+      "field": "feature",
+      "oldValue": "API listed as 'Not documented' in compare page atAGlance and categorizedFeatures",
+      "newValue": "'Developer API Access' + 'Zapier Integration' are listed in 'All Plans Include' on /pricing. /mailforge-alternative page explicitly advertises 'Full API Access & Zapier Integration'.",
+      "evidenceSource": ".seo/runs/2026-04-12-mailreef-crawl/summary.json",
+      "engine": "cmux-browser",
+      "affectedFiles": ["app/compare/[slug]/compare-data.js"],
+      "detectedAt": "2026-04-12T10:30:00Z",
+      "status": "fixed",
+      "fixedAt": "2026-04-12T10:30:00Z",
+      "editEvidence": "compare-data.js atAGlance API updated to 'Developer API + Zapier'.",
+      "source": "seo-audit-competitor mailreef 2026-04-12"
+    },
+    {
+      "id": "audit.mailreef.learn-article-needs-regeneration",
+      "cluster": "mailreef-audit-2026-04-12",
+      "reason": "factual-drift-too-severe",
+      "severity": "critical",
+      "competitor": "mailreef",
+      "field": "multiple",
+      "oldValue": "mailreef-alternatives.js claims: 'Real Google/MS' account type, '~$3-4/mo' pricing, 'Basic' warmup, 'Limited' monitoring, '20 min' setup, screenshot caption says 'Google and Microsoft mailboxes'",
+      "newValue": "Mailreef is dedicated SMTP server (not Google/MS), pricing is $240-249/mo server-based, no warmup product, monitoring included, demo-required onboarding",
+      "evidenceSource": ".seo/runs/2026-04-12-mailreef-crawl/summary.json",
+      "engine": "cmux-browser",
+      "affectedFiles": ["app/learn/[slug]/articles/mailreef-alternatives.js"],
+      "detectedAt": "2026-04-12T10:30:00Z",
+      "status": "needs-regeneration",
+      "reviewReason": "6+ drift claims in a single article. Every data point about Mailreef in the comparison tables and FAQ is wrong. Surgical edits would require rewriting the entire article. Operator should regenerate via /seo-generate.",
+      "source": "seo-audit-competitor mailreef 2026-04-12"
+    }
+  ],
+  "lastUpdated": "2026-04-12T10:30:00Z"
+}

@@ -1,0 +1,1833 @@
+{
+  "snapshotAt": "2026-04-11T18:30:00.000Z",
+  "runDir": ".seo/runs/2026-04-11-pipeline",
+  "source": "mcp__sendkit-seo__serp_analysis (Jina SERP API)",
+  "keywordCount": 30,
+  "keywords": {
+    "infrabox vs zapmail": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": 5,
+      "ourUrlDetected": "https://www.infrabox.io/",
+      "ourUrlExpected": "https://www.infrabox.io/learn/infrabox-vs-zapmail",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://sourceforge.net/software/compare/Infrabox-vs-Zapmail/",
+          "title": "Infrabox vs. Zapmail Comparison - SourceForge"
+        },
+        {
+          "position": 2,
+          "url": "https://www.reddit.com/r/coldemail/comments/1rhhq21/what_inbox_provider_do_you_guys_recommend/",
+          "title": "What inbox provider do you guys recommend? : r/coldemail - Reddit"
+        },
+        {
+          "position": 3,
+          "url": "https://zapmail.ai/blog/infrabox-review/",
+          "title": "Infrabox Review (2026) - zapmail.ai"
+        },
+        {
+          "position": 4,
+          "url": "https://zapmail.ai/blog/cheapinboxes-alternatives/",
+          "title": "5 CheapInboxes Alternatives - zapmail.ai"
+        },
+        {
+          "position": 5,
+          "url": "https://www.infrabox.io/",
+          "title": "Infrabox - Home"
+        },
+        {
+          "position": 6,
+          "url": "https://puzzleinbox.com/compare/inbox-kit",
+          "title": "Inbox Kit Review: New Provider With No Track Record"
+        },
+        {
+          "position": 7,
+          "url": "https://www.primeforge.ai/blog/infrabox-alternatives",
+          "title": "5 Best Infrabox Alternatives - primeforge.ai"
+        },
+        {
+          "position": 8,
+          "url": "https://www.mailforge.ai/blog/infrabox-alternatives",
+          "title": "9 Best Infrabox Alternatives - mailforge.ai"
+        },
+        {
+          "position": 9,
+          "url": "https://zapmail.ai/blog/zapmail-review/",
+          "title": "7 Brutal Truths From a Founder - Zapmail"
+        }
+      ],
+      "topCompetitors": [
+        "sourceforge.net",
+        "reddit.com",
+        "zapmail.ai"
+      ]
+    },
+    "infrabox vs primeforge": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/infrabox-vs-primeforge",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://sourceforge.net/software/compare/Infrabox-vs-Primeforge/",
+          "title": "Infrabox vs. Primeforge Comparison - SourceForge"
+        },
+        {
+          "position": 2,
+          "url": "https://www.reddit.com/r/coldemail/comments/1rhhq21/what_inbox_provider_do_you_guys_recommend/",
+          "title": "What inbox provider recommend - Reddit"
+        },
+        {
+          "position": 3,
+          "url": "https://www.primeforge.ai/blog/infrabox-alternatives",
+          "title": "5 Best Infrabox Alternatives - primeforge.ai"
+        },
+        {
+          "position": 4,
+          "url": "https://www.primeforge.ai/blog/infrabox-review",
+          "title": "We Purchased 30 Mailboxes from Infrabox - primeforge.ai"
+        },
+        {
+          "position": 5,
+          "url": "https://www.reddit.com/r/coldemail/comments/1opajky/need_some_advice_best_cold_email_setup_and/",
+          "title": "Need some advice best cold email setup - Reddit"
+        },
+        {
+          "position": 6,
+          "url": "https://www.mailforge.ai/blog/infrabox-review",
+          "title": "Infrabox Review: 7 Things - mailforge.ai"
+        },
+        {
+          "position": 7,
+          "url": "https://zapmail.ai/blog/primeforge-alternatives/",
+          "title": "5 Best Primeforge Alternatives - zapmail.ai"
+        },
+        {
+          "position": 8,
+          "url": "https://inboxflow.net/compare",
+          "title": "Cold Email Tool Comparisons - InboxFlow"
+        },
+        {
+          "position": 9,
+          "url": "https://www.primeforge.ai/blog/prewarmed-ms365-mailboxes",
+          "title": "5 Best Prewarmed MS365 Mailboxes - primeforge.ai"
+        }
+      ],
+      "topCompetitors": [
+        "sourceforge.net",
+        "reddit.com",
+        "primeforge.ai"
+      ]
+    },
+    "infrabox vs mailforge": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/infrabox-vs-mailforge",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://sourceforge.net/software/compare/Infrabox-vs-Mailforge/",
+          "title": "Infrabox vs. Mailforge Comparison - SourceForge"
+        },
+        {
+          "position": 2,
+          "url": "https://www.mailforge.ai/blog/zapmail-vs-infrabox",
+          "title": "Zapmail vs Infrabox - mailforge.ai"
+        },
+        {
+          "position": 3,
+          "url": "https://www.mailforge.ai/blog/infrabox-alternatives",
+          "title": "9 Best Infrabox Alternatives - mailforge.ai"
+        },
+        {
+          "position": 4,
+          "url": "https://slashdot.org/software/comparison/Infrabox-vs-Mailforge/",
+          "title": "Compare Infrabox vs. Mailforge 2026 - Slashdot"
+        },
+        {
+          "position": 5,
+          "url": "https://www.mailforge.ai/blog/infrabox-review",
+          "title": "Infrabox Review: 7 Things - mailforge.ai"
+        },
+        {
+          "position": 6,
+          "url": "https://www.reddit.com/r/coldemail/comments/1rhhq21/what_inbox_provider_do_you_guys_recommend/",
+          "title": "What inbox provider recommend - Reddit"
+        },
+        {
+          "position": 7,
+          "url": "https://puzzleinbox.com/blog/best-cold-email-infrastructure-providers",
+          "title": "Best Cold Email Infrastructure Providers - PuzzleInbox"
+        },
+        {
+          "position": 8,
+          "url": "https://inboxflow.net/compare",
+          "title": "Cold Email Tool Comparisons - InboxFlow"
+        },
+        {
+          "position": 9,
+          "url": "https://www.infraforge.ai/blog/zapmail-vs-infrabox",
+          "title": "Zapmail vs Infrabox - infraforge.ai"
+        },
+        {
+          "position": 10,
+          "url": "https://www.primeforge.ai/blog/infrabox-review",
+          "title": "We Purchased 30 Mailboxes - primeforge.ai"
+        }
+      ],
+      "topCompetitors": [
+        "sourceforge.net",
+        "mailforge.ai",
+        "slashdot.org"
+      ]
+    },
+    "what is infrabox": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": 1,
+      "ourUrlDetected": "https://www.infrabox.io/",
+      "ourUrlExpected": "https://www.infrabox.io/learn/what-is-infrabox",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.infrabox.io/",
+          "title": "Infrabox - Home"
+        },
+        {
+          "position": 2,
+          "url": "https://www.mailforge.ai/blog/infrabox-review",
+          "title": "Infrabox Review: 7 Things - mailforge.ai"
+        },
+        {
+          "position": 3,
+          "url": "https://zapmail.ai/blog/infrabox-review/",
+          "title": "Infrabox Review (2026) - zapmail.ai"
+        },
+        {
+          "position": 4,
+          "url": "https://www.linkedin.com/company/infrabox",
+          "title": "Infrabox - LinkedIn"
+        },
+        {
+          "position": 5,
+          "url": "https://www.reddit.com/r/coldemail/comments/1qbfbrg/infrabox_vs_premium_inboxes_for_google/",
+          "title": "Infrabox vs premium inboxes - Reddit"
+        },
+        {
+          "position": 6,
+          "url": "https://helpcenter.smartlead.ai/en/articles/419-google-and-outlook-mailboxes-by-infrabox-full-admin-access-to-google-and-outlook",
+          "title": "Smartlead Infrabox Mailboxes"
+        },
+        {
+          "position": 7,
+          "url": "https://www.primeforge.ai/blog/infrabox-review",
+          "title": "We Purchased 30 Mailboxes - primeforge.ai"
+        },
+        {
+          "position": 8,
+          "url": "https://www.crunchbase.com/organization/infrabox-com",
+          "title": "Infrabox.com Crunchbase"
+        },
+        {
+          "position": 9,
+          "url": "https://www.mailforge.ai/blog/zapmail-vs-infrabox",
+          "title": "Zapmail vs Infrabox - mailforge.ai"
+        },
+        {
+          "position": 10,
+          "url": "https://tekpon.com/software/infrabox/reviews/",
+          "title": "Infrabox Tekpon"
+        }
+      ],
+      "topCompetitors": [
+        "mailforge.ai",
+        "zapmail.ai",
+        "linkedin.com"
+      ]
+    },
+    "infrabox review": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/infrabox-review",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.mailforge.ai/blog/infrabox-review",
+          "title": "Infrabox Review: 7 Things - mailforge.ai"
+        },
+        {
+          "position": 2,
+          "url": "https://zapmail.ai/blog/infrabox-review/",
+          "title": "Infrabox Review (2026) - zapmail.ai"
+        },
+        {
+          "position": 3,
+          "url": "https://www.reddit.com/r/coldemail/comments/1qbfbrg/infrabox_vs_premium_inboxes_for_google/",
+          "title": "Infrabox vs premium inboxes - Reddit"
+        },
+        {
+          "position": 4,
+          "url": "https://puzzleinbox.com/compare/inbox-kit",
+          "title": "Inbox Kit Review PuzzleInbox"
+        },
+        {
+          "position": 5,
+          "url": "https://www.g2.com/products/infrabox/pricing",
+          "title": "Infrabox Pricing 2026 G2"
+        },
+        {
+          "position": 6,
+          "url": "https://coldemailkit.com/tools/infrabox",
+          "title": "Infrabox Review 2026 coldemailkit"
+        },
+        {
+          "position": 7,
+          "url": "https://inboxflow.net/infrabox-vs-primeforge",
+          "title": "Infrabox vs Primeforge InboxFlow"
+        },
+        {
+          "position": 8,
+          "url": "https://www.mailforge.ai/blog/zapmail-vs-infrabox",
+          "title": "Zapmail vs Infrabox - mailforge.ai"
+        },
+        {
+          "position": 9,
+          "url": "https://tekpon.com/software/infrabox/reviews/",
+          "title": "Infrabox Tekpon"
+        }
+      ],
+      "topCompetitors": [
+        "mailforge.ai",
+        "zapmail.ai",
+        "reddit.com"
+      ]
+    },
+    "infrabox g2 reviews": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": 3,
+      "ourUrlDetected": "https://www.infrabox.io/",
+      "ourUrlExpected": "https://www.infrabox.io/learn/infrabox-review",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.g2.com/products/infrabox/pricing",
+          "title": "Infrabox Pricing 2026 - G2"
+        },
+        {
+          "position": 2,
+          "url": "https://www.g2.com/products/infrabox/competitors/alternatives",
+          "title": "Top 10 Infrabox Alternatives - G2"
+        },
+        {
+          "position": 3,
+          "url": "https://www.infrabox.io/",
+          "title": "Infrabox Home"
+        },
+        {
+          "position": 4,
+          "url": "https://www.g2.com/sellers/enrich-labs",
+          "title": "Enrich Labs Products G2"
+        },
+        {
+          "position": 5,
+          "url": "https://www.g2.com/categories/email-management",
+          "title": "Best Email Management Software G2"
+        },
+        {
+          "position": 6,
+          "url": "https://www.mailforge.ai/blog/infrabox-review",
+          "title": "Infrabox Review 7 Things - mailforge.ai"
+        },
+        {
+          "position": 7,
+          "url": "https://www.g2.com/products/arpan-shah-inboxigniter/reviews",
+          "title": "InboxIgniter Reviews G2"
+        },
+        {
+          "position": 8,
+          "url": "https://zapmail.ai/blog/infrabox-review/",
+          "title": "Infrabox Review 2026 - zapmail.ai"
+        },
+        {
+          "position": 9,
+          "url": "https://puzzleinbox.com/compare/inbox-kit",
+          "title": "Inbox Kit Review PuzzleInbox"
+        },
+        {
+          "position": 10,
+          "url": "https://www.primeforge.ai/blog/infrabox-review",
+          "title": "We Purchased 30 Mailboxes - primeforge.ai"
+        }
+      ],
+      "topCompetitors": [
+        "g2.com",
+        "mailforge.ai",
+        "zapmail.ai"
+      ]
+    },
+    "zapmail alternatives": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/alternatives/zapmail",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.reddit.com/r/coldemail/comments/1sazs8w/any_alternatives_to_zapmail/",
+          "title": "any alternatives to zapmail Reddit"
+        },
+        {
+          "position": 2,
+          "url": "https://zapmail.ai/blog/cheapinboxes-alternatives/",
+          "title": "5 CheapInboxes Alternatives zapmail.ai"
+        },
+        {
+          "position": 3,
+          "url": "https://www.aerosend.io/cold-email/zapmail-alternatives/",
+          "title": "Best Zapmail Alternatives Aerosend"
+        },
+        {
+          "position": 4,
+          "url": "https://inframail.io/blog-detail/all-zapmail-alternatives-compared-7-options-tested-(2026)",
+          "title": "All Zapmail Alternatives Inframail"
+        },
+        {
+          "position": 5,
+          "url": "https://www.warmy.io/blog/zapmail-alternatives/",
+          "title": "Zapmail Alternatives Warmy"
+        },
+        {
+          "position": 6,
+          "url": "https://zapmail.ai/blog/best-email-outreach-tools-top-platforms-compared/",
+          "title": "Best Email Outreach Tools zapmail"
+        },
+        {
+          "position": 7,
+          "url": "https://quickmail.com/alternative-to-zapmail",
+          "title": "ZapMail Alternative QuickMail"
+        },
+        {
+          "position": 8,
+          "url": "https://www.mailpool.ai/compare/zapmail",
+          "title": "best Zapmail alternative Mailpool"
+        },
+        {
+          "position": 9,
+          "url": "https://puzzleinbox.com/compare/zap-mail",
+          "title": "Zap Mail Alternatives PuzzleInbox"
+        },
+        {
+          "position": 10,
+          "url": "https://www.mailforge.ai/blog/cold-email-infrastructure-tools",
+          "title": "21 Cold Email Infrastructure Tools mailforge"
+        }
+      ],
+      "topCompetitors": [
+        "reddit.com",
+        "zapmail.ai",
+        "aerosend.io"
+      ]
+    },
+    "primeforge alternatives": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/alternatives/primeforge",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://zapmail.ai/blog/primeforge-alternatives/",
+          "title": "5 Best Primeforge Alternatives zapmail"
+        },
+        {
+          "position": 2,
+          "url": "https://prospeo.io/s/primeforge-alternatives",
+          "title": "7 Best Primeforge Alternatives Prospeo"
+        },
+        {
+          "position": 3,
+          "url": "https://www.g2.com/products/primeforge/competitors/alternatives",
+          "title": "Top 10 Primeforge Alternatives G2"
+        },
+        {
+          "position": 4,
+          "url": "https://www.reddit.com/r/coldemail/comments/1msr5xc/mailforge_vs_primeforge/",
+          "title": "Mailforge VS Primeforge Reddit"
+        },
+        {
+          "position": 5,
+          "url": "https://www.mailforge.ai/blog/cold-email-tools",
+          "title": "11 Best Cold Email Tools mailforge"
+        },
+        {
+          "position": 6,
+          "url": "https://omr.com/en/reviews/product/primeforge/alternatives",
+          "title": "Primeforge alternatives 2026 OMR"
+        },
+        {
+          "position": 7,
+          "url": "https://www.infraforge.ai/blog/cold-email-infrastructure-for-agencies",
+          "title": "5 Best Infrastructure Providers Infraforge"
+        },
+        {
+          "position": 8,
+          "url": "https://puzzleinbox.com/compare/primeforge",
+          "title": "PuzzleInbox vs Primeforge"
+        },
+        {
+          "position": 9,
+          "url": "https://www.youtube.com/watch?v=tQcr6QDb8v8",
+          "title": "Primeforge VS Infraforge VS Mailforge YouTube"
+        }
+      ],
+      "topCompetitors": [
+        "zapmail.ai",
+        "prospeo.io",
+        "g2.com"
+      ]
+    },
+    "mailforge alternatives": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/alternatives/mailforge",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.mailforge.ai/blog/cold-email-tools",
+          "title": "11 Best Cold Email Tools mailforge"
+        },
+        {
+          "position": 2,
+          "url": "https://www.mailforge.ai/blog/inframail-alternatives",
+          "title": "3 Inframail Alternatives mailforge"
+        },
+        {
+          "position": 3,
+          "url": "https://www.reddit.com/r/coldemail/comments/1msr5xc/mailforge_vs_primeforge/",
+          "title": "Mailforge VS Primeforge Reddit"
+        },
+        {
+          "position": 4,
+          "url": "https://www.mailreef.com/mailforge-alternative",
+          "title": "Mailforge Alternative Mailreef"
+        },
+        {
+          "position": 5,
+          "url": "https://www.hypertide.io/mailforge",
+          "title": "MailForge Alternative Hypertide"
+        },
+        {
+          "position": 6,
+          "url": "https://www.mailforge.ai/blog/cold-email-infrastructure-tools",
+          "title": "21 Cold Email Infrastructure Tools mailforge"
+        },
+        {
+          "position": 7,
+          "url": "https://zapmail.ai/Mailforge-alternative",
+          "title": "Mailforge Alternative Zapmail"
+        },
+        {
+          "position": 8,
+          "url": "https://www.11x.ai/sales-tools/mailforge",
+          "title": "Top 10 Mailforge Alternatives 11x"
+        },
+        {
+          "position": 9,
+          "url": "https://inframail.io/blog-detail/mailforge-alternatives",
+          "title": "14 Best Mailforge Alternatives Inframail"
+        }
+      ],
+      "topCompetitors": [
+        "mailforge.ai",
+        "reddit.com",
+        "mailreef.com"
+      ]
+    },
+    "infrabox vs instantly": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": 7,
+      "ourUrlDetected": "https://www.infrabox.io/",
+      "ourUrlExpected": "https://www.infrabox.io/learn/infrabox-vs-instantly",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://sourceforge.net/software/compare/Infrabox-vs-Instantly/",
+          "title": "Infrabox vs Instantly SourceForge"
+        },
+        {
+          "position": 2,
+          "url": "https://slashdot.org/software/comparison/Infrabox-vs-Instantly/",
+          "title": "Infrabox vs Instantly Slashdot"
+        },
+        {
+          "position": 3,
+          "url": "https://www.reddit.com/r/coldemail/comments/1rpiclk/spent_4_months_testing_instantly_vs_smartlead_one/",
+          "title": "spent 4 months testing Instantly vs Smartlead Reddit"
+        },
+        {
+          "position": 4,
+          "url": "https://zapmail.ai/blog/infrabox-review/",
+          "title": "Infrabox Review 2026 zapmail.ai"
+        },
+        {
+          "position": 5,
+          "url": "https://www.mailforge.ai/blog/infrabox-review",
+          "title": "Infrabox Review 7 Things mailforge.ai"
+        },
+        {
+          "position": 6,
+          "url": "https://puzzleinbox.com/compare/quickmail-vs-instantly",
+          "title": "QuickMail vs Instantly PuzzleInbox"
+        },
+        {
+          "position": 7,
+          "url": "https://www.infrabox.io/",
+          "title": "Infrabox Home"
+        },
+        {
+          "position": 8,
+          "url": "https://www.youtube.com/watch?v=emWseF24KsI",
+          "title": "Instantly AI vs SmartLead YouTube"
+        },
+        {
+          "position": 9,
+          "url": "https://www.primeforge.ai/blog/infrabox-alternatives",
+          "title": "5 Best Infrabox Alternatives primeforge.ai"
+        },
+        {
+          "position": 10,
+          "url": "https://instantly.ai/blog/instantly-vs-smartlead-ab-testing-features/?lng=en",
+          "title": "Instantly vs Smartlead instantly.ai"
+        }
+      ],
+      "topCompetitors": [
+        "sourceforge.net",
+        "slashdot.org",
+        "reddit.com"
+      ]
+    },
+    "infrabox vs smartlead": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": 10,
+      "ourUrlDetected": "https://www.infrabox.io/cold-email-warmup",
+      "ourUrlExpected": "https://www.infrabox.io/learn/infrabox-vs-smartlead",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://sourceforge.net/software/compare/Infrabox-vs-Smartlead/",
+          "title": "Infrabox vs Smartlead SourceForge"
+        },
+        {
+          "position": 2,
+          "url": "https://slashdot.org/software/comparison/Infrabox-vs-Smartlead/",
+          "title": "Infrabox vs Smartlead Slashdot"
+        },
+        {
+          "position": 3,
+          "url": "https://helpcenter.smartlead.ai/en/articles/419-google-and-outlook-mailboxes-by-infrabox-full-admin-access-to-google-and-outlook",
+          "title": "Infrabox Mailboxes Smartlead"
+        },
+        {
+          "position": 4,
+          "url": "https://www.reddit.com/r/coldemail/comments/1mvb9hj/whats_your_experience_with_smartsenders_on/",
+          "title": "SmartSenders on SmartLead Reddit"
+        },
+        {
+          "position": 5,
+          "url": "https://supersend.io/blog/smartlead-alternatives",
+          "title": "SmartLead Alternatives SuperSend"
+        },
+        {
+          "position": 6,
+          "url": "https://zapmail.ai/blog/infrabox-review/",
+          "title": "Infrabox Review zapmail"
+        },
+        {
+          "position": 7,
+          "url": "https://www.mailforge.ai/blog/infrabox-alternatives",
+          "title": "9 Best Infrabox Alternatives mailforge"
+        },
+        {
+          "position": 8,
+          "url": "https://www.primeforge.ai/blog/infrabox-alternatives",
+          "title": "5 Best Infrabox Alternatives primeforge"
+        },
+        {
+          "position": 9,
+          "url": "https://inboxflow.net/compare",
+          "title": "Cold Email Tool Comparisons InboxFlow"
+        },
+        {
+          "position": 10,
+          "url": "https://www.infrabox.io/cold-email-warmup",
+          "title": "Built-In Warmup Infrabox"
+        }
+      ],
+      "topCompetitors": [
+        "sourceforge.net",
+        "slashdot.org",
+        "helpcenter.smartlead.ai"
+      ]
+    },
+    "infrabox pricing breakdown": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": 1,
+      "ourUrlDetected": "https://www.infrabox.io/",
+      "ourUrlExpected": "https://www.infrabox.io/learn/infrabox-pricing",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.infrabox.io/",
+          "title": "Infrabox Home"
+        },
+        {
+          "position": 2,
+          "url": "https://www.g2.com/products/infrabox/pricing",
+          "title": "Infrabox Pricing 2026 G2"
+        },
+        {
+          "position": 3,
+          "url": "https://www.infrabox.io/azure-mailboxes",
+          "title": "Azure Mailboxes Infrabox"
+        },
+        {
+          "position": 4,
+          "url": "https://www.mailforge.ai/blog/infrabox-review",
+          "title": "Infrabox Review mailforge"
+        },
+        {
+          "position": 5,
+          "url": "https://coldemailkit.com/tools/infrabox",
+          "title": "Infrabox Review coldemailkit"
+        },
+        {
+          "position": 6,
+          "url": "https://growthboosters.com/p/inbox-kit",
+          "title": "Inbox Kit GrowthBoosters"
+        },
+        {
+          "position": 7,
+          "url": "https://inboxflow.net/compare",
+          "title": "Cold Email Tool Comparisons InboxFlow"
+        },
+        {
+          "position": 8,
+          "url": "https://www.infraforge.ai/blog/zapmail-vs-infrabox",
+          "title": "Zapmail vs Infrabox infraforge"
+        },
+        {
+          "position": 9,
+          "url": "https://www.primeforge.ai/blog/infrabox-alternatives",
+          "title": "5 Best Infrabox Alternatives primeforge"
+        }
+      ],
+      "topCompetitors": [
+        "g2.com",
+        "mailforge.ai",
+        "coldemailkit.com"
+      ]
+    },
+    "instantly alternatives for infrastructure": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/alternatives/instantly",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://lagrowthmachine.com/instantly-alternatives/",
+          "title": "Instantly Alternatives lagrowthmachine"
+        },
+        {
+          "position": 2,
+          "url": "https://sparkle.io/blog/instantly-alternatives/",
+          "title": "15 Instantly Alternatives sparkle"
+        },
+        {
+          "position": 3,
+          "url": "https://reply.io/blog/instantly-alternatives/",
+          "title": "Top 15+ Instantly.ai Alternatives reply"
+        },
+        {
+          "position": 4,
+          "url": "https://www.reddit.com/r/coldemail/comments/1hm353z/what_do_i_use_instead_of_instantlyai/",
+          "title": "use instead of instantly Reddit"
+        },
+        {
+          "position": 5,
+          "url": "https://aisdr.com/blog/instantly-alternatives/",
+          "title": "11 Best Alternatives Instantly AiSDR"
+        },
+        {
+          "position": 6,
+          "url": "https://marketbetter.ai/blog/best-instantly-alternatives-2026/",
+          "title": "10 Best Instantly.ai Alternatives marketbetter"
+        },
+        {
+          "position": 7,
+          "url": "https://www.salesrobot.co/blogs/instantly-alternatives",
+          "title": "Instantly Alternatives salesrobot"
+        },
+        {
+          "position": 8,
+          "url": "https://instantly.ai/blog/comparing-instantly-vs-smartlead/",
+          "title": "Instantly vs Smartlead instantly.ai"
+        },
+        {
+          "position": 9,
+          "url": "https://www.eesel.ai/blog/instantly-alternatives",
+          "title": "7 Instantly alternatives eesel"
+        }
+      ],
+      "topCompetitors": [
+        "lagrowthmachine.com",
+        "sparkle.io",
+        "reply.io"
+      ]
+    },
+    "smartlead alternatives for infrastructure": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/alternatives/smartlead",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.mailforge.ai/blog/smartlead-alternatives",
+          "title": "11 Best Smartlead Alternatives mailforge"
+        },
+        {
+          "position": 2,
+          "url": "https://ditlead.com/blog/best-smartlead-alternative-2026",
+          "title": "10 Best Smartlead Alternatives DitLead"
+        },
+        {
+          "position": 3,
+          "url": "https://www.marketbetter.ai/blog/best-smartlead-alternatives-2026/",
+          "title": "10 Best SmartLead Alternatives marketbetter"
+        },
+        {
+          "position": 4,
+          "url": "https://www.reddit.com/r/coldemail/comments/1nzb2ed/which_of_these_3_is_best_for_cold_email_outreach/",
+          "title": "which 3 best cold email Reddit"
+        },
+        {
+          "position": 5,
+          "url": "https://www.inboxally.com/blog/smartlead-alternatives",
+          "title": "Smartlead Alternatives inboxally"
+        },
+        {
+          "position": 6,
+          "url": "https://supersend.io/blog/smartlead-alternatives",
+          "title": "SmartLead Alternatives SuperSend"
+        },
+        {
+          "position": 7,
+          "url": "https://www.g2.com/products/smartlead/competitors/alternatives",
+          "title": "Top 10 Smartlead Alternatives G2"
+        },
+        {
+          "position": 8,
+          "url": "https://sparkle.io/blog/smartlead-alternatives/",
+          "title": "11 Smartlead Alternatives sparkle"
+        },
+        {
+          "position": 9,
+          "url": "https://www.smartlead.ai/blog/outreach-io-alternatives",
+          "title": "8 Outreach Alternatives smartlead"
+        }
+      ],
+      "topCompetitors": [
+        "mailforge.ai",
+        "ditlead.com",
+        "marketbetter.ai"
+      ]
+    },
+    "maildoso alternatives": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/alternatives/maildoso",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.salesforge.ai/blog/maildoso-alternatives",
+          "title": "3+ Maildoso Alternatives salesforge"
+        },
+        {
+          "position": 2,
+          "url": "https://www.saleshandy.com/blog/cold-email-infrastructure-providers/",
+          "title": "6 Best Cold Email Infrastructure saleshandy"
+        },
+        {
+          "position": 3,
+          "url": "https://www.reddit.com/r/coldemail/comments/1pidvic/recommendations_for_mailboxes_maildoso_mailscale/",
+          "title": "Recommendations for mailboxes Reddit"
+        },
+        {
+          "position": 4,
+          "url": "https://www.mailpool.ai/compare/maildoso",
+          "title": "Maildoso alternative Mailpool"
+        },
+        {
+          "position": 5,
+          "url": "https://www.mailreef.com/maildoso-alternative",
+          "title": "Maildoso Alternative Mailreef"
+        },
+        {
+          "position": 6,
+          "url": "https://www.g2.com/products/maildoso/competitors/alternatives",
+          "title": "Top 10 maildoso Alternatives G2"
+        },
+        {
+          "position": 7,
+          "url": "https://www.gmass.co/blog/best-cold-email-infrastructure/",
+          "title": "5 Best Cold Email Infrastructure gmass"
+        },
+        {
+          "position": 8,
+          "url": "https://zapmail.ai/Maildoso-alternative",
+          "title": "Maildoso Alternative Zapmail"
+        },
+        {
+          "position": 9,
+          "url": "https://www.hypertide.io/maildoso",
+          "title": "Maildoso Alternative Hypertide"
+        },
+        {
+          "position": 10,
+          "url": "https://www.aerosend.io/cold-email/best-maildoso-alternative-guide/",
+          "title": "Best Maildoso Alternative Aerosend"
+        }
+      ],
+      "topCompetitors": [
+        "salesforge.ai",
+        "saleshandy.com",
+        "reddit.com"
+      ]
+    },
+    "infraforge alternatives": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/alternatives/infraforge",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.mailpool.ai/compare/infraforge",
+          "title": "Best Infraforge alternative Mailpool"
+        },
+        {
+          "position": 2,
+          "url": "https://www.mailreef.com/infraforge-alternative",
+          "title": "InfraForge Alternative Mailreef"
+        },
+        {
+          "position": 3,
+          "url": "https://www.aerosend.io/cold-email/aerosend-vs-infraforge/",
+          "title": "Aerosend vs Infraforge"
+        },
+        {
+          "position": 4,
+          "url": "https://www.reddit.com/r/coldemail/comments/1fqe0a5/are_cold_email_infrastructure_tools_worth_it/",
+          "title": "Cold Email Infrastructure tools worth it Reddit"
+        },
+        {
+          "position": 5,
+          "url": "https://www.mailforge.ai/blog/cold-email-infrastructure-tools",
+          "title": "21 Cold Email Infrastructure Tools mailforge"
+        },
+        {
+          "position": 6,
+          "url": "https://www.producthunt.com/products/infraforge/alternatives",
+          "title": "Best Infraforge alternatives Product Hunt"
+        },
+        {
+          "position": 7,
+          "url": "https://litemail.ai/blog/litemail-smarter-infraforge-alternative",
+          "title": "Smarter Alternative Infraforge LiteMail"
+        },
+        {
+          "position": 8,
+          "url": "https://inframail.io/blog-detail/infraforge-alternatives-best-cold-email-solutions-in-2026",
+          "title": "Infraforge Alternatives Inframail"
+        },
+        {
+          "position": 9,
+          "url": "https://www.gmass.co/blog/best-cold-email-infrastructure/",
+          "title": "5 Best Cold Email Infrastructure gmass"
+        }
+      ],
+      "topCompetitors": [
+        "mailpool.ai",
+        "mailreef.com",
+        "aerosend.io"
+      ]
+    },
+    "zapmail review": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/zapmail-review",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.reddit.com/r/coldemail/comments/1it4k1c/zapmailai_review_breaking_down_myths/",
+          "title": "Zapmail.ai Review Reddit"
+        },
+        {
+          "position": 2,
+          "url": "https://zapmail.ai/blog/zapmail-review/",
+          "title": "7 Brutal Truths Zapmail"
+        },
+        {
+          "position": 3,
+          "url": "https://www.trustpilot.com/review/zapmail.ai",
+          "title": "Zapmail.ai Trustpilot"
+        },
+        {
+          "position": 4,
+          "url": "https://www.primeforge.ai/blog/zapmail-review",
+          "title": "Zapmail Review Primeforge"
+        },
+        {
+          "position": 5,
+          "url": "https://www.youtube.com/watch?v=fNfNkBOesx8",
+          "title": "Zapmail Review YouTube"
+        },
+        {
+          "position": 6,
+          "url": "https://www.g2.com/products/zapmail/reviews",
+          "title": "Zapmail Reviews G2"
+        },
+        {
+          "position": 7,
+          "url": "https://woodpecker.co/blog/zapmail/",
+          "title": "Zapmail Review Woodpecker"
+        },
+        {
+          "position": 8,
+          "url": "https://puzzleinbox.com/tools/zapmail",
+          "title": "Zapmail Review Puzzle Inbox"
+        },
+        {
+          "position": 9,
+          "url": "https://www.salesforge.ai/directory/sales-tools/zapmail",
+          "title": "Zapmail Overview salesforge"
+        },
+        {
+          "position": 10,
+          "url": "https://zapmail.ai/blog/cheapinboxes-review/",
+          "title": "CheapInboxes Review zapmail"
+        }
+      ],
+      "topCompetitors": [
+        "reddit.com",
+        "zapmail.ai",
+        "trustpilot.com"
+      ]
+    },
+    "primeforge review": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/primeforge-review",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.reddit.com/r/coldemail/comments/1kj6gzk/its_prime_time_for_primeforgeai_google_workspace/",
+          "title": "primeforge.ai Reddit"
+        },
+        {
+          "position": 2,
+          "url": "https://www.g2.com/products/primeforge/reviews",
+          "title": "Primeforge Reviews G2"
+        },
+        {
+          "position": 3,
+          "url": "https://www.trustpilot.com/review/primeforge.ai",
+          "title": "Primeforge.ai Trustpilot"
+        },
+        {
+          "position": 4,
+          "url": "https://zapmail.ai/blog/primeforge-review/",
+          "title": "Primeforge Review zapmail"
+        },
+        {
+          "position": 5,
+          "url": "https://coldemailkit.com/tools/primeforge",
+          "title": "Primeforge Review coldemailkit"
+        },
+        {
+          "position": 6,
+          "url": "https://prospeo.io/s/primeforge-pricing-reviews-pros-and-cons",
+          "title": "Primeforge Pricing Prospeo"
+        },
+        {
+          "position": 7,
+          "url": "https://www.primeforge.ai/blog/zapmail-review",
+          "title": "Zapmail Review Primeforge"
+        },
+        {
+          "position": 8,
+          "url": "https://inboxflow.net/infraforge-vs-primeforge",
+          "title": "Infraforge vs Primeforge InboxFlow"
+        },
+        {
+          "position": 9,
+          "url": "https://puzzleinbox.com/compare/primeforge",
+          "title": "PuzzleInbox vs Primeforge"
+        },
+        {
+          "position": 10,
+          "url": "https://www.saasworthy.com/product/primeforge-ai",
+          "title": "Primeforge SaaSworthy"
+        }
+      ],
+      "topCompetitors": [
+        "reddit.com",
+        "g2.com",
+        "trustpilot.com"
+      ]
+    },
+    "mailforge review": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/mailforge-review",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.trustpilot.com/review/mailforge.ai",
+          "title": "Mailforge.ai Trustpilot"
+        },
+        {
+          "position": 2,
+          "url": "https://www.reddit.com/r/SaaS/comments/19eavrw/just_launched_mailforgeai_to_scale_cold_email/",
+          "title": "mailforge.ai Reddit SaaS"
+        },
+        {
+          "position": 3,
+          "url": "https://www.g2.com/products/salesforge-mailforge/reviews",
+          "title": "Mailforge Reviews G2"
+        },
+        {
+          "position": 4,
+          "url": "https://www.mailforge.ai/blog/mailreef",
+          "title": "Mailreef 14 Days mailforge"
+        },
+        {
+          "position": 5,
+          "url": "https://woodpecker.co/blog/mailforge/",
+          "title": "Mailforge Woodpecker"
+        },
+        {
+          "position": 6,
+          "url": "https://www.mailforge.ai/blog/mailscale-reviews",
+          "title": "Mailscale Reviews mailforge"
+        },
+        {
+          "position": 7,
+          "url": "https://prospeo.io/s/mailforge-pricing-reviews-pros-and-cons",
+          "title": "Mailforge Pricing Prospeo"
+        },
+        {
+          "position": 8,
+          "url": "https://www.producthunt.com/products/mailforge",
+          "title": "Mailforge Product Hunt"
+        },
+        {
+          "position": 9,
+          "url": "https://www.dimmo.ai/products/mailforge",
+          "title": "Mailforge Review Dimmo"
+        },
+        {
+          "position": 10,
+          "url": "https://skywork.ai/skypage/en/Mailforge-Review-(2025)-My-Hands-On-Test-of-This-Cold-Email-Infrastructure-AI/1976556110033776640",
+          "title": "Mailforge Review skywork"
+        }
+      ],
+      "topCompetitors": [
+        "trustpilot.com",
+        "reddit.com",
+        "g2.com"
+      ]
+    },
+    "pre-warmed mailboxes": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/infrabox-prewarmed-mailboxes",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://zapmail.ai/Pre-Warmed-Mailboxes",
+          "title": "Pre-warmed Mailboxes Zapmail"
+        },
+        {
+          "position": 2,
+          "url": "https://www.reddit.com/r/coldemail/comments/1nyljko/best_platform_to_get_prewarmed_inboxes/",
+          "title": "Best pre-warmed inboxes Reddit"
+        },
+        {
+          "position": 3,
+          "url": "https://helpcenter.smartlead.ai/en/articles/429-pre-warmed-mailboxes-by-smartlead",
+          "title": "Pre-warmed Mailboxes Smartlead"
+        },
+        {
+          "position": 4,
+          "url": "https://instantly.ai/pre-warmed-email-accounts",
+          "title": "Pre-Warmed Email Accounts Instantly"
+        },
+        {
+          "position": 5,
+          "url": "https://www.infraforge.ai/blog/pre-warmed-email-accounts",
+          "title": "5 Best Pre-Warmed Providers Infraforge"
+        },
+        {
+          "position": 6,
+          "url": "https://prospeo.io/s/pre-warmed-email-accounts",
+          "title": "Pre-Warmed Buyers Guide Prospeo"
+        },
+        {
+          "position": 7,
+          "url": "https://litemail.ai/pre-warmup",
+          "title": "Pre-Warmed Inboxes LiteMail"
+        },
+        {
+          "position": 8,
+          "url": "https://emailastra.io/",
+          "title": "EmailAstra"
+        },
+        {
+          "position": 9,
+          "url": "https://www.mailscale.ai/prewarmed",
+          "title": "Pre-warmed Inboxes Mailscale"
+        },
+        {
+          "position": 10,
+          "url": "https://www.infraforge.ai/blog/pre-warmed-mailboxes-vs-manual-warming-key-differences",
+          "title": "Pre-Warmed vs Manual Warming Infraforge"
+        }
+      ],
+      "topCompetitors": [
+        "zapmail.ai",
+        "reddit.com",
+        "helpcenter.smartlead.ai"
+      ]
+    },
+    "pre-warmed google workspace": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/pre-warmed-google-workspace-accounts",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://puzzleinbox.com/blog/prewarmed-inboxes-explained",
+          "title": "Pre-Warmed Inboxes Explained PuzzleInbox"
+        },
+        {
+          "position": 2,
+          "url": "https://f60host.com/pre-warmed-google-workspace-email-accounts.php",
+          "title": "Pre-warmed Google Workspace f60host"
+        },
+        {
+          "position": 3,
+          "url": "https://www.primeforge.ai/blog/prewarmed-google-mailboxes",
+          "title": "5 Best Prewarmed Google Workspace primeforge"
+        },
+        {
+          "position": 4,
+          "url": "https://litemail.ai/blog/pre-warmed-gws-inboxes-cold-email-compliance",
+          "title": "Pre-Warmed GWS Inboxes LiteMail"
+        },
+        {
+          "position": 5,
+          "url": "https://www.reddit.com/r/coldemail/comments/1niicnx/pre_warmed_up_emails/",
+          "title": "Pre warmed up emails Reddit"
+        },
+        {
+          "position": 6,
+          "url": "https://www.infraforge.ai/blog/pre-warmed-email-accounts",
+          "title": "5 Best Pre-Warmed Providers Infraforge"
+        },
+        {
+          "position": 7,
+          "url": "https://emailastra.io/",
+          "title": "EmailAstra Pre Warmed Google"
+        },
+        {
+          "position": 8,
+          "url": "https://prospeo.io/s/pre-warmed-email-accounts",
+          "title": "Pre-Warmed Buyers Guide Prospeo"
+        },
+        {
+          "position": 9,
+          "url": "https://www.mailwarm.com/blog/best-email-warmup-schedule-gmail-google-workspace",
+          "title": "Email Warmup Schedule mailwarm"
+        },
+        {
+          "position": 10,
+          "url": "https://www.instagram.com/p/DGQO2ReJ7eu/",
+          "title": "Instagram Pre-Warmed Google Workspace"
+        }
+      ],
+      "topCompetitors": [
+        "puzzleinbox.com",
+        "f60host.com",
+        "primeforge.ai"
+      ]
+    },
+    "pre-warmed microsoft 365": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/pre-warmed-microsoft-365-mailboxes",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://litemail.ai/blog/pre-warmed-ms365-inboxes-warm-up-history-explained",
+          "title": "Pre-Warmed MS365 LiteMail"
+        },
+        {
+          "position": 2,
+          "url": "https://www.primeforge.ai/blog/prewarmed-ms365-mailboxes",
+          "title": "5 Best Prewarmed MS365 primeforge"
+        },
+        {
+          "position": 3,
+          "url": "https://puzzleinbox.com/blog/prewarmed-inboxes-explained",
+          "title": "Pre-Warmed Inboxes PuzzleInbox"
+        },
+        {
+          "position": 4,
+          "url": "https://litemail.ai/blog/pre-warmed-ms365-inboxes-lead-gen-agencies-2026",
+          "title": "Pre-Warmed MS365 Lead Gen LiteMail"
+        },
+        {
+          "position": 5,
+          "url": "https://www.reddit.com/r/coldemail/comments/1ij1cqe/urgently_need_to_send_15k_emails/",
+          "title": "Urgently 15k emails Reddit"
+        },
+        {
+          "position": 6,
+          "url": "https://www.infraforge.ai/blog/pre-warmed-mailboxes-vs-manual-warming-key-differences",
+          "title": "Pre-Warmed vs Manual infraforge"
+        },
+        {
+          "position": 7,
+          "url": "https://prospeo.io/s/pre-warmed-email-accounts",
+          "title": "Pre-Warmed Buyers Guide Prospeo"
+        },
+        {
+          "position": 8,
+          "url": "https://help.zapmail.ai/en/articles/13358418-pre-warmed-mailboxes-in-zapmail-complete-guide",
+          "title": "Zapmail Pre-warmed Guide"
+        },
+        {
+          "position": 9,
+          "url": "https://warminboxes.com/",
+          "title": "Warm Inboxes"
+        },
+        {
+          "position": 10,
+          "url": "https://litemail.ai/blog/pre-warmed-ms365-inboxes-saas-outbound",
+          "title": "Pre-Warmed MS365 SaaS LiteMail"
+        }
+      ],
+      "topCompetitors": [
+        "litemail.ai",
+        "primeforge.ai",
+        "puzzleinbox.com"
+      ]
+    },
+    "best cold email infrastructure for startups": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/best-cold-email-infrastructure-startups-2026",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.reddit.com/r/coldemail/comments/1rckew4/best_startup_cold_email_sender/",
+          "title": "Best Startup Sender Reddit"
+        },
+        {
+          "position": 2,
+          "url": "https://www.mailforge.ai/blog/cold-email-infrastructure-tools",
+          "title": "21 Cold Email Infrastructure mailforge"
+        },
+        {
+          "position": 3,
+          "url": "https://www.sprintzeal.com/blog/email-tools-for-tech-startups",
+          "title": "6 Cold Email Tools Startups sprintzeal"
+        },
+        {
+          "position": 4,
+          "url": "https://www.cm-alliance.com/cybersecurity-blog/6-best-cold-email-tools-for-saas-startups-how-to-use-them-securely",
+          "title": "7 Best SaaS Startups cm-alliance"
+        },
+        {
+          "position": 5,
+          "url": "https://www.amyntas.in/best-cold-email-infrastructure-for-startups-and-freelancers/",
+          "title": "Best for Startups amyntas"
+        },
+        {
+          "position": 6,
+          "url": "https://www.saleshandy.com/blog/cold-email-infrastructure-providers/",
+          "title": "6 Best Cold Email Infrastructure saleshandy"
+        },
+        {
+          "position": 7,
+          "url": "https://snov.io/blog/best-cold-email-infrastructure-tools/",
+          "title": "Best Tools snov.io"
+        },
+        {
+          "position": 8,
+          "url": "https://www.gmass.co/blog/best-cold-email-infrastructure/",
+          "title": "5 Best gmass"
+        },
+        {
+          "position": 9,
+          "url": "https://smtpmart.com/blog/best-cold-email-marketing-websites/",
+          "title": "10 Best Websites smtpmart"
+        },
+        {
+          "position": 10,
+          "url": "https://www.primeforge.ai/blog/cold-email-infrastructure-tools-2025",
+          "title": "10 Best primeforge"
+        }
+      ],
+      "topCompetitors": [
+        "reddit.com",
+        "mailforge.ai",
+        "sprintzeal.com"
+      ]
+    },
+    "cheapest cold email infrastructure": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/cheapest-cold-email-infrastructure-2026",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.reddit.com/r/coldemail/comments/1rwlfcf/new_to_cold_email_confused_whats_the_cheapest/",
+          "title": "Cheapest New to Cold Email Reddit"
+        },
+        {
+          "position": 2,
+          "url": "https://www.gmass.co/blog/cheapest-cold-email/",
+          "title": "Cheapest Cold Email Tool gmass"
+        },
+        {
+          "position": 3,
+          "url": "https://www.mailforge.ai/blog/cold-email-infrastructure-tools",
+          "title": "21 Cold Email mailforge"
+        },
+        {
+          "position": 4,
+          "url": "https://www.saleshandy.com/blog/cold-email-infrastructure-providers/",
+          "title": "6 Best Cold Email saleshandy"
+        },
+        {
+          "position": 5,
+          "url": "https://www.youtube.com/watch?v=cTqUdUE7niw",
+          "title": "Cheapest YouTube"
+        },
+        {
+          "position": 6,
+          "url": "https://www.infraforge.ai/blog/best-cheapest-cold-email-softwares",
+          "title": "10 Cheapest infraforge"
+        },
+        {
+          "position": 7,
+          "url": "https://leadsmonky.com/best-cheap-inboxes-for-cold-email-agencies/",
+          "title": "Best Cheap Inboxes leadsmonky"
+        },
+        {
+          "position": 8,
+          "url": "https://www.trulyinbox.com/blog/cold-email-service-providers/",
+          "title": "7 Best Cold Email trulyinbox"
+        },
+        {
+          "position": 9,
+          "url": "https://www.gmass.co/blog/best-cold-email-infrastructure/",
+          "title": "5 Best gmass"
+        },
+        {
+          "position": 10,
+          "url": "https://snov.io/blog/best-cold-email-infrastructure-tools/",
+          "title": "Best Tools snov.io"
+        }
+      ],
+      "topCompetitors": [
+        "reddit.com",
+        "gmass.co",
+        "mailforge.ai"
+      ]
+    },
+    "best cold email infrastructure under 50 mailboxes": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/best-cold-email-infrastructure-under-50-mailboxes",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.reddit.com/r/coldemail/comments/1s3ogoz/best_affordable_mailbox_provider_for_lowvolume/",
+          "title": "Low-volume Reddit"
+        },
+        {
+          "position": 2,
+          "url": "https://www.mailforge.ai/blog/cold-email-infrastructure-tools",
+          "title": "21 Cold Email mailforge"
+        },
+        {
+          "position": 3,
+          "url": "https://leadsmonky.com/best-cheap-inboxes-for-cold-email-agencies/",
+          "title": "Best Cheap Inboxes leadsmonky"
+        },
+        {
+          "position": 4,
+          "url": "https://www.gmass.co/blog/best-cold-email-infrastructure/",
+          "title": "5 Best gmass"
+        },
+        {
+          "position": 5,
+          "url": "https://www.primeforge.ai/blog/cold-email-infrastructure-tools-2025",
+          "title": "10 Best primeforge"
+        },
+        {
+          "position": 6,
+          "url": "https://winnr.app/blog/best-cold-email-infrastructure-2026.html",
+          "title": "7 Best winnr"
+        },
+        {
+          "position": 7,
+          "url": "https://maildeck.co/blog/cold-email-infrastructure-cost-2026",
+          "title": "Pricing Comparison maildeck"
+        },
+        {
+          "position": 8,
+          "url": "https://zapmail.ai/blog/cold-email-infrastructure/",
+          "title": "5 Cold Email Infrastructure zapmail"
+        },
+        {
+          "position": 9,
+          "url": "https://www.saleshandy.com/blog/cold-email-infrastructure-providers/",
+          "title": "6 Best saleshandy"
+        }
+      ],
+      "topCompetitors": [
+        "reddit.com",
+        "mailforge.ai",
+        "leadsmonky.com"
+      ]
+    },
+    "best cold email infrastructure for high volume": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/best-cold-email-infrastructure-high-volume",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.reddit.com/r/coldemail/comments/1s1zukv/best_platform_for_high_volume_cold_emails/",
+          "title": "Best platform high volume Reddit"
+        },
+        {
+          "position": 2,
+          "url": "https://www.gmass.co/blog/high-volume-cold-email-methods/",
+          "title": "3 Best Methods High-Volume gmass"
+        },
+        {
+          "position": 3,
+          "url": "https://www.infraforge.ai/blog/best-email-infrastructure-tools",
+          "title": "7 Best Tools Infraforge"
+        },
+        {
+          "position": 4,
+          "url": "https://www.hypergen.io/blog/top-cold-email-infrastructure-providers",
+          "title": "Top 7 providers Hypergen"
+        },
+        {
+          "position": 5,
+          "url": "https://www.scaledmail.com/blogs/best-email-service-cold-emails",
+          "title": "8 Best ScaledMail"
+        },
+        {
+          "position": 6,
+          "url": "https://snov.io/blog/best-cold-email-infrastructure-tools/",
+          "title": "Best Tools snov.io"
+        },
+        {
+          "position": 7,
+          "url": "https://www.mailpool.ai/blog/the-best-cold-email-stack-in-2026-infrastructure-sending-tool-tracking",
+          "title": "Best Cold Email Stack mailpool"
+        },
+        {
+          "position": 8,
+          "url": "https://www.youtube.com/watch?v=jynVNwB7R44",
+          "title": "5 Best Software YouTube"
+        },
+        {
+          "position": 9,
+          "url": "https://www.skief.co/guides/scale-tech-stack-send-large-volume-cold-emails",
+          "title": "Scaling Tech Stack skief"
+        }
+      ],
+      "topCompetitors": [
+        "reddit.com",
+        "gmass.co",
+        "infraforge.ai"
+      ]
+    },
+    "cold emails going to spam gmail": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/cold-emails-going-to-spam-gmail-fix",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.reddit.com/r/coldemail/comments/1q4oe6w/cold_emails_suddenly_going_100_to_spam_on_gmail/",
+          "title": "Suddenly going to spam Reddit"
+        },
+        {
+          "position": 2,
+          "url": "https://support.google.com/mail/thread/302232592/how-can-i-avoid-getting-my-email-straight-to-the-recipient-spam-folder",
+          "title": "How to avoid spam Google Support"
+        },
+        {
+          "position": 3,
+          "url": "https://www.youtube.com/watch?v=SbhCltADz-M",
+          "title": "Cold Emails Spam Fix YouTube"
+        },
+        {
+          "position": 4,
+          "url": "https://www.leadloft.com/blog/emails-in-spam",
+          "title": "Cold Emails Going to Spam LeadLoft"
+        },
+        {
+          "position": 5,
+          "url": "https://www.allegrow.co/knowledge-base/cold-emails-reported-as-spam",
+          "title": "Cold Email vs Spam allegrow"
+        },
+        {
+          "position": 6,
+          "url": "https://www.n-able.com/blog/how-to-revive-a-cold-email-list-without-getting-flagged-as-spam",
+          "title": "Revive Cold Email n-able"
+        },
+        {
+          "position": 7,
+          "url": "https://support.google.com/mail/thread/212566320/why-are-my-emails-going-to-spam",
+          "title": "Why emails spam Google Community"
+        },
+        {
+          "position": 8,
+          "url": "https://www.quora.com/What-causes-cold-emails-to-land-in-spam-and-how-do-you-avoid-it-for-higher-deliverability",
+          "title": "Causes Quora"
+        },
+        {
+          "position": 9,
+          "url": "https://www.emailchaser.com/learn/how-to-know-if-your-cold-emails-are-going-to-spam",
+          "title": "How to know spam emailchaser"
+        }
+      ],
+      "topCompetitors": [
+        "reddit.com",
+        "support.google.com",
+        "youtube.com"
+      ]
+    },
+    "dmarc failed gmail": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/dmarc-failed-gmail-fix",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://knowledge.workspace.google.com/admin/security/troubleshoot-dmarc-issues",
+          "title": "Troubleshoot DMARC Google"
+        },
+        {
+          "position": 2,
+          "url": "https://support.google.com/mail/thread/340592212/dmarc-error-sending-email-through-gmail",
+          "title": "DMARC error Google Help"
+        },
+        {
+          "position": 3,
+          "url": "https://www.reddit.com/r/squarespace/comments/1k0ywnh/how_do_i_fix_a_dmarc_email_issue_with_gmail/",
+          "title": "DMARC squarespace Reddit"
+        },
+        {
+          "position": 4,
+          "url": "https://www.validity.com/blog/why-does-dmarc-fail-troubleshooting-email-authentication-issues/",
+          "title": "Why DMARC Fail Validity"
+        },
+        {
+          "position": 5,
+          "url": "https://www.valimail.com/blog/dmarc-fail/",
+          "title": "DMARC fail Valimail"
+        },
+        {
+          "position": 6,
+          "url": "https://www.duocircle.com/emails-services/gmail-550-5-7-26-error-for-emails-failing-dmarc-checks",
+          "title": "Gmail 550 duocircle"
+        },
+        {
+          "position": 7,
+          "url": "https://powerdmarc.com/why-is-dmarc-failing/",
+          "title": "DMARC Fail powerdmarc"
+        },
+        {
+          "position": 8,
+          "url": "https://learn.microsoft.com/en-us/answers/questions/5704598/emails-rejected-at-gmail-because-of-failed-dmarc-v",
+          "title": "Emails rejected Microsoft Q&A"
+        },
+        {
+          "position": 9,
+          "url": "https://www.youtube.com/watch?v=AwyBwk1SLNA",
+          "title": "Fix DMARC YouTube"
+        },
+        {
+          "position": 10,
+          "url": "https://fullvalence.com/2025/07/04/gmail-dmarc-failure/",
+          "title": "Gmail DMARC failure fullvalence"
+        }
+      ],
+      "topCompetitors": [
+        "knowledge.workspace.google.com",
+        "support.google.com",
+        "reddit.com"
+      ]
+    },
+    "why is my domain blacklisted": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/learn/domain-blacklisted-diagnosis-guide",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://mxtoolbox.com/blacklists.aspx",
+          "title": "IP Blacklist Check MxToolbox"
+        },
+        {
+          "position": 2,
+          "url": "https://www.reddit.com/r/sysadmin/comments/1qg983g/our_domain_is_probably_blacklisted_how_to_find/",
+          "title": "Domain probably blacklisted Reddit"
+        },
+        {
+          "position": 3,
+          "url": "https://dnschecker.org/ip-blacklist-checker.php",
+          "title": "IP Blacklist DNS Checker"
+        },
+        {
+          "position": 4,
+          "url": "https://folderly.com/blog/remove-email-domain-ip-from-blacklist",
+          "title": "Break Free Folderly"
+        },
+        {
+          "position": 5,
+          "url": "https://netcorecloud.com/tutorials/ip-domain-blacklist-reasons/",
+          "title": "6 Reasons netcorecloud"
+        },
+        {
+          "position": 6,
+          "url": "https://learn.microsoft.com/en-us/answers/questions/4702278/our-domain-is-blacklisted",
+          "title": "Domain blacklisted Microsoft Q&A"
+        },
+        {
+          "position": 7,
+          "url": "https://www.youtube.com/watch?v=PiN0Mh3VURA",
+          "title": "How to check YouTube"
+        },
+        {
+          "position": 8,
+          "url": "https://docs.20i.com/email-hosting/domain-blacklisted",
+          "title": "domain blacklisted 20i"
+        },
+        {
+          "position": 9,
+          "url": "https://www.zerobounce.net/blacklist-checker",
+          "title": "Free IP Blacklist ZeroBounce"
+        }
+      ],
+      "topCompetitors": [
+        "mxtoolbox.com",
+        "reddit.com",
+        "dnschecker.org"
+      ]
+    },
+    "cold email infrastructure": {
+      "snapshotAt": "2026-04-11T18:30:00.000Z",
+      "ourPosition": null,
+      "ourUrlDetected": null,
+      "ourUrlExpected": "https://www.infrabox.io/",
+      "top10": [
+        {
+          "position": 1,
+          "url": "https://www.gmass.co/blog/best-cold-email-infrastructure/",
+          "title": "5 Best gmass"
+        },
+        {
+          "position": 2,
+          "url": "https://www.saleshandy.com/blog/cold-email-infrastructure-providers/",
+          "title": "6 Best saleshandy"
+        },
+        {
+          "position": 3,
+          "url": "https://www.mailforge.ai/",
+          "title": "Mailforge homepage"
+        },
+        {
+          "position": 4,
+          "url": "https://www.reddit.com/r/coldemail/comments/1g9hqru/is_the_cold_email_infrastructure_setup_overrated/",
+          "title": "Overrated Reddit"
+        },
+        {
+          "position": 5,
+          "url": "https://supersend.io/blog/cold-email-infrastructure-complete-guide",
+          "title": "Complete Guide supersend"
+        },
+        {
+          "position": 6,
+          "url": "https://www.youtube.com/watch?v=cTqUdUE7niw",
+          "title": "Cheapest YouTube"
+        },
+        {
+          "position": 7,
+          "url": "https://www.mailforge.ai/blog/cold-email-infrastructure-tools",
+          "title": "21 Tools mailforge"
+        },
+        {
+          "position": 8,
+          "url": "https://prospeo.io/s/cold-email-infrastructure",
+          "title": "Setup Guide Prospeo"
+        },
+        {
+          "position": 9,
+          "url": "https://woodpecker.co/blog/cold-email-infrastructure/",
+          "title": "Cold Email Infrastructure Woodpecker"
+        },
+        {
+          "position": 10,
+          "url": "https://inframail.io/",
+          "title": "Inframail"
+        }
+      ],
+      "topCompetitors": [
+        "gmass.co",
+        "saleshandy.com",
+        "mailforge.ai"
+      ]
+    }
+  }
+}

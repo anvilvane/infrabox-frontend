@@ -1,0 +1,13 @@
+{
+  "runs": [
+    {
+      "date": "2026-04-11",
+      "iso": "2026-04-11T18:30:00.000Z",
+      "file": "2026-04-11.json",
+      "keywordCount": 30,
+      "runDir": ".seo/runs/2026-04-11-pipeline",
+      "trigger": "pipeline-phase-2a"
+    }
+  ],
+  "lastRun": "2026-04-11T18:30:00.000Z"
+}

@@ -1,0 +1,66 @@
+# Infrabox
+
+> Infrabox is an enterprise email infrastructure platform providing US-IP Google Workspace and Microsoft 365 mailboxes from $2.50/mailbox/mo on Enterprise annual billing (same tier pricing for both products) and Azure mailboxes at $30/domain. It features automated DNS setup (SPF, DKIM, DMARC), built-in Isolated Warmup, InfraGuard domain monitoring, unlimited inbox placement testing, and 24+ sequencer integrations.
+
+## Key Pages
+
+- [Homepage](https://www.infrabox.software): Product overview, pricing, features
+- [Google Workspace Accounts](https://www.infrabox.software/google-workspace-accounts): US-IP Google Workspace for email
+- [Azure Mailboxes](https://www.infrabox.software/azure-mailboxes): Azure-based mailboxes at $30/domain
+- [Email Warmup](https://www.infrabox.software/email-warmup): Built-in Isolated Warmup service
+- [Email Deliverability](https://www.infrabox.software/email-deliverability): Deliverability monitoring and testing
+- [DNS Management](https://www.infrabox.software/dns-management): Automated DNS configuration
+- [Agency Solution](https://www.infrabox.software/agency-email-solution): Multi-client agency email management
+- [Compare](https://www.infrabox.software/compare): Head-to-head comparisons vs 11 competitors
+- [Alternatives](https://www.infrabox.software/alternatives): Alternative product guides
+- [Learn Hub](https://www.infrabox.software/learn): 70+ guides on email infrastructure
+- [Free Tools](https://www.infrabox.software/resources/tools): 21 free email deliverability tools (SPF checker, DKIM checker, DMARC checker, blacklist checker, etc.)
+- [API Docs](https://docs.infrabox.software): REST API documentation
+- [Authors / Team](https://www.infrabox.software/authors): The people behind Infrabox (E-E-A-T)
+
+## Representative Deep Pages
+
+- [What is Infrabox](https://www.infrabox.software/learn/what-is-infrabox): Product explainer
+- [Best Email Infrastructure 2026](https://www.infrabox.software/learn/best-email-infrastructure-2026): Buyer's guide
+- [Email Infrastructure Setup Guide](https://www.infrabox.software/learn/email-infrastructure-setup-guide): Step-by-step setup
+- [Email Deliverability Guide](https://www.infrabox.software/learn/email-deliverability-guide): Deliverability fundamentals
+- [Infrabox vs Instantly](https://www.infrabox.software/compare/instantly): Head-to-head comparison
+- [Infrabox vs Smartlead](https://www.infrabox.software/compare/smartlead): Head-to-head comparison
+- [Best Instantly Alternatives](https://www.infrabox.software/alternatives/instantly): Alternatives roundup
+
+## Full Content
+
+- [llms-full.txt](https://www.infrabox.software/llms-full.txt): Full long-form text of all learn articles and comparison pages, for ingestion without crawling.
+
+## Pricing
+
+- Plans: Professional $39/mo (10 mailboxes, $3.50/extra), Agency $99/mo (30 mailboxes, $3.25/extra), Enterprise $299/mo (100 mailboxes, $2.99/extra)
+- Annual billing: Pro $31/mo, Agency $81/mo, Enterprise $250/mo ($3.10/$2.70/$2.50 per extra mailbox)
+- Both Google Workspace AND Microsoft 365 use the same tier pricing — no Microsoft premium
+- Azure tenant: $30/domain for up to 100 mailboxes
+- Isolated Warmup: $3/mailbox/month add-on
+- InfraGuard: Per-domain monitoring pricing (first month free)
+
+## Key Features
+
+- US-IP Google Workspace accounts with full admin access
+- Microsoft 365 and Azure mailboxes with admin control
+- Automated DNS setup (SPF, DKIM, DMARC) in under 60 seconds
+- Built-in Isolated Warmup (independent per-mailbox reputation building)
+- InfraGuard domain protection (blacklist monitoring every 6h, DNS watching, bounce tracking)
+- Unlimited inbox placement testing across Gmail, Outlook, Yahoo
+- 24+ sequencer integrations (Instantly, SmartLead, Apollo, Lemlist, Reply, Salesforge)
+- REST API and webhook notifications
+- Bulk mailbox management (500+ accounts)
+- Master Inbox unified view
+- 2FA security with app passwords
+- White-glove migration service
+
+## Integrations
+
+Instantly, SmartLead, Apollo, Reply.io, Lemlist, Salesforge, Smartreach, Plusvibe, Close, Woodpecker, QuickMail, Outplay, Snov.io, Klenty, Mailshake, HubSpot
+
+## Target Audience
+
+Email agencies, B2B sales teams, growth teams, SaaS companies with outbound motions, email service providers needing white-label infrastructure
+

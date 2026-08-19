@@ -1,0 +1,121 @@
+{
+  "id": "programmatic-geo-infra",
+  "name": "Cold email infrastructure by geo",
+  "pageType": "learn",
+  "generator": "programmatic",
+  "priority": 3,
+  "status": "done",
+  "doneAt": "2026-04-11T00:00:00Z",
+  "assignedAgent": null,
+  "owner": null,
+  "description": "Geo-specific guides that tie Infrabox's US-IP advantage to what buyers in each market actually need. Each variant must have country-specific deliverability context (inbox providers, regulations, sender-auth rules, typical recipient expectations).",
+  "searchIntent": "informational-commercial",
+  "headKeywords": [
+    "cold email infrastructure <country>",
+    "<country> cold email setup",
+    "cold email deliverability <country>"
+  ],
+  "semanticKeywords": [
+    "sender authentication",
+    "data residency",
+    "gdpr",
+    "can-spam",
+    "local inbox providers",
+    "regional deliverability"
+  ],
+  "competitors": [
+    "mailforge",
+    "primeforge",
+    "zapmail",
+    "instantly"
+  ],
+  "intentHints": [],
+  "template": {
+    "slugPattern": "cold-email-infrastructure-<country>",
+    "titlePattern": "Cold Email Infrastructure for <Country> (2026)",
+    "category": "Guides",
+    "type": "guide",
+    "minWords": 1800
+  },
+  "variables": [
+    {
+      "country": "us",
+      "Country": "United States",
+      "regs": "CAN-SPAM",
+      "inboxes": "Gmail, Outlook, Yahoo, Apple Mail",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00Z",
+      "slug": "cold-email-infrastructure-us"
+    },
+    {
+      "country": "uk",
+      "Country": "United Kingdom",
+      "regs": "PECR, UK GDPR",
+      "inboxes": "Gmail, Outlook, Sky, BTinternet",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00Z",
+      "slug": "cold-email-infrastructure-uk"
+    },
+    {
+      "country": "canada",
+      "Country": "Canada",
+      "regs": "CASL (strict)",
+      "inboxes": "Gmail, Outlook, Rogers, Bell",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00Z",
+      "slug": "cold-email-infrastructure-canada"
+    },
+    {
+      "country": "australia",
+      "Country": "Australia",
+      "regs": "Spam Act 2003",
+      "inboxes": "Gmail, Outlook, Telstra, Bigpond",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00Z",
+      "slug": "cold-email-infrastructure-australia"
+    },
+    {
+      "country": "germany",
+      "Country": "Germany",
+      "regs": "GDPR, UWG (very strict)",
+      "inboxes": "Gmail, Web.de, GMX, Outlook",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00Z",
+      "slug": "cold-email-infrastructure-germany"
+    },
+    {
+      "country": "france",
+      "Country": "France",
+      "regs": "GDPR, LCEN",
+      "inboxes": "Gmail, Orange, Free, Outlook",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00Z",
+      "slug": "cold-email-infrastructure-france"
+    },
+    {
+      "country": "netherlands",
+      "Country": "Netherlands",
+      "regs": "GDPR, Telecommunicatiewet",
+      "inboxes": "Gmail, Outlook, KPN",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00Z",
+      "slug": "cold-email-infrastructure-netherlands"
+    },
+    {
+      "country": "india",
+      "Country": "India",
+      "regs": "IT Act, CERT-In rules",
+      "inboxes": "Gmail, Outlook, Rediff",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00Z",
+      "slug": "cold-email-infrastructure-india"
+    }
+  ],
+  "excludeSlugs": [],
+  "cmuxPanelCount": 2,
+  "notes": "CASL, GDPR, and German UWG are genuinely strict — an honest guide should acknowledge risk and avoid positioning cold email as a free-fire zone in those markets.",
+  "mcp": {
+    "keywordsSyncedAt": "2026-04-11T14:35:00.000Z",
+    "keywordsSyncedBy": "backfill-from-push-history"
+  }
+}

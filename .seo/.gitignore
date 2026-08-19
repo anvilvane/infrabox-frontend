@@ -1,0 +1,10 @@
+runs/
+memory/.locks/
+*.screenshot.png
+*.draft.json
+
+# Local blog pipeline (Playwright/sharp). Personal, do not commit.
+lib/
+components/
+scripts/*.ts
+scripts/tsconfig.json

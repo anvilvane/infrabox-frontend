@@ -1,0 +1,105 @@
+{
+  "id": "troubleshoot-deliverability",
+  "name": "Deliverability troubleshooting",
+  "pageType": "learn",
+  "generator": "standard",
+  "priority": 1,
+  "status": "done",
+  "doneAt": "2026-04-11",
+  "assignedAgent": null,
+  "owner": null,
+  "description": "Diagnostic articles targeting high-intent symptom queries. These rank well because users searching them are actively debugging a broken campaign and convert when they hit a useful guide. Each article is symptom-first: state the symptom in the H1, explain the likely causes in order of probability, give a debug checklist, and show how InfraGuard catches the same issue automatically.",
+  "searchIntent": "informational (diagnostic)",
+  "headKeywords": [
+    "cold emails going to spam gmail",
+    "emails landing in promotions tab",
+    "dmarc failed gmail",
+    "why is my domain blacklisted",
+    "soft bounce cold email fix",
+    "google postmaster bad reputation fix",
+    "microsoft 365 cold email spam fix",
+    "spf softfail fix"
+  ],
+  "semanticKeywords": [
+    "deliverability diagnosis",
+    "spam folder",
+    "sender score",
+    "postmaster tools",
+    "blacklist removal",
+    "authentication failure"
+  ],
+  "competitors": [],
+  "intentHints": [
+    "These queries have strong Reddit presence — run seo-reddit-intent on each slug before drafting"
+  ],
+  "slugs": [
+    {
+      "slug": "cold-emails-going-to-spam-gmail-fix",
+      "type": "how-to",
+      "targetQuery": "cold emails going to spam gmail",
+      "status": "done",
+      "doneAt": "2026-04-11"
+    },
+    {
+      "slug": "emails-landing-in-promotions-tab",
+      "type": "how-to",
+      "targetQuery": "cold emails landing in promotions tab",
+      "status": "done",
+      "doneAt": "2026-04-11"
+    },
+    {
+      "slug": "dmarc-failed-gmail-fix",
+      "type": "how-to",
+      "targetQuery": "dmarc failed gmail",
+      "status": "done",
+      "doneAt": "2026-04-11"
+    },
+    {
+      "slug": "domain-blacklisted-diagnosis-guide",
+      "type": "guide",
+      "targetQuery": "why is my domain blacklisted",
+      "status": "done",
+      "doneAt": "2026-04-11"
+    },
+    {
+      "slug": "soft-bounce-cold-email-fix",
+      "type": "how-to",
+      "targetQuery": "soft bounce cold email fix",
+      "status": "done",
+      "doneAt": "2026-04-11"
+    },
+    {
+      "slug": "google-postmaster-bad-reputation",
+      "type": "how-to",
+      "targetQuery": "google postmaster bad reputation fix",
+      "status": "done",
+      "doneAt": "2026-04-11"
+    },
+    {
+      "slug": "microsoft-365-cold-email-spam-fix",
+      "type": "how-to",
+      "targetQuery": "microsoft 365 cold email spam fix",
+      "status": "done",
+      "doneAt": "2026-04-11"
+    },
+    {
+      "slug": "spf-softfail-fix",
+      "type": "how-to",
+      "targetQuery": "spf softfail fix",
+      "status": "done",
+      "doneAt": "2026-04-11"
+    }
+  ],
+  "excludeSlugs": [
+    "why-cold-emails-go-to-spam",
+    "email-blacklist-removal-guide",
+    "check-domain-blacklisted",
+    "google-postmaster-tools-guide"
+  ],
+  "cmuxPanelCount": 2,
+  "notes": "Each article must link to the corresponding existing pillar article in excludeSlugs as further reading.",
+  "mcp": {
+    "keywordsSyncedAt": "2026-04-11T14:35:00.000Z",
+    "keywordsSyncedBy": "backfill-from-push-history"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "alternatives-fresh-wave",
+  "name": "New alternatives pages",
+  "pageType": "alternatives",
+  "generator": "standard",
+  "priority": 1,
+  "status": "done",
+  "assignedAgent": null,
+  "owner": null,
+  "description": "New /alternatives/<slug> pages for tools that are not yet in alternatives-data.js. All 11 existing alternatives pages cover infrastructure-specific tools; these cover adjacent tools (sequencers with bundled infrastructure, lead platforms) whose users overlap with Infrabox's target buyer.",
+  "searchIntent": "informational-commercial (listicle)",
+  "headKeywords": [
+    "<tool> alternatives",
+    "best <tool> alternatives",
+    "<tool> competitors"
+  ],
+  "semanticKeywords": [
+    "alternatives",
+    "competitors",
+    "replacement",
+    "cold email infrastructure",
+    "mailbox provider"
+  ],
+  "competitors": [
+    "gmass",
+    "salesforge",
+    "lemlist",
+    "apollo"
+  ],
+  "intentHints": [],
+  "slugs": [
+    {
+      "slug": "gmass",
+      "toolName": "GMass",
+      "toolDomain": "gmass.co",
+      "angle": "Gmail-native mass senders looking for real-scale infrastructure",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00.000Z",
+      "runDir": ".seo/runs/2026-04-11-alternatives-fresh-wave"
+    },
+    {
+      "slug": "salesforge",
+      "toolName": "Salesforge",
+      "toolDomain": "salesforge.ai",
+      "angle": "users wanting infrastructure without committing to the full Forge stack",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00.000Z",
+      "runDir": ".seo/runs/2026-04-11-alternatives-fresh-wave"
+    },
+    {
+      "slug": "lemlist",
+      "toolName": "Lemlist",
+      "toolDomain": "lemlist.com",
+      "angle": "sequencer users who need dedicated infrastructure for scale",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00.000Z",
+      "runDir": ".seo/runs/2026-04-11-alternatives-fresh-wave"
+    },
+    {
+      "slug": "apollo",
+      "toolName": "Apollo",
+      "toolDomain": "apollo.io",
+      "angle": "Apollo users frustrated with bundled sending limits",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00.000Z",
+      "runDir": ".seo/runs/2026-04-11-alternatives-fresh-wave"
+    }
+  ],
+  "excludeSlugs": [],
+  "cmuxPanelCount": 2,
+  "notes": "Each page follows the existing mailforge/zapmail structure in alternatives-data.js. Must include infraboxAlternative as the first entry and 5-7 real alternatives.",
+  "mcp": {
+    "keywordsSyncedAt": "2026-04-11T14:35:00.000Z",
+    "keywordsSyncedBy": "backfill-from-push-history"
+  }
+}

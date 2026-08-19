@@ -1,0 +1,533 @@
+{
+  "id": "sequencer-integration-guides",
+  "name": "Sequencer integration guides",
+  "pageType": "learn",
+  "generator": "programmatic",
+  "priority": 2,
+  "status": "completed",
+  "assignedAgent": null,
+  "owner": null,
+  "description": "Step-by-step guides for connecting Infrabox mailboxes to each sequencer Infrabox actually supports. Every slug maps 1:1 to a platform listed at /sequencers/connect. Zero tolerance for hallucinated integrations.\n\nAn earlier run of this cluster hallucinated integrations for Apollo, Hunter, and HeyReach. Apollo is in the metadata file but hidden from the public UI; Hunter and HeyReach are not in Infrabox's sequencer codebase at all. The Apollo article was rolled back and the rules below now prevent a recurrence.",
+  "searchIntent": "transactional (post-signup, pre-launch)",
+  "authoritativeSource": {
+    "_note": "Before drafting ANY slug in this cluster, the worker MUST read both of these files. They are the canonical list of supported sequencers — anything not in sequencer-metadata.ts is NOT supported, period.",
+    "metadata": "../src/lib/sequencer-metadata.ts",
+    "connectionConfig": "../src/lib/sequencers.ts",
+    "connectPage": "../src/app/(dashboard)/sequencers/connect/page.tsx",
+    "quickSetupPage": "../src/app/(dashboard)/quick-setup/sequencer/page.tsx",
+    "rule": "Every sequencer mentioned in a draft must match a platform key in sequencerMetadata object. Every feature claimed must come from the features array in that platform's metadata entry or from the sequencer's own docs. No inventing fields, caps, or flows."
+  },
+  "headKeywords": [
+    "<sequencer> infrabox integration",
+    "connect <sequencer> to google workspace",
+    "connect <sequencer> to microsoft 365",
+    "how to import infrabox mailboxes into <sequencer>",
+    "<sequencer> cold email setup"
+  ],
+  "semanticKeywords": [
+    "smtp connection",
+    "imap connection",
+    "oauth",
+    "mailbox import",
+    "sending schedule",
+    "ramp-up",
+    "sequencer setup",
+    "api key",
+    "email+password credentials"
+  ],
+  "competitors": [],
+  "intentHints": [
+    "The Infrabox dashboard has a /sequencers/connect page that handles the actual connection UI. Workers should reference what that page actually does (from the source in authoritativeSource) — the connection fields, the validation flow, the workspace selection, the tags — rather than inventing a generic flow."
+  ],
+  "featuredAssets": {
+    "_note": "Use library assets — do NOT re-capture Infrabox UI via Playwright. The sequencers.png screenshot shows the Infrabox Sequencers page with the actual connected/available platforms list.",
+    "infraboxSequencersPage": "/images/dashboard/sequencers.png",
+    "infraboxExports": "/images/dashboard/exports.png",
+    "infraboxMailboxes": "/images/dashboard/mailboxes.png"
+  },
+  "template": {
+    "slugPattern": "infrabox-<sequencer>-integration",
+    "titlePattern": "How to Connect Infrabox to <Sequencer> (2026)",
+    "category": "Guides",
+    "type": "how-to",
+    "minWords": 1500
+  },
+  "variables": [
+    {
+      "sequencer": "sendkit",
+      "Sequencer": "SendKit",
+      "platformKey": "sendkit",
+      "category": "outreach",
+      "bestFor": "Dedicated infrastructure",
+      "badge": "new",
+      "features": [
+        "Dedicated IPs & AI warmup",
+        "Unified inbox + Slack",
+        "Built-in phone dialer"
+      ],
+      "website": "https://sendkit.ai",
+      "connectionFields": [
+        "api_key (validated via SendKit workspace lookup)"
+      ],
+      "note": "SendKit has a special flow in page.tsx — workspace info is fetched after API key validation and requires Google/Microsoft OAuth configured in SendKit. Reference lines 1708-1761 in ../src/app/(dashboard)/sequencers/connect/page.tsx for the real validation flow.",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-sendkit-integration"
+    },
+    {
+      "sequencer": "instantly",
+      "Sequencer": "Instantly",
+      "platformKey": "instantly",
+      "category": "outreach",
+      "bestFor": "Best for scale",
+      "badge": "popular",
+      "features": [
+        "Unlimited accounts & warmup",
+        "450M+ lead database"
+      ],
+      "website": "https://instantly.ai",
+      "connectionFields": [
+        "email (required)",
+        "password (required)",
+        "api_key (optional)",
+        "workspace (optional)"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-instantly-integration",
+      "note": "Already shipped by earlier run. KEEP."
+    },
+    {
+      "sequencer": "salesforge",
+      "Sequencer": "Salesforge",
+      "platformKey": "salesforge",
+      "category": "outreach",
+      "bestFor": "Best for AI outreach",
+      "features": [
+        "AI SDR agent (Agent Frank)",
+        "Primebox unified inbox"
+      ],
+      "website": "https://www.salesforge.ai",
+      "connectionFields": [
+        "check sequencers.ts for exact field list"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-salesforge-integration"
+    },
+    {
+      "sequencer": "smartlead",
+      "Sequencer": "Smartlead",
+      "platformKey": "smartlead",
+      "category": "outreach",
+      "bestFor": "Cold email at scale",
+      "features": [
+        "Multi-account email sending",
+        "Centralized inbox view"
+      ],
+      "website": "https://www.smartlead.ai",
+      "connectionFields": [
+        "email (required)",
+        "password (required)"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-smartlead-integration",
+      "note": "Already shipped. KEEP."
+    },
+    {
+      "sequencer": "emailbison",
+      "Sequencer": "Email Bison",
+      "platformKey": "emailbison",
+      "category": "outreach",
+      "bestFor": "Best for privacy",
+      "features": [
+        "Dedicated server/IP per client",
+        "Private warmup pool"
+      ],
+      "website": "https://emailbison.com",
+      "connectionFields": [
+        "email (required)",
+        "password (required)"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-emailbison-integration"
+    },
+    {
+      "sequencer": "zazu",
+      "Sequencer": "Za-Zu",
+      "platformKey": "zazu",
+      "category": "outreach",
+      "bestFor": "Best for Clay users",
+      "features": [
+        "AI personalization",
+        "Multi-account management"
+      ],
+      "website": "https://za-zu.com",
+      "connectionFields": [
+        "check sequencers.ts"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-zazu-integration"
+    },
+    {
+      "sequencer": "brandjet",
+      "Sequencer": "BrandJet",
+      "platformKey": "brandjet",
+      "category": "outreach",
+      "bestFor": "Best for brand intelligence",
+      "features": [
+        "Multi-channel campaigns",
+        "AI Unibox + sentiment analysis"
+      ],
+      "website": "https://www.brandjet.ai",
+      "connectionFields": [
+        "api_key only (BrandJet has custom validation — see lines 1592-1648 in page.tsx)"
+      ],
+      "note": "BrandJet has custom API-key-only validation. No email/password fields. Worker must reference the BrandJet validation function in page.tsx and describe that specific flow.",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-brandjet-integration"
+    },
+    {
+      "sequencer": "emelia",
+      "Sequencer": "Emelia",
+      "platformKey": "emelia",
+      "category": "outreach",
+      "bestFor": "Beginner friendly",
+      "features": [
+        "Cold email + LinkedIn",
+        "Built-in warmup & email finder"
+      ],
+      "website": "https://emelia.io",
+      "connectionFields": [
+        "email (required)",
+        "password (required)"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-emelia-integration"
+    },
+    {
+      "sequencer": "hothawk",
+      "Sequencer": "Hothawk",
+      "platformKey": "hothawk",
+      "category": "inbox",
+      "bestFor": "Best for sales teams",
+      "features": [
+        "Team collaboration & pipeline",
+        "Unlimited email accounts"
+      ],
+      "website": "https://hothawk.ai",
+      "connectionFields": [
+        "check sequencers.ts"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-hothawk-integration"
+    },
+    {
+      "sequencer": "leadspicker",
+      "Sequencer": "LeadsPicker",
+      "platformKey": "leadspicker",
+      "category": "outreach",
+      "bestFor": "Best for lead gen",
+      "features": [
+        "AI prospect discovery",
+        "Waterfall enrichment"
+      ],
+      "website": "https://www.leadspicker.com",
+      "connectionFields": [
+        "check sequencers.ts — may not be in the form config yet"
+      ],
+      "note": "Present in sequencer-metadata.ts but may not be in sequencers.ts form config. Worker must verify the connection is live in the dashboard before writing the article. If not live, skip and log to gaps.json.",
+      "status": "skipped",
+      "skippedAt": "2026-04-11",
+      "skipReason": "metadata-only-no-form-config",
+      "gapId": "sequencer-integration-guides.leadspicker-metadata-only"
+    },
+    {
+      "sequencer": "lemlist",
+      "Sequencer": "Lemlist",
+      "platformKey": "lemlist",
+      "category": "outreach",
+      "bestFor": "Best for personalization",
+      "features": [
+        "Image & video personalization",
+        "Free lemwarm warmup"
+      ],
+      "website": "https://www.lemlist.com",
+      "connectionFields": [
+        "email (required)",
+        "password (required)"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-lemlist-integration",
+      "note": "Already shipped. KEEP."
+    },
+    {
+      "sequencer": "mailtoaster",
+      "Sequencer": "MailToaster",
+      "platformKey": "mailtoaster",
+      "category": "warmup",
+      "bestFor": "Best peer-to-peer warmup",
+      "features": [
+        "Real inbox engagement network",
+        "GPT-powered replies"
+      ],
+      "website": "https://mailtoaster.ai",
+      "connectionFields": [
+        "check sequencers.ts"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-mailtoaster-integration"
+    },
+    {
+      "sequencer": "manyreach",
+      "Sequencer": "Manyreach",
+      "platformKey": "manyreach",
+      "category": "outreach",
+      "bestFor": "Best for pay-per-email",
+      "features": [
+        "No monthly subscription",
+        "Unlimited senders & warmup"
+      ],
+      "website": "https://www.manyreach.com",
+      "connectionFields": [
+        "check sequencers.ts"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-manyreach-integration"
+    },
+    {
+      "sequencer": "masterinbox",
+      "Sequencer": "Master Inbox",
+      "platformKey": "masterinbox",
+      "category": "inbox",
+      "bestFor": "Best for multi-sequencer",
+      "features": [
+        "Aggregates Smartlead, Instantly & more",
+        "AI auto-labeling"
+      ],
+      "website": "https://masterinbox.com",
+      "connectionFields": [
+        "has workspace selection — see the sequencerWorkspaces logic in page.tsx line 2721"
+      ],
+      "note": "Master Inbox has workspace selection after credential validation. Worker must describe this multi-step flow accurately. Reference the Master Inbox Workspace Selection section in page.tsx.",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-masterinbox-integration"
+    },
+    {
+      "sequencer": "pipl",
+      "Sequencer": "PlusVibe",
+      "platformKey": "pipl",
+      "category": "outreach",
+      "bestFor": "Best for deliverability",
+      "features": [
+        "AI personalization (80+ sources)",
+        "Unlimited warmup"
+      ],
+      "website": "https://plusvibe.ai",
+      "connectionFields": [
+        "email (required)",
+        "password (required)"
+      ],
+      "note": "Platform key is 'pipl' but the UI name is 'PlusVibe' and the website is plusvibe.ai. Use 'PlusVibe' in all user-facing copy; 'pipl' is the internal platform key only.",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-plusvibe-integration"
+    },
+    {
+      "sequencer": "reachinbox",
+      "Sequencer": "ReachInbox",
+      "platformKey": "reachinbox",
+      "category": "outreach",
+      "bestFor": "Best for AI sequences",
+      "features": [
+        "AI sequence generator",
+        "Onebox unified inbox"
+      ],
+      "website": "https://reachinbox.ai",
+      "connectionFields": [
+        "check sequencers.ts — may not be in the form config yet"
+      ],
+      "note": "Present in sequencer-metadata.ts but may not be in sequencers.ts form config. Worker must verify before writing. If not live, skip and log to gaps.json.",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-reachinbox-integration"
+    },
+    {
+      "sequencer": "replyio",
+      "Sequencer": "Reply.io",
+      "platformKey": "replyio",
+      "category": "outreach",
+      "bestFor": "Best for multichannel",
+      "features": [
+        "Email + LinkedIn + SMS + calls",
+        "1B+ contact database"
+      ],
+      "website": "https://reply.io",
+      "connectionFields": [
+        "check sequencers.ts"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-replyio-integration"
+    },
+    {
+      "sequencer": "saleshandy",
+      "Sequencer": "Saleshandy",
+      "platformKey": "saleshandy",
+      "category": "outreach",
+      "bestFor": "Best for lead finding",
+      "features": [
+        "800M+ B2B database",
+        "Sender rotation & unified inbox"
+      ],
+      "website": "https://www.saleshandy.com",
+      "connectionFields": [
+        "check sequencers.ts"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-saleshandy-integration"
+    },
+    {
+      "sequencer": "snovio",
+      "Sequencer": "Snov.io",
+      "platformKey": "snovio",
+      "category": "outreach",
+      "bestFor": "Best for verification",
+      "features": [
+        "Email finder & verifier",
+        "5,000+ integrations"
+      ],
+      "website": "https://snov.io",
+      "connectionFields": [
+        "check sequencers.ts — note the snov/snovio alias"
+      ],
+      "note": "Both 'snov' and 'snovio' keys exist in the metadata (alias). Use 'snovio' as the canonical key and 'Snov.io' as the display name.",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-snovio-integration"
+    },
+    {
+      "sequencer": "supersend",
+      "Sequencer": "Supersend",
+      "platformKey": "supersend",
+      "category": "outreach",
+      "bestFor": "Best for all-in-one setup",
+      "badge": "popular",
+      "features": [
+        "Buy domains & mailboxes in-app",
+        "Email + LinkedIn + Twitter"
+      ],
+      "website": "https://supersend.io",
+      "connectionFields": [
+        "api_key with custom validation — see lines 1650-1705 in page.tsx"
+      ],
+      "note": "Supersend has custom API-key-only validation that returns account info. Worker must describe that exact flow.",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-supersend-integration"
+    },
+    {
+      "sequencer": "trulyinbox",
+      "Sequencer": "TrulyInbox",
+      "platformKey": "trulyinbox",
+      "category": "warmup",
+      "bestFor": "Best free warmup",
+      "badge": "popular",
+      "features": [
+        "AI industry-specific warmup",
+        "Forever-free plan"
+      ],
+      "website": "https://www.trulyinbox.com",
+      "connectionFields": [
+        "email (required)",
+        "password (required)"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-trulyinbox-integration"
+    },
+    {
+      "sequencer": "warmforge",
+      "Sequencer": "Warmforge",
+      "platformKey": "warmforge",
+      "category": "warmup",
+      "bestFor": "Best for monitoring",
+      "features": [
+        "Premium aged account pool",
+        "DNS checks & blacklist monitoring"
+      ],
+      "website": "https://www.warmforge.ai",
+      "connectionFields": [
+        "email (required)",
+        "password (required)"
+      ],
+      "note": "Warmforge is the Salesforge warmup product — not Mailforge or Primeforge. Don't conflate.",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-warmforge-integration"
+    },
+    {
+      "sequencer": "warmy",
+      "Sequencer": "Warmy.io",
+      "platformKey": "warmy",
+      "category": "warmup",
+      "bestFor": "Best for multi-language",
+      "features": [
+        "AI warmup in 30+ languages",
+        "650K+ domain network"
+      ],
+      "website": "https://www.warmy.io",
+      "connectionFields": [
+        "check sequencers.ts — note the warmy/warmly alias"
+      ],
+      "note": "Both 'warmy' and 'warmly' keys exist in metadata (alias). Use 'warmy' as canonical key, 'Warmy.io' as display name.",
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-warmy-integration"
+    },
+    {
+      "sequencer": "woodpecker",
+      "Sequencer": "Woodpecker",
+      "platformKey": "woodpecker",
+      "category": "outreach",
+      "bestFor": "Best for B2B teams",
+      "features": [
+        "Bounce Shield & A/B testing",
+        "Agency panel & white-label"
+      ],
+      "website": "https://woodpecker.co",
+      "connectionFields": [
+        "email (required)",
+        "password (required)"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11",
+      "existingSlug": "infrabox-woodpecker-integration"
+    }
+  ],
+  "excludeSlugs": [
+    "cold-email-sequencer-integration-guide",
+    "infrabox-api-integration-guide",
+    "infrabox-instantly-integration",
+    "infrabox-smartlead-integration",
+    "infrabox-lemlist-integration"
+  ],
+  "cmuxPanelCount": 2,
+  "notes": "ZERO HALLUCINATION POLICY:\n\n1. Before drafting any slug, the worker MUST read ../src/lib/sequencer-metadata.ts and confirm the platformKey exists. If it does not, STOP and log a gap.\n\n2. The worker MUST also read ../src/lib/sequencers.ts to confirm the sequencer has an active form config. If the metadata has it but sequencers.ts does not (e.g. LeadsPicker, ReachInbox may be metadata-only), the connection may not be live yet — verify by checking ../src/app/(dashboard)/sequencers/connect/page.tsx for rendering logic. If not live, skip and log to gaps.json with reason='metadata-only-no-form-config'.\n\n3. The worker MUST reference the EXACT connection fields defined in sequencers.ts for each platform. No inventing 'the integration needs a webhook URL' when the real flow is email+password. If in doubt, check the connection panel rendering in page.tsx.\n\n4. Screenshots: use /images/dashboard/sequencers.png for any screenshot of the Infrabox sequencers list. Do NOT re-capture via Playwright. If you need a screenshot of the target sequencer's UI and none exists in public/images/, run /seo-scrape <sequencer-domain> to capture a home/pricing shot — but only the sequencer's OWN site, not the Infrabox connect panel with that sequencer selected (which would require an authenticated session).\n\n5. Excluded slugs include the 3 already-shipped integration articles (instantly, smartlead, lemlist) from the earlier run. Do NOT regenerate them. Do read them for voice reference.\n\n6. Apollo-specific: Apollo exists as a platform key in sequencer-metadata.ts but is NOT in the public /sequencers/connect UI (not in the user-facing 24-item catalog). The Apollo integration article was previously hallucinated and rolled back. DO NOT draft an Apollo integration article from this cluster. Apollo remains a valid subject for /alternatives/apollo and for third-party comparisons, but NOT for an 'infrabox-apollo-integration' guide.\n\n7. Voice reference: re-read infrabox-instantly-integration.js, infrabox-smartlead-integration.js, infrabox-lemlist-integration.js before drafting to mirror the voice and structure exactly.",
+  "mcp": {
+    "keywordsSyncedAt": "2026-04-11T14:35:00.000Z",
+    "keywordsSyncedBy": "backfill-from-push-history"
+  },
+  "completedAt": "2026-04-11"
+}

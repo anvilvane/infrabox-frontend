@@ -1,0 +1,73 @@
+{
+  "project": {
+    "name": "Infrabox",
+    "domain": "infrabox.io",
+    "baseUrl": "https://www.infrabox.io",
+    "sendkitSeoProjectId": "69ca19f149b783c0bcc85141"
+  },
+  "product": {
+    "category": "Cold email infrastructure",
+    "oneLiner": "Real Google Workspace, Microsoft 365 and Azure mailboxes with US IPs, automated DNS, isolated warmup, and deliverability monitoring.",
+    "differentiators": [
+      "Real Google Workspace & Microsoft 365 accounts (not shared-IP mailboxes)",
+      "US-based IP addresses",
+      "Isolated warmup network (not a shared pool)",
+      "InfraGuard monitoring (6h blacklist checks, DNS watch, auto-pause)",
+      "24+ native sequencer integrations",
+      "Azure mailboxes at $30/tenant for up to 100 mailboxes",
+      "Automated SPF/DKIM/DMARC/MX via Cloudflare in under 60 seconds"
+    ],
+    "pricing": {
+      "professional": { "monthly": 39, "slots": 10, "extraPerMailbox": 3.5 },
+      "agency":       { "monthly": 99, "slots": 30, "extraPerMailbox": 3.25 },
+      "enterprise":   { "monthly": 299, "slots": 100, "extraPerMailbox": 2.99 },
+      "azure":        { "perTenant": 30, "mailboxesPerTenant": 100 },
+      "warmupAddon":  { "perMailboxMonth": 3.0, "type": "isolated" },
+      "infraGuard":   { "firstMonthFree": true, "billing": "per-domain" }
+    }
+  },
+  "paths": {
+    "compareData":      "app/compare/[slug]/compare-data.js",
+    "alternativesData": "app/alternatives/[slug]/alternatives-data.js",
+    "learnData":        "app/learn/[slug]/learn-data.js",
+    "learnArticles":    "app/learn/[slug]/articles",
+    "sitemap":          "app/sitemap.js",
+    "publicImages":     "public/learn"
+  },
+  "pageTypes": {
+    "compare":        { "urlPrefix": "/compare/",      "template": ".seo/templates/compare.md" },
+    "alternatives":   { "urlPrefix": "/alternatives/", "template": ".seo/templates/alternatives.md" },
+    "learn":          { "urlPrefix": "/learn/",        "template": ".seo/templates/learn-article.md" },
+    "programmatic":   { "urlPrefix": "/",              "template": ".seo/templates/programmatic.md" }
+  },
+  "memory": {
+    "competitors":    ".seo/memory/competitors.json",
+    "generated":      ".seo/memory/generated.json",
+    "gaps":           ".seo/memory/gaps.json",
+    "intentSignals":  ".seo/memory/intent-signals.json",
+    "assetLibrary":   ".seo/memory/asset-library.json",
+    "lockfile":       ".seo/memory/.locks"
+  },
+  "quality": {
+    "minWordsLearnArticle": 1800,
+    "minSectionsLearnArticle": 6,
+    "minCompetitorsForAlternatives": 5,
+    "maxCompetitorsForAlternatives": 8,
+    "requireInternalLinks": 4,
+    "requireExternalSources": 2,
+    "requireSchemaJsonLd": true,
+    "screenshots": {
+      "compare":       { "required": 2, "publicPaths": ["public/compare/<slug>-hero.webp", "public/compare/<slug>-infrabox.webp"], "source": "seo-scrape run dir + playwright clean-mode shot of www.infrabox.io" },
+      "alternatives":  { "required": "oneperalt", "publicPath": "public/alternatives/<slug>-<domain>.webp", "source": "seo-scrape run dir, one per listed alternative" },
+      "learnReview":   { "required": 2, "publicPath": "public/learn/<slug>-<step>.webp", "source": "playwright clean-mode navigate + screenshot, topic-specific UI" },
+      "learnHowTo":    { "required": 2, "publicPath": "public/learn/<slug>-<step>.webp", "source": "playwright clean-mode navigate + screenshot, topic-specific UI" },
+      "learnGuide":    { "required": 1, "publicPath": "public/learn/<slug>-01.webp", "source": "playwright clean-mode screenshot of relevant infrabox.io page" },
+      "programmaticGuide": { "required": 1, "publicPath": "public/learn/<slug>-01.webp", "source": "shared infrabox.io hero captured once and copied per slug" }
+    }
+  },
+  "parallelism": {
+    "cmuxMaxPanels": 6,
+    "perPanelClusterBudget": 1,
+    "handoffVia": "generated.json + cluster.status"
+  }
+}

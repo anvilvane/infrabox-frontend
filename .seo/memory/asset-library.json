@@ -1,0 +1,662 @@
+{
+  "_meta": {
+    "description": "Index of pre-verified, curated product + competitor screenshots already shipping in public/. Workers MUST check this before capturing new screenshots via Playwright MCP. Only capture fresh when no matching asset exists.",
+    "schemaVersion": 1,
+    "generatedAt": "2026-04-12T14:30:00.000Z",
+    "total": 52
+  },
+  "infrabox": {
+    "dashboard": [
+      {
+        "path": "/images/dashboard/dashboard-home.png",
+        "topic": "dashboard-home",
+        "surface": "infrabox-dashboard",
+        "tags": [
+          "infrabox",
+          "product-ui",
+          "dashboard-home"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/dashboard/domains.png",
+        "topic": "domains",
+        "surface": "infrabox-dashboard",
+        "tags": [
+          "infrabox",
+          "product-ui",
+          "domains"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/dashboard/email-insights.png",
+        "topic": "email-insights",
+        "surface": "infrabox-dashboard",
+        "tags": [
+          "infrabox",
+          "product-ui",
+          "email-insights"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/dashboard/email-validation.png",
+        "topic": "email-validation",
+        "surface": "infrabox-dashboard",
+        "tags": [
+          "infrabox",
+          "product-ui",
+          "email-validation"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/dashboard/exports.png",
+        "topic": "exports",
+        "surface": "infrabox-dashboard",
+        "tags": [
+          "infrabox",
+          "product-ui",
+          "exports"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/dashboard/inbox-placement.png",
+        "topic": "inbox-placement",
+        "surface": "infrabox-dashboard",
+        "tags": [
+          "infrabox",
+          "product-ui",
+          "inbox-placement"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/dashboard/infraguard.png",
+        "topic": "infraguard",
+        "surface": "infrabox-dashboard",
+        "tags": [
+          "infrabox",
+          "product-ui",
+          "infraguard"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/dashboard/mailboxes.png",
+        "topic": "mailboxes",
+        "surface": "infrabox-dashboard",
+        "tags": [
+          "infrabox",
+          "product-ui",
+          "mailboxes"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/dashboard/prewarm.png",
+        "topic": "prewarm",
+        "surface": "infrabox-dashboard",
+        "tags": [
+          "infrabox",
+          "product-ui",
+          "prewarm"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/dashboard/pricing.png",
+        "topic": "pricing",
+        "surface": "infrabox-dashboard",
+        "tags": [
+          "infrabox",
+          "product-ui",
+          "pricing"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/dashboard/quick-setup.png",
+        "topic": "quick-setup",
+        "surface": "infrabox-dashboard",
+        "tags": [
+          "infrabox",
+          "product-ui",
+          "quick-setup"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/dashboard/renewals.png",
+        "topic": "renewals",
+        "surface": "infrabox-dashboard",
+        "tags": [
+          "infrabox",
+          "product-ui",
+          "renewals"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/dashboard/sequencers.png",
+        "topic": "sequencers",
+        "surface": "infrabox-dashboard",
+        "tags": [
+          "infrabox",
+          "product-ui",
+          "sequencers"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/dashboard/warmup-promo-popup.png",
+        "topic": "warmup-promo-popup",
+        "surface": "infrabox-dashboard",
+        "tags": [
+          "infrabox",
+          "product-ui",
+          "warmup-promo-popup"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/dashboard/warmup.png",
+        "topic": "warmup",
+        "surface": "infrabox-dashboard",
+        "tags": [
+          "infrabox",
+          "product-ui",
+          "warmup"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "extras": [
+      {
+        "path": "/dashboard-preview.png",
+        "topic": "dashboard-preview",
+        "surface": "infrabox-dashboard-hero",
+        "tags": [
+          "infrabox",
+          "hero",
+          "dashboard"
+        ],
+        "verifiedGood": true
+      }
+    ]
+  },
+  "competitors": {
+    "apollo": [
+      {
+        "path": "/images/compare/apollo-homepage.png",
+        "topic": "apollo-homepage",
+        "surface": "apollo-homepage",
+        "competitor": "apollo",
+        "kind": "homepage",
+        "tags": [
+          "apollo",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/apollo-pricing.png",
+        "topic": "apollo-pricing",
+        "surface": "apollo-pricing",
+        "competitor": "apollo",
+        "kind": "pricing",
+        "tags": [
+          "apollo",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "cheapinboxes": [
+      {
+        "path": "/images/compare/cheapinboxes-homepage.png",
+        "topic": "cheapinboxes-homepage",
+        "surface": "cheapinboxes-homepage",
+        "competitor": "cheapinboxes",
+        "kind": "homepage",
+        "tags": [
+          "cheapinboxes",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/cheapinboxes-pricing.png",
+        "topic": "cheapinboxes-pricing",
+        "surface": "cheapinboxes-pricing",
+        "competitor": "cheapinboxes",
+        "kind": "pricing",
+        "tags": [
+          "cheapinboxes",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "gmass": [
+      {
+        "path": "/images/compare/gmass-homepage.png",
+        "topic": "gmass-homepage",
+        "surface": "gmass-homepage",
+        "competitor": "gmass",
+        "kind": "homepage",
+        "tags": [
+          "gmass",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/gmass-pricing.png",
+        "topic": "gmass-pricing",
+        "surface": "gmass-pricing",
+        "competitor": "gmass",
+        "kind": "pricing",
+        "tags": [
+          "gmass",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "hypergen": [
+      {
+        "path": "/images/compare/hypergen-homepage.png",
+        "topic": "hypergen-homepage",
+        "surface": "hypergen-homepage",
+        "competitor": "hypergen",
+        "kind": "homepage",
+        "tags": [
+          "hypergen",
+          "homepage"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "hypertide": [
+      {
+        "path": "/images/compare/hypertide-homepage.png",
+        "topic": "hypertide-homepage",
+        "surface": "hypertide-homepage",
+        "competitor": "hypertide",
+        "kind": "homepage",
+        "tags": [
+          "hypertide",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/hypertide-pricing.png",
+        "topic": "hypertide-pricing",
+        "surface": "hypertide-pricing",
+        "competitor": "hypertide",
+        "kind": "pricing",
+        "tags": [
+          "hypertide",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "infrabox": [
+      {
+        "path": "/images/compare/infrabox-dashboard.png",
+        "topic": "infrabox-dashboard",
+        "surface": "infrabox-dashboard",
+        "competitor": "infrabox",
+        "kind": "dashboard",
+        "tags": [
+          "infrabox",
+          "dashboard"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/infrabox-homepage.png",
+        "topic": "infrabox-homepage",
+        "surface": "infrabox-homepage",
+        "competitor": "infrabox",
+        "kind": "homepage",
+        "tags": [
+          "infrabox",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/infrabox-pricing.png",
+        "topic": "infrabox-pricing",
+        "surface": "infrabox-pricing",
+        "competitor": "infrabox",
+        "kind": "pricing",
+        "tags": [
+          "infrabox",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "infraforge": [
+      {
+        "path": "/images/compare/infraforge-homepage.png",
+        "topic": "infraforge-homepage",
+        "surface": "infraforge-homepage",
+        "competitor": "infraforge",
+        "kind": "homepage",
+        "tags": [
+          "infraforge",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/infraforge-pricing.png",
+        "topic": "infraforge-pricing",
+        "surface": "infraforge-pricing",
+        "competitor": "infraforge",
+        "kind": "pricing",
+        "tags": [
+          "infraforge",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "inframail": [
+      {
+        "path": "/images/compare/inframail-homepage.png",
+        "topic": "inframail-homepage",
+        "surface": "inframail-homepage",
+        "competitor": "inframail",
+        "kind": "homepage",
+        "tags": [
+          "inframail",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/inframail-pricing.png",
+        "topic": "inframail-pricing",
+        "surface": "inframail-pricing",
+        "competitor": "inframail",
+        "kind": "pricing",
+        "tags": [
+          "inframail",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "lemlist": [
+      {
+        "path": "/images/compare/lemlist-homepage.png",
+        "topic": "lemlist-homepage",
+        "surface": "lemlist-homepage",
+        "competitor": "lemlist",
+        "kind": "homepage",
+        "tags": [
+          "lemlist",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/lemlist-pricing.png",
+        "topic": "lemlist-pricing",
+        "surface": "lemlist-pricing",
+        "competitor": "lemlist",
+        "kind": "pricing",
+        "tags": [
+          "lemlist",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "instantly": [
+      {
+        "path": "/images/compare/instantly-homepage.png",
+        "topic": "instantly-homepage",
+        "surface": "instantly-homepage",
+        "competitor": "instantly",
+        "kind": "homepage",
+        "tags": [
+          "instantly",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/instantly-pricing.png",
+        "topic": "instantly-pricing",
+        "surface": "instantly-pricing",
+        "competitor": "instantly",
+        "kind": "pricing",
+        "tags": [
+          "instantly",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "maildoso": [
+      {
+        "path": "/images/compare/maildoso-homepage.png",
+        "topic": "maildoso-homepage",
+        "surface": "maildoso-homepage",
+        "competitor": "maildoso",
+        "kind": "homepage",
+        "tags": [
+          "maildoso",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/maildoso-pricing.png",
+        "topic": "maildoso-pricing",
+        "surface": "maildoso-pricing",
+        "competitor": "maildoso",
+        "kind": "pricing",
+        "tags": [
+          "maildoso",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "mailforge": [
+      {
+        "path": "/images/compare/mailforge-homepage.png",
+        "topic": "mailforge-homepage",
+        "surface": "mailforge-homepage",
+        "competitor": "mailforge",
+        "kind": "homepage",
+        "tags": [
+          "mailforge",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/mailforge-pricing.png",
+        "topic": "mailforge-pricing",
+        "surface": "mailforge-pricing",
+        "competitor": "mailforge",
+        "kind": "pricing",
+        "tags": [
+          "mailforge",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "mailpool": [
+      {
+        "path": "/images/compare/mailpool-homepage.png",
+        "topic": "mailpool-homepage",
+        "surface": "mailpool-homepage",
+        "competitor": "mailpool",
+        "kind": "homepage",
+        "tags": [
+          "mailpool",
+          "homepage"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "mailreef": [
+      {
+        "path": "/images/compare/mailreef-homepage.png",
+        "topic": "mailreef-homepage",
+        "surface": "mailreef-homepage",
+        "competitor": "mailreef",
+        "kind": "homepage",
+        "tags": [
+          "mailreef",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/mailreef-pricing.png",
+        "topic": "mailreef-pricing",
+        "surface": "mailreef-pricing",
+        "competitor": "mailreef",
+        "kind": "pricing",
+        "tags": [
+          "mailreef",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "salesforge": [
+      {
+        "path": "/images/compare/salesforge-homepage.png",
+        "topic": "salesforge-homepage",
+        "surface": "salesforge-homepage",
+        "competitor": "salesforge",
+        "kind": "homepage",
+        "tags": [
+          "salesforge",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/salesforge-pricing.png",
+        "topic": "salesforge-pricing",
+        "surface": "salesforge-pricing",
+        "competitor": "salesforge",
+        "kind": "pricing",
+        "tags": [
+          "salesforge",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "premium": [
+      {
+        "path": "/images/compare/premium-inboxes-homepage.png",
+        "topic": "premium-inboxes-homepage",
+        "surface": "premium-inboxes-homepage",
+        "competitor": "premium",
+        "kind": "inboxes-homepage",
+        "tags": [
+          "premium",
+          "inboxes-homepage"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "primeforge": [
+      {
+        "path": "/images/compare/primeforge-homepage.png",
+        "topic": "primeforge-homepage",
+        "surface": "primeforge-homepage",
+        "competitor": "primeforge",
+        "kind": "homepage",
+        "tags": [
+          "primeforge",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/primeforge-pricing.png",
+        "topic": "primeforge-pricing",
+        "surface": "primeforge-pricing",
+        "competitor": "primeforge",
+        "kind": "pricing",
+        "tags": [
+          "primeforge",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "smartlead": [
+      {
+        "path": "/images/compare/smartlead-homepage.png",
+        "topic": "smartlead-homepage",
+        "surface": "smartlead-homepage",
+        "competitor": "smartlead",
+        "kind": "homepage",
+        "tags": [
+          "smartlead",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/smartlead-pricing.png",
+        "topic": "smartlead-pricing",
+        "surface": "smartlead-pricing",
+        "competitor": "smartlead",
+        "kind": "pricing",
+        "tags": [
+          "smartlead",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ],
+    "zapmail": [
+      {
+        "path": "/images/compare/zapmail-homepage.png",
+        "topic": "zapmail-homepage",
+        "surface": "zapmail-homepage",
+        "competitor": "zapmail",
+        "kind": "homepage",
+        "tags": [
+          "zapmail",
+          "homepage"
+        ],
+        "verifiedGood": true
+      },
+      {
+        "path": "/images/compare/zapmail-pricing.png",
+        "topic": "zapmail-pricing",
+        "surface": "zapmail-pricing",
+        "competitor": "zapmail",
+        "kind": "pricing",
+        "tags": [
+          "zapmail",
+          "pricing"
+        ],
+        "verifiedGood": true
+      }
+    ]
+  }
+}

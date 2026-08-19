@@ -1,0 +1,1590 @@
+{
+  "_meta": {
+    "description": "Dedup registry of every page already generated (seeded from the live repo). Agents MUST check this before starting generation. Status: live | draft | reserved.",
+    "schemaVersion": 1,
+    "counts": {
+      "compare": 11,
+      "alternatives": 16,
+      "learn": 143,
+      "total": 170
+    },
+    "lastSeededAt": "2026-04-11T18:18:43.295Z"
+  },
+  "entries": [
+    {
+      "slug": "mailforge",
+      "pageType": "compare",
+      "url": "/compare/mailforge",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "primeforge",
+      "pageType": "compare",
+      "url": "/compare/primeforge",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "infraforge",
+      "pageType": "compare",
+      "url": "/compare/infraforge",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "zapmail",
+      "pageType": "compare",
+      "url": "/compare/zapmail",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "maildoso",
+      "pageType": "compare",
+      "url": "/compare/maildoso",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cheapinboxes",
+      "pageType": "compare",
+      "url": "/compare/cheapinboxes",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "inframail",
+      "pageType": "compare",
+      "url": "/compare/inframail",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "mailreef",
+      "pageType": "compare",
+      "url": "/compare/mailreef",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "hypertide",
+      "pageType": "compare",
+      "url": "/compare/hypertide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "instantly",
+      "pageType": "compare",
+      "url": "/compare/instantly",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "smartlead",
+      "pageType": "compare",
+      "url": "/compare/smartlead",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "apollo",
+      "pageType": "alternatives",
+      "url": "/alternatives/apollo",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:06:47.326Z",
+      "cluster": "alternatives-fresh-wave",
+      "status": "live"
+    },
+    {
+      "slug": "lemlist",
+      "pageType": "alternatives",
+      "url": "/alternatives/lemlist",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:04:31.327Z",
+      "cluster": "alternatives-fresh-wave",
+      "status": "live"
+    },
+    {
+      "slug": "salesforge",
+      "pageType": "alternatives",
+      "url": "/alternatives/salesforge",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:02:22.329Z",
+      "cluster": "alternatives-fresh-wave",
+      "status": "live"
+    },
+    {
+      "slug": "gmass",
+      "pageType": "alternatives",
+      "url": "/alternatives/gmass",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T13:59:56.794Z",
+      "cluster": "alternatives-fresh-wave",
+      "status": "live"
+    },
+    {
+      "slug": "mailforge",
+      "pageType": "alternatives",
+      "url": "/alternatives/mailforge",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "zapmail",
+      "pageType": "alternatives",
+      "url": "/alternatives/zapmail",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "maildoso",
+      "pageType": "alternatives",
+      "url": "/alternatives/maildoso",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "infraforge",
+      "pageType": "alternatives",
+      "url": "/alternatives/infraforge",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cheapinboxes",
+      "pageType": "alternatives",
+      "url": "/alternatives/cheapinboxes",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "inframail",
+      "pageType": "alternatives",
+      "url": "/alternatives/inframail",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "mailreef",
+      "pageType": "alternatives",
+      "url": "/alternatives/mailreef",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "hypertide",
+      "pageType": "alternatives",
+      "url": "/alternatives/hypertide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "primeforge",
+      "pageType": "alternatives",
+      "url": "/alternatives/primeforge",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "instantly",
+      "pageType": "alternatives",
+      "url": "/alternatives/instantly",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "smartlead",
+      "pageType": "alternatives",
+      "url": "/alternatives/smartlead",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "infrabox",
+      "pageType": "alternatives",
+      "url": "/alternatives/infrabox",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-12T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "agency-workflows-guide",
+      "pageType": "learn",
+      "url": "/learn/agency-workflows-guide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "best-cold-email-infrastructure-2026",
+      "pageType": "learn",
+      "url": "/learn/best-cold-email-infrastructure-2026",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "best-cold-email-infrastructure-high-volume",
+      "pageType": "learn",
+      "url": "/learn/best-cold-email-infrastructure-high-volume",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:06:31.498Z",
+      "cluster": "best-of-use-case-listicles",
+      "status": "live"
+    },
+    {
+      "slug": "best-cold-email-infrastructure-microsoft-365",
+      "pageType": "learn",
+      "url": "/learn/best-cold-email-infrastructure-microsoft-365",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:04:17.617Z",
+      "cluster": "best-of-use-case-listicles",
+      "status": "live"
+    },
+    {
+      "slug": "best-cold-email-infrastructure-startups-2026",
+      "pageType": "learn",
+      "url": "/learn/best-cold-email-infrastructure-startups-2026",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T13:58:42.782Z",
+      "cluster": "best-of-use-case-listicles",
+      "status": "live"
+    },
+    {
+      "slug": "best-cold-email-infrastructure-under-50-mailboxes",
+      "pageType": "learn",
+      "url": "/learn/best-cold-email-infrastructure-under-50-mailboxes",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:02:22.838Z",
+      "cluster": "best-of-use-case-listicles",
+      "status": "live"
+    },
+    {
+      "slug": "best-domain-extensions-cold-email",
+      "pageType": "learn",
+      "url": "/learn/best-domain-extensions-cold-email",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "best-email-infrastructure-agencies",
+      "pageType": "learn",
+      "url": "/learn/best-email-infrastructure-agencies",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "bimi-setup-guide",
+      "pageType": "learn",
+      "url": "/learn/bimi-setup-guide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "buy-pre-warmed-email-accounts-guide",
+      "pageType": "learn",
+      "url": "/learn/buy-pre-warmed-email-accounts-guide",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:18:39.605Z",
+      "cluster": "infrabox-prewarm-angle",
+      "status": "live"
+    },
+    {
+      "slug": "cheapest-cold-email-infrastructure-2026",
+      "pageType": "learn",
+      "url": "/learn/cheapest-cold-email-infrastructure-2026",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:00:42.934Z",
+      "cluster": "best-of-use-case-listicles",
+      "status": "live"
+    },
+    {
+      "slug": "cheapinboxes-alternatives",
+      "pageType": "learn",
+      "url": "/learn/cheapinboxes-alternatives",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "check-domain-blacklisted",
+      "pageType": "learn",
+      "url": "/learn/check-domain-blacklisted",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-ab-testing-guide",
+      "pageType": "learn",
+      "url": "/learn/cold-email-ab-testing-guide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-bounce-rate-benchmarks",
+      "pageType": "learn",
+      "url": "/learn/cold-email-bounce-rate-benchmarks",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-compliance-gdpr-can-spam",
+      "pageType": "learn",
+      "url": "/learn/cold-email-compliance-gdpr-can-spam",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-deliverability-statistics-2026",
+      "pageType": "learn",
+      "url": "/learn/cold-email-deliverability-statistics-2026",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-domain-setup-checklist",
+      "pageType": "learn",
+      "url": "/learn/cold-email-domain-setup-checklist",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-australia",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-australia",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:05:47.027Z",
+      "cluster": "programmatic-geo-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-canada",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-canada",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:03:34.333Z",
+      "cluster": "programmatic-geo-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-comparison-2026",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-comparison-2026",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-consulting",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-consulting",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:07:15.442Z",
+      "cluster": "programmatic-vertical-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-ecommerce",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-ecommerce",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:07:15.218Z",
+      "cluster": "programmatic-vertical-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-financial-services",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-financial-services",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:07:15.381Z",
+      "cluster": "programmatic-vertical-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-france",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-france",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:10:13.169Z",
+      "cluster": "programmatic-geo-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-germany",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-germany",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:08:02.710Z",
+      "cluster": "programmatic-geo-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-healthcare",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-healthcare",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:07:15.562Z",
+      "cluster": "programmatic-vertical-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-india",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-india",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:14:54.205Z",
+      "cluster": "programmatic-geo-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-legal",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-legal",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:07:15.325Z",
+      "cluster": "programmatic-vertical-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-manufacturing",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-manufacturing",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:07:15.499Z",
+      "cluster": "programmatic-vertical-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-netherlands",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-netherlands",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:12:19.765Z",
+      "cluster": "programmatic-geo-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-real-estate",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-real-estate",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-recruitment",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-recruitment",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-saas",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-saas",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-setup-guide",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-setup-guide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-solo-founders",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-solo-founders",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:08:29.831Z",
+      "cluster": "best-of-use-case-listicles",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-staffing",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-staffing",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:07:15.276Z",
+      "cluster": "programmatic-vertical-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-startups",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-startups",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:07:06.858Z",
+      "cluster": "programmatic-vertical-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-uk",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-uk",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:01:06.877Z",
+      "cluster": "programmatic-geo-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-infrastructure-us",
+      "pageType": "learn",
+      "url": "/learn/cold-email-infrastructure-us",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T13:58:33.724Z",
+      "cluster": "programmatic-geo-infra",
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-reply-rate-benchmarks-2026",
+      "pageType": "learn",
+      "url": "/learn/cold-email-reply-rate-benchmarks-2026",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-sending-volume-limits-guide",
+      "pageType": "learn",
+      "url": "/learn/cold-email-sending-volume-limits-guide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-sequencer-integration-guide",
+      "pageType": "learn",
+      "url": "/learn/cold-email-sequencer-integration-guide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cold-email-warmup-guide",
+      "pageType": "learn",
+      "url": "/learn/cold-email-warmup-guide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "cold-emails-going-to-spam-gmail-fix",
+      "pageType": "learn",
+      "url": "/learn/cold-emails-going-to-spam-gmail-fix",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T13:58:15.683Z",
+      "cluster": "troubleshoot-deliverability",
+      "status": "live"
+    },
+    {
+      "slug": "dkim-setup-cold-email",
+      "pageType": "learn",
+      "url": "/learn/dkim-setup-cold-email",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "dmarc-failed-gmail-fix",
+      "pageType": "learn",
+      "url": "/learn/dmarc-failed-gmail-fix",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:03:13.821Z",
+      "cluster": "troubleshoot-deliverability",
+      "status": "live"
+    },
+    {
+      "slug": "dmarc-setup-cold-email",
+      "pageType": "learn",
+      "url": "/learn/dmarc-setup-cold-email",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "dns-setup-guide",
+      "pageType": "learn",
+      "url": "/learn/dns-setup-guide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "domain-blacklisted-diagnosis-guide",
+      "pageType": "learn",
+      "url": "/learn/domain-blacklisted-diagnosis-guide",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:05:34.661Z",
+      "cluster": "troubleshoot-deliverability",
+      "status": "live"
+    },
+    {
+      "slug": "domain-reputation-vs-ip-reputation",
+      "pageType": "learn",
+      "url": "/learn/domain-reputation-vs-ip-reputation",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "domain-warmup-best-practices",
+      "pageType": "learn",
+      "url": "/learn/domain-warmup-best-practices",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "email-authentication-spf-dkim-dmarc-explained",
+      "pageType": "learn",
+      "url": "/learn/email-authentication-spf-dkim-dmarc-explained",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "email-blacklist-removal-guide",
+      "pageType": "learn",
+      "url": "/learn/email-blacklist-removal-guide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "email-deliverability-guide",
+      "pageType": "learn",
+      "url": "/learn/email-deliverability-guide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "email-deliverability-monitoring-setup",
+      "pageType": "learn",
+      "url": "/learn/email-deliverability-monitoring-setup",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "email-infrastructure-cost-analysis-2026",
+      "pageType": "learn",
+      "url": "/learn/email-infrastructure-cost-analysis-2026",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "email-sending-limits-google-microsoft",
+      "pageType": "learn",
+      "url": "/learn/email-sending-limits-google-microsoft",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "email-warmup-tools-comparison-2026",
+      "pageType": "learn",
+      "url": "/learn/email-warmup-tools-comparison-2026",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "emails-landing-in-promotions-tab",
+      "pageType": "learn",
+      "url": "/learn/emails-landing-in-promotions-tab",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:01:07.743Z",
+      "cluster": "troubleshoot-deliverability",
+      "status": "live"
+    },
+    {
+      "slug": "google-postmaster-bad-reputation",
+      "pageType": "learn",
+      "url": "/learn/google-postmaster-bad-reputation",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:09:58.488Z",
+      "cluster": "troubleshoot-deliverability",
+      "status": "live"
+    },
+    {
+      "slug": "google-postmaster-tools-guide",
+      "pageType": "learn",
+      "url": "/learn/google-postmaster-tools-guide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "google-workspace-vs-microsoft-365-cold-email",
+      "pageType": "learn",
+      "url": "/learn/google-workspace-vs-microsoft-365-cold-email",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "google-yahoo-sender-requirements-2026",
+      "pageType": "learn",
+      "url": "/learn/google-yahoo-sender-requirements-2026",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "how-many-domains-cold-email",
+      "pageType": "learn",
+      "url": "/learn/how-many-domains-cold-email",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "hypertide-alternatives",
+      "pageType": "learn",
+      "url": "/learn/hypertide-alternatives",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "inbox-placement-testing-explained",
+      "pageType": "learn",
+      "url": "/learn/inbox-placement-testing-explained",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-api-integration-guide",
+      "pageType": "learn",
+      "url": "/learn/infrabox-api-integration-guide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-brandjet-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-brandjet-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:24:08.403Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-emailbison-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-emailbison-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:20:58.882Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-emelia-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-emelia-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:25:37.656Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-hothawk-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-hothawk-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:27:11.298Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-instantly-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-instantly-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T13:59:29.662Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-lemlist-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-lemlist-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:02:43.963Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-mailtoaster-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-mailtoaster-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:29:12.081Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-manyreach-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-manyreach-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:30:42.542Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-masterinbox-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-masterinbox-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:32:14.865Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-plusvibe-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-plusvibe-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:33:55.649Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-prewarmed-mailboxes",
+      "pageType": "learn",
+      "url": "/learn/infrabox-prewarmed-mailboxes",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:10:56.518Z",
+      "cluster": "infrabox-prewarm-angle",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-pricing",
+      "pageType": "learn",
+      "url": "/learn/infrabox-pricing",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-reachinbox-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-reachinbox-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:35:30.491Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-replyio-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-replyio-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:37:05.893Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-review",
+      "pageType": "learn",
+      "url": "/learn/infrabox-review",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-salesforge-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-salesforge-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:19:19.860Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-saleshandy-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-saleshandy-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:38:41.792Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-sendkit-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-sendkit-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:17:34.949Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-smartlead-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-smartlead-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:01:13.693Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-snovio-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-snovio-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:40:19.102Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-supersend-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-supersend-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T16:33:27.201Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-trulyinbox-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-trulyinbox-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T16:33:27.247Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-vs-mailforge",
+      "pageType": "learn",
+      "url": "/learn/infrabox-vs-mailforge",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-vs-primeforge",
+      "pageType": "learn",
+      "url": "/learn/infrabox-vs-primeforge",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-vs-zapmail",
+      "pageType": "learn",
+      "url": "/learn/infrabox-vs-zapmail",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-vs-zapmail-vs-primeforge",
+      "pageType": "learn",
+      "url": "/learn/infrabox-vs-zapmail-vs-primeforge",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-warmforge-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-warmforge-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T16:33:27.292Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-warmy-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-warmy-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T16:33:27.339Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-whitelabel-guide",
+      "pageType": "learn",
+      "url": "/learn/infrabox-whitelabel-guide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-woodpecker-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-woodpecker-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T16:33:27.384Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infrabox-zazu-integration",
+      "pageType": "learn",
+      "url": "/learn/infrabox-zazu-integration",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:22:32.720Z",
+      "cluster": "sequencer-integration-guides",
+      "status": "live"
+    },
+    {
+      "slug": "infraforge-alternatives",
+      "pageType": "learn",
+      "url": "/learn/infraforge-alternatives",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "infraforge-vs-instantly",
+      "pageType": "learn",
+      "url": "/learn/infraforge-vs-instantly",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T17:55:40.743Z",
+      "cluster": "competitor-vs-competitor",
+      "status": "live"
+    },
+    {
+      "slug": "inframail-alternatives",
+      "pageType": "learn",
+      "url": "/learn/inframail-alternatives",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "inframail-review",
+      "pageType": "learn",
+      "url": "/learn/inframail-review",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "ip-rotation-cold-email",
+      "pageType": "learn",
+      "url": "/learn/ip-rotation-cold-email",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "launch-cold-email-campaign-same-day",
+      "pageType": "learn",
+      "url": "/learn/launch-cold-email-campaign-same-day",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:23:03.724Z",
+      "cluster": "infrabox-prewarm-angle",
+      "status": "live"
+    },
+    {
+      "slug": "maildoso-review",
+      "pageType": "learn",
+      "url": "/learn/maildoso-review",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "mailforge-pricing",
+      "pageType": "learn",
+      "url": "/learn/mailforge-pricing",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "mailforge-review",
+      "pageType": "learn",
+      "url": "/learn/mailforge-review",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "mailforge-vs-instantly",
+      "pageType": "learn",
+      "url": "/learn/mailforge-vs-instantly",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T17:41:15.429Z",
+      "cluster": "competitor-vs-competitor",
+      "status": "live"
+    },
+    {
+      "slug": "mailforge-vs-maildoso",
+      "pageType": "learn",
+      "url": "/learn/mailforge-vs-maildoso",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T17:48:47.706Z",
+      "cluster": "competitor-vs-competitor",
+      "status": "live"
+    },
+    {
+      "slug": "mailforge-vs-primeforge",
+      "pageType": "learn",
+      "url": "/learn/mailforge-vs-primeforge",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "mailpool-alternatives",
+      "pageType": "learn",
+      "url": "/learn/mailpool-alternatives",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "mailreef-alternatives",
+      "pageType": "learn",
+      "url": "/learn/mailreef-alternatives",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "microsoft-365-cold-email-spam-fix",
+      "pageType": "learn",
+      "url": "/learn/microsoft-365-cold-email-spam-fix",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:12:17.752Z",
+      "cluster": "troubleshoot-deliverability",
+      "status": "live"
+    },
+    {
+      "slug": "pre-warmed-google-workspace-accounts",
+      "pageType": "learn",
+      "url": "/learn/pre-warmed-google-workspace-accounts",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:14:36.171Z",
+      "cluster": "infrabox-prewarm-angle",
+      "status": "live"
+    },
+    {
+      "slug": "pre-warmed-mailboxes-vs-self-warmup",
+      "pageType": "learn",
+      "url": "/learn/pre-warmed-mailboxes-vs-self-warmup",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:12:47.302Z",
+      "cluster": "infrabox-prewarm-angle",
+      "status": "live"
+    },
+    {
+      "slug": "pre-warmed-mailboxes-worth-it",
+      "pageType": "learn",
+      "url": "/learn/pre-warmed-mailboxes-worth-it",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "pre-warmed-microsoft-365-mailboxes",
+      "pageType": "learn",
+      "url": "/learn/pre-warmed-microsoft-365-mailboxes",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:16:27.310Z",
+      "cluster": "infrabox-prewarm-angle",
+      "status": "live"
+    },
+    {
+      "slug": "premium-inboxes-alternatives",
+      "pageType": "learn",
+      "url": "/learn/premium-inboxes-alternatives",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "primeforge-pricing",
+      "pageType": "learn",
+      "url": "/learn/primeforge-pricing",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "primeforge-review",
+      "pageType": "learn",
+      "url": "/learn/primeforge-review",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "primeforge-vs-smartlead",
+      "pageType": "learn",
+      "url": "/learn/primeforge-vs-smartlead",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T17:45:28.719Z",
+      "cluster": "competitor-vs-competitor",
+      "status": "live"
+    },
+    {
+      "slug": "scale-cold-email-100-to-10000",
+      "pageType": "learn",
+      "url": "/learn/scale-cold-email-100-to-10000",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "shared-vs-private-email-infrastructure",
+      "pageType": "learn",
+      "url": "/learn/shared-vs-private-email-infrastructure",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "skip-email-warmup-safely",
+      "pageType": "learn",
+      "url": "/learn/skip-email-warmup-safely",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:20:47.230Z",
+      "cluster": "infrabox-prewarm-angle",
+      "status": "live"
+    },
+    {
+      "slug": "smartlead-vs-instantly",
+      "pageType": "learn",
+      "url": "/learn/smartlead-vs-instantly",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T17:59:46.559Z",
+      "cluster": "competitor-vs-competitor",
+      "status": "live"
+    },
+    {
+      "slug": "soft-bounce-cold-email-fix",
+      "pageType": "learn",
+      "url": "/learn/soft-bounce-cold-email-fix",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:07:41.002Z",
+      "cluster": "troubleshoot-deliverability",
+      "status": "live"
+    },
+    {
+      "slug": "spf-record-setup-cold-email",
+      "pageType": "learn",
+      "url": "/learn/spf-record-setup-cold-email",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "spf-softfail-fix",
+      "pageType": "learn",
+      "url": "/learn/spf-softfail-fix",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:14:33.081Z",
+      "cluster": "troubleshoot-deliverability",
+      "status": "live"
+    },
+    {
+      "slug": "us-ip-benefits-guide",
+      "pageType": "learn",
+      "url": "/learn/us-ip-benefits-guide",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "what-is-infrabox",
+      "pageType": "learn",
+      "url": "/learn/what-is-infrabox",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "why-cold-emails-go-to-spam",
+      "pageType": "learn",
+      "url": "/learn/why-cold-emails-go-to-spam",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "zapmail-prewarm-vs-infrabox-prewarm",
+      "pageType": "learn",
+      "url": "/learn/zapmail-prewarm-vs-infrabox-prewarm",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T14:25:04.503Z",
+      "cluster": "infrabox-prewarm-angle",
+      "status": "live"
+    },
+    {
+      "slug": "zapmail-pricing",
+      "pageType": "learn",
+      "url": "/learn/zapmail-pricing",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "zapmail-review",
+      "pageType": "learn",
+      "url": "/learn/zapmail-review",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "zapmail-vs-maildoso",
+      "pageType": "learn",
+      "url": "/learn/zapmail-vs-maildoso",
+      "source": "agent-generated",
+      "generatedAt": "2026-04-11T17:52:26.660Z",
+      "cluster": "competitor-vs-competitor",
+      "status": "live"
+    },
+    {
+      "slug": "zapmail-vs-mailforge",
+      "pageType": "learn",
+      "url": "/learn/zapmail-vs-mailforge",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "zapmail-vs-primeforge",
+      "pageType": "learn",
+      "url": "/learn/zapmail-vs-primeforge",
+      "source": "repo-seed",
+      "generatedAt": "2026-04-11T00:00:00.000Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "smtp-server-setup-guide",
+      "pageType": "learn",
+      "url": "/learn/smtp-server-setup-guide",
+      "source": "agent-generated",
+      "generatedAt": "2026-06-18T11:53:14.105Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "smtp-relay-vs-smtp-server",
+      "pageType": "learn",
+      "url": "/learn/smtp-relay-vs-smtp-server",
+      "source": "agent-generated",
+      "generatedAt": "2026-06-19T10:46:22.583Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "smtp-ports-explained",
+      "pageType": "learn",
+      "url": "/learn/smtp-ports-explained",
+      "source": "agent-generated",
+      "generatedAt": "2026-06-18T11:53:14.188Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "microsoft-365-smtp-settings",
+      "pageType": "learn",
+      "url": "/learn/microsoft-365-smtp-settings",
+      "source": "agent-generated",
+      "generatedAt": "2026-06-19T10:46:22.705Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "smtp-errors-and-fixes",
+      "pageType": "learn",
+      "url": "/learn/smtp-errors-and-fixes",
+      "source": "agent-generated",
+      "generatedAt": "2026-06-18T11:53:14.266Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "self-hosted-email-server",
+      "pageType": "learn",
+      "url": "/learn/self-hosted-email-server",
+      "source": "agent-generated",
+      "generatedAt": "2026-06-19T10:46:22.838Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "smtp-error-codes-explained",
+      "pageType": "learn",
+      "url": "/learn/smtp-error-codes-explained",
+      "source": "agent-generated",
+      "generatedAt": "2026-06-18T11:53:14.354Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "dedicated-ip-vs-shared-ip",
+      "pageType": "learn",
+      "url": "/learn/dedicated-ip-vs-shared-ip",
+      "source": "agent-generated",
+      "generatedAt": "2026-06-19T10:46:22.967Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "smtp-550-5-7-1-error-fix",
+      "pageType": "learn",
+      "url": "/learn/smtp-550-5-7-1-error-fix",
+      "source": "agent-generated",
+      "generatedAt": "2026-06-18T11:53:14.445Z",
+      "cluster": null,
+      "status": "live"
+    },
+    {
+      "slug": "dedicated-vs-shared-ip-cost",
+      "pageType": "learn",
+      "url": "/learn/dedicated-vs-shared-ip-cost",
+      "source": "agent-generated",
+      "generatedAt": "2026-06-19T10:46:23.082Z",
+      "cluster": null,
+      "status": "live"
+    }
+  ]
+}

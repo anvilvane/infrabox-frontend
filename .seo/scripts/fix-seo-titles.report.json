@@ -1,0 +1,461 @@
+{
+  "summary": {
+    "totalEdits": 48,
+    "filesChanged": 38,
+    "errors": 0,
+    "warnings": 150,
+    "validation": {
+      "overLength": 0,
+      "doubleSuffix": 0,
+      "badChars": 0
+    }
+  },
+  "updates": [
+    {
+      "kind": "layout",
+      "file": "app/cold-email-warmup/layout.js",
+      "old": "Email Warmup | 24+ Sequencer Integrations",
+      "new": "Email Warmup | 24+ Sequencer Integrations"
+    },
+    {
+      "kind": "layout",
+      "file": "app/careers/layout.js",
+      "old": "Careers — Join the Team Building Email Infra",
+      "new": "Careers — Join the Team Building Email Infra"
+    },
+    {
+      "kind": "layout",
+      "file": "app/agency-email-solution/layout.js",
+      "old": "Email Solution for Agencies — Multi-Client",
+      "new": "Email Solution for Agencies — Multi-Client"
+    },
+    {
+      "kind": "layout",
+      "file": "app/azure-mailboxes/layout.js",
+      "old": "Azure Mailboxes | 100 Free | $30 Per Domain",
+      "new": "Azure Mailboxes | 100 Free | $30 Per Domain"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/layout.js",
+      "old": "Email Resources Hub — Tools & Guides",
+      "new": "Email Resources Hub — Tools & Guides"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/dkim-checker/layout.js",
+      "old": "Free DKIM Checker — Validate DKIM Signatures",
+      "new": "Free DKIM Checker — Validate DKIM Signatures"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/knowledge-base/layout.js",
+      "old": "Knowledge Base — DNS & Email Infrastructure",
+      "new": "Knowledge Base — DNS & Email Infrastructure"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/dmarc-checker/layout.js",
+      "old": "Free DMARC Checker — Validate Policy & Alignment",
+      "new": "Free DMARC Checker — Validate Policy & Alignment"
+    },
+    {
+      "kind": "layout",
+      "file": "app/affiliates/layout.js",
+      "old": "Affiliate Program — 10% Lifetime Commissions",
+      "new": "Affiliate Program — 10% Lifetime Commissions"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/knowledge-base/dns-management/layout.js",
+      "old": "DNS for Cold Email — SPF, DKIM, DMARC (2026)",
+      "new": "DNS for Cold Email — SPF, DKIM, DMARC (2026)"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/spf-checker/layout.js",
+      "old": "Free SPF Checker — Validate DNS Records",
+      "new": "Free SPF Checker — Validate DNS Records"
+    },
+    {
+      "kind": "layout",
+      "file": "app/creators/layout.js",
+      "old": "Creator Program — 10% Lifetime Commissions",
+      "new": "Creator Program — 10% Lifetime Commissions"
+    },
+    {
+      "kind": "layout",
+      "file": "app/dns-management/layout.js",
+      "old": "DNS Management — Auto SPF, DKIM, DMARC Setup",
+      "new": "DNS Management — Auto SPF, DKIM, DMARC Setup"
+    },
+    {
+      "kind": "layout",
+      "file": "app/google-disruption/layout.js",
+      "old": "Google Workspace Disruption Protection",
+      "new": "Google Workspace Disruption Protection"
+    },
+    {
+      "kind": "layout",
+      "file": "app/google-panel-checker/layout.js",
+      "old": "Google Workspace Admin Panel Health Check",
+      "new": "Google Workspace Admin Panel Health Check"
+    },
+    {
+      "kind": "layout",
+      "file": "app/google-suspension/layout.js",
+      "old": "Google Workspace Suspension Recovery",
+      "new": "Google Workspace Suspension Recovery"
+    },
+    {
+      "kind": "layout",
+      "file": "app/google-workspace-accounts/layout.js",
+      "old": "US-IP Google Workspace Accounts — $2.50/mo",
+      "new": "US-IP Google Workspace Accounts — $2.50/mo"
+    },
+    {
+      "kind": "layout",
+      "file": "app/partners/layout.js",
+      "old": "Partner Network — Certified Cold Email Partners",
+      "new": "Partner Network — Certified Cold Email Partners"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/guides/cold-email-warmup/layout.js",
+      "old": "Cold Email Warmup Guide (2026)",
+      "new": "Cold Email Warmup Guide (2026)"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/guides/dns-setup/layout.js",
+      "old": "DNS Setup for Email Authentication (2026)",
+      "new": "DNS Setup for Email Authentication (2026)"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/guides/layout.js",
+      "old": "Email Deliverability Guides & Tutorials",
+      "new": "Email Deliverability Guides & Tutorials"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/knowledge-base/google-disruption/layout.js",
+      "old": "Google Workspace Disruption Protection",
+      "new": "Google Workspace Disruption Protection"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/knowledge-base/google-panel-checker/layout.js",
+      "old": "Google Workspace Admin Panel Health Check",
+      "new": "Google Workspace Admin Panel Health Check"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/knowledge-base/google-suspension/layout.js",
+      "old": "Google Workspace Suspension Recovery",
+      "new": "Google Workspace Suspension Recovery"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/knowledge-base/google-workspace-accounts/layout.js",
+      "old": "US-IP Google Workspace Accounts — $2.50/mo",
+      "new": "US-IP Google Workspace Accounts — $2.50/mo"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/bimi-checker/layout.js",
+      "old": "Free BIMI Checker — Validate BIMI DNS & Logo",
+      "new": "Free BIMI Checker — Validate BIMI DNS & Logo"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/bimi-generator/layout.js",
+      "old": "Free BIMI Generator — Create BIMI DNS Records",
+      "new": "Free BIMI Generator — Create BIMI DNS Records"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/deliverability-score/layout.js",
+      "old": "Free Domain Deliverability Score Checker",
+      "new": "Free Domain Deliverability Score Checker"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/dmarc-generator/layout.js",
+      "old": "Free DMARC Generator — Create DMARC Records",
+      "new": "Free DMARC Generator — Create DMARC Records"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/domain-scanner/layout.js",
+      "old": "Free Domain Health Scanner — Full Analysis",
+      "new": "Free Domain Health Scanner — Full Analysis"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/email-permutator/layout.js",
+      "old": "Free Email Permutator — Find Any Email",
+      "new": "Free Email Permutator — Find Any Email"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/email-verifier/layout.js",
+      "old": "Free Email Verifier — Validate Email Addresses",
+      "new": "Free Email Verifier — Validate Email Addresses"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/layout.js",
+      "old": "Email Tools — SPF, DKIM, DMARC Validators",
+      "new": "Email Tools — SPF, DKIM, DMARC Validators"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/mailbox-calculator/layout.js",
+      "old": "Free Mailbox Cost Calculator — Pricing Tool",
+      "new": "Free Mailbox Cost Calculator — Pricing Tool"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/reputation-check/layout.js",
+      "old": "Free Domain & IP Reputation Checker",
+      "new": "Free Domain & IP Reputation Checker"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/spf-generator/layout.js",
+      "old": "Free SPF Generator — Create SPF DNS Records",
+      "new": "Free SPF Generator — Create SPF DNS Records"
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/spf-raw-checker/layout.js",
+      "old": "Free SPF Raw Syntax Checker — Validate SPF",
+      "new": "Free SPF Raw Syntax Checker — Validate SPF"
+    },
+    {
+      "kind": "compare",
+      "file": "app/compare/[slug]/compare-data.js",
+      "old": "Infrabox vs CheapInboxes (2026)",
+      "new": "Infrabox vs CheapInboxes (2026)"
+    },
+    {
+      "kind": "compare",
+      "file": "app/compare/[slug]/compare-data.js",
+      "old": "Infrabox vs Mailforge (2026)",
+      "new": "Infrabox vs Mailforge (2026)"
+    },
+    {
+      "kind": "compare",
+      "file": "app/compare/[slug]/compare-data.js",
+      "old": "Infrabox vs Primeforge (2026)",
+      "new": "Infrabox vs Primeforge (2026)"
+    },
+    {
+      "kind": "compare",
+      "file": "app/compare/[slug]/compare-data.js",
+      "old": "Infrabox vs Infraforge (2026)",
+      "new": "Infrabox vs Infraforge (2026)"
+    },
+    {
+      "kind": "compare",
+      "file": "app/compare/[slug]/compare-data.js",
+      "old": "Infrabox vs Zapmail (2026)",
+      "new": "Infrabox vs Zapmail (2026)"
+    },
+    {
+      "kind": "compare",
+      "file": "app/compare/[slug]/compare-data.js",
+      "old": "Infrabox vs Maildoso (2026)",
+      "new": "Infrabox vs Maildoso (2026)"
+    },
+    {
+      "kind": "compare",
+      "file": "app/compare/[slug]/compare-data.js",
+      "old": "Infrabox vs Inframail (2026)",
+      "new": "Infrabox vs Inframail (2026)"
+    },
+    {
+      "kind": "compare",
+      "file": "app/compare/[slug]/compare-data.js",
+      "old": "Infrabox vs Mailreef (2026)",
+      "new": "Infrabox vs Mailreef (2026)"
+    },
+    {
+      "kind": "compare",
+      "file": "app/compare/[slug]/compare-data.js",
+      "old": "Infrabox vs Hypertide (2026)",
+      "new": "Infrabox vs Hypertide (2026)"
+    },
+    {
+      "kind": "compare",
+      "file": "app/compare/[slug]/compare-data.js",
+      "old": "Infrabox vs Instantly (2026)",
+      "new": "Infrabox vs Instantly (2026)"
+    },
+    {
+      "kind": "compare",
+      "file": "app/compare/[slug]/compare-data.js",
+      "old": "Infrabox vs SmartLead (2026)",
+      "new": "Infrabox vs SmartLead (2026)"
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "No change (already up to date): cold-email-infrastructure-saas",
+    "No change (already up to date): best-domain-extensions-cold-email",
+    "No change (already up to date): coldiq-inboxes-review",
+    "No change (already up to date): cold-email-sending-volume-limits-guide",
+    "No change (already up to date): mailforge-pricing",
+    "No change (already up to date): dns-setup-guide",
+    "No change (already up to date): cold-email-warmup-guide",
+    "No change (already up to date): infraforge-alternatives",
+    "No change (already up to date): mightymail-review",
+    "No change (already up to date): cold-email-infrastructure-startups",
+    "No change (already up to date): instantly-mailboxes-review",
+    "No change (already up to date): primeforge-pricing",
+    "No change (already up to date): smartlead-mailboxes-review",
+    "No change (already up to date): best-cold-email-infrastructure-startups-2026",
+    "No change (already up to date): cold-email-infrastructure-solo-founders",
+    "No change (already up to date): inboxnavigator-review",
+    "No change (already up to date): google-postmaster-tools-guide",
+    "No change (already up to date): google-yahoo-sender-requirements-2026",
+    "No change (already up to date): infrabox-vs-mailforge",
+    "No change (already up to date): primeforge-review",
+    "No change (already up to date): agentmail-review",
+    "No change (already up to date): best-cold-email-infrastructure-under-50-mailboxes",
+    "No change (already up to date): coldsire-review",
+    "No change (already up to date): endy-inboxes-review",
+    "No change (already up to date): best-cold-email-infrastructure-high-volume",
+    "No change (already up to date): email-astra-review",
+    "No change (already up to date): hyperinbox-review",
+    "No change (already up to date): premium-inboxes-review",
+    "No change (already up to date): agency-workflows-guide",
+    "No change (already up to date): cold-email-reply-rate-benchmarks-2026",
+    "No change (already up to date): infrabox-whitelabel-guide",
+    "No change (already up to date): skysenders-review",
+    "No change (already up to date): smartlead-vs-instantly",
+    "No change (already up to date): cold-email-infrastructure-australia",
+    "No change (already up to date): cold-email-infrastructure-india",
+    "No change (already up to date): infrabox-vs-primeforge",
+    "No change (already up to date): mission-inbox-review",
+    "No change (already up to date): superwave-review",
+    "No change (already up to date): zapmail-pricing",
+    "No change (already up to date): best-cold-email-infrastructure-2026",
+    "No change (already up to date): bimi-setup-guide",
+    "No change (already up to date): cheapinboxes-review",
+    "No change (already up to date): email-authentication-spf-dkim-dmarc-explained",
+    "No change (already up to date): email-infrastructure-cost-analysis-2026",
+    "No change (already up to date): infrabox-vs-zapmail",
+    "No change (already up to date): mailforge-vs-primeforge",
+    "No change (already up to date): pre-warmed-mailboxes-vs-self-warmup",
+    "No change (already up to date): zapmail-review",
+    "No change (already up to date): zapmail-vs-mailforge",
+    "No change (already up to date): mailpool-ai-review",
+    "No change (already up to date): puzzleinbox-review",
+    "No change (already up to date): wizemails-review",
+    "No change (already up to date): cold-email-sequencer-integration-guide",
+    "No change (already up to date): email-warmup-tools-comparison-2026",
+    "No change (already up to date): inbox-placement-testing-explained",
+    "No change (already up to date): infraboxes-review",
+    "No change (already up to date): infraforge-review",
+    "No change (already up to date): infraforge-vs-instantly",
+    "No change (already up to date): lunatro-mx-review",
+    "No change (already up to date): mailforge-vs-instantly",
+    "No change (already up to date): scaledmail-review",
+    "No change (already up to date): goboxmate-review",
+    "No change (already up to date): hypertide-review",
+    "No change (already up to date): infrabox-vs-puzzleinbox",
+    "No change (already up to date): launch-cold-email-campaign-same-day",
+    "No change (already up to date): mailforge-vs-maildoso",
+    "No change (already up to date): mailin-ai-review",
+    "No change (already up to date): mailscale-review",
+    "No change (already up to date): shared-vs-private-email-infrastructure",
+    "No change (already up to date): aerosend-review",
+    "No change (already up to date): domain-reputation-vs-ip-reputation",
+    "No change (already up to date): infrabox-vs-zapmail-vs-primeforge",
+    "No change (already up to date): mailreef-review",
+    "No change (already up to date): cold-email-infrastructure-france",
+    "No change (already up to date): cold-email-infrastructure-germany",
+    "No change (already up to date): cold-email-infrastructure-uk",
+    "No change (already up to date): cold-email-infrastructure-us",
+    "No change (already up to date): dkim-setup-cold-email",
+    "No change (already up to date): email-deliverability-monitoring-setup",
+    "No change (already up to date): pre-warmed-google-workspace-accounts",
+    "No change (already up to date): primeforge-vs-smartlead",
+    "No change (already up to date): slicey-review",
+    "No change (already up to date): us-ip-benefits-guide",
+    "No change (already up to date): what-is-infrabox",
+    "No change (already up to date): zapmail-prewarm-vs-infrabox-prewarm",
+    "No change (already up to date): zapmail-vs-primeforge",
+    "No change (already up to date): apollo-review",
+    "No change (already up to date): best-cold-email-infrastructure-microsoft-365",
+    "No change (already up to date): best-email-infrastructure-agencies",
+    "No change (already up to date): buy-pre-warmed-email-accounts-guide",
+    "No change (already up to date): cheapest-cold-email-infrastructure-2026",
+    "No change (already up to date): check-domain-blacklisted",
+    "No change (already up to date): cold-email-ab-testing-guide",
+    "No change (already up to date): cold-email-bounce-rate-benchmarks",
+    "No change (already up to date): cold-email-compliance-gdpr-can-spam",
+    "No change (already up to date): cold-email-deliverability-statistics-2026",
+    "No change (already up to date): cold-email-domain-setup-checklist",
+    "No change (already up to date): cold-email-infrastructure-canada",
+    "No change (already up to date): cold-email-infrastructure-comparison-2026",
+    "No change (already up to date): cold-email-infrastructure-healthcare",
+    "No change (already up to date): cold-email-infrastructure-netherlands",
+    "No change (already up to date): cold-email-infrastructure-recruitment",
+    "No change (already up to date): cold-email-infrastructure-setup-guide",
+    "No change (already up to date): cold-emails-going-to-spam-gmail-fix",
+    "No change (already up to date): domain-blacklisted-diagnosis-guide",
+    "No change (already up to date): domain-warmup-best-practices",
+    "No change (already up to date): email-blacklist-removal-guide",
+    "No change (already up to date): email-sending-limits-google-microsoft",
+    "No change (already up to date): emails-landing-in-promotions-tab",
+    "No change (already up to date): google-workspace-vs-microsoft-365-cold-email",
+    "No change (already up to date): how-many-domains-cold-email",
+    "No change (already up to date): infrabox-brandjet-integration",
+    "No change (already up to date): infrabox-emailbison-integration",
+    "No change (already up to date): infrabox-emelia-integration",
+    "No change (already up to date): infrabox-hothawk-integration",
+    "No change (already up to date): infrabox-instantly-integration",
+    "No change (already up to date): infrabox-lemlist-integration",
+    "No change (already up to date): infrabox-mailtoaster-integration",
+    "No change (already up to date): infrabox-manyreach-integration",
+    "No change (already up to date): infrabox-masterinbox-integration",
+    "No change (already up to date): infrabox-plusvibe-integration",
+    "No change (already up to date): infrabox-prewarmed-mailboxes",
+    "No change (already up to date): infrabox-pricing",
+    "No change (already up to date): infrabox-reachinbox-integration",
+    "No change (already up to date): infrabox-replyio-integration",
+    "No change (already up to date): infrabox-review",
+    "No change (already up to date): infrabox-salesforge-integration",
+    "No change (already up to date): infrabox-saleshandy-integration",
+    "No change (already up to date): infrabox-sendkit-integration",
+    "No change (already up to date): infrabox-smartlead-integration",
+    "No change (already up to date): infrabox-snovio-integration",
+    "No change (already up to date): infrabox-supersend-integration",
+    "No change (already up to date): infrabox-trulyinbox-integration",
+    "No change (already up to date): infrabox-warmforge-integration",
+    "No change (already up to date): infrabox-warmy-integration",
+    "No change (already up to date): infrabox-woodpecker-integration",
+    "No change (already up to date): infrabox-zazu-integration",
+    "No change (already up to date): inframail-review",
+    "No change (already up to date): instantly-review",
+    "No change (already up to date): ip-rotation-cold-email",
+    "No change (already up to date): lemlist-review",
+    "No change (already up to date): maildeck-review",
+    "No change (already up to date): maildoso-alternatives",
+    "No change (already up to date): mailforge-review",
+    "No change (already up to date): pre-warmed-mailboxes-worth-it",
+    "No change (already up to date): pre-warmed-microsoft-365-mailboxes",
+    "No change (already up to date): scale-cold-email-100-to-10000",
+    "No change (already up to date): skip-email-warmup-safely",
+    "No change (already up to date): smartlead-review",
+    "No change (already up to date): zapmail-vs-maildoso"
+  ],
+  "validation": {
+    "overLength": [],
+    "doubleSuffix": [],
+    "badChars": []
+  }
+}

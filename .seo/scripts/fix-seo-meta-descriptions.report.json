@@ -1,0 +1,770 @@
+{
+  "summary": {
+    "totalEdits": 77,
+    "filesChanged": 62,
+    "errors": 0,
+    "warnings": 1,
+    "validation": {
+      "lengthIssues": 0,
+      "idealRangeWarnings": 52,
+      "duplicates": 0
+    }
+  },
+  "updates": [
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/mailpool-ai-review.js",
+      "old": "MailPool.ai review (2026): multi-provider inboxes, AI domain generator, blacklist monitoring, and whether the GCP/Microsoft partner positioning fits you.",
+      "new": "MailPool.ai review (2026): multi-provider inboxes, AI domain generator, blacklist monitoring, and whether the GCP/Microsoft partner positioning fits you.",
+      "len": 153
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/superwave-review.js",
+      "old": "SuperWave review (2026): the pipeline-as-a-service model, the 95% inbox SLA versus the provider's own 80-90% admission, and who SuperWave actually fits.",
+      "new": "SuperWave review (2026): the pipeline-as-a-service model, the 95% inbox SLA versus the provider's own 80-90% admission, and who SuperWave actually fits.",
+      "len": 152
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/infraboxes-review.js",
+      "old": "InfraBoxes review (2026): $3 private and $2.50 Google mailbox tiers with warmup, monitoring, and burn alerts bundled in, and where the architecture fits.",
+      "new": "InfraBoxes review (2026): $3 private and $2.50 Google mailbox tiers with warmup, monitoring, and burn alerts bundled in, and where the architecture fits.",
+      "len": 153
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/goboxmate-review.js",
+      "old": "GoBoxMate review (2026): the done-for-you Google Workspace inbox model at $38.88-$99, 48-hour setup, templated testimonials, and who actually fits.",
+      "new": "GoBoxMate review (2026): the done-for-you Google Workspace inbox model at $38.88-$99, 48-hour setup, templated testimonials, and who actually fits.",
+      "len": 147
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/instantly-mailboxes-review.js",
+      "old": "Instantly Mailboxes (DFY and pre-warmed) review for 2026: per-mailbox pricing, in-platform-only positioning, domain ownership terms, and the real fit.",
+      "new": "Instantly Mailboxes (DFY and pre-warmed) review for 2026: per-mailbox pricing, in-platform-only positioning, domain ownership terms, and the real fit.",
+      "len": 150
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/mailin-ai-review.js",
+      "old": "Mailin.ai review (2026): the Solopreneur/Business/Enterprise tiers, ~$1.20-per-mailbox economics at scale, founder-led support, and who Mailin actually fits.",
+      "new": "Mailin.ai review (2026): the Solopreneur/Business/Enterprise tiers, ~$1.20-per-mailbox economics at scale, founder-led support, and who Mailin actually fits.",
+      "len": 157
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/mailreef-review.js",
+      "old": "MailReef review (2026): the per-server pricing, what 'unlimited' actually means in the marketing, dedicated IP considerations, and where MailReef fits.",
+      "new": "MailReef review (2026): the per-server pricing, what 'unlimited' actually means in the marketing, dedicated IP considerations, and where MailReef fits.",
+      "len": 151
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/coldiq-inboxes-review.js",
+      "old": "ColdIQ Inboxes review (2026): why it's infrastructure bundled into a managed GTM agency retainer (~$2K-8K/mo), not self-serve, and who fits that model.",
+      "new": "ColdIQ Inboxes review (2026): why it's infrastructure bundled into a managed GTM agency retainer (~$2K-8K/mo), not self-serve, and who fits that model.",
+      "len": 151
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/lunatro-mx-review.js",
+      "old": "LUNATRO.MX review (2026): the $199 subscription, 400 Microsoft Azure inboxes, a 30,000-email monthly cap, application-gated access, and who it fits.",
+      "new": "LUNATRO.MX review (2026): the $199 subscription, 400 Microsoft Azure inboxes, a 30,000-email monthly cap, application-gated access, and who it fits.",
+      "len": 148
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/premium-inboxes-review.js",
+      "old": "Premium Inboxes review (2026): the per-inbox pricing, what the done-for-you setup actually delivers, the Slack-based support model, and the real fit.",
+      "new": "Premium Inboxes review (2026): the per-inbox pricing, what the done-for-you setup actually delivers, the Slack-based support model, and the real fit.",
+      "len": 149
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/mission-inbox-review.js",
+      "old": "Mission Inbox review (2026): isolated infrastructure plus dedicated IPs, the AI Pre-send Shield, the $199 starting plan, and where Mission Inbox fits.",
+      "new": "Mission Inbox review (2026): isolated infrastructure plus dedicated IPs, the AI Pre-send Shield, the $199 starting plan, and where Mission Inbox fits.",
+      "len": 150
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/agentmail-review.js",
+      "old": "AgentMail review (2026): what the AI-agent inbox API actually does, its published usage-based pricing, and why it's a different category from cold email.",
+      "new": "AgentMail review (2026): what the AI-agent inbox API actually does, its published usage-based pricing, and why it's a different category from cold email.",
+      "len": 153
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/mailscale-review.js",
+      "old": "Mailscale review (2026): the per-mailbox pricing, the tier-jump pricing structure, the marketing deliverability guarantee, and where Mailscale fits.",
+      "new": "Mailscale review (2026): the per-mailbox pricing, the tier-jump pricing structure, the marketing deliverability guarantee, and where Mailscale fits.",
+      "len": 148
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/infrabox-vs-zapmail.js",
+      "old": "Infrabox vs ZapMail (2026): identical plan pricing, both with Google + Microsoft. Infrabox adds Azure mailboxes, isolated warmup, and InfraGuard monitoring.",
+      "new": "Infrabox vs ZapMail (2026): identical plan pricing, both with Google + Microsoft. Infrabox adds Azure mailboxes, isolated warmup, and InfraGuard monitoring.",
+      "len": 156
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/scaledmail-review.js",
+      "old": "ScaledMail review (2026): per-provider pricing for Google, Outlook and SMTP, the fully-managed multi-provider model, and where ScaledMail actually fits.",
+      "new": "ScaledMail review (2026): per-provider pricing for Google, Outlook and SMTP, the fully-managed multi-provider model, and where ScaledMail actually fits.",
+      "len": 152
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/puzzleinbox-review.js",
+      "old": "PuzzleInbox review (2026): per-inbox pricing on Google Workspace and Outlook 365, team transparency observations, and where the product actually fits.",
+      "new": "PuzzleInbox review (2026): per-inbox pricing on Google Workspace and Outlook 365, team transparency observations, and where the product actually fits.",
+      "len": 150
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/hypertide-review.js",
+      "old": "HyperTide review (2026): advertised pricing, the Google/Microsoft/Entra platform claims, deliverability considerations, and where the provider fits.",
+      "new": "HyperTide review (2026): advertised pricing, the Google/Microsoft/Entra platform claims, deliverability considerations, and where the provider fits.",
+      "len": 148
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/aerosend-review.js",
+      "old": "AeroSend review (2026): slot-based pricing on 10-domain isolation pods, built-in domain burn-alert monitoring, and where AeroSend actually fits.",
+      "new": "AeroSend review (2026): slot-based pricing on 10-domain isolation pods, built-in domain burn-alert monitoring, and where AeroSend actually fits.",
+      "len": 144
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/email-astra-review.js",
+      "old": "Email Astra review (2026): the pre-warmed Google/Microsoft inbox model, wildly inconsistent pricing ($2.75-$10), the non-refundable policy, and safe-test tips.",
+      "new": "Email Astra review (2026): the pre-warmed Google/Microsoft inbox model, wildly inconsistent pricing ($2.75-$10), the non-refundable policy, and safe-test tips.",
+      "len": 159
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/infraforge-review.js",
+      "old": "InfraForge review (2026): advertised pricing, the slot-based model, dedicated IP add-ons, and where the Salesforge infrastructure product actually fits.",
+      "new": "InfraForge review (2026): advertised pricing, the slot-based model, dedicated IP add-ons, and where the Salesforge infrastructure product actually fits.",
+      "len": 152
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/smartlead-mailboxes-review.js",
+      "old": "Smartlead Mailboxes (SmartSenders) review for 2026: per-mailbox pricing, the vendor-bundled provisioning model, and where the product actually fits.",
+      "new": "Smartlead Mailboxes (SmartSenders) review for 2026: per-mailbox pricing, the vendor-bundled provisioning model, and where the product actually fits.",
+      "len": 148
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/slicey-review.js",
+      "old": "Slicey review (2026): per-domain pricing on isolated Outlook inboxes, the marketing-level guarantees, and where Slicey actually fits cold-email buyers.",
+      "new": "Slicey review (2026): per-domain pricing on isolated Outlook inboxes, the marketing-level guarantees, and where Slicey actually fits cold-email buyers.",
+      "len": 151
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/zapmail-vs-mailforge.js",
+      "old": "ZapMail vs Mailforge (2026): real Google Workspace from $39/mo vs shared-IP accounts at $2-3/mo. Why Infrabox beats both with Microsoft 365 + isolated warmup.",
+      "new": "ZapMail vs Mailforge (2026): real Google Workspace from $39/mo vs shared-IP accounts at $2-3/mo. Why Infrabox beats both with Microsoft 365 + isolated warmup.",
+      "len": 158
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/wizemails-review.js",
+      "old": "wizeMails review (2026): the dedicated-server-per-client model, Signal Intelligence Engine monitoring every 15 minutes, $179/mo pricing, and who it fits.",
+      "new": "wizeMails review (2026): the dedicated-server-per-client model, Signal Intelligence Engine monitoring every 15 minutes, $179/mo pricing, and who it fits.",
+      "len": 153
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/hyperinbox-review.js",
+      "old": "HyperInboxes review (2026): the premium Google mailbox model, fast 12-hour setup, free replacements, reported sequencer disconnections, and signup status.",
+      "new": "HyperInboxes review (2026): the premium Google mailbox model, fast 12-hour setup, free replacements, reported sequencer disconnections, and signup status.",
+      "len": 154
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/mightymail-review.js",
+      "old": "MightyMail review (2026): the high-density Microsoft Azure Outlook model (99 inboxes/domain), done-for-you 5-day setup, missing pricing, and who it fits.",
+      "new": "MightyMail review (2026): the high-density Microsoft Azure Outlook model (99 inboxes/domain), done-for-you 5-day setup, missing pricing, and who it fits.",
+      "len": 153
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/coldsire-review.js",
+      "old": "ColdSire review (2026): the premium mixed-pool model (15% cold-email cap), true domain isolation, $6/account Google & Microsoft pricing, and the real fit.",
+      "new": "ColdSire review (2026): the premium mixed-pool model (15% cold-email cap), true domain isolation, $6/account Google & Microsoft pricing, and the real fit.",
+      "len": 154
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/inboxnavigator-review.js",
+      "old": "Inbox Navigator review (2026): the done-for-you multi-platform model (Google, Microsoft, SMTP, prewarmed), dedicated-IP isolation, $3/inbox, and who it fits.",
+      "new": "Inbox Navigator review (2026): the done-for-you multi-platform model (Google, Microsoft, SMTP, prewarmed), dedicated-IP isolation, $3/inbox, and who it fits.",
+      "len": 157
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/cheapinboxes-review.js",
+      "old": "CheapInboxes review (2026): the pricing tiers, advertised features, the real deliverability considerations, and where CheapInboxes actually fits today.",
+      "new": "CheapInboxes review (2026): the pricing tiers, advertised features, the real deliverability considerations, and where CheapInboxes actually fits today.",
+      "len": 151
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/endy-inboxes-review.js",
+      "old": "Endy Inboxes review (2026): private dedicated-IP infrastructure, transparent $25-$199 tiers (~$2-2.5/mailbox), 30-minute done-for-you setup, and the fit.",
+      "new": "Endy Inboxes review (2026): private dedicated-IP infrastructure, transparent $25-$199 tiers (~$2-2.5/mailbox), 30-minute done-for-you setup, and the fit.",
+      "len": 153
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/cold-email-infrastructure-canada.js",
+      "old": "Cold email into Canada is CASL-governed — one of the strictest anti-spam regimes worldwide. The legal playbook plus the exact infrastructure that lands inboxes.",
+      "new": "Cold email into Canada is CASL-governed — one of the strictest anti-spam regimes worldwide. The legal playbook plus the exact infrastructure that lands inboxes.",
+      "len": 160
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/infrabox-warmforge-integration.js",
+      "old": "Step-by-step guide to connect Infrabox Google Workspace and Microsoft 365 mailboxes to Warmforge, Salesforge's premium warmup with aged-account pools.",
+      "new": "Step-by-step guide to connect Infrabox Google Workspace and Microsoft 365 mailboxes to Warmforge, Salesforge's premium warmup with aged-account pools.",
+      "len": 150
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/cold-email-infrastructure-healthcare.js",
+      "old": "Cold email infrastructure for healthtech B2B teams selling into hospitals, health systems, and payers. HIPAA guardrails plus the clinical-buyer playbook.",
+      "new": "Cold email infrastructure for healthtech B2B teams selling into hospitals, health systems, and payers. HIPAA guardrails plus the clinical-buyer playbook.",
+      "len": 153
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/skysenders-review.js",
+      "old": "SkySenders review (2026): the dedicated-server-per-domain model, transparent $59-$269/mo tiers, the SkyBox unified inbox, built-in monitoring, and the fit.",
+      "new": "SkySenders review (2026): the dedicated-server-per-domain model, transparent $59-$269/mo tiers, the SkyBox unified inbox, built-in monitoring, and the fit.",
+      "len": 155
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/smartlead-vs-instantly.js",
+      "old": "Smartlead vs Instantly (2026) with verified pricing — Smartlead's $39-$379 ladder vs Instantly's $47-$358. Per-workspace vs per-plan, lead DB, AI agents.",
+      "new": "Smartlead vs Instantly (2026) with verified pricing — Smartlead's $39-$379 ladder vs Instantly's $47-$358. Per-workspace vs per-plan, lead DB, AI agents.",
+      "len": 153
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/zapmail-vs-maildoso.js",
+      "old": "Zapmail vs Maildoso (2026): real pre-warmed Google/Microsoft + ZapShield at $39-299/mo vs SMTP + Google Workspace Combo with unlimited placement testing.",
+      "new": "Zapmail vs Maildoso (2026): real pre-warmed Google/Microsoft + ZapShield at $39-299/mo vs SMTP + Google Workspace Combo with unlimited placement testing.",
+      "len": 153
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/cold-email-infrastructure-australia.js",
+      "old": "Cold email in Australia is governed by the Spam Act 2003 — consent, identification, and unsubscribe. The full legal playbook plus the infrastructure setup.",
+      "new": "Cold email in Australia is governed by the Spam Act 2003 — consent, identification, and unsubscribe. The full legal playbook plus the infrastructure setup.",
+      "len": 155
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/cold-email-infrastructure-germany.js",
+      "old": "Germany is Europe's hardest cold-email market. UWG §7 bars it without explicit consent. Here's what's legal, what gets sued, and the infrastructure setup.",
+      "new": "Germany is Europe's hardest cold-email market. UWG §7 bars it without explicit consent. Here's what's legal, what gets sued, and the infrastructure setup.",
+      "len": 154
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/cold-email-infrastructure-netherlands.js",
+      "old": "Dutch cold-email law: Telecommunicatiewet permits B2B messages to legal entities without consent. What the ACM and AP expect, plus the infrastructure setup.",
+      "new": "Dutch cold-email law: Telecommunicatiewet permits B2B messages to legal entities without consent. What the ACM and AP expect, plus the infrastructure setup.",
+      "len": 156
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/cold-email-infrastructure-us.js",
+      "old": "Cold-email infrastructure for US senders. CAN-SPAM rules, Gmail/Yahoo bulk-sender requirements, US-IP reputation, plus the mailbox setup that lands inboxes.",
+      "new": "Cold-email infrastructure for US senders. CAN-SPAM rules, Gmail/Yahoo bulk-sender requirements, US-IP reputation, plus the mailbox setup that lands inboxes.",
+      "len": 156
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/infrabox-prewarmed-mailboxes.js",
+      "old": "Infrabox pre-warmed mailboxes ship same-day on Google Workspace and Microsoft 365. Browse the Prewarm Inventory, pick a domain-age tier, and start sending today.",
+      "new": "Infrabox pre-warmed mailboxes ship same-day on Google Workspace and Microsoft 365. Browse the Prewarm Inventory, pick a domain-age tier, and start sending today.",
+      "len": 161
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/mailforge-vs-maildoso.js",
+      "old": "Mailforge vs Maildoso (2026) on pricing, features, warmup, and monitoring. The shared-IP SMTP showdown — Google Workspace, self-healing, and real deliverability.",
+      "new": "Mailforge vs Maildoso (2026) on pricing, features, warmup, and monitoring. The shared-IP SMTP showdown — Google Workspace, self-healing, and real deliverability.",
+      "len": 161
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/cold-email-infrastructure-france.js",
+      "old": "France allows B2B cold email to a named professional address when the pitch matches the role. What CNIL expects, how to stay legal, plus the infrastructure setup.",
+      "new": "France allows B2B cold email to a named professional address when the pitch matches the role. What CNIL expects, how to stay legal, plus the infrastructure setup.",
+      "len": 162
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/mailforge-vs-instantly.js",
+      "old": "Mailforge vs Instantly: one is shared-IP mailbox infrastructure at $2-3/mo, the other is a $47/mo sender with Google-only accounts. Here's which to pick in 2026.",
+      "new": "Mailforge vs Instantly: one is shared-IP mailbox infrastructure at $2-3/mo, the other is a $47/mo sender with Google-only accounts. Here's which to pick in 2026.",
+      "len": 161
+    },
+    {
+      "kind": "article",
+      "file": "app/learn/[slug]/articles/maildeck-review.js",
+      "old": "MailDeck review (2026): the Microsoft/Google/SMTP multi-platform model, ~$0.30-$0.50 per inbox at scale (833K+ inboxes), and the concentration-risk fit.",
+      "new": "MailDeck review (2026): the Microsoft/Google/SMTP multi-platform model, ~$0.30-$0.50 per inbox at scale (833K+ inboxes), and the concentration-risk fit.",
+      "len": 152
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/dmarc-checker/layout.js",
+      "old": "Free DMARC record checker. Validate your DMARC DNS, analyze policy (none/quarantine/reject), check SPF and DKIM alignment, and verify reporting setup.",
+      "new": "Free DMARC record checker. Validate your DMARC DNS, analyze policy (none/quarantine/reject), check SPF and DKIM alignment, and verify reporting setup.",
+      "len": 150
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/bimi-checker/layout.js",
+      "old": "Free BIMI record checker. Validate BIMI DNS records, your SVG logo and VMC certificate, and confirm whether your brand logo displays in Gmail, Yahoo, and Apple.",
+      "new": "Free BIMI record checker. Validate BIMI DNS records, your SVG logo and VMC certificate, and confirm whether your brand logo displays in Gmail, Yahoo, and Apple.",
+      "len": 160
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/dkim-checker/layout.js",
+      "old": "Free DKIM record checker. Validate DKIM DNS records, public key configuration, key sizes, and selector setup. Auto-detect Google, Microsoft, and SendGrid keys.",
+      "new": "Free DKIM record checker. Validate DKIM DNS records, public key configuration, key sizes, and selector setup. Auto-detect Google, Microsoft, and SendGrid keys.",
+      "len": 159
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/tools/spf-checker/layout.js",
+      "old": "Free SPF record checker. Validate SPF DNS records, count DNS lookups, analyze authorized mechanisms, and detect issues like exceeding the 10-lookup limit.",
+      "new": "Free SPF record checker. Validate SPF DNS records, count DNS lookups, analyze authorized mechanisms, and detect issues like exceeding the 10-lookup limit.",
+      "len": 154
+    },
+    {
+      "kind": "layout",
+      "file": "app/cold-email-warmup/layout.js",
+      "old": "Built-in email warmup for Infrabox mailboxes or any of 24+ sequencers like Instantly, SmartLead, and Lemlist. Smart volume scaling and real-time health scoring.",
+      "new": "Built-in email warmup for Infrabox mailboxes or any of 24+ sequencers like Instantly, SmartLead, and Lemlist. Smart volume scaling and real-time health scoring.",
+      "len": 160
+    },
+    {
+      "kind": "layout",
+      "file": "app/careers/layout.js",
+      "old": "Hiring across engineering, growth, and operations in our Gurgaon office. Work directly with the founding team on cold email infrastructure used worldwide.",
+      "new": "Hiring across engineering, growth, and operations in our Gurgaon office. Work directly with the founding team on cold email infrastructure used worldwide.",
+      "len": 154
+    },
+    {
+      "kind": "layout",
+      "file": "app/refund-policy/layout.js",
+      "old": "Infrabox refund policy. Subscription fees, wallet credits, domain purchases, chargebacks, billing disputes, and how to request a refund from our billing team.",
+      "new": "Infrabox refund policy. Subscription fees, wallet credits, domain purchases, chargebacks, billing disputes, and how to request a refund from our billing team.",
+      "len": 158
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/knowledge-base/layout.js",
+      "old": "Knowledge base for cold email infrastructure. DNS management, Google Workspace configuration, panel diagnostics, disruption handling, and suspension recovery.",
+      "new": "Knowledge base for cold email infrastructure. DNS management, Google Workspace configuration, panel diagnostics, disruption handling, and suspension recovery.",
+      "len": 158
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/knowledge-base/google-panel-checker/layout.js",
+      "old": "Understand the Google Workspace admin panel for cold email — account status, suspension warnings, license usage, and the health signals worth tracking weekly.",
+      "new": "Understand the Google Workspace admin panel for cold email — account status, suspension warnings, license usage, and the health signals worth tracking weekly.",
+      "len": 158
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/knowledge-base/dns-management/layout.js",
+      "old": "Step-by-step guides for managing cold-email DNS — SPF, DKIM, DMARC, MX records, and key rotation. Best practices and troubleshooting from the Infrabox team.",
+      "new": "Step-by-step guides for managing cold-email DNS — SPF, DKIM, DMARC, MX records, and key rotation. Best practices and troubleshooting from the Infrabox team.",
+      "len": 156
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/knowledge-base/google-disruption/layout.js",
+      "old": "How to spot, prevent, and recover from Google Workspace disruptions. Diagnostic playbooks, monitoring tips, and backup strategies for cold-email senders.",
+      "new": "How to spot, prevent, and recover from Google Workspace disruptions. Diagnostic playbooks, monitoring tips, and backup strategies for cold-email senders.",
+      "len": 153
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/knowledge-base/google-suspension/layout.js",
+      "old": "Playbook for recovering Google Workspace accounts after suspension. Reactivation steps, what to send Google support, and how to prevent it next time.",
+      "new": "Playbook for recovering Google Workspace accounts after suspension. Reactivation steps, what to send Google support, and how to prevent it next time.",
+      "len": 149
+    },
+    {
+      "kind": "layout",
+      "file": "app/resources/knowledge-base/google-workspace-accounts/layout.js",
+      "old": "What to know before buying Google Workspace accounts for cold email — US IPs, admin access, 2FA, domain isolation, and how Infrabox sets them up.",
+      "new": "What to know before buying Google Workspace accounts for cold email — US IPs, admin access, 2FA, domain isolation, and how Infrabox sets them up.",
+      "len": 145
+    },
+    {
+      "kind": "layout",
+      "file": "app/google-panel-checker/layout.js",
+      "old": "Free Google Workspace admin panel check. Verify account status, surface suspension risks, and monitor workspace health to avoid costly email disruptions.",
+      "new": "Free Google Workspace admin panel check. Verify account status, surface suspension risks, and monitor workspace health to avoid costly email disruptions.",
+      "len": 153
+    },
+    {
+      "kind": "layout",
+      "file": "app/partners/layout.js",
+      "old": "Hand-picked agencies and operators who build, run, or rescue cold-email infrastructure. 66 Infrabox-certified partners across Platinum, Gold, and more.",
+      "new": "Hand-picked agencies and operators who build, run, or rescue cold-email infrastructure. 66 Infrabox-certified partners across Platinum, Gold, and more.",
+      "len": 151
+    },
+    {
+      "kind": "partner-tagline",
+      "file": "app/partners/data.js",
+      "partner": "Axia Growth",
+      "old": "M&A deal-flow outbound niche with account research and sequencer build.",
+      "new": "M&A deal-flow outbound niche with account research and sequencer build."
+    },
+    {
+      "kind": "partner-tagline",
+      "file": "app/partners/data.js",
+      "partner": "Enavra",
+      "old": "Boutique outbound for B2B SaaS teams — done-with-you sequencer builds and reply handling.",
+      "new": "Boutique outbound for B2B SaaS teams — done-with-you sequencer builds and reply handling."
+    },
+    {
+      "kind": "partner-tagline",
+      "file": "app/partners/data.js",
+      "partner": "Enrow",
+      "old": "French-market outbound operator with native French sequences and CNIL-aware deliverability.",
+      "new": "French-market outbound operator with native French sequences and CNIL-aware deliverability."
+    },
+    {
+      "kind": "partner-tagline",
+      "file": "app/partners/data.js",
+      "partner": "Lidgen",
+      "old": "MENA/Israel outbound specialist with sequencer build and reply handling.",
+      "new": "MENA/Israel outbound specialist with sequencer build and reply handling."
+    },
+    {
+      "kind": "partner-tagline",
+      "file": "app/partners/data.js",
+      "partner": "Prospectify",
+      "old": "Outbound for European B2B SaaS with sequencer build and pan-EU account research.",
+      "new": "Outbound for European B2B SaaS with sequencer build and pan-EU account research."
+    },
+    {
+      "kind": "partner-tagline",
+      "file": "app/partners/data.js",
+      "partner": "Prospero AI",
+      "old": "AI-augmented prospecting for B2B teams with enriched targeting and copy generation.",
+      "new": "AI-augmented prospecting for B2B teams with enriched targeting and copy generation."
+    },
+    {
+      "kind": "partner-tagline",
+      "file": "app/partners/data.js",
+      "partner": "Relevance AI",
+      "old": "AI-driven outbound personalization at scale for SaaS and agency teams.",
+      "new": "AI-driven outbound personalization at scale for SaaS and agency teams."
+    },
+    {
+      "kind": "partner-tagline",
+      "file": "app/partners/data.js",
+      "partner": "Primavera Solar",
+      "old": "LATAM-market outbound with native Spanish and Portuguese sequences.",
+      "new": "LATAM-market outbound with native Spanish and Portuguese sequences."
+    },
+    {
+      "kind": "partner-tagline",
+      "file": "app/partners/data.js",
+      "partner": "Email Ethos",
+      "old": "Ethical, deliverability-safe outbound with sender-reputation guardrails.",
+      "new": "Ethical, deliverability-safe outbound with sender-reputation guardrails."
+    },
+    {
+      "kind": "partner-tagline",
+      "file": "app/partners/data.js",
+      "partner": "Level180",
+      "old": "African-market outbound specialist with sequencer build for SaaS teams.",
+      "new": "African-market outbound specialist with sequencer build for SaaS teams."
+    },
+    {
+      "kind": "partner-tagline",
+      "file": "app/partners/data.js",
+      "partner": "Revenue Boost",
+      "old": "Outbound retainers for early-stage SaaS founders, from copy to reply handling.",
+      "new": "Outbound retainers for early-stage SaaS founders, from copy to reply handling."
+    },
+    {
+      "kind": "partner-tagline",
+      "file": "app/partners/data.js",
+      "partner": "Prospeqt",
+      "old": "DACH-market outbound agency. Localized copy for German enterprise buyers.",
+      "new": "DACH-market outbound agency. Localized copy for German enterprise buyers."
+    },
+    {
+      "kind": "partner-tagline",
+      "file": "app/partners/data.js",
+      "partner": "cold.email",
+      "old": "Full-stack cold email agency for B2B SaaS. Built-for-you outbound with creator distribution.",
+      "new": "Full-stack cold email agency for B2B SaaS. Built-for-you outbound with creator distribution."
+    },
+    {
+      "kind": "partner-tagline",
+      "file": "app/partners/data.js",
+      "partner": "GTMx",
+      "old": "High-volume outbound shop for B2B SaaS with sequencer builds and reply handling.",
+      "new": "High-volume outbound shop for B2B SaaS with sequencer builds and reply handling."
+    },
+    {
+      "kind": "partner-tagline",
+      "file": "app/partners/data.js",
+      "partner": "Best Leads",
+      "old": "Lead-generation focused outbound shop with sequencer build and copywriting.",
+      "new": "Lead-generation focused outbound shop with sequencer build and copywriting."
+    },
+    {
+      "kind": "authors-description",
+      "file": "app/authors/page.js",
+      "old": "Meet the people building Infrabox — the cold email infrastructure platform trusted by agencies and B2B sales teams across the US, EU, and APAC.",
+      "new": "Meet the people building Infrabox — the cold email infrastructure platform trusted by agencies and B2B sales teams across the US, EU, and APAC.",
+      "len": 143
+    },
+    {
+      "kind": "authors-og-description",
+      "file": "app/authors/page.js",
+      "old": "Meet the people building Infrabox — the cold email infrastructure platform trusted by agencies and B2B sales teams across the US, EU, and APAC.",
+      "new": "Meet the people building Infrabox — the cold email infrastructure platform trusted by agencies and B2B sales teams across the US, EU, and APAC.",
+      "len": 143
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "authors/page.js: first title is \"Our Team\", not the expected \"Our Team | Infrabox\". Leaving as-is."
+  ],
+  "lengthIssues": [],
+  "idealRangeWarnings": [
+    {
+      "label": "article:aerosend-review",
+      "len": 144
+    },
+    {
+      "label": "article:infrabox-prewarmed-mailboxes",
+      "len": 161
+    },
+    {
+      "label": "article:mailforge-vs-maildoso",
+      "len": 161
+    },
+    {
+      "label": "article:cold-email-infrastructure-france",
+      "len": 162
+    },
+    {
+      "label": "article:mailforge-vs-instantly",
+      "len": 161
+    },
+    {
+      "label": "partner-rendered:cold.email",
+      "len": 167
+    },
+    {
+      "label": "partner-rendered:SendtoWin",
+      "len": 163
+    },
+    {
+      "label": "partner-rendered:Anevo Marketing",
+      "len": 122
+    },
+    {
+      "label": "partner-rendered:Vertical GTM",
+      "len": 162
+    },
+    {
+      "label": "partner-rendered:Cold Labs",
+      "len": 139
+    },
+    {
+      "label": "partner-rendered:LeadHaste",
+      "len": 130
+    },
+    {
+      "label": "partner-rendered:LeadHype",
+      "len": 133
+    },
+    {
+      "label": "partner-rendered:Netswick",
+      "len": 135
+    },
+    {
+      "label": "partner-rendered:Outstation",
+      "len": 134
+    },
+    {
+      "label": "partner-rendered:EventCaptain",
+      "len": 162
+    },
+    {
+      "label": "partner-rendered:Rillation Revenue",
+      "len": 137
+    },
+    {
+      "label": "partner-rendered:Fundraisly",
+      "len": 140
+    },
+    {
+      "label": "partner-rendered:The Growth Pro",
+      "len": 139
+    },
+    {
+      "label": "partner-rendered:Source It Marketing",
+      "len": 136
+    },
+    {
+      "label": "partner-rendered:Sales Boutique",
+      "len": 141
+    },
+    {
+      "label": "partner-rendered:Maildoso",
+      "len": 123
+    },
+    {
+      "label": "partner-rendered:SuperSend",
+      "len": 131
+    },
+    {
+      "label": "partner-rendered:Abstrakt MG",
+      "len": 127
+    },
+    {
+      "label": "partner-rendered:Enrichflow",
+      "len": 129
+    },
+    {
+      "label": "partner-rendered:Scaletopia",
+      "len": 125
+    },
+    {
+      "label": "partner-rendered:Success.ai",
+      "len": 131
+    },
+    {
+      "label": "partner-rendered:Deliverability Ninja",
+      "len": 124
+    },
+    {
+      "label": "partner-rendered:OppDrip",
+      "len": 128
+    },
+    {
+      "label": "partner-rendered:SalesUp Club",
+      "len": 141
+    },
+    {
+      "label": "partner-rendered:NerasVenture",
+      "len": 124
+    },
+    {
+      "label": "partner-rendered:Oneaway",
+      "len": 120
+    },
+    {
+      "label": "partner-rendered:Elsa Consulting",
+      "len": 125
+    },
+    {
+      "label": "partner-rendered:Wild Community",
+      "len": 129
+    },
+    {
+      "label": "partner-rendered:Predictable Revenue",
+      "len": 138
+    },
+    {
+      "label": "partner-rendered:Outbound Buddy",
+      "len": 133
+    },
+    {
+      "label": "partner-rendered:AI Agency Institute",
+      "len": 135
+    },
+    {
+      "label": "partner-rendered:Thriving Arc",
+      "len": 122
+    },
+    {
+      "label": "partner-rendered:North Consulting",
+      "len": 133
+    },
+    {
+      "label": "partner-rendered:Enavra",
+      "len": 163
+    },
+    {
+      "label": "partner-rendered:Automindz Solutions",
+      "len": 130
+    },
+    {
+      "label": "partner-rendered:Unify GTM",
+      "len": 124
+    },
+    {
+      "label": "partner-rendered:InboxNavigator",
+      "len": 129
+    },
+    {
+      "label": "partner-rendered:Deal GTM",
+      "len": 123
+    },
+    {
+      "label": "partner-rendered:LeadzROI",
+      "len": 128
+    },
+    {
+      "label": "partner-rendered:Plenty Deals",
+      "len": 125
+    },
+    {
+      "label": "partner-rendered:RevCentric",
+      "len": 128
+    },
+    {
+      "label": "partner-rendered:Hypergen / Hypernova",
+      "len": 140
+    },
+    {
+      "label": "partner-rendered:Heavn Media",
+      "len": 129
+    },
+    {
+      "label": "partner-rendered:Enrow",
+      "len": 164
+    },
+    {
+      "label": "partner-rendered:Legacy GTM",
+      "len": 121
+    },
+    {
+      "label": "partner-rendered:Incendium Strategies",
+      "len": 130
+    },
+    {
+      "label": "authors",
+      "len": 143
+    }
+  ],
+  "duplicates": []
+}

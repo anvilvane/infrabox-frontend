@@ -1,0 +1,73 @@
+export const article = {
+  slug: "infrabox-masterinbox-integration",
+  title: "Connect Infrabox to Master Inbox (2026)",
+  metaDescription: "Step-by-step guide to connect Infrabox mailboxes to Master Inbox, the multi-sequencer aggregator with AI auto-labeling. Includes the workspace-selection flow.",
+  headline: "Connect Infrabox Mailboxes to Master Inbox in Under 5 Minutes",
+  publishedAt: "2026-04-11",
+  updatedAt: "2026-04-11",
+  author: "Mohit Mimani",
+  category: "Guides",
+  readingTime: "8 min read",
+  tags: ["Master Inbox integration", "multi-sequencer inbox", "unified inbox", "Google Workspace", "Microsoft 365", "workspace selection"],
+  excerpt: "Master Inbox is the only sequencer in the Infrabox catalog with a two-step connection flow: validate credentials, then pick a workspace. Here is exactly what happens and why.",
+  type: "how-to",
+  screenshots: [
+    { src: "/images/dashboard/sequencers.png", alt: "Infrabox Sequencers page with Master Inbox connected", caption: "Infrabox Sequencers page, Master Inbox sits in the Inbox Management category alongside Hothawk." },
+    { src: "/images/dashboard/exports.png", alt: "Infrabox exports tracking the Master Inbox workspace selection", caption: "Infrabox Exports page showing a successful Master Inbox push with the target workspace resolved." },
+  ],
+  sections: [
+    {
+      heading: "The Fast Path: Credentials, Then Workspace",
+      content: "Master Inbox is the only sequencer in the Infrabox catalog with a genuine two-step connection flow: credentials first, workspace selection second. You enter your Master Inbox email and password, Infrabox posts them to Master Inbox's workspace-lookup endpoint, the response returns every workspace your account belongs to, and you pick the one you want as the target for your Infrabox mailboxes. Only then does the Connect Account button enable.\n\nEverything else in the Infrabox catalog is either one-screen (email + password, click connect) or one-field (API key, click connect). Master Inbox is unique because one Master Inbox login can belong to multiple workspaces, and pushing mailboxes into the wrong workspace is a headache to undo. The two-step flow makes the choice explicit.",
+    },
+    {
+      heading: "Why Master Inbox Needs a Workspace Picker",
+      content: "Master Inbox's whole value prop is aggregating replies from multiple outreach tools. Smartlead, Instantly, and more: into a single view. Because agencies typically run one Master Inbox account across multiple clients, each client gets its own workspace. One login can legitimately belong to 5, 10, or 20 workspaces.\n\n| Field | What it does |\n|---|---|\n| sequencer_login | Your Master Inbox email |\n| sequencer_password | Your Master Inbox password |\n| workspace_id | The workspace you're pushing mailboxes INTO: fetched dynamically after credential validation |\n\nThe workspace_id field is marked dynamic in the Master Inbox sequencer config. It has no static options at the moment you open the form. Infrabox only knows what to populate the dropdown with *after* Master Inbox's API returns the workspace list. That's why the Select Workspace dropdown is initially empty and greyed out until you hit **Validate Credentials**.\n\nFor most other sequencers, this complexity is hidden because they assume one login = one workspace. Master Inbox is different by design, and the Infrabox connect flow respects that.",
+    },
+    {
+      heading: "Prerequisites Before You Connect",
+      content: "Gather these items:\n\n| Item | Where | Required |\n|---|---|---|\n| Master Inbox account (any paid plan) | masterinbox.com | Yes |\n| Master Inbox login email |, | Yes |\n| Master Inbox password |, | Yes |\n| At least one workspace in your Master Inbox account | Master Inbox → Workspaces | Yes |\n| Knowledge of which workspace to target (if multi-tenant) |, | Yes |\n| Infrabox mailboxes provisioned | Infrabox → Mailboxes | Yes |\n| IMAP enabled on Google Workspace OU | admin.google.com → Gmail → End User Access | Yes |\n\n**The multi-workspace trap.** If your Master Inbox login belongs to a workspace you never actually use (e.g. a trial workspace created months ago), it will still show up in the dropdown during the workspace selection step. Pay attention: pick the one that is actually live for your current client, not whatever is alphabetically first. Pushing mailboxes into the wrong workspace is recoverable, but requires manual cleanup inside Master Inbox → Workspace → Remove Sender.",
+    },
+    {
+      heading: "Step-by-Step: Connect Master Inbox",
+      content: "The full click path including the workspace selection step:\n\n| Step | Action | Time |\n|---|---|---|\n| 1 | Infrabox → **Sequencers** → **Connect New Sequencer** | 5 sec |\n| 2 | Filter by **Inbox Management** and pick **Master Inbox** | 5 sec |\n| 3 | Enter **Email**: your Master Inbox login | 5 sec |\n| 4 | Enter **Password**: your Master Inbox password | 5 sec |\n| 5 | Click **Validate Credentials** (below the credential fields) |, |\n| 6 | Infrabox POSTs to `/api/auth/sequencers/masterinbox/workspaces` with the credentials | 1-3 sec |\n| 7 | Master Inbox returns the list of workspaces the account belongs to |, |\n| 8 | Infrabox populates the **Workspace** dropdown and shows a 'Credentials validated!' toast | 0.5 sec |\n| 9 | Pick your target workspace from the dropdown | 5 sec |\n| 10 | Click **Connect Account** (now enabled) |, |\n| 11 | Infrabox pushes every selected mailbox into the chosen Master Inbox workspace | 20-40 sec |\n| 12 | Redirect to `/sequencers` with success toast |, |\n\n**Total: about 2 minutes for a clean multi-step connect.**\n\nThe important UX detail: the Connect Account button stays disabled until *both* the credentials are validated AND a workspace is selected. You cannot skip the validate step, because without it the dropdown is empty. This is enforced in the Infrabox connect flow via `disabled={isSubmitting || (isMasterInbox && !credentialsValidated)}`.",
+    },
+    {
+      heading: "What Happens After Workspace Selection",
+      content: "Once you pick the workspace and click Connect Account, Infrabox's API submits a payload to Master Inbox that includes:\n\n| Field | Value | Notes |\n|---|---|---|\n| platform | masterinbox | Fixed |\n| sequencer_login | Your Master Inbox email | From step 3 |\n| sequencer_password | Your Master Inbox password | From step 4 |\n| workspace_id | Selected workspace ID | From the dropdown in step 9 |\n| auth_token | Session token | Returned by the workspace-lookup call, reused here |\n| token_value | Auth token value | Same |\n| mailbox_list | Every Infrabox mailbox selected for export | From Infrabox state |\n\nMaster Inbox validates the session token (to confirm the workspace selection wasn't tampered with client-side), then provisions each mailbox inside the target workspace. The auth_token reuse is important: it means you don't have to re-enter credentials between the workspace-lookup and the final Connect Account step, and Master Inbox doesn't rate-limit you for double-validating.\n\nAfter this, Master Inbox pulls replies from every connected Infrabox mailbox via IMAP, classifies them with AI auto-labeling (positive / objection / OOO / unsub / bounce), and aggregates them into the unified view that is Master Inbox's whole value proposition. The AI auto-labeling is similar to what [BrandJet's Unibox](/learn/infrabox-brandjet-integration) does on the outreach side, but Master Inbox lives on the inbox-management side and is meant for cross-tool aggregation.",
+    },
+    {
+      heading: "Aggregating Replies From Multiple Outreach Tools",
+      content: "The typical Master Inbox stack for an agency looks like this:\n\n| Layer | Tool | Purpose |\n|---|---|---|\n| Mailboxes | Infrabox | Real Google Workspace / Microsoft 365 mailboxes |\n| Warmup | Infrabox warmup add-on or [TrulyInbox](/learn/infrabox-trulyinbox-integration) | Reputation building |\n| Sender (Client A) | [Instantly](/learn/infrabox-instantly-integration) | Outbound sequences |\n| Sender (Client B) | [Smartlead](/learn/infrabox-smartlead-integration) | Outbound sequences |\n| Sender (Client C) | [Lemlist](/learn/infrabox-lemlist-integration) | Outbound sequences |\n| Unified reply management | **Master Inbox** | Replies from all three senders in one view |\n\nThe Master Inbox integration's whole point is that last row. Instead of checking three separate sender Uniboxes for replies, your team reviews one Master Inbox feed. The AI auto-labeling means positive replies float to the top, OOO auto-replies are collapsed, and unsubs/bounces are auto-filed. For a 10-person sales team running outbound across multiple tools, this is a massive reduction in reply-management overhead. Manually checking 3 sender Uniboxes for 100 mailboxes' replies is a 30-minute daily task; Master Inbox drops it to ~5 minutes.",
+    },
+    {
+      heading: "Errors and How to Fix Them",
+      content: "The specific failure modes for Infrabox → Master Inbox connections:\n\n| Error | Cause | Fix |\n|---|---|---|\n| 'Validation Failed' after clicking Validate Credentials | Wrong password or 2FA on Master Inbox | Verify login in a clean browser tab |\n| Workspace dropdown empty despite successful validation | Account has no workspaces yet, you never created one | Log into Master Inbox, create a workspace, come back |\n| Connect Account button stays disabled after picking workspace | Session token expired (took >10 minutes) | Click Validate Credentials again to get a fresh token |\n| Mailboxes pushed into wrong workspace | Picked the wrong entry from the dropdown | Master Inbox → (correct workspace) → Senders → Remove, then re-push from Infrabox |\n| Replies show in underlying mailbox but not in Master Inbox | IMAP polling delayed, or OU-level IMAP disabled | Enable IMAP in admin.google.com → Gmail → End User Access, wait 2 minutes |\n\n**Session token expiration is subtle.** If you validate credentials, then go to lunch, then come back and pick a workspace 20 minutes later, the auth_token has expired and the Connect Account submission will fail. Fix: click Validate Credentials again to get a fresh token, then immediately pick your workspace and submit. Don't walk away between those two steps.",
+    },
+    {
+      heading: "Verifying the Integration Works",
+      content: "Four smoke tests before using Master Inbox for real reply management:\n\n**Test 1: mailboxes appear in the correct workspace.** After the connect completes, log into Master Inbox and open the workspace you selected. Confirm every Infrabox mailbox you exported is listed. If any are missing, they likely hit a rate limit: retry from Infrabox → Sequencers → Master Inbox → Retry Export.\n\n**Test 2: reply round-trip.** Send yourself a test email from one of the Infrabox mailboxes (via the mailbox's Gmail webmail). Reply from a different address. Within 2 minutes, the reply should appear in Master Inbox's unified view inside the workspace you selected. If it doesn't, IMAP is broken.\n\n**Test 3: AI classification accuracy.** Reply to the test email with distinct intents: 'interested' (positive), 'we just signed with X' (objection), 'out of office' (OOO). Check that Master Inbox's AI auto-labeling assigns the right labels. If labeling is wrong, check Master Inbox → Settings → Classification Rules.\n\n**Test 4: cross-tool aggregation.** If you're running multiple senders (Instantly + Smartlead + Lemlist), send a test from each and confirm all three replies land in the same Master Inbox view. That's the whole point of the integration, if it works, you have a unified reply dashboard.",
+    },
+  ],
+  faqs: [
+    { question: "Can one Infrabox workspace push mailboxes to multiple Master Inbox workspaces?", answer: "Yes, but you have to run the connect flow once per target workspace. Infrabox stores each sequencer connection separately, and you can have multiple active Master Inbox connections pointing to different workspaces. At export time, Infrabox asks which connection to use. This is how most agencies handle multi-client workflows." },
+    { question: "What happens if I delete a workspace in Master Inbox after connecting it from Infrabox?", answer: "The next export attempt to that workspace will fail with 'Workspace not found'. Existing mailboxes already pushed to the deleted workspace are also lost, Master Inbox purges senders when a workspace is deleted. Delete carefully, and re-run the Infrabox connect flow to push mailboxes into the replacement workspace." },
+    { question: "Does Master Inbox aggregate mailbox data from Infrabox's own dashboard?", answer: "No. Master Inbox only aggregates replies from email sequencers that it's connected to (Smartlead, Instantly, etc.). It does not read Infrabox's mailbox status, InfraGuard data, or warmup state: those stay inside Infrabox's dashboard. Master Inbox is strictly a reply-management layer." },
+    { question: "How does Master Inbox's AI auto-labeling compare to BrandJet's AI Unibox?", answer: "Both use AI classification on replies, but BrandJet layers in brand-sentiment tracking on top (positive/negative brand perception over time). Master Inbox focuses purely on reply triage (positive / objection / OOO / unsub / bounce) without sentiment scoring. For pure reply routing, Master Inbox is simpler; for brand intelligence, BrandJet goes deeper." },
+    { question: "Can I use Master Inbox and my sender's built-in Unibox at the same time?", answer: "Yes. They're not mutually exclusive: both read replies via IMAP independently. Your reps can work from either interface. Teams usually end up favoring one as the canonical view and treating the other as backup. If Master Inbox is your unified view, most agencies hide the sender Uniboxes by not giving reps access to those tools directly." },
+  ],
+  sources: [
+    { title: "Master Inbox Documentation", url: "https://docs.masterinbox.com", date: "2026" },
+    { title: "Google Workspace: Enable IMAP Access", url: "https://support.google.com/a/answer/105694", date: "2026" },
+    { title: "Google Workspace SMTP settings", url: "https://support.google.com/a/answer/176600", date: "2026" },
+    { title: "Microsoft 365 Authenticated SMTP", url: "https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission", date: "2026" },
+  ],
+  relatedSlugs: [
+    "infrabox-review",
+    "email-sequencer-integration-guide",
+    "infrabox-hothawk-integration",
+    "infrabox-brandjet-integration",
+    "infrabox-smartlead-integration",
+    "infrabox-instantly-integration",
+  ],
+};

@@ -1,0 +1,958 @@
+{
+  "_meta": {
+    "description": "Canonical competitor registry. Agents read this before scraping to avoid redundant work and to pick up known strengths/weaknesses. Update after every scrape with anything new learned.",
+    "schemaVersion": 1
+  },
+  "competitors": {
+    "mailforge": {
+      "name": "Mailforge",
+      "domain": "mailforge.ai",
+      "ecosystem": "Salesforge (with Primeforge, Infraforge, Warmforge)",
+      "category": "shared-ip-bulk-mailboxes",
+      "pricingHint": "$2-3/mailbox/mo (headline $3 to $2 volume; ~$6 effective at 10-slot minimum on yearly; $2.42 at 200 mailboxes). 10-slot minimum. $14/yr per .com domain. SSL & Domain Masking add-on $2/domain/mo or $6/domain/yr.",
+      "corePositioning": "Cheapest bulk mailboxes for cold email. Shared IP infrastructure only.",
+      "knownStrengths": [
+        "Lowest per-mailbox cost in market ($2.42 effective at 200-mailbox volume)",
+        "Fast setup — 5 minute hero claim",
+        "Free Automated DNS Set Up (SPF/DKIM/DMARC/custom domain tracking)",
+        "Bulk DNS Updates, Domain Transferring, Multiple Workspaces",
+        "SSL & Domain Masking paid add-on",
+        "Works With Any Sending Software (no vendor lock-in)",
+        "10k+ businesses served, 4.9 rating, 1k+ community"
+      ],
+      "knownWeaknesses": [
+        "Not real Google Workspace or Microsoft 365 accounts (routes to Primeforge)",
+        "No Azure mailbox option (Infrabox unique differentiator)",
+        "Shared IP reputation",
+        "10 mailbox minimum — effective floor is ~$6/mailbox at small volumes, not the $2 headline",
+        "Warmup NOT bundled — Warmforge is a separate product at $10/slot/mo standalone (only free if you also subscribe to Salesforge sequencer)",
+        "NO domain monitoring, blacklist checking, or placement testing in the Mailforge product itself — those features belong to Warmforge (separate purchase)",
+        "Dedicated IPs sold as separate Infraforge product",
+        "No /features, /compare, /integrations, /faq, /warmup routes — site is very thin"
+      ],
+      "verifiedFeatures": [
+        "Free Automated Set Up (SPF/DKIM/DMARC/custom domain tracking)",
+        "Bulk DNS Updates",
+        "Domain Transferring",
+        "Multiple Workspaces",
+        "Works With Any Sending Software",
+        "SSL & Domain Masking (paid add-on)"
+      ],
+      "verifiedNotFeatures": [
+        "Domain reputation monitoring (NOT a Mailforge feature — Heat Score is a Warmforge trademark)",
+        "Mailbox Heat Score (Warmforge feature, not Mailforge)",
+        "Inbox placement testing (Warmforge feature)",
+        "Email warmup (Warmforge feature)",
+        "Email verification (Warmforge feature area)"
+      ],
+      "knownUrls": {
+        "home": "https://mailforge.ai",
+        "pricing": "https://mailforge.ai/pricing"
+      },
+      "warmforgeRelationship": {
+        "bundledWithMailforge": false,
+        "bundledWithSalesforgeSequencer": true,
+        "standalonePrice": "$10/slot/mo billed quarterly, 1 free slot included, -10% annual",
+        "evidence": "warmforge.ai/pricing verified 2026-04-11T16:55 via cmux-browser"
+      },
+      "lastScrapedAt": "2026-04-11T16:55:00Z",
+      "scrapeArtifactDir": ".seo/runs/2026-04-11-mailforge-crawl",
+      "verifiedByCrawl": true,
+      "crawlEngine": "cmux-browser"
+    },
+    "primeforge": {
+      "name": "Primeforge",
+      "domain": "primeforge.ai",
+      "ecosystem": "Salesforge (with Mailforge, Infraforge, Warmforge, Leadsforge, Salesforge)",
+      "category": "real-google-microsoft-accounts",
+      "pricingHint": "$4.50/mailbox/mo monthly (1-100 slots) → $3.50/mo at 1001+ slots. Annual: $45/year (1-100) → $34/year (1001+), 2 months free. Minimum 10 slots. $14/year per .com domain.",
+      "corePositioning": "Real Google Workspace & Microsoft 365 mailboxes, automated setup, US IPs, 30-min time-to-send. 'No loopholes. No EDU tricks. No fragile infrastructure.'",
+      "knownStrengths": [
+        "Real Google Workspace AND Microsoft 365 accounts (NOT Microsoft-only as earlier assumed)",
+        "Automated DNS (SPF/DKIM/DMARC) setup included",
+        "Published volume tiers and 2-months-free annual discount",
+        "API access included in base price",
+        "Multiple workspaces for organization",
+        "30-minute setup time",
+        "US IP addresses for all accounts",
+        "Full domain & mailbox ownership",
+        "Part of tight Salesforge ecosystem for 'mix & match' stacking with Mailforge, Infraforge, Warmforge"
+      ],
+      "knownWeaknesses": [
+        "No Azure mailbox option (Infrabox unique differentiator)",
+        "No ongoing monitoring / blacklist detection feature (InfraGuard-equivalent absent)",
+        "Warmup is a separate Warmforge product, not bundled",
+        "No free trial",
+        "10 mailbox minimum purchase",
+        "Pre-warmed positioned as 'Sometimes' in their own comparison table — effectively a Warmforge cross-sell",
+        "No specific integration count claim — no published list of supported sequencers"
+      ],
+      "knownUrls": {
+        "home": "https://primeforge.ai",
+        "pricing": "https://primeforge.ai/pricing",
+        "preWarmed": "https://primeforge.ai/pre-warmed-mailboxes"
+      },
+      "providerSupport": {
+        "googleWorkspace": {
+          "supported": true,
+          "accountType": "Real Google Workspace (tier not publicly stated)"
+        },
+        "microsoft365": {
+          "supported": true,
+          "evidence": "Hero copy + pricing calculator"
+        },
+        "azure": {
+          "supported": false,
+          "note": "Infrabox unique differentiator"
+        }
+      },
+      "pricingTiers": {
+        "monthly": {
+          "base": "$4.50/slot/mo (1-100)",
+          "highVolume": "$3.50/slot/mo (1001+)"
+        },
+        "annual": {
+          "base": "$45/slot/yr (1-100, ~$3.75/mo)",
+          "highVolume": "$34/slot/yr (1001+, ~$2.83/mo)",
+          "discount": "2 months free vs monthly"
+        },
+        "minimum": "10 mailbox slots",
+        "domainCost": "$14/year per .com"
+      },
+      "lastScrapedAt": "2026-04-11T15:36:38Z",
+      "scrapeArtifactDir": ".seo/runs/2026-04-11-primeforge-crawl",
+      "verifiedByCrawl": true
+    },
+    "infraforge": {
+      "name": "Infraforge",
+      "domain": "infraforge.ai",
+      "ecosystem": "Salesforge",
+      "category": "dedicated-ip-infrastructure",
+      "pricingHint": "$3/mailbox/mo + $99/IP",
+      "corePositioning": "Dedicated-IP email infrastructure.",
+      "knownStrengths": [
+        "Dedicated IPs",
+        "Scales to high volume"
+      ],
+      "knownWeaknesses": [
+        "Expensive setup with per-IP fee",
+        "Separate from Primeforge accounts"
+      ],
+      "knownUrls": {
+        "home": "https://infraforge.ai"
+      },
+      "lastScrapedAt": "2026-04-11T23:32:31Z",
+      "scrapeArtifactDir": ".seo/runs/2026-04-11-competitor-watch/snapshots/infraforge.json",
+      "crawlEngine": "playwright (MCP)",
+      "verifiedByCrawl": true,
+      "watchBaseline": true
+    },
+    "zapmail": {
+      "name": "Zapmail",
+      "domain": "zapmail.ai",
+      "category": "real-google-microsoft-accounts",
+      "pricingHint": "Starter $39/mo (10 mailboxes, $3.50/extra), Growth $99/mo (30, $3.25/extra), Pro $299/mo (100, $3.00/extra). Hero advertises $2.50/mailbox floor. US/EU IP. M365 via pricing toggle. Monthly/Quarterly/Yearly billing with yearly giving 2 months free.",
+      "corePositioning": "Pre-warmed Google & Microsoft mailboxes with 12 weeks of warmup done before delivery. Real Google Workspace Business Starter accounts with admin access, OAuth-based automated setup in 10 minutes, 1M+ mailboxes setup, 330k+ domains managed, 50K+ businesses served, 4.5 TrustPilot.",
+      "knownStrengths": [
+        "Pre-warmed mailboxes with 12 weeks of warmup done before delivery",
+        "Real Google Workspace (Official Business Starter with Admin Access) AND Microsoft 365 accounts",
+        "50+ outreach tool integrations (not 5 as earlier assumed)",
+        "ZapShield reputation protection: rotating DNS zones, blacklist monitoring, early intervention, dedicated creation/redirection IPs, Google Cloud DNS",
+        "Placement testing with per-plan credits (3/10/30 per month): tests Gmail + Outlook, SPF/DKIM/DMARC validation, blacklist checks, 2-24h reports",
+        "AI workflow tools: Instant Domain Genie (domain suggestion), Smart Mailbox Namer, Persona Snapshots (AI profile images)",
+        "OAuth-based automated setup (10 min vs 48h for account resellers)",
+        "US/EU IP accounts",
+        "Multi-workspace management with workspace-level isolation",
+        "Aged domains available as a feature",
+        "Monthly / Quarterly / Yearly billing (yearly: 2 months free)",
+        "1M+ mailboxes setup, 330k+ domains, 4.5 TrustPilot"
+      ],
+      "knownWeaknesses": [
+        "No Azure mailbox option (Infrabox unique differentiator)",
+        "Pre-warmed pricing not publicly exposed — requires signup to see the premium",
+        "Placement test credits hard-capped per plan (3/10/30 per month) — not unlimited like Infrabox wallet-based testing",
+        "API access locked to Pro tier only ($299/mo)",
+        "Microsoft 365 pricing hidden behind homepage pricing toggle (less transparent than separate dedicated pages)",
+        "Infrabox-reported user concerns (unverified from official site): reports of India-based IPs despite US/EU claim, Microsoft 365 reliability reports"
+      ],
+      "knownUrls": {
+        "home": "https://zapmail.ai",
+        "pricing": "https://zapmail.ai/#pricing (inline on homepage, /pricing 404s)",
+        "features": "inline on homepage (/features 404s)",
+        "placementTest": "https://zapmail.ai/features/placement-test",
+        "zapshield": "https://zapmail.ai/features/zapshield",
+        "agedDomains": "https://zapmail.ai/features/aged-domains",
+        "preWarmed": "https://zapmail.ai/Pre-Warmed-Mailboxes",
+        "marketplace": "https://zapmail.ai/marketplace",
+        "docs": "https://docs.zapmail.ai/",
+        "help": "https://help.zapmail.ai/en/",
+        "affiliate": "https://zapmail.ai/Affiliate-Program",
+        "alternativesTargeted": [
+          "https://zapmail.ai/Mailforge-alternative",
+          "https://zapmail.ai/Mailreef-alternative",
+          "https://zapmail.ai/Maildoso-alternative",
+          "https://zapmail.ai/Infraforge-alternative"
+        ]
+      },
+      "pricingTiers": [
+        {
+          "name": "Starter",
+          "monthly": 39,
+          "mailboxes": 10,
+          "extraRate": 3.5,
+          "placementCredits": 3,
+          "ipRegion": "US/EU",
+          "apiAccess": false
+        },
+        {
+          "name": "Growth",
+          "monthly": 99,
+          "mailboxes": 30,
+          "extraRate": 3.25,
+          "placementCredits": 10,
+          "ipRegion": "US/EU",
+          "apiAccess": false,
+          "popular": true
+        },
+        {
+          "name": "Pro",
+          "monthly": 299,
+          "mailboxes": 100,
+          "extraRate": 3,
+          "placementCredits": 30,
+          "ipRegion": "US/EU",
+          "apiAccess": true,
+          "prioritySupport": true
+        }
+      ],
+      "providerSupport": {
+        "googleWorkspace": {
+          "supported": true,
+          "accountType": "Official Business Starter with Admin Access"
+        },
+        "microsoft365": {
+          "supported": true,
+          "evidence": "Pricing toggle on homepage, explicit M365 mentions in pricing intro and hero"
+        },
+        "azure": {
+          "supported": false,
+          "note": "Infrabox unique differentiator"
+        }
+      },
+      "integrationsCount": "50+",
+      "trustSignals": {
+        "mailboxesSetup": "1M+",
+        "domainsManaged": "330k+",
+        "businessesServed": "50K+",
+        "avgSetupTime": "5 mins",
+        "trustpilotRating": 4.5
+      },
+      "lastScrapedAt": "2026-04-11T15:22:00Z",
+      "scrapeArtifactDir": ".seo/runs/2026-04-11-zapmail-crawl",
+      "verifiedByCrawl": true
+    },
+    "maildoso": {
+      "name": "Maildoso",
+      "domain": "maildoso.com",
+      "category": "smtp-plus-google-workspace-bulk",
+      "pricingHint": "SMTP floor $0.80/mb at 20K, $1.20/mb at 10K, $1.90/mb at 300, $2.50/mb at 30. Combo (SMTP+GW) $3/mb at 15+15, $2.50/mb at 35+35, $2/SMTP $2.50/GW at 150+150. Quarterly SMTP: $3.10 at 32, $2.40 at 68, $1.80 at 400. Hero: 'Mailboxes for Just $1.8'.",
+      "corePositioning": "Mailboxes Built for Outbound — SMTP + Google Workspace diversified infrastructure optimized for cold email deliverability at bulk scale.",
+      "knownStrengths": [
+        "Cheapest bulk SMTP pricing in the market ($0.80–$1.20/mb at 10K–20K scale)",
+        "Combo plans bundle SMTP with official Google Workspace accounts",
+        "Inbox placement tests every 3 days with per-mailbox health scores",
+        "Self-healing mailboxes (14-day automated pause-and-rotate on burned mailboxes)",
+        "Domain health monitoring and inbox reputation monitoring",
+        "Auto-configured SPF/DKIM/DMARC and domain registration",
+        "IP rotation for SMTP mailboxes",
+        "API & MCP access for automation",
+        "One-click export to Instantly, Smartlead, Saleshandy, Apollo, Lemlist, EmailBizon",
+        "Primary domain protection via CAPTCHA",
+        "Deliverability consulting included",
+        "400k+ mailboxes managed, 10M+ emails/day, 5,000+ companies, G2 4.7 (159 reviews)"
+      ],
+      "knownWeaknesses": [
+        "No Microsoft 365 support — SMTP and Google Workspace only",
+        "No Azure mailbox option",
+        "Google Workspace only available in Combo bundles, not as a standalone tier",
+        "No built-in warmup product — pricing page provides 'warmup recommendation' sending cadence rather than a managed warmup tool",
+        "Integrations page 404s — exact count unverified (6+ named platforms confirmed on homepage)",
+        "Tiered pricing requires committing to target volume upfront"
+      ],
+      "knownUrls": {
+        "home": "https://maildoso.com",
+        "pricing": "https://maildoso.com/pricing",
+        "features": "404 — features described inline on homepage and pricing page only",
+        "integrations": "404 — integrations listed inline on homepage only"
+      },
+      "pricingTiers": {
+        "combo": [
+          {
+            "name": "Combo 15",
+            "split": "15 SMTP + 15 GW",
+            "pricePerMailbox": 3,
+            "monthlyCost": 90
+          },
+          {
+            "name": "Combo 35",
+            "split": "35 SMTP + 35 GW",
+            "pricePerMailbox": 2.5,
+            "monthlyCost": 175
+          },
+          {
+            "name": "Combo 150",
+            "split": "150 SMTP + 150 GW",
+            "smtpRate": 2.0,
+            "gwRate": 2.5
+          }
+        ],
+        "smtpMonthly": [
+          {
+            "mailboxes": 30,
+            "perMailbox": 2.5
+          },
+          {
+            "mailboxes": 70,
+            "perMailbox": 2.25
+          },
+          {
+            "mailboxes": 300,
+            "perMailbox": 1.9
+          },
+          {
+            "mailboxes": 10000,
+            "perMailbox": 1.2
+          },
+          {
+            "mailboxes": 20000,
+            "perMailbox": 0.8
+          }
+        ],
+        "smtpQuarterly": [
+          {
+            "mailboxes": 32,
+            "perMailbox": 3.1
+          },
+          {
+            "mailboxes": 68,
+            "perMailbox": 2.4
+          },
+          {
+            "mailboxes": 400,
+            "perMailbox": 1.8
+          }
+        ],
+        "domains": "$72/year for 6 domains"
+      },
+      "providerSupport": {
+        "googleWorkspace": {
+          "supported": true,
+          "accountType": "Official Google Workspace with business license",
+          "availability": "Combo plans only"
+        },
+        "microsoft365": {
+          "supported": false,
+          "note": "No Microsoft 365 tier; no Outlook/Office 365 support anywhere on site"
+        },
+        "smtp": {
+          "supported": true,
+          "sharedIp": true
+        },
+        "azure": {
+          "supported": false
+        }
+      },
+      "integrationsNamed": [
+        "Instantly",
+        "Smartlead",
+        "Saleshandy",
+        "Apollo",
+        "Lemlist",
+        "EmailBizon"
+      ],
+      "trustSignals": {
+        "companiesServed": "5,000+",
+        "mailboxesManaged": "400k+",
+        "emailsSentDaily": "10M+",
+        "g2Rating": 4.7,
+        "g2Reviews": 159
+      },
+      "lastScrapedAt": "2026-04-11T20:55:00Z",
+      "scrapeArtifactDir": ".seo/runs/2026-04-11-maildoso-crawl",
+      "verifiedByCrawl": true
+    },
+    "cheapinboxes": {
+      "name": "Cheapinboxes",
+      "domain": "cheapinboxes.com",
+      "category": "budget-mailbox-provider",
+      "knownStrengths": ["transparent tiered pricing ($2.80-$3.50/mo)", "M365 + Google Workspace", "70+ API endpoints with MCP", "24/7 support <5min response", "pre-warmed inboxes"],
+      "knownWeaknesses": ["no built-in monitoring or blacklist checking", "no inbox placement testing"],
+      "knownUrls": {
+        "home": "https://cheapinboxes.com",
+        "calculator": "https://www.cheapinboxes.com/calculator",
+        "developers": "https://www.cheapinboxes.com/developers"
+      },
+      "lastScrapedAt": "2026-04-12T10:00:00Z",
+      "scrapeArtifactDir": ".seo/runs/2026-04-12-cheapinboxes-crawl/summary.json",
+      "crawlEngine": "cmux-browser",
+      "verifiedByCrawl": true,
+      "watchBaseline": true
+    },
+    "inframail": {
+      "name": "Inframail",
+      "domain": "inframail.io",
+      "category": "managed-infrastructure",
+      "knownStrengths": [
+        "Flat-rate pricing: $129/mo unlimited inboxes (80K emails, 1 US IP), $327/mo Agency (300K, 3 IPs)",
+        "Unlimited inboxes and domain setups at no extra cost per inbox",
+        "Dedicated US IPs included in all plans",
+        "24/7 AI Agent Monitoring for IPs, Domains, and Copy",
+        "Free email account warmup included",
+        "Free Automated Sending Platform",
+        "1 on 1 Dedicated Cold Email Coach",
+        "Microsoft-backed infrastructure"
+      ],
+      "knownWeaknesses": [
+        "Microsoft-only: no Google Workspace option",
+        "Email volume caps: 80K-300K emails/month depending on plan",
+        "Fewer sequencer integrations (Instantly and Smartlead only visible)",
+        "No inbox placement testing"
+      ],
+      "knownUrls": {
+        "home": "https://inframail.io",
+        "mailforge-alternative": "https://inframail.io/mailforge-alternative",
+        "infraforge-alternative": "https://inframail.io/infraforge-alternative",
+        "maildoso-alternative": "https://inframail.io/maildoso-alternative"
+      },
+      "lastScrapedAt": "2026-04-12T12:00:00Z",
+      "scrapeArtifactDir": ".seo/runs/2026-04-12-inframail-crawl/summary.json",
+      "crawlEngine": "cmux-browser",
+      "verifiedByCrawl": true,
+      "watchBaseline": true
+    },
+    "mailreef": {
+      "name": "Mailreef",
+      "domain": "mailreef.com",
+      "ecosystem": "Dabble Holdings (Philadelphia startup studio, also built/sold Warmup Inbox)",
+      "category": "dedicated-server-infrastructure",
+      "pricingHint": "Agency $240/mo (12-month) + $0.001/send, Agency Flex $249/mo (month-to-month) + $0.001/send, Enterprise custom. 150+ mailboxes/server. Effective ~$1.60/mailbox at full capacity.",
+      "corePositioning": "Dedicated mail server + dedicated IP per customer. Microsoft Outlook-centric SMTP infrastructure with live delivery consulting and spammer screening.",
+      "knownStrengths": [
+        "Dedicated server per customer (no shared infrastructure)",
+        "Dedicated IP address per customer",
+        "150+ mailboxes per server",
+        "Public pricing: Agency $240/mo, Agency Flex $249/mo",
+        "1-click domain purchases and mailbox creation",
+        "Auto-create SPF/DKIM/DMARC",
+        "Live delivery consulting",
+        "Spammer screening — vets every customer",
+        "Developer API Access + Zapier integration",
+        "Server & Mailbox Monitoring",
+        "Smartlead & Instantly integration",
+        "Full SMTP/IMAP capabilities",
+        "No daily sending limits",
+        "100M+ emails/month, 0 blocked mailboxes, 99.9% uptime",
+        "11 competitor comparison pages (active SEO play)"
+      ],
+      "knownWeaknesses": [
+        "No Google Workspace accounts — Outlook/SMTP only",
+        "No Azure mailbox option",
+        "No built-in warmup product",
+        "No inbox placement testing visible",
+        "Server-based pricing ($240+/mo minimum) — high floor for small teams",
+        "Requires demo/screening for onboarding",
+        "Only 3 published case studies"
+      ],
+      "verifiedFeatures": [
+        "Dedicated Mail Server per customer",
+        "Dedicated IP Address per customer",
+        "150+ Mailboxes per Server",
+        "1-click Domain Purchases",
+        "1-click Mailbox Creation",
+        "Auto-create SPF/DKIM/DMARC",
+        "Live Technical Support",
+        "Spammer Screening",
+        "Developer API Access",
+        "Zapier Integration",
+        "Server & Mailbox Monitoring",
+        "Smartlead & Instantly Integration",
+        "Full SMTP/IMAP"
+      ],
+      "verifiedNotFeatures": [
+        "Google Workspace accounts (NOT offered)",
+        "Email warmup (no built-in product)",
+        "Inbox placement testing (not on site)"
+      ],
+      "knownUrls": {
+        "home": "https://www.mailreef.com",
+        "pricing": "https://www.mailreef.com/pricing",
+        "aboutUs": "https://www.mailreef.com/about-us",
+        "caseStudies": "https://www.mailreef.com/case-studies",
+        "compareHub": "https://www.mailreef.com/compare-mailreef",
+        "bookDemo": "https://www.mailreef.com/book-demo"
+      },
+      "pricingTiers": [
+        {
+          "name": "Agency",
+          "commitment": "12-month",
+          "monthlyPrice": 240,
+          "perSendOverage": 0.001,
+          "mailboxesPerServer": "150+"
+        },
+        {
+          "name": "Agency Flex",
+          "commitment": "Month-to-month",
+          "monthlyPrice": 249,
+          "perSendOverage": 0.001,
+          "mailboxesPerServer": "150+"
+        },
+        {
+          "name": "Enterprise",
+          "commitment": "Custom",
+          "monthlyPrice": "Special Pricing"
+        }
+      ],
+      "providerSupport": {
+        "googleWorkspace": {
+          "supported": false,
+          "note": "Not offered — Outlook/SMTP only"
+        },
+        "microsoft365": {
+          "supported": true,
+          "evidence": "Outlook-first on homepage"
+        },
+        "smtp": {
+          "supported": true
+        },
+        "azure": {
+          "supported": false
+        }
+      },
+      "trustSignals": {
+        "emailsPerMonth": "100M+",
+        "blockedMailboxes": "0",
+        "uptime": "99.9%",
+        "clients": "100s",
+        "caseStudies": 3
+      },
+      "lastScrapedAt": "2026-04-12T10:30:00Z",
+      "scrapeArtifactDir": ".seo/runs/2026-04-12-mailreef-crawl",
+      "crawlEngine": "cmux-browser",
+      "verifiedByCrawl": true
+    },
+    "hypertide": {
+      "name": "Hypertide",
+      "domain": "hypertide.io",
+      "category": "automated-infrastructure",
+      "pricingHint": "$50/month per order (50 inboxes per pricing section, FAQ claims 100 Azure inboxes). Effective $1/inbox. 5,000 emails/mo per order. One-time initiation fee for Azure configurators.",
+      "corePositioning": "Automated cold email infrastructure across Google, Microsoft, and Entra. Positions as VA replacement ($1,000/mo savings). Fully automated 4-6 hour setup with tenant isolation per order. NOT a done-for-you/managed service — explicitly automated.",
+      "knownStrengths": [
+        "$1/inbox effective rate, one of the cheapest for real Google/Microsoft accounts",
+        "Google Workspace + Microsoft 365 + Entra (Azure AD) triple-provider support",
+        "Tenant isolation per order (dedicated domains, IPs, users)",
+        "Automated 4-6 hour setup with pre-configured SPF/DKIM/DMARC",
+        "Native Outlook UI for Entra (8% better performance per FAQ)",
+        "Warmup management tools for bulk warmup settings",
+        "Domain purchasing within platform",
+        "Auto-linking with SmartLead, Instantly, and Bison",
+        "14 video testimonials on homepage",
+        "8 competitor alternative pages (Mailreef, Superwave, Maildoso, Mailscale, Mailforge, CheapInboxes, Inframail, PremiumInboxes)"
+      ],
+      "knownWeaknesses": [
+        "50-inbox cap per order with 5,000 emails/month sending limit",
+        "Only 3 sequencer auto-link integrations (SmartLead, Instantly, Bison)",
+        "No domain monitoring, inbox placement testing, or warmup suite",
+        "No free trials",
+        "Pricing section vs FAQ disagree on inbox count (50 vs 100)"
+      ],
+      "knownUrls": {
+        "home": "https://hypertide.io",
+        "booking": "https://www.hypertide.io/booking",
+        "testimonials": "https://www.hypertide.io/testimonials",
+        "mailreefAlt": "https://www.hypertide.io/mailreef",
+        "maildosoAlt": "https://www.hypertide.io/maildoso",
+        "mailforgeAlt": "https://www.hypertide.io/mailforge",
+        "inframailAlt": "https://www.hypertide.io/inframail"
+      },
+      "lastScrapedAt": "2026-04-12T12:00:00Z",
+      "scrapeArtifactDir": ".seo/runs/2026-04-12-hypertide-crawl/summary.json",
+      "crawlEngine": "cmux-browser",
+      "verifiedByCrawl": true,
+      "watchBaseline": true
+    },
+    "instantly": {
+      "name": "Instantly",
+      "domain": "instantly.ai",
+      "category": "sequencer-with-infrastructure",
+      "pricingHint": "Outreach: Growth $47/mo, Hypergrowth $97/mo, Light Speed $358/mo (all unlimited email accounts + warmup). Instantly Credits: Growth $47/mo (1500-2000 credits + 450M+ B2B lead database), Supersonic $97/mo (5000-7500 credits), Hyper Credits from $197/mo (10K-200K credits).",
+      "corePositioning": "All-in-one sales engagement + lead intelligence platform. Cold email sequencer bundled with a 450M+ B2B lead database (Instantly Credits), built-in CRM, inbox placement testing, AI copilot, AI sales agent, and a 1M+ deliverability pool. Email accounts (real US-IP Google Workspace) sold via separate Email Accounts product with 24-72h provisioning.",
+      "knownStrengths": [
+        "450M+ B2B lead database (Instantly Credits, $47/mo Growth)",
+        "Outreach sequences with unlimited email accounts + unlimited warmup on all plans",
+        "1,000,000+ real email accounts in shared deliverability pool",
+        "Built-in Inbox Placement testing (Gmail/Outlook/Yahoo + 400+ blacklists + SpamAssassin + SPF/DKIM/DMARC)",
+        "SISR (Server & IP Sharding and Rotation) on Light Speed/Enterprise tiers for high-volume deliverability",
+        "AI Copilot, AI Sales Agent, Automations, Website Visitors, Unibox, built-in CRM",
+        "Automated DNS (MX/SPF/DKIM/DMARC) on provisioned Email Accounts",
+        "50,000+ sales teams trust signal on homepage"
+      ],
+      "knownWeaknesses": [
+        "Email Accounts product is Google-only — no Microsoft 365 or Azure provisioning",
+        "Email account pricing not publicly exposed on /email-accounts or /pricing (requires signup)",
+        "Lead Database is a separate Instantly Credits subscription, not bundled with Outreach plans",
+        "Vendor lock-in — email accounts provisioned through Instantly are tied to their ecosystem",
+        "Shared deliverability pool on all tiers except Enterprise (private network Enterprise-only)",
+        "24-72 hour setup time for provisioned email accounts"
+      ],
+      "knownUrls": {
+        "home": "https://instantly.ai",
+        "pricing": "https://instantly.ai/pricing",
+        "emailAccounts": "https://instantly.ai/email-accounts",
+        "deliverability": "https://instantly.ai/deliverability",
+        "inboxPlacement": "https://instantly.ai/inbox-placement",
+        "crm": "https://instantly.ai/crm"
+      },
+      "providerSupport": {
+        "googleWorkspace": {
+          "supported": true,
+          "accountType": "US IP Google Workspace accounts (provisioned via Email Accounts product, 24-72h setup)"
+        },
+        "microsoft365": {
+          "supported": false,
+          "note": "No Microsoft 365 provisioning on /email-accounts. Users can BYO Outlook mailbox into Instantly sequencer but Instantly does not provision them."
+        },
+        "azure": {
+          "supported": false
+        }
+      },
+      "leadDatabase": {
+        "size": "450M+",
+        "priceTag": "$47/mo (Instantly Credits Growth) — 1500-2000 credits/mo",
+        "evidence": "instantly.ai/pricing (Instantly Credits tab): 'Growth$47/monthlyGet Started1500-2000 Instantly Credits MonthlyDatabase of 450M+ B2B Leads'"
+      },
+      "lastScrapedAt": "2026-04-11T22:20:00+05:30",
+      "scrapeArtifactDir": ".seo/runs/2026-04-11-instantly-crawl",
+      "verifiedByCrawl": true,
+      "crawlEngine": "cmux-browser"
+    },
+    "smartlead": {
+      "name": "Smartlead",
+      "domain": "smartlead.ai",
+      "category": "sequencer-partner-reseller",
+      "pricingHint": "Outreach platform (monthly): Base $39, Pro $94, Unlimited Smart $174, Unlimited Prime $379. Yearly billing saves 17% (Base $32, Pro $78, Unlimited Smart $144, Unlimited Prime $315). SmartSenders DFY mailboxes (partner-reseller tier): Pager.ai $13/yr + $4.50/mo, Infrabox $13/yr + $4.50/mo, Zapmail Standard $13/yr + $4.5/mo, Mailreef SMTP $19/yr + $3.99/mo (75-mailbox min), Zapmail Pre-Warmed $18/yr + $9/mo.",
+      "corePositioning": "AI-native multi-channel cold outreach platform (SmartProspect leads, SmartAgents AI, SmartInfra dedicated servers, SmartDialer calls, SmartSenders DFY mailbox reseller, SmartDelivery testing, Ultra Premium Warmup, Unified Master Inbox). Does NOT own mailbox infrastructure — SmartSenders is a partner-reseller tier that explicitly includes Infrabox as one of five named partners.",
+      "knownStrengths": [
+        "100,000+ businesses trust signal (rendered on homepage, pricing, integrations pages)",
+        "4-tier public pricing ladder with yearly 17% discount",
+        "Unlimited Prime ceiling $379/mo gives 500K emails + 170K verified + 3 SmartServers + OAuth + 3+ workspaces",
+        "Ultra Premium Warmup (unlimited email warmups) bundled with outreach plans",
+        "SmartSenders partner-reseller network with published rates at helpcenter.smartlead.ai/en/articles/266 — Infrabox is an officially named partner",
+        "16 native integrations on /integrations (Clay, HubSpot, Listkit, Sendspark, LeadMagic, Slack, Gmail, Outlook, Zapmail, Hyperinboxes, Mailreef, Inbox Automate, InfraInbox, Expandi, OutboundSync, Smartreach) + Zapier bridge to 1,000+ apps",
+        "SmartInfra product claims dedicated servers for email control (Unlimited Prime tier)",
+        "G2 4.6/5 (221 reviews shown on pricing page)"
+      ],
+      "knownWeaknesses": [
+        "No own Google/Microsoft infrastructure — every mailbox routes through the SmartSenders partner network",
+        "No Azure mailbox option (Infrabox unique differentiator)",
+        "SmartSenders Mailreef SMTP tier has 75-mailbox minimum (15 domains × 5 mailboxes)",
+        "Pro plan email capacity is 90,000/mo — meaningfully less than the 150K figure often cited in cold email content",
+        "Infrabox routed via SmartSenders costs $4.50/mo vs $2.99/mo direct — SmartSenders adds a reseller markup",
+        "Integrations list is 16 native — earlier content overstated as 23-24"
+      ],
+      "knownUrls": {
+        "home": "https://smartlead.ai",
+        "pricing": "https://www.smartlead.ai/pricing",
+        "integrations": "https://www.smartlead.ai/integrations",
+        "smartSendersPricing": "https://helpcenter.smartlead.ai/en/articles/266-smartsenders-pricing",
+        "emailAccountSetupSmartsenders": "https://www.smartlead.ai/email-account-setup-smartsenders"
+      },
+      "pricingTiers": [
+        {
+          "name": "Base",
+          "monthly": 39,
+          "yearlyMonthlyEquivalent": 32,
+          "contacts": 2000,
+          "emailSends": 6000,
+          "verifiedEmails": 2000
+        },
+        {
+          "name": "Pro",
+          "monthly": 94,
+          "yearlyMonthlyEquivalent": 78,
+          "contacts": 30000,
+          "emailSends": 90000,
+          "verifiedEmails": 30000
+        },
+        {
+          "name": "Unlimited Smart",
+          "monthly": 174,
+          "yearlyMonthlyEquivalent": 144,
+          "contacts": "Unlimited",
+          "emailSends": 150000,
+          "verifiedEmails": 50000,
+          "ultraPremiumEligible": true
+        },
+        {
+          "name": "Unlimited Prime",
+          "monthly": 379,
+          "yearlyMonthlyEquivalent": 315,
+          "contacts": "Unlimited",
+          "emailSends": 500000,
+          "verifiedEmails": 170000,
+          "smartServers": 3,
+          "oauth": true,
+          "workspaces": "3+"
+        }
+      ],
+      "smartSenders": {
+        "model": "partner-reseller",
+        "publicPage": "https://helpcenter.smartlead.ai/en/articles/266-smartsenders-pricing",
+        "partners": [
+          {
+            "name": "Pager.ai",
+            "domainPerYear": 13,
+            "mailboxPerMonth": 4.5,
+            "provider": "Google/Outlook"
+          },
+          {
+            "name": "Infrabox",
+            "domainPerYear": 13,
+            "mailboxPerMonth": 4.5,
+            "provider": "Google/Outlook",
+            "note": "Explicitly named as a SmartSenders partner"
+          },
+          {
+            "name": "Zapmail Standard",
+            "domainPerYear": 13,
+            "mailboxPerMonth": 4.5,
+            "provider": "Google/Outlook with Admin Access"
+          },
+          {
+            "name": "Mailreef (SMTP)",
+            "domainPerYear": 19,
+            "mailboxPerMonth": 3.99,
+            "minimum": "75 mailboxes (15 domains × 5)",
+            "provider": "SMTP"
+          },
+          {
+            "name": "Zapmail Pre-Warmed",
+            "domainPerYear": 18,
+            "mailboxPerMonth": 9.0,
+            "provider": "Google/Outlook (pre-warmed)",
+            "feature": "Skip 2-3 week warmup"
+          }
+        ]
+      },
+      "providerSupport": {
+        "googleWorkspace": {
+          "supported": "via partners (SmartSenders reseller)",
+          "viaOwnInfrastructure": false
+        },
+        "microsoft365": {
+          "supported": "via partners (SmartSenders reseller)",
+          "viaOwnInfrastructure": false
+        },
+        "azure": {
+          "supported": false,
+          "note": "Infrabox unique differentiator"
+        },
+        "smtp": {
+          "supported": "via Mailreef partner tier",
+          "minimum": "75 mailboxes"
+        }
+      },
+      "trustSignals": {
+        "businessesTrusted": "100,000+",
+        "g2Rating": "4.6/5",
+        "g2Reviews": 221
+      },
+      "lastScrapedAt": "2026-04-11T16:50:00Z",
+      "scrapeArtifactDir": ".seo/runs/2026-04-11-smartlead-crawl",
+      "verifiedByCrawl": true,
+      "crawlEngine": "cmux-browser (Tier 2 fallback — Playwright MCP unavailable)"
+    },
+    "gmass": {
+      "name": "GMass",
+      "domain": "gmass.co",
+      "category": "gmail-native-sender",
+      "pricingHint": "Standard $29.95/mo, Premium $39.95/mo, Professional $59.95/mo (Jan 2026 repricing). ColdSMTP add-on $99/mo for unlimited cold emails.",
+      "corePositioning": "Gmail-native mass mailer Chrome extension, runs inside your own Google account. Also offers ColdSMTP dedicated cold email server as a $99/mo add-on.",
+      "knownStrengths": [
+        "Runs inside Gmail UI — no workflow change",
+        "Unlimited emails/campaigns on paid tiers",
+        "SMTP add-on to exceed Gmail's daily cap",
+        "ColdSMTP dedicated cold email server ($99/mo add-on) — unlimited cold emails, no warm-up needed, application-based",
+        "Spam Solver pre-send deliverability testing (20 Gmail/Workspace accounts)",
+        "Email Analyzer for technical email diagnostics (IP blacklists, DKIM, SPF)",
+        "Email Deliverability Wizard for data-driven analysis",
+        "~400,000 users",
+        "MultiSend inbox rotation on all plans",
+        "API + Zapier + webhooks integration"
+      ],
+      "knownWeaknesses": [
+        "Inherits Gmail's 2,000/day Workspace cap and 500/day gmail.com cap (without SMTP/ColdSMTP)",
+        "Per-user pricing compounds on teams",
+        "ColdSMTP still sends from your primary domain — no account isolation",
+        "No isolation between GMass sending and the rest of your Google Workspace",
+        "ColdSMTP is application-based and requires approval"
+      ],
+      "knownUrls": {
+        "home": "https://gmass.co",
+        "pricing": "https://www.gmass.co/pricing",
+        "priceChangeAnnouncement": "https://www.gmass.co/blog/price-changes-jan-2026/",
+        "coldSMTP": "https://www.gmass.co/blog/coldsmtp-cold-email-sending-server/",
+        "deliverability": "https://www.gmass.co/features/deliverability-optimization",
+        "api": "https://www.gmass.co/features/api",
+        "smtpIntegration": "https://www.gmass.co/features/smtp-integration"
+      },
+      "lastScrapedAt": "2026-04-12T09:00:00Z",
+      "scrapeArtifactDir": ".seo/runs/2026-04-12-gmass-crawl",
+      "verifiedByCrawl": true,
+      "crawlEngine": "cmux-browser (Tier 2 fallback — Playwright MCP unavailable)"
+    },
+    "salesforge": {
+      "name": "Salesforge",
+      "domain": "salesforge.ai",
+      "ecosystem": "Salesforge (with Mailforge, Primeforge, Infraforge, Warmforge bundled, Leadsforge, Agent Frank)",
+      "category": "multi-channel-outreach-platform",
+      "pricingHint": "Pro $40/mo annual ($48 monthly, 5K emails, 1 LinkedIn sender), Growth $80/mo annual ($96 monthly, 50K emails, unlimited LinkedIn senders), Agent Frank $499/mo annual ($599 monthly). Warmforge Premium bundled free.",
+      "corePositioning": "Multi-channel outreach platform (Email + LinkedIn) anchoring the Forge Stack. Unified inbox (Primebox), unlimited mailboxes and LinkedIn senders, free bundled warm-up (Warmforge Premium), optional AI SDR (Agent Frank).",
+      "knownStrengths": [
+        "Multi-channel email + LinkedIn outreach from one dashboard",
+        "Unlimited LinkedIn senders on Growth plan",
+        "Primebox™ unified inbox (email + LinkedIn replies) — free on every plan",
+        "Warmforge Premium bundled free (warm-up + placement testing + inbox health monitoring)",
+        "Unlimited mailboxes on both Pro and Growth plans",
+        "Agent Frank AI SDR differentiator (500M+ contacts, 20+ languages)",
+        "Modular Forge Stack interop (Mailforge, Primeforge, Infraforge)",
+        "26+ native integrations + 1000+ via Make/Zapier",
+        "4.6 G2 rating, 10,000+ businesses",
+        "Annual plan gives 2 months free"
+      ],
+      "knownWeaknesses": [
+        "Infrastructure (Mailforge/Primeforge/Infraforge mailboxes) still sold separately",
+        "Pro tier capped at 5K emails/mo, 1K active contacts, and only 1 LinkedIn sender",
+        "Unlimited LinkedIn senders require Growth plan ($80+/mo annual)",
+        "True monthly cost for solo is ~$75-90 once an infrastructure subscription is added",
+        "Agent Frank is a $499/mo add-on, not bundled",
+        "Warmforge monitoring does not match InfraGuard depth (6h blacklist checks, DNS watching, automated bounce tracking)",
+        "Multi-language, A/B testing, API, ESP matching are Growth-plan exclusives"
+      ],
+      "knownUrls": {
+        "home": "https://www.salesforge.ai",
+        "pricing": "https://www.salesforge.ai/pricing",
+        "integrations": "https://www.salesforge.ai/integrations",
+        "stack": "https://www.salesforge.ai/stack"
+      },
+      "lastScrapedAt": "2026-04-11T16:24:00Z",
+      "scrapeArtifactDir": ".seo/runs/2026-04-11-salesforge-crawl"
+    },
+    "lemlist": {
+      "name": "Lemlist",
+      "domain": "lemlist.com",
+      "category": "sequencer-with-personalization",
+      "pricingHint": "Email Pro $63/user annual ($72 quarterly, $79 monthly), Multichannel Expert $87/user annual ($99 quarterly, $109 monthly), Enterprise custom (5+ seats)",
+      "corePositioning": "AI sales engagement platform for precision outbound. AI agents detect buying signals, enrich leads, and research accounts for multichannel outreach via email, LinkedIn, WhatsApp, and phone.",
+      "knownStrengths": [
+        "600M+ leads database bundled on all plans",
+        "LinkedIn + WhatsApp ($20/mo/user add-on) + dialer multichannel",
+        "Image and video personalization",
+        "In-app domain purchase add-on with automated DNS setup",
+        "14-day free trial with full Multichannel access",
+        "57 integrations (Hubspot, Salesforce, Pipedrive, Zoho, Zapier, Make, n8n, Clay, Aircall, Ringover)",
+        "Lemwarm warmup booster included with all paid plans",
+        "SOC 2 Type II certified",
+        "AI-powered personalization with AI agents and AI variables",
+        "Inbox rotation on all plans",
+        "Email Pro: 3 senders/user, 200 enrichment credits/mo",
+        "Multichannel Expert: 5 senders/user, 400 enrichment credits/mo"
+      ],
+      "knownWeaknesses": [
+        "Per-user pricing compounds on teams ($87/user annual x N seats)",
+        "No dedicated infrastructure - bring your own Gmail/Outlook/SMTP",
+        "Shared-pool warmup (Lemwarm, not isolated)",
+        "Multichannel features (LinkedIn, WhatsApp, dialer) locked to Expert tier",
+        "WhatsApp automation is an additional $20/mo/user add-on even on Expert"
+      ],
+      "knownUrls": {
+        "home": "https://lemlist.com",
+        "pricing": "https://www.lemlist.com/pricing",
+        "integrations": "https://lemlist.com/integrations"
+      },
+      "lastScrapedAt": "2026-04-12T00:00:00.000Z",
+      "scrapeArtifactDir": ".seo/runs/2026-04-12-lemlist-crawl",
+      "verifiedByCrawl": true,
+      "crawlEngine": "cmux-browser"
+    },
+    "apollo": {
+      "name": "Apollo",
+      "domain": "apollo.io",
+      "category": "data-platform-with-sequencer",
+      "pricingHint": "Free (900 credits/yr), Basic $49/user annual ($59 monthly, 30K credits/yr), Professional $79/user annual ($99 monthly, 48K credits/yr), Organization $119/user annual ($149 monthly, 3-seat minimum, 72K credits/yr). Add-ons: Inbound $119/team/mo, Advanced Dialer $119/team/mo.",
+      "corePositioning": "B2B data platform (275M+ contacts) with built-in sequencing, domain & mailbox purchasing, deliverability suite & warmup, dialer, and workflow automation. 500,000+ companies. 4.7/5 from 9,015 reviews.",
+      "knownStrengths": [
+        "275M+ verified B2B contact database",
+        "Domain & Mailbox Purchasing included on Basic+ (Apollo now provisions infrastructure)",
+        "Deliverability Suite & Email Warmup on Basic+",
+        "US Dialer on all paid plans (credits apply); Advanced Dialer add-on for International/Parallel/Power/Local Presence",
+        "Free tier with Gmail & Microsoft connection (900 credits/yr)",
+        "Integrated data + sequencing + CRM (Salesforce, HubSpot, Pipedrive)",
+        "Unlimited mailboxes + unlimited daily sends on Professional+",
+        "AI Assistant, AI Research, AI Lead Scoring, AI Writing (up to 1M words/mo)",
+        "Waterfall Enrichment on Basic+",
+        "14-day free trial on Basic and Professional",
+        "Automated Workflows (up to 500/team on Organization)"
+      ],
+      "knownWeaknesses": [
+        "Free/Basic limited to 1 mailbox per user and 250 emails/day",
+        "Per-user pricing + 3-seat minimum on Organization ($357/mo annual floor, $447/mo monthly floor)",
+        "Organization plan is Annual Only (no monthly billing option)",
+        "Explicit credit allocations (not unlimited): 900/yr Free, 30K/yr Basic, 48K/yr Pro, 72K/yr Org",
+        "No Azure mailbox option (Infrabox unique differentiator)",
+        "Advanced Dialer features (International, Parallel, Power, Local Presence) are a $119/team/mo add-on",
+        "Domain & Mailbox Purchasing is new — maturity/reputation of provisioned domains unproven vs dedicated providers"
+      ],
+      "verifiedFeatures": [
+        "Domain & Mailbox Purchasing (Basic+)",
+        "Deliverability Suite & Email Warmup (Basic+)",
+        "Unlimited Sequences (Basic+), A/Z Testing (Professional+)",
+        "US Dialer (all paid plans, credits apply)",
+        "CRM Integrations: Salesforce, HubSpot, Pipedrive (Basic+)",
+        "Outreach & SalesLoft Integration",
+        "SendGrid & Mailgun Integration",
+        "AI Assistant (INTRODUCTORY FREE on all plans)",
+        "AI Research & AI Lead Scoring (Basic+)",
+        "Waterfall Enrichment (Basic+)",
+        "Unified Inbox",
+        "Meeting Scheduler",
+        "Call Recordings & AI Insights (Professional: 4,000 mins, Organization: 8,000 mins)",
+        "Automated Workflows (2-500 per team by tier)",
+        "Mobile App (BETA)",
+        "Chrome Extension",
+        "SSO (Organization only)",
+        "Custom LLM API key (Organization only)"
+      ],
+      "mailboxesPerUser": {
+        "free": "1 mailbox per user",
+        "basic": "1 mailbox per user",
+        "professional": "Unlimited Google and Microsoft mailboxes + 5 SMTP mailboxes per user",
+        "organization": "Unlimited Google and Microsoft mailboxes + 15 SMTP mailboxes per user"
+      },
+      "dailyEmailSends": {
+        "free": "250 emails",
+        "basic": "250 emails",
+        "professional": "Unlimited",
+        "organization": "Unlimited"
+      },
+      "knownUrls": {
+        "home": "https://apollo.io",
+        "pricing": "https://www.apollo.io/pricing",
+        "integrations": "https://www.apollo.io/product/integrations"
+      },
+      "lastScrapedAt": "2026-04-12T00:00:00Z",
+      "scrapeArtifactDir": ".seo/runs/2026-04-12-apollo-crawl",
+      "verifiedByCrawl": true,
+      "crawlEngine": "cmux-browser"
+    }
+  }
+}

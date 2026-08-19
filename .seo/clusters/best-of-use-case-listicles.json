@@ -1,0 +1,101 @@
+{
+  "id": "best-of-use-case-listicles",
+  "name": "Best-of listicles by use case",
+  "pageType": "learn",
+  "generator": "standard",
+  "priority": 2,
+  "status": "complete",
+  "assignedAgent": null,
+  "owner": null,
+  "description": "High-intent listicle articles ranking cold email infrastructure tools for specific situations. Different from existing listicles (best-cold-email-infrastructure-2026, best-email-infrastructure-agencies) because these slice by BUYER CONTEXT, not provider generic rankings.",
+  "searchIntent": "informational-commercial (high intent)",
+  "headKeywords": [
+    "best cold email infrastructure for startups",
+    "cheapest cold email infrastructure",
+    "best cold email infrastructure under 50 mailboxes",
+    "best cold email infrastructure for microsoft 365",
+    "best cold email infrastructure for high volume",
+    "cold email infrastructure for solo founders"
+  ],
+  "semanticKeywords": [
+    "pricing",
+    "scale",
+    "deliverability",
+    "dedicated ip",
+    "shared vs dedicated",
+    "bulk sending",
+    "under N mailboxes"
+  ],
+  "competitors": [
+    "mailforge",
+    "primeforge",
+    "zapmail",
+    "instantly",
+    "smartlead",
+    "maildoso"
+  ],
+  "intentHints": [
+    "Run seo-reddit-intent for each target query — buyers discuss these use cases heavily on r/coldemail and r/sales"
+  ],
+  "slugs": [
+    {
+      "slug": "best-cold-email-infrastructure-startups-2026",
+      "type": "guide",
+      "angle": "bootstrapped/early-stage, under $500/mo budget",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00.000Z",
+      "runDir": ".seo/runs/2026-04-11-best-of-use-case-listicles"
+    },
+    {
+      "slug": "cheapest-cold-email-infrastructure-2026",
+      "type": "guide",
+      "angle": "rock-bottom cost, honest trade-offs",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00.000Z",
+      "runDir": ".seo/runs/2026-04-11-best-of-use-case-listicles"
+    },
+    {
+      "slug": "best-cold-email-infrastructure-under-50-mailboxes",
+      "type": "guide",
+      "angle": "sub-50 mailbox setups — what price breaks at this tier",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00.000Z",
+      "runDir": ".seo/runs/2026-04-11-best-of-use-case-listicles"
+    },
+    {
+      "slug": "best-cold-email-infrastructure-microsoft-365",
+      "type": "comparison",
+      "angle": "tools with Microsoft support, since most providers are Google-only",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00.000Z",
+      "runDir": ".seo/runs/2026-04-11-best-of-use-case-listicles"
+    },
+    {
+      "slug": "best-cold-email-infrastructure-high-volume",
+      "type": "guide",
+      "angle": "500+ mailbox deployments, workspace isolation",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00.000Z",
+      "runDir": ".seo/runs/2026-04-11-best-of-use-case-listicles"
+    },
+    {
+      "slug": "cold-email-infrastructure-solo-founders",
+      "type": "guide",
+      "angle": "single-person operators running outbound themselves",
+      "status": "done",
+      "doneAt": "2026-04-11T00:00:00.000Z",
+      "runDir": ".seo/runs/2026-04-11-best-of-use-case-listicles"
+    }
+  ],
+  "excludeSlugs": [
+    "best-cold-email-infrastructure-2026",
+    "best-email-infrastructure-agencies",
+    "cold-email-infrastructure-comparison-2026"
+  ],
+  "cmuxPanelCount": 2,
+  "notes": "Each listicle must pick 5-7 tools with real pros/cons from scraped data. Infrabox can be #1 but not in every one — if the honest answer is Mailforge (for cheapest) then say so. Credibility is the compounding asset.",
+  "mcp": {
+    "keywordsSyncedAt": "2026-04-11T14:35:00.000Z",
+    "keywordsSyncedBy": "backfill-from-push-history"
+  }
+}

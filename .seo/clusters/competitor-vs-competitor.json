@@ -1,0 +1,107 @@
+{
+  "id": "competitor-vs-competitor",
+  "name": "Third-party head-to-head comparisons",
+  "pageType": "learn",
+  "generator": "standard",
+  "priority": 3,
+  "status": "done",
+  "assignedAgent": null,
+  "owner": null,
+  "description": "Comparison articles between two competitors where Infrabox is not a party. These rank for buyers who haven't heard of Infrabox yet — they're comparing X vs Y. We play the neutral-expert role, then naturally introduce Infrabox as 'if you're not sure about either, here's a third option' in the verdict. This is the most Trojan-horse-shaped cluster — do not be heavy-handed.",
+  "searchIntent": "transactional (comparison)",
+  "headKeywords": [
+    "<tool A> vs <tool B>",
+    "<tool A> or <tool B>",
+    "<tool A> vs <tool B> pricing"
+  ],
+  "semanticKeywords": [
+    "comparison",
+    "pricing",
+    "feature matrix",
+    "integrations",
+    "deliverability"
+  ],
+  "competitors": [
+    "mailforge",
+    "primeforge",
+    "zapmail",
+    "instantly",
+    "smartlead",
+    "maildoso",
+    "infraforge"
+  ],
+  "intentHints": [],
+  "slugs": [
+    {
+      "slug": "mailforge-vs-instantly",
+      "type": "comparison",
+      "toolA": "Mailforge",
+      "toolB": "Instantly",
+      "status": "done",
+      "doneAt": "2026-04-11T18:00:00Z",
+      "runDir": ".seo/runs/2026-04-11-competitor-vs-competitor"
+    },
+    {
+      "slug": "primeforge-vs-smartlead",
+      "type": "comparison",
+      "toolA": "Primeforge",
+      "toolB": "Smartlead",
+      "status": "done",
+      "doneAt": "2026-04-11T18:10:00Z",
+      "runDir": ".seo/runs/2026-04-11-competitor-vs-competitor"
+    },
+    {
+      "slug": "mailforge-vs-maildoso",
+      "type": "comparison",
+      "toolA": "Mailforge",
+      "toolB": "Maildoso",
+      "status": "done",
+      "doneAt": "2026-04-11T18:20:00Z",
+      "runDir": ".seo/runs/2026-04-11-competitor-vs-competitor"
+    },
+    {
+      "slug": "zapmail-vs-maildoso",
+      "type": "comparison",
+      "toolA": "Zapmail",
+      "toolB": "Maildoso",
+      "status": "done",
+      "doneAt": "2026-04-11T18:30:00Z",
+      "runDir": ".seo/runs/2026-04-11-competitor-vs-competitor"
+    },
+    {
+      "slug": "infraforge-vs-instantly",
+      "type": "comparison",
+      "toolA": "Infraforge",
+      "toolB": "Instantly",
+      "status": "done",
+      "doneAt": "2026-04-11T18:40:00Z",
+      "runDir": ".seo/runs/2026-04-11-competitor-vs-competitor"
+    },
+    {
+      "slug": "smartlead-vs-instantly",
+      "type": "comparison",
+      "toolA": "Smartlead",
+      "toolB": "Instantly",
+      "status": "done",
+      "doneAt": "2026-04-11T18:50:00Z",
+      "runDir": ".seo/runs/2026-04-11-competitor-vs-competitor"
+    }
+  ],
+  "excludeSlugs": [
+    "mailforge-vs-primeforge",
+    "zapmail-vs-mailforge",
+    "zapmail-vs-primeforge",
+    "infrabox-vs-mailforge",
+    "infrabox-vs-primeforge",
+    "infrabox-vs-zapmail",
+    "infrabox-vs-zapmail-vs-primeforge"
+  ],
+  "cmuxPanelCount": 2,
+  "notes": "Voice rule: pretend Infrabox is not writing this. The article should be valuable to someone who only wants to pick between A and B. Infrabox appears in the 'other options' section at the bottom, not the hero.",
+  "mcp": {
+    "keywordsSyncedAt": "2026-04-11T14:35:00.000Z",
+    "keywordsSyncedBy": "backfill-from-push-history"
+  },
+  "completedAt": "2026-04-11T18:50:00Z",
+  "completedBy": "seo-generate worker"
+}

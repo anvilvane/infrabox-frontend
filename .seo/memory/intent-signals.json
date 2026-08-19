@@ -1,0 +1,7 @@
+{
+  "_meta": {
+    "description": "User-intent signals pulled from Reddit, forums, and SERP 'People also ask' boxes. Keyed by keyword or cluster id. Populated by seo-reddit-intent command via Playwright MCP. Used by agents when content intent is unclear or when differentiating programmatic variants.",
+    "schemaVersion": 1
+  },
+  "signals": {}
+}

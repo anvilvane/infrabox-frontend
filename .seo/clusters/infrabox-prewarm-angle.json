@@ -1,0 +1,185 @@
+{
+  "id": "infrabox-prewarm-angle",
+  "name": "Infrabox pre-warmed mailboxes — positioning cluster",
+  "pageType": "learn",
+  "generator": "standard",
+  "priority": 1,
+  "status": "done",
+  "doneAt": "2026-04-11T14:30:00Z",
+  "runDir": ".seo/runs/2026-04-11-infrabox-prewarm-angle",
+  "assignedAgent": "seo-generate",
+  "owner": null,
+  "description": "Infrabox offers pre-warmed mailboxes but the existing content does not position this clearly. The flagship article on the topic (/learn/pre-warmed-mailboxes-worth-it) was written before Infrabox's pre-warmed offering was emphasized and currently frames Zapmail as the incumbent. This cluster closes the gap with 8 new pages that foreground Infrabox's pre-warmed offering across the full keyword axis (tool, tech, use case, comparison).\n\nThe prewarm offering is a real differentiator: pre-warmed Google Workspace and Microsoft 365 accounts that can start sending immediately, priced within a point of the same real accounts without prewarming (unlike Zapmail's $8-12 premium tier). Positioning angle: 'Pre-warmed without the Zapmail tax.'\n\nThe cluster DOES NOT modify the existing /learn/pre-warmed-mailboxes-worth-it article. That article stays where it is — the new pages link to it as further reading and complement rather than replace it. A future editorial pass can revisit the existing article once this cluster is live.",
+  "searchIntent": "transactional (high intent — buyer wants to skip warmup)",
+  "headKeywords": [
+    "pre-warmed mailboxes",
+    "pre-warmed google workspace",
+    "pre-warmed microsoft 365",
+    "buy pre-warmed email accounts",
+    "pre-warmed cold email accounts",
+    "pre-warmed inboxes",
+    "skip email warmup",
+    "launch cold email same day"
+  ],
+  "semanticKeywords": [
+    "warmup period",
+    "sender reputation",
+    "send immediately",
+    "14-day warmup",
+    "zapmail prewarm",
+    "prewarm cost",
+    "prewarmed account quality",
+    "seasoned mailbox"
+  ],
+  "competitors": [
+    "zapmail",
+    "primeforge",
+    "mailforge",
+    "instantly"
+  ],
+  "intentHints": [
+    "Run seo-reddit-intent on 'pre-warmed mailboxes' — r/coldemail has strong opinions on whether prewarming is worth the premium. Surface the skepticism honestly, then show how Infrabox's prewarm offering addresses the specific objections (quality consistency, reputation portability, price)."
+  ],
+  "featuredAssets": {
+    "_note": "All three exist in .seo/memory/asset-library.json under infrabox.dashboard. Use them directly via /images/dashboard/<file>.png — do NOT re-capture via Playwright.",
+    "heroShot": "/images/dashboard/prewarm.png",
+    "supportingShots": [
+      "/images/dashboard/warmup.png",
+      "/images/dashboard/warmup-promo-popup.png",
+      "/images/dashboard/dashboard-home.png",
+      "/images/dashboard/mailboxes.png"
+    ]
+  },
+  "slugs": [
+    {
+      "slug": "infrabox-prewarmed-mailboxes",
+      "type": "guide",
+      "targetQuery": "infrabox pre-warmed mailboxes",
+      "angle": "Flagship page for the feature. Covers: what Infrabox's prewarm is, how it differs from Zapmail's prewarm (price + quality + provider mix), when to choose prewarm vs self-warmup, the dashboard screenshot hero.",
+      "minWords": 2000,
+      "mustLink": [
+        "/learn/pre-warmed-mailboxes-worth-it",
+        "/learn/infrabox-pricing",
+        "/learn/what-is-infrabox"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11T14:30:00Z",
+      "runDir": ".seo/runs/2026-04-11-infrabox-prewarm-angle"
+    },
+    {
+      "slug": "pre-warmed-mailboxes-vs-self-warmup",
+      "type": "comparison",
+      "targetQuery": "pre-warmed mailboxes vs self warmup",
+      "angle": "Decision framework: when does the premium for prewarmed pay off, when does self-warmup win. Uses Infrabox's isolated warmup and prewarm offering as the two reference points.",
+      "minWords": 1800,
+      "mustLink": [
+        "/learn/cold-email-warmup-guide",
+        "/learn/domain-warmup-best-practices",
+        "/learn/infrabox-prewarmed-mailboxes"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11T14:30:00Z",
+      "runDir": ".seo/runs/2026-04-11-infrabox-prewarm-angle"
+    },
+    {
+      "slug": "pre-warmed-google-workspace-accounts",
+      "type": "guide",
+      "targetQuery": "pre-warmed google workspace accounts",
+      "angle": "Keyword-specific landing: buyer is searching for prewarmed Google Workspace specifically. Positions Infrabox + compares with Zapmail's Google Workspace prewarm tier.",
+      "minWords": 1800,
+      "mustLink": [
+        "/learn/what-is-infrabox",
+        "/learn/infrabox-vs-zapmail"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11T14:30:00Z",
+      "runDir": ".seo/runs/2026-04-11-infrabox-prewarm-angle"
+    },
+    {
+      "slug": "pre-warmed-microsoft-365-mailboxes",
+      "type": "guide",
+      "targetQuery": "pre-warmed microsoft 365 mailboxes",
+      "angle": "Underserved angle — most prewarm conversations are Google-only. Infrabox is one of few offering prewarmed M365. Own this query.",
+      "minWords": 1800,
+      "mustLink": [
+        "/learn/google-workspace-vs-microsoft-365-cold-email",
+        "/learn/infrabox-prewarmed-mailboxes"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11T14:30:00Z",
+      "runDir": ".seo/runs/2026-04-11-infrabox-prewarm-angle"
+    },
+    {
+      "slug": "buy-pre-warmed-email-accounts-guide",
+      "type": "guide",
+      "targetQuery": "buy pre-warmed email accounts",
+      "angle": "Transactional buyer's guide. Where to buy, what to look for in quality (sending history, bounce rate, folder placement), which providers offer what. Honest + comparative.",
+      "minWords": 2000,
+      "mustLink": [
+        "/learn/pre-warmed-mailboxes-worth-it",
+        "/learn/infrabox-prewarmed-mailboxes"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11T14:30:00Z",
+      "runDir": ".seo/runs/2026-04-11-infrabox-prewarm-angle"
+    },
+    {
+      "slug": "skip-email-warmup-safely",
+      "type": "how-to",
+      "targetQuery": "how to skip email warmup",
+      "angle": "The direct answer to the question a stressed buyer types at 2am when their campaign launch is tomorrow. Prewarm is one legitimate answer — but only if quality is real. Honest about the risks.",
+      "minWords": 1600,
+      "mustLink": [
+        "/learn/cold-email-warmup-guide",
+        "/learn/infrabox-prewarmed-mailboxes"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11T14:30:00Z",
+      "runDir": ".seo/runs/2026-04-11-infrabox-prewarm-angle"
+    },
+    {
+      "slug": "launch-cold-email-campaign-same-day",
+      "type": "how-to",
+      "targetQuery": "launch cold email campaign same day",
+      "angle": "Use-case framing for speed-of-launch. The prewarm option becomes the hero of the playbook. Includes a concrete same-day setup checklist using Infrabox.",
+      "minWords": 1800,
+      "mustLink": [
+        "/learn/cold-email-infrastructure-setup-guide",
+        "/learn/infrabox-prewarmed-mailboxes"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11T14:30:00Z",
+      "runDir": ".seo/runs/2026-04-11-infrabox-prewarm-angle"
+    },
+    {
+      "slug": "zapmail-prewarm-vs-infrabox-prewarm",
+      "type": "comparison",
+      "targetQuery": "zapmail pre-warmed vs infrabox pre-warmed",
+      "angle": "Head-to-head on the prewarm offering specifically. Zapmail is the incumbent in this niche — position honestly on price, quality, provider mix. Must use real Zapmail pricing scraped via /seo-scrape before drafting.",
+      "minWords": 1800,
+      "mustLink": [
+        "/compare/zapmail",
+        "/learn/infrabox-vs-zapmail",
+        "/learn/infrabox-prewarmed-mailboxes"
+      ],
+      "status": "done",
+      "doneAt": "2026-04-11T14:30:00Z",
+      "runDir": ".seo/runs/2026-04-11-infrabox-prewarm-angle"
+    }
+  ],
+  "excludeSlugs": [
+    "pre-warmed-mailboxes-worth-it",
+    "cold-email-warmup-guide",
+    "domain-warmup-best-practices",
+    "email-warmup-tools-comparison-2026",
+    "infrabox-pricing",
+    "infrabox-review",
+    "what-is-infrabox"
+  ],
+  "cmuxPanelCount": 1,
+  "notes": "Single-panel serial execution — the pages share a lot of context (prewarm facts, Zapmail pricing, Infrabox positioning) and benefit from being drafted by one agent that keeps all of it in context rather than shards. Worker must scrape Zapmail via /seo-scrape on first slug and reuse the extract across all 8 slugs (the summary.json from the first scrape is the shared source of truth for the whole cluster). Must use /images/dashboard/prewarm.png as the hero on every slug and pick supporting shots from featuredAssets.supportingShots based on content context.",
+  "mcp": {
+    "keywordsSyncedAt": "2026-04-11T14:35:00.000Z",
+    "keywordsSyncedBy": "backfill-from-push-history"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "source": "Flat per-mailbox rate by volume band. Monthly rates are authoritative.",
+  "mailboxBands": {
+    "monthly": [
+      { "upTo": 29,  "rate": 3.90 },
+      { "upTo": 99,  "rate": 3.25 },
+      { "upTo": 199, "rate": 2.99 }
+    ],
+    "quarterly": [
+      { "upTo": 29,  "rate": 3.50 },
+      { "upTo": 99,  "rate": 3.00 },
+      { "upTo": 199, "rate": 2.90 }
+    ],
+    "annual": [
+      { "upTo": 29,  "rate": 3.10 },
+      { "upTo": 99,  "rate": 2.70 },
+      { "upTo": 199, "rate": 2.50 }
+    ]
+  },
+  "customPricingFrom": 200,
+  "customAzureTenantsFrom": 10,
+  "azureTenant": 30,
+  "warmupPerMailbox": 3,
+  "infraGuardPerDomain": 3,
+  "tld": { ".com": 12, ".co": 7, ".info": 3.5 },
+  "funnel": {
+    "meetingRate": 0.30,
+    "positiveReplyRate": 0.015,
+    "sendingDaysPerMonth": 22,
+    "defaultMeetings": 20
+  },
+  "providers": {
+    "google":    { "label": "Google Workspace", "billing": "mailbox", "block": 3,  "epd": 15 },
+    "microsoft": { "label": "Microsoft 365",    "billing": "mailbox", "block": 3,  "epd": 5  },
+    "azure":     { "label": "Azure",            "billing": "tenant",  "block": 50, "epd": 3  }
+  },
+  "provenance": {
+    "mailboxBands.monthly": "Confirmed directly: 1-29 = $3.90, 30-99 = $3.25, 100-199 = $2.99, 200+ custom.",
+    "azureTenant": "homepage #pricing ($30 per Azure tenant)",
+    "warmupPerMailbox": "homepage #pricing add-ons ($3/mailbox/mo)"
+  },
+  "notes": {
+    "model": "Every mailbox is charged at the band rate. There is no plan base fee and no included-slot allowance: 40 mailboxes = 40 x $3.25, not a base plus overage.",
+    "cycles": "Quarterly and annual carry their own band rates rather than a discount applied on top of monthly. Only the monthly row was explicitly confirmed; the other two were derived from data/pricing.js and should be checked."
+  },
+  "unverified": [
+    "mailboxBands.quarterly",
+    "mailboxBands.annual",
+    "funnel.meetingRate",
+    "funnel.positiveReplyRate",
+    "funnel.sendingDaysPerMonth",
+    "infraGuardPerDomain",
+    "tld..com",
+    "tld..co",
+    "tld..info",
+    "providers.google.block",
+    "providers.google.epd",
+    "providers.microsoft.block",
+    "providers.microsoft.epd",
+    "providers.azure.block",
+    "providers.azure.epd"
+  ]
+}

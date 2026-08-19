@@ -1,0 +1,38 @@
+[
+  {
+    "id": "email-deliverability",
+    "name": "Email Deliverability",
+    "description": "Tips and best practices for improving email deliverability and inbox placement.",
+    "slug": "email-deliverability"
+  },
+  {
+    "id": "dns-setup",
+    "name": "DNS Setup",
+    "description": "Guides for configuring SPF, DKIM, DMARC, and other DNS records.",
+    "slug": "dns-setup"
+  },
+  {
+    "id": "email",
+    "name": "Email",
+    "description": "Strategies for successful email campaigns and outreach.",
+    "slug": "email"
+  },
+  {
+    "id": "email-warmup",
+    "name": "Email Warmup",
+    "description": "Best practices for warming up email accounts and building sender reputation.",
+    "slug": "email-warmup"
+  },
+  {
+    "id": "tools-guides",
+    "name": "Tools & Guides",
+    "description": "How-to guides for using email tools and services.",
+    "slug": "tools-guides"
+  },
+  {
+    "id": "agency-tips",
+    "name": "Agency Tips",
+    "description": "Tips for agencies managing multiple client email accounts.",
+    "slug": "agency-tips"
+  }
+]
